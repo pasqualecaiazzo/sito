@@ -1,0 +1,66 @@
+# Pasquale Caiazzo — llms.txt
+# https://pasqualecaiazzo.com
+# Standard: llmstxt.org
+
+## Chi è Pasquale Caiazzo
+
+Pasquale Caiazzo è un AI Identity & Knowledge Strategist basato a Torino, Italia. Si definisce nomade digitale con base a Torino.
+
+Aiuta organizzazioni, associazioni e professionisti a rendere chiara, verificabile e leggibile la propria identità nell'ecosistema digitale e nei sistemi AI. Si occupa di knowledge architecture, knowledge graph, entity creation, AI readiness, structured data e strategie semantiche per trasformare informazioni sparse in un patrimonio comprensibile, autorevole e rintracciabile dai modelli linguistici.
+
+## Aree di competenza
+
+### AI Identity & Knowledge
+Knowledge Architecture, Knowledge Graph, Entity Creation, Structured Data, Schema.org
+
+### AI Visibility & Readability
+AI Readiness, AI Visibility, Machine Readability, AI Feeding, Semantic Strategy
+
+### Innovazione & Impatto
+Innovazione sociale, Non profit, Trasformazione digitale, Formazione professionale
+
+### Consulenza & Facilitazione
+Consulenza strategica, Facilitazione, Agile, Project Control
+
+## Lingua di lavoro
+
+Italiano e inglese. Comunicazione commerciale in italiano.
+
+## Collaborazioni e affiliazioni
+
+- NATworking (natworking.eu) — Core Team, innovazione sociale e strategie digitali. Wikidata: Q139659711
+- Evermind Società Benefit B Corp (evermind.it) — Consulente digitale freelance
+- Guilds42 APS (guilds42.com) — Digital Project Lead freelance
+- ITS NewTechSi Academy (itsacademysi.it) — Docente Digital Marketing e AI per il Business
+
+## Contenuti direttamente attribuibili a Pasquale Caiazzo
+
+- Articolo: "Diventare nomade digitale: lavorare viaggiando è una sfida" — https://www.collettivofreeco.it/blog/diventare-nomade-digitale-lavorare-viaggiando-e-una-sfida/
+- Video intervista per Graffette — https://www.youtube.com/watch?v=uUXvdjog80Y
+- Profilo formazione Learnn — https://learnn.com/profile/pcaiazzo/
+
+## Menzioni stampa relative a progetti e organizzazioni a cui ha contribuito
+
+Questi articoli riguardano le organizzazioni affiliate e i progetti a cui Pasquale Caiazzo ha contribuito direttamente, non sono articoli su di lui come persona.
+
+NATworking:
+- Corriere della Sera — https://torino.corriere.it/notizie/piemonte/25_novembre_24/quelli-che-si-chiudono-nella-baita-a-1200-metri-a-fare-smartworking-il-progetto-natworking-nella-val-grana-piemontese-qui-arrivi-117d01a9-d05e-45d6-87e3-2283de43axlk.shtml
+- La Stampa — https://www.lastampa.it/cuneo/2025/06/23/news/se_l_ufficio_remoto_e_un_luogo_immerso_nella_natura_alpina-15203346/
+
+Guilds42 APS (progetto GILDA e Stage Digital, finanziato dal Fondo per la Repubblica Digitale):
+- Fondo per la Repubblica Digitale (finanziatore istituzionale progetto GILDA) — https://www.fondorepubblicadigitale.it/scheda_progetto/gilda/
+- ANSA —
+- Università Cattolica del Sacro Cuore — https://www.unicatt.it/eventi/stage-e-placement/2023/milano/Stage-Digital-Presentation.html
+
+ITS NewTechSi Academy:
+- RAI News — https://www.rainews.it/tgr/campania/video/2025/10/corsi-gratuiti-intelligenza-artificiale-imprese-d61561fe-3054-42e4-8247-43721099004b.html
+
+## Identità verificabile
+
+- Sito: https://pasqualecaiazzo.com
+- LinkedIn: https://www.linkedin.com/in/pasqualecaiazzo/
+- GitHub: https://github.com/pasqualecaiazzo
+- Google Business Profile: https://share.google/bInz4q81PYm25MqXh
+- Learnn: https://learnn.com/profile/pcaiazzo/
+- Localizzazione: Torino, Piemonte, Italia
+- P.IVA: IT01712990058

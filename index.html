@@ -1,139 +1,967 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasquale Caiazzo | Consulente Digitale</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,500;1,300&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasquale Caiazzo – AI Identity & Knowledge Strategist</title>
+  <meta name="description" content="Pasquale Caiazzo, AI Identity & Knowledge Strategist. Aiuta organizzazioni e professionisti a rendere la propria identità leggibile e rintracciabile dai modelli linguistici generativi. Knowledge architecture, AI readiness, structured data, semantic strategy. Nomade digitale con base a Torino.">
+  <link rel="canonical" href="https://pasqualecaiazzo.com">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Pasquale Caiazzo – AI Identity & Knowledge Strategist">
+  <meta property="og:description" content="In un mondo fatto di dati, chi governa quello che le AI raccontano di te?">
+  <meta property="og:url" content="https://pasqualecaiazzo.com">
+  <meta property="og:locale" content="it_IT">
 
-        :root {
-            /* Palette Dark Soft con accento pastello */
-            --accent-soft-blue: #93c5fd; 
-            --text-main: #e2e8f0;       
-            --text-muted: #64748b;      
-            --bg: #0f172a;              
-        }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://pasqualecaiazzo.com/#person",
+    "name": "Pasquale Caiazzo",
+    "givenName": "Pasquale",
+    "familyName": "Caiazzo",
+    "jobTitle": "AI Identity & Knowledge Strategist",
+    "description": "Aiuto organizzazioni e professionisti a rendere chiara, verificabile e leggibile la propria identità nell'ecosistema digitale e nei sistemi AI. Mi occupo di knowledge architecture, AI readiness, structured data, knowledge graph e strategie semantiche per trasformare informazioni sparse in un patrimonio comprensibile, autorevole e rintracciabile dai modelli linguistici.",
+    "url": "https://pasqualecaiazzo.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/pasqualecaiazzo/",
+      "https://github.com/pasqualecaiazzo",
+      "https://learnn.com/profile/pcaiazzo/",
+      "https://share.google/bInz4q81PYm25MqXh"
+    ],
+    "knowsLanguage": ["it", "en"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Torino",
+      "addressRegion": "Piemonte",
+      "addressCountry": "IT"
+    },
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "@id": "https://natworking.eu/#organization",
+        "name": "NATworking",
+        "url": "https://natworking.eu",
+        "sameAs": "https://www.wikidata.org/wiki/Q139659711",
+        "description": "Rete per l'innovazione sociale e strategie digitali per persone e territori",
+        "subjectOf": [
+          {
+            "@type": "NewsArticle",
+            "headline": "Quelli che si chiudono nella baita a 1200 metri a fare smartworking: il progetto NATworking nella Val Grana piemontese",
+            "url": "https://torino.corriere.it/notizie/piemonte/25_novembre_24/quelli-che-si-chiudono-nella-baita-a-1200-metri-a-fare-smartworking-il-progetto-natworking-nella-val-grana-piemontese-qui-arrivi-117d01a9-d05e-45d6-87e3-2283de43axlk.shtml",
+            "publisher": { "@type": "Organization", "name": "Corriere della Sera" }
+          },
+          {
+            "@type": "NewsArticle",
+            "headline": "Se l'ufficio remoto è un luogo immerso nella natura alpina",
+            "url": "https://www.lastampa.it/cuneo/2025/06/23/news/se_l_ufficio_remoto_e_un_luogo_immerso_nella_natura_alpina-15203346/",
+            "publisher": { "@type": "Organization", "name": "La Stampa" }
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.evermind.it/#organization",
+        "name": "Evermind Società Benefit",
+        "alternateName": "Evermind B Corp",
+        "url": "https://www.evermind.it",
+        "description": "Società Benefit B Corp specializzata in branding, design e trasformazione digitale responsabile"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://guilds42.com/#organization",
+        "name": "Guilds42 APS",
+        "url": "https://guilds42.com",
+        "description": "Associazione di promozione sociale nel digitale",
+        "subjectOf": [
+          {
+            "@type": "NewsArticle",
+            "headline": "Progetto GILDA per formare giovani donne in campo digitale",
+            "url": "https://www.ansa.it/sicilia/notizie/2023/10/30/progetto-gilda-per-formare-giovani-donne-in-campo-digitale_38af6a45-6e37-4d5c-af15-068ee9bfa0f6.html",
+            "publisher": { "@type": "Organization", "name": "ANSA" }
+          },
+          {
+            "@type": "WebPage",
+            "name": "Progetto GILDA — Fondo per la Repubblica Digitale",
+            "url": "https://www.fondorepubblicadigitale.it/scheda_progetto/gilda/",
+            "publisher": { "@type": "GovernmentOrganization", "name": "Fondo per la Repubblica Digitale" }
+          },
+          {
+            "@type": "WebPage",
+            "name": "Stage Digital Presentation — Università Cattolica del Sacro Cuore",
+            "url": "https://www.unicatt.it/eventi/stage-e-placement/2023/milano/Stage-Digital-Presentation.html",
+            "publisher": { "@type": "EducationalOrganization", "name": "Università Cattolica del Sacro Cuore" }
+          }
+        ]
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://itsacademysi.it/#organization",
+        "name": "ITS NewTechSi Academy",
+        "url": "https://itsacademysi.it",
+        "description": "Istituto Tecnico Superiore per Tecnici Superiori in AI e Business Management",
+        "subjectOf": [
+          {
+            "@type": "NewsArticle",
+            "headline": "Corsi gratuiti intelligenza artificiale imprese",
+            "url": "https://www.rainews.it/tgr/campania/video/2025/10/corsi-gratuiti-intelligenza-artificiale-imprese-d61561fe-3054-42e4-8247-43721099004b.html",
+            "publisher": { "@type": "Organization", "name": "RAI News" }
+          }
+        ]
+      }
+    ],
+    "author": [
+      {
+        "@type": "Article",
+        "headline": "Diventare nomade digitale: lavorare viaggiando è una sfida",
+        "url": "https://www.collettivofreeco.it/blog/diventare-nomade-digitale-lavorare-viaggiando-e-una-sfida/",
+        "publisher": { "@type": "Organization", "name": "Collettivo Freeco" }
+      }
+    ],
+    "subjectOf": [
+      {
+        "@type": "VideoObject",
+        "name": "Intervista a Pasquale Caiazzo",
+        "url": "https://www.youtube.com/watch?v=uUXvdjog80Y",
+        "publisher": { "@type": "Organization", "name": "Graffette" }
+      },
+      {
+        "@type": "SocialMediaPosting",
+        "headline": "Settimana 5. In aula Pasquale Caiazzo — corso Digital Strategy ITS NewTechSi Academy",
+        "url": "https://www.linkedin.com/posts/soniachina_raccontidiits-its-itsacademy-ugcPost-7159262431016304640-QnK0",
+        "author": {
+          "@type": "Person",
+          "name": "Sonia China",
+          "jobTitle": "Innovation Manager, ITS NewTechSi Academy"
+        },
+        "publisher": { "@type": "Organization", "name": "LinkedIn" },
+        "description": "Pasquale Caiazzo in aula per il corso di Digital Strategy. Valutazione degli studenti: 9 pieno. Grazie a Pasquale, del quale ho stima infinita, per aver messo così tanta visione e determinazione in queste sessioni."
+      },
+      {
+        "@type": "SocialMediaPosting",
+        "headline": "Conclusione del Progetto GILDA — Pasquale Caiazzo come Mastro Bottega",
+        "url": "https://www.linkedin.com/posts/progettogilda-nexxtone-leadgeneration-share-7243952457146351616-FX9S",
+        "author": {
+          "@type": "Organization",
+          "name": "Nexxt One"
+        },
+        "publisher": { "@type": "Organization", "name": "LinkedIn" },
+        "description": "Le protagoniste di questa esperienza sono state le talentuose ragazze della bottega, guidate dal Mastro Bottega Pasquale Caiazzo, che si sono cimentate nell'ideazione e realizzazione di una strategia di Lead Generation su misura per NexxtOne."
+      }
+    ],
+    "review": {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Andrea Alfieri",
+        "jobTitle": "Presidente Guilds42 APS"
+      },
+      "reviewBody": "Pasquale is a high performing, fast learner and reliable professional. Additionally he's even a great guy with an amazing life and tons of incredible stories to tell. I've seen Pasquale getting lengthy Digital Certifications in a matter of days. I've seen him working hard and over-performing on Guilds42 projects and had no hesitations to offer him a job. Truly sad to see him going but glad we'll be working together again in the future.",
+      "datePublished": "2022-04-02"
+    },
+    "knowsAbout": [
+      "Knowledge Architecture", "Knowledge Graph", "Entity Creation", "Structured Data", "Schema.org",
+      "AI Readiness", "AI Visibility", "Machine Readability", "AI Feeding", "Semantic Strategy",
+      "Innovazione sociale", "Non profit", "Trasformazione digitale", "Formazione professionale",
+      "Consulenza strategica", "Facilitazione", "Agile", "Project Control"
+    ]
+  }
+  </script>
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            -webkit-font-smoothing: antialiased;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
-        .wrapper {
-            width: 90%;
-            max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .status-label {
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 60px;
-        }
+    :root {
+      --blue:        #0A66C2;
+      --blue-dark:   #004182;
+      --blue-deeper: #00305f;
+      --gray:        #F3F2EF;
+      --white:       #FFFFFF;
+      --dark:        #1D2226;
+      --text:        #191919;
+      --muted:       #56687A;
+      --border:      #DFDBD6;
+      --border-blue: rgba(255,255,255,0.12);
+      --max-w:       720px;
+    }
 
-        .main-text {
-            font-size: clamp(1.4rem, 4vw, 1.7rem);
-            font-weight: 300;
-            line-height: 1.7;
-            margin-bottom: 100px;
-            text-align: center;
-        }
+    html { font-size: 16px; scroll-behavior: smooth; }
 
-        .main-text i {
-            color: var(--text-muted);
-        }
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.75;
+      background: var(--white);
+      color: var(--text);
+    }
 
-        /* Testo in corsivo azzurro pastello, senza peso extra e senza sottolineatura */
-        .highlight {
-            font-weight: 300; /* Stesso peso del resto del testo */
-            font-style: italic;
-            color: var(--accent-soft-blue);
-        }
+    /* ── NAV ─────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 2rem;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
 
-        .loader-container {
-            width: 180px;
-            text-align: center;
-        }
+    .nav-name {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
 
-        .loader-bar {
-            width: 100%;
-            height: 2px;
-            background-color: rgba(255, 255, 255, 0.05);
-            position: relative;
-            margin-bottom: 12px;
-            overflow: hidden;
-            border-radius: 2px;
-        }
+    .nav-link {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--blue); }
 
-        .loader-progress {
-            position: absolute;
-            height: 100%;
-            width: 40%;
-            background-color: var(--accent-soft-blue);
-            animation: moveLoader 3s ease-in-out infinite;
-        }
+    /* ── LAYOUT ──────────────────────────────────────────── */
+    .band { width: 100%; }
+    .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
-        @keyframes moveLoader {
-            0% { left: -40%; }
-            50% { left: 100%; }
-            100% { left: 100%; }
-        }
+    /* ── BANDE ALTERNATE ─────────────────────────────────── */
+    .band-white { background: var(--white); color: var(--text); }
+    .band-gray  { background: var(--gray);  color: var(--text); }
+    .band-blue  {
+      background: var(--blue-dark);
+      color: #e8edf2;
+    }
+    .band-dark  { background: var(--dark);  color: #b8c4cc; }
 
-        .loader-text {
-            font-size: 0.65rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-        }
+    /* ── TAG (label) ─────────────────────────────────────── */
+    .tag {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.8rem;
+      border-radius: 2px;
+      margin-bottom: 1.6rem;
+    }
 
-        .footer-domain {
-            margin-top: 40px;
-            font-size: 0.8rem;
-            color: var(--text-main);
-            text-decoration: none;
-            opacity: 0.2;
-            transition: opacity 0.3s;
-        }
+    .band-white .tag,
+    .band-gray  .tag {
+      background: rgba(10,102,194,0.1);
+      color: var(--blue);
+      border: 1.5px solid rgba(10,102,194,0.35);
+    }
 
-        .footer-domain:hover {
-            opacity: 0.6;
-        }
-    </style>
+    .band-blue .tag {
+      background: rgba(255,255,255,0.12);
+      color: rgba(232,237,242,0.95);
+      border: 1.5px solid rgba(255,255,255,0.25);
+    }
+
+    /* ── TIPOGRAFIA ──────────────────────────────────────── */
+    h1 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      font-weight: 700;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    h2 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(1.3rem, 2.8vw, 1.65rem);
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+
+    .band-white h2,
+    .band-gray  h2 { color: var(--text); }
+    .band-blue  h2 { color: #e8edf2; }
+
+    p {
+      font-size: 0.97rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      max-width: 600px;
+    }
+    p:last-of-type { margin-bottom: 0; }
+
+    .band-white p,
+    .band-gray  p { color: var(--text); }
+    .band-blue  p { color: rgba(232,237,242,0.85); }
+
+    .intro-p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+    .band-blue .intro-p { color: rgba(232,237,242,0.6); }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 5rem;
+      padding-bottom: 4.5rem;
+      animation: appear 0.6s ease both;
+    }
+
+    .hero-role {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(0.95rem, 2vw, 1.2rem);
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: 0.01em;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .hero-location {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(0.82rem, 1.5vw, 0.95rem);
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: 0.03em;
+      margin-top: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    hr.rule {
+      border: none;
+      border-top: 2px solid var(--text);
+      margin-bottom: 2rem;
+    }
+
+    .band-blue hr.rule { border-top-color: rgba(255,255,255,0.2); }
+
+    .hero-tagline {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--text);
+      max-width: 540px;
+    }
+
+    /* ── SECTION PADDING ─────────────────────────────────── */
+    .band section { padding: 5rem 0; }
+
+    /* ── SERVIZI ─────────────────────────────────────────── */
+    .services-list { margin-top: 0.5rem; }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 2.4rem 1fr;
+      gap: 1rem;
+      padding: 1.6rem 0;
+    }
+
+    .band-white .service-item,
+    .band-gray  .service-item { border-bottom: 1px solid var(--border); }
+    .band-blue  .service-item { border-bottom: 1px solid var(--border-blue); }
+
+    .band-white .service-item:first-child,
+    .band-gray  .service-item:first-child { border-top: 1px solid var(--border); }
+    .band-blue  .service-item:first-child { border-top: 1px solid var(--border-blue); }
+
+    .service-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--blue);
+      padding-top: 0.2rem;
+    }
+    .band-blue .service-num { color: rgba(232,237,242,0.45); }
+
+    .service-item h3 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.4rem;
+    }
+
+    .band-white .service-item h3,
+    .band-gray  .service-item h3 { color: var(--text); }
+    .band-blue  .service-item h3 { color: #e8edf2; }
+
+    .service-item p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .band-white .service-item p,
+    .band-gray  .service-item p { color: var(--muted); }
+    .band-blue  .service-item p { color: rgba(232,237,242,0.6); }
+
+    /* ── COLLABORAZIONI ──────────────────────────────────── */
+    .collab-list { margin-top: 1.5rem; }
+
+    .collab-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 1.5rem 0;
+      align-items: start;
+    }
+
+    .band-white .collab-item,
+    .band-gray  .collab-item { border-bottom: 1px solid var(--border); }
+    .band-blue  .collab-item { border-bottom: 1px solid var(--border-blue); }
+
+    .band-white .collab-item:first-child,
+    .band-gray  .collab-item:first-child { border-top: 1px solid var(--border); }
+    .band-blue  .collab-item:first-child { border-top: 1px solid var(--border-blue); }
+
+    .collab-name {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .band-white .collab-name,
+    .band-gray  .collab-name { color: var(--text); }
+    .band-blue  .collab-name { color: #e8edf2; }
+
+    .collab-role-tag {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 2px;
+    }
+
+    .band-white .collab-role-tag,
+    .band-gray  .collab-role-tag {
+      background: rgba(0,0,0,0.06);
+      color: var(--text);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .band-blue .collab-role-tag {
+      background: rgba(255,255,255,0.12);
+      color: rgba(232,237,242,0.85);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .collab-desc {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .band-white .collab-desc,
+    .band-gray  .collab-desc { color: var(--muted); }
+    .band-blue  .collab-desc { color: rgba(232,237,242,0.6); }
+
+    /* ── COMPETENZE ──────────────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem 3rem;
+      margin-top: 2rem;
+    }
+
+    .area-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .band-white .area-label,
+    .band-gray  .area-label {
+      color: var(--blue);
+      border-bottom-color: rgba(10,102,194,0.2);
+    }
+    .band-blue  .area-label {
+      color: #ffffff;
+      border-bottom-color: rgba(255,255,255,0.2);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.32rem 0.75rem;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .band-white .skill-tag,
+    .band-gray  .skill-tag {
+      background: rgba(10,102,194,0.1);
+      color: var(--blue);
+      border: 1.5px solid rgba(10,102,194,0.35);
+    }
+
+    .band-blue .skill-tag {
+      background: #ffffff;
+      color: var(--blue-dark);
+      border: 1.5px solid rgba(255,255,255,0.8);
+    }
+
+    /* ── PROOF CALLOUT ───────────────────────────────────── */
+    .proof-callout {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      padding: 1.5rem;
+      border: 1.5px solid rgba(10,102,194,0.25);
+      background: rgba(10,102,194,0.04);
+      border-radius: 2px;
+      max-width: 560px;
+    }
+
+    .proof-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+
+    .proof-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 0.9rem;
+      max-width: 100%;
+    }
+
+    .proof-prompt {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--dark);
+      padding: 0.75rem 1rem;
+      border-radius: 2px;
+      margin-bottom: 0.9rem;
+    }
+
+    .prompt-cursor {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--blue);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .prompt-q {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: #e8edf2;
+      letter-spacing: 0.01em;
+    }
+
+    .proof-sub {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--muted);
+      margin: 0;
+      max-width: 100%;
+    }
+
+    /* ── CTA ─────────────────────────────────────────────── */
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.8rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .band-white .cta-link,
+    .band-gray  .cta-link {
+      background: var(--blue);
+      color: #fff;
+    }
+    .band-white .cta-link:hover,
+    .band-gray  .cta-link:hover { background: var(--blue-dark); }
+
+    .cta-group {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 1.8rem;
+    }
+
+    .cta-link { margin-top: 0; }
+
+    .cta-link-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .band-white .cta-link-outline,
+    .band-gray  .cta-link-outline {
+      background: transparent;
+      color: var(--blue);
+      border: 1.5px solid var(--blue);
+    }
+    .band-white .cta-link-outline:hover,
+    .band-gray  .cta-link-outline:hover {
+      background: rgba(10,102,194,0.07);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2rem 2rem 2.5rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .footer-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: #6b7c8a;
+      line-height: 1.9;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .footer-links a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: #6b7c8a;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--blue); }
+
+    .nav-anchors {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    @media (max-width: 560px) { .nav-anchors { display: none; } }
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 560px) {
+      nav        { padding: 0.85rem 1.25rem; }
+      .inner     { padding: 0 1.25rem; }
+
+      h1         { letter-spacing: -0.02em; }
+      .hero-top  { flex-direction: column; }
+
+      .service-item  { grid-template-columns: 1.6rem 1fr; }
+      .collab-item   { grid-template-columns: 1fr; gap: 0.5rem; }
+      .skills-grid   { grid-template-columns: 1fr; gap: 1.8rem; }
+      .footer-inner  { flex-direction: column; padding: 1.5rem 1.25rem 2rem; }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <span class="status-label">Work in Progress</span>
-
-        <div class="main-text">
-            Al lavoro per dare una nuova forma a questo spazio. <br>
-            <i>E onestamente,</i> <span class="highlight">era anche ora.</span>
-        </div>
-
-        <div class="loader-container">
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
-            </div>
-            <div class="loader-text">Aggiornamento in corso</div>
-        </div>
-
-        <a href="/" class="footer-domain">pasqualecaiazzo.com</a>
+  <nav>
+    <a href="#" class="nav-name">Pasquale Caiazzo</a>
+    <div class="nav-anchors">
+      <a href="#about" class="nav-link">Chi sono</a>
+      <a href="#servizi" class="nav-link">Come lavoro</a>
+      <a href="#collaborazioni" class="nav-link">Impatto</a>
+      <a href="#contatti" class="nav-link">Contatti</a>
     </div>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn ↗</a>
+  </nav>
+
+  <!-- HERO – bianco -->
+  <div class="band band-white">
+    <div class="inner">
+      <header class="hero">
+        <h2 class="hero-role">AI Identity &amp; Knowledge Strategist</h2>
+        <h1>Pasquale<br>Caiazzo</h1>
+        <p class="hero-location">Nomade digitale con base a Torino</p>
+        <hr class="rule">
+        <p class="hero-tagline">
+          In un mondo fatto di dati,<br>
+          chi governa quello che le AI raccontano di te?
+        </p>
+      </header>
+    </div>
+  </div>
+
+  <!-- CHI SONO – grigio -->
+  <div class="band band-gray">
+    <div class="inner">
+      <section id="about" aria-labelledby="about-h">
+        <span class="tag">Chi sono</span>
+        <h2 id="about-h">Identità leggibile, verificabile e autorevole nell'era dell'AI</h2>
+        <p>
+          Aiuto organizzazioni, associazioni e professionisti a rendere chiara, verificabile e leggibile la propria identità nell'ecosistema digitale e nei sistemi AI. Lavoro su <strong>knowledge architecture, AI readiness, structured data</strong> e strategie semantiche per trasformare informazioni sparse in un patrimonio comprensibile, autorevole e rintracciabile.
+        </p>
+        <p>
+          Supporto organizzazioni complesse nella costruzione di <strong>infrastrutture informative solide</strong>, garantendo che la loro identità sia leggibile e autorevole per le persone e per i <strong>modelli linguistici generativi</strong>.
+        </p>
+        <p>
+          Aiuto organizzazioni e professionisti a <strong>nutrire le AI</strong> perché smettano di ignorarli.
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <!-- COME LAVORO – blu scuro -->
+  <div class="band band-blue">
+    <div class="inner">
+      <section id="servizi" aria-labelledby="servizi-h">
+        <span class="tag">Come lavoro</span>
+        <h2 id="servizi-h">Quattro aree di intervento</h2>
+        <div class="services-list">
+
+          <div class="service-item">
+            <span class="service-num">01</span>
+            <div>
+              <h3>Knowledge Architecture</h3>
+              <p>Progettazione di flussi informativi che non si limitano all'automazione, ma che <strong>codificano il valore dell'organizzazione</strong> per renderlo rintracciabile dai modelli linguistici. Significa costruire una struttura di conoscenza (knowledge graph, entità verificabili, dati strutturati) che permette ai sistemi AI di rispondere correttamente quando vengono interrogati su di te. Il risultato è un patrimonio informativo che non dipende da nessun singolo strumento e sopravvive nel tempo.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <span class="service-num">02</span>
+            <div>
+              <h3>AI Readiness &amp; Machine Readability</h3>
+              <p>Trasformo i processi e i dati aziendali in asset informativi certi, eliminando le <strong>allucinazioni digitali</strong> e l'invisibilità algoritmica. Molte organizzazioni esistono online ma restano invisibili (o peggio, rappresentate in modo scorretto) nei sistemi AI. Mappa i punti ciechi informativi, li struttura secondo standard leggibili dai modelli linguistici e costruisce una presenza verificabile che i sistemi possono citare con precisione.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <span class="service-num">03</span>
+            <div>
+              <h3>Semantic Strategy</h3>
+              <p>Strategie basate sull'<strong>integrità del dato e sulla sovranità informativa</strong>, partendo dagli obiettivi strategici e non dai singoli strumenti. Significa decidere cosa vuoi che i sistemi AI sappiano di te, in quale forma, con quale priorità: costruire le infrastrutture perché quella versione della tua identità sia quella che circola. Non è ottimizzazione per i motori di ricerca tradizionali: è governance della propria narrativa nell'ecosistema AI.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <span class="service-num">04</span>
+            <div>
+              <h3>Formazione &amp; Consulenza</h3>
+              <p>Percorsi per trasferire la cultura del dato strutturato all'interno delle organizzazioni, trasformando le informazioni in un <strong>vantaggio competitivo duraturo</strong>. L'obiettivo non è creare dipendenza dal consulente: è costruire la competenza interna perché ogni team sappia come produrre, mantenere e aggiornare una presenza informativa leggibile dai sistemi AI. La formazione tocca sia il layer tecnico che quello strategico.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- COLLABORAZIONI – bianco -->
+  <div class="band band-white">
+    <div class="inner">
+      <section id="collaborazioni" aria-labelledby="collab-h">
+        <span class="tag">Relazioni &amp; Impatto</span>
+        <h2 id="collab-h">Non solo AI</h2>
+        <p>
+          Credo nel potere delle relazioni umane e nel lavoro con realtà che generano impatti positivi sul territorio e sulle persone reali. Queste collaborazioni sono parte integrante del mio modo di vedere il mondo. Credo sia fondamentale dare forma a idee, progetti e visioni.
+        </p>
+        <div class="collab-list" role="list">
+
+          <div class="collab-item" role="listitem">
+            <div>
+              <span class="collab-name">NATworking</span>
+              <span class="collab-role-tag">Core Team · Innovazione Sociale</span>
+            </div>
+            <p class="collab-desc">Punto di incontro tra direzioni personali e strumento di innovazione sociale. Progetti destinati a impattare positivamente sulle persone prima e sui territori poi. Focus su CRM, campagne ADV e strategie digitali per tradurre la visione in strumenti concreti.</p>
+          </div>
+
+          <div class="collab-item" role="listitem">
+            <div>
+              <span class="collab-name">Evermind B Corp</span>
+              <span class="collab-role-tag">Collaborazione · Freelance</span>
+            </div>
+            <p class="collab-desc">Progettazione e implementazione di soluzioni digitali con focus su CRM, processi e strategie. Un contesto che mette al centro l'innovazione responsabile e la costruzione di comunità, dove ogni soluzione tecnologica deve avere senso per le persone prima che per i numeri.</p>
+          </div>
+
+          <div class="collab-item" role="listitem">
+            <div>
+              <span class="collab-name">Guilds42 APS</span>
+              <span class="collab-role-tag">Digital Project Lead · Freelance</span>
+            </div>
+            <p class="collab-desc">Primo miglio nel mondo del digitale, e parte del lavoro ancora oggi per la missione e gli ideali che la muovono. Team di 6-8 persone guidati su progetti digitali reali in Agile, con percorsi hands-on per studenti universitari, professionisti in transizione e donne nel reinserimento professionale.</p>
+          </div>
+
+          <div class="collab-item" role="listitem">
+            <div>
+              <span class="collab-name">ITS NewTechSi Academy</span>
+              <span class="collab-role-tag">Docente · Digital Marketing &amp; AI</span>
+            </div>
+            <p class="collab-desc">Percorso ITS per Tecnici Superiori in AI &amp; Business Management. Casi studio reali, strumenti operativi e una visione aggiornata del mercato digitale portati in aula: dall'advertising ai sistemi CRM applicati al business.</p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- COMPETENZE – blu scuro -->
+  <div class="band band-blue">
+    <div class="inner">
+      <section id="competenze" aria-labelledby="comp-h">
+        <span class="tag">Competenze</span>
+        <h2 id="comp-h">Aree di expertise</h2>
+        <div class="skills-grid">
+
+          <div class="skill-area">
+            <span class="area-label">AI Identity &amp; Knowledge</span>
+            <div class="skill-tags">
+              <span class="skill-tag">Knowledge Architecture</span>
+              <span class="skill-tag">Knowledge Graph</span>
+              <span class="skill-tag">Entity Creation</span>
+              <span class="skill-tag">Structured Data</span>
+              <span class="skill-tag">Schema.org</span>
+            </div>
+          </div>
+
+          <div class="skill-area">
+            <span class="area-label">AI Visibility &amp; Readability</span>
+            <div class="skill-tags">
+              <span class="skill-tag">AI Readiness</span>
+              <span class="skill-tag">AI Visibility</span>
+              <span class="skill-tag">Machine Readability</span>
+              <span class="skill-tag">AI Feeding</span>
+              <span class="skill-tag">Semantic Strategy</span>
+            </div>
+          </div>
+
+          <div class="skill-area">
+            <span class="area-label">Innovazione &amp; Impatto</span>
+            <div class="skill-tags">
+              <span class="skill-tag">Innovazione sociale</span>
+              <span class="skill-tag">Non profit</span>
+              <span class="skill-tag">Trasformazione digitale</span>
+              <span class="skill-tag">Formazione professionale</span>
+            </div>
+          </div>
+
+          <div class="skill-area">
+            <span class="area-label">Consulenza &amp; Facilitazione</span>
+            <div class="skill-tags">
+              <span class="skill-tag">Consulenza strategica</span>
+              <span class="skill-tag">Facilitazione</span>
+              <span class="skill-tag">Agile</span>
+              <span class="skill-tag">Project Control</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- CONTATTI – grigio -->
+  <div class="band band-gray">
+    <div class="inner">
+      <section id="contatti" aria-labelledby="cta-h">
+        <span class="tag">Contatti</span>
+        <h2 id="cta-h">Parliamo</h2>
+        <p>
+          Se quello che hai letto ha senso per il tuo contesto, prenota una chiamata di 30 minuti o scrivimi direttamente su LinkedIn.
+        </p>
+        <div class="cta-group">
+          <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-link">
+            Prenota una chiamata ↗
+          </a>
+          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="cta-link-outline">
+            LinkedIn ↗
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- FOOTER – scuro -->
+  <footer class="band band-dark">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        Pasquale Caiazzo<br>
+        Nomade digitale con base a Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
