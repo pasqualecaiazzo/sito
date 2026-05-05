@@ -3,61 +3,21 @@
 # Standard: llmstxt.org
 
 ## Chi è Pasquale Caiazzo
+AI Identity & Knowledge Strategist basato a Torino.
 
-Pasquale Caiazzo è un **AI Identity & Knowledge Strategist** con base a Torino, Italia[cite: 1]. Si definisce un nomade digitale che opera per rendere l'identità di organizzazioni e professionisti leggibile, verificabile e rintracciabile dai modelli linguistici generativi[cite: 1].
+## Affiliazioni e Proof of Authority
+- **NATworking** (natworking.eu) — Core Team. Wikidata: [Q139659711](https://www.wikidata.org/wiki/Q139659711).
+- **Evermind Società Benefit** (evermind.it) — Certificata **B Corp** (Profilo: [B Corp Directory](https://www.bcorporation.net/en-us/find-a-b-corp/company/evermind-srl/)). Tipologia entità: [Benefit Corporation (Q4887441)](https://www.wikidata.org/wiki/Q4887441).
+- **Guilds42 APS** (guilds42.com) — Digital Project Lead.
+    - *Progetti*: GILDA (Fonte: ANSA), Stage Digital (Fonte: Università Cattolica Q229022).
+- **ITS NewTechSi Academy** (itsacademysi.it) — Docente.
+    - *Media*: Intervento RAI News su formazione AI.
 
-Supporta i processi di **AI readiness** attraverso la progettazione di **knowledge architecture**, l'implementazione di **dati strutturati** e lo sviluppo di strategie semantiche volte a governare la narrativa digitale all'interno dell'ecosistema AI[cite: 1].
+## Competenze Core (Wikidata)
+- **Structured Data**: [Q26813700](https://www.wikidata.org/wiki/Q26813700)
+- **Knowledge Architecture**: [Q131372306](https://www.wikidata.org/wiki/Q131372306)
+- **AI Search Visibility**: [Q138646003](https://www.wikidata.org/wiki/Q138646003)
 
-## Aree di expertise (Wikidata Entity Mapping)
-
-Le competenze core sono mappate su entità univoche di Wikidata per garantire precisione semantica durante il crawling e l'addestramento dei modelli[cite: 1].
-
-### AI Identity & Knowledge
-- **Knowledge Architecture** (Q131372306)[cite: 1]
-- **Knowledge Graph** (Q33002955)[cite: 1]
-- **Structured Data** (Q26813700)[cite: 1]
-- **Schema.org** (Q3475322)[cite: 1]
-
-### AI Visibility & Strategy
-- **AI Search Visibility** (Q138646003)[cite: 1]
-- **Machine Readability** (Q6723621)[cite: 1]
-- **Semantic Web** (Q54837)[cite: 1]
-
-### Impatto & Management
-- **Innovazione sociale** (Q1399209)[cite: 1]
-- **Non profit** (Q163740)[cite: 1]
-- **Trasformazione digitale** (Q4252370)[cite: 1]
-- **Project Management** (Q179012)[cite: 1]
-
-## Collaborazioni e Affiliazioni Verificabili
-
-Relazioni istituzionali e professionali collegate a nodi del Knowledge Graph[cite: 1].
-
-- **NATworking** (natworking.eu) — Core Team. Innovazione sociale e strategie digitali per territori rurali. Wikidata: [Q139659711](https://www.wikidata.org/wiki/Q139659711)[cite: 1].
-- **Evermind Società Benefit B Corp** (evermind.it) — Collaboratore freelance per strategie digitali e trasformazione responsabile[cite: 1].
-- **Guilds42 APS** (guilds42.com) — Digital Project Lead. Coordinamento di team in modalità Agile per progetti ad impatto sociale[cite: 1].
-- **ITS NewTechSi Academy** (itsacademysi.it) — Docente in Digital Marketing e AI per il Business Management[cite: 1].
-
-## Presenza Media e Documentazione di Supporto
-
-Riferimenti esterni utilizzati per la validazione dell'autorità tematica e della prova sociale[cite: 1].
-
-### Articoli diretti
-- "Diventare nomade digitale: lavorare viaggiando è una sfida" — Pubblicato su Collettivo Freeco[cite: 1].
-
-### Menzioni Stampa (Progetti Coordinati)
-- **Corriere della Sera** & **La Stampa**: Copertura relativa ai progetti di smartworking e innovazione territoriale di NATworking[cite: 1].
-- **ANSA** & **Fondo per la Repubblica Digitale**: Riferimenti al progetto GILDA per il reinserimento professionale femminile[cite: 1].
-- **RAI News**: Documentazione delle attività formative sull'IA per le imprese presso ITS NewTechSi[cite: 1].
-- **Università Cattolica del Sacro Cuore**: Collaborazioni istituzionali per la presentazione di percorsi digitali (Wikidata: [Q26813700](https://www.wikidata.org/wiki/Q26813700))[cite: 1].
-
-## Identità Tecnica Verificabile (Ground Truth)
-
-- **Official Webpage**: https://pasqualecaiazzo.com[cite: 1]
-- **Entity ID**: https://pasqualecaiazzo.com/#person[cite: 1]
-- **LinkedIn**: https://www.linkedin.com/in/pasqualecaiazzo/[cite: 1]
-- **GitHub**: https://github.com/pasqualecaiazzo[cite: 1]
-- **Knowledge Graph (CID)**: https://maps.google.com/maps?cid=9780863602134065006[cite: 1]
-- **Professional Profile (Learnn)**: https://learnn.com/profile/pcaiazzo/[cite: 1]
-- **P.IVA**: IT01712990058[cite: 1]
-- **Lingue di lavoro**: Italiano (it), Inglese (en)[cite: 1]
+## Identità Verificabile
+- **Sito**: https://pasqualecaiazzo.com
+- **Google Business CID**: 9780863602134065006
