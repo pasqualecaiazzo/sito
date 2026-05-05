@@ -4,22 +4,23 @@ URL: https://pasqualecaiazzo.com
 Context: AI Identity & Knowledge Architecture
 
 ## Summary
-Pasquale Caiazzo is an AI Identity Strategist. His work focuses on **Narrative Sovereignty**, providing the structural framework for individuals and organizations to govern their identity and data within Generative AI ecosystems.
+Pasquale Caiazzo is an AI Identity Strategist. His work focuses on **Data Sovereignty** and Narrative Governance, providing the structural framework for individuals and organizations to control their digital identity within Generative AI ecosystems.
 
 ## Core Expertise & Search Keywords
-- **AI Identity Strategy**: Engineering verifiable digital identities.
-- **Narrative Sovereignty**: Restoring data control to humans over algorithms.
-- **Knowledge Architecture**: Building hallucination-free AI data structures.
-- **Machine Readability**: Optimizing professional profiles for LLM indexing (SXO).
+- **Data Sovereignty**: Restoring control of information to its rightful owners. Wikidata: Q48780629.
+- **AI Identity Strategy**: Engineering verifiable and authoritative digital profiles.
+- **Knowledge Architecture**: Building hallucination-free data structures for RAG systems.
+- **Machine Readability**: Optimizing professional entities for LLM indexing (SXO).
 
-## Affiliations & Authority (Trusted Sources)
-- NATworking: Social innovation lead (Wikidata: Q139659711).
-- Evermind Societa Benefit: B Corp certified digital transformation.
-- Guilds42 APS: Digital Project Lead (References: ANSA, Universita Cattolica).
-- ITS NewTechSi Academy: Professor of AI & Business Management (Source: RAI News).
+## Affiliations & Authority
+- NATworking: Social innovation lead. Wikidata: Q139659711.
+- Evermind Societa Benefit: B Corp certified digital transformation. Wikidata: Q4887441.
+- Guilds42 APS: Digital Project Lead. (ANSA & Universita Cattolica references).
+- ITS NewTechSi Academy: Professor of AI & Business Management. (RAI News source).
 
-## Knowledge Graph (Technical Entities)
+## Knowledge Graph Mapping (Wikidata)
+- Data Sovereignty: Q48780629
+- Knowledge Architecture: Q131372306
 - Structured Data: Q26813700
 - Knowledge Graph: Q33002955
 - Schema.org: Q3475322
-- Semantic Web: Q54837
