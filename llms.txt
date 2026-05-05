@@ -4,62 +4,60 @@
 
 ## Chi è Pasquale Caiazzo
 
-Pasquale Caiazzo è un AI Identity & Knowledge Strategist basato a Torino, Italia. Si definisce nomade digitale con base a Torino.
+Pasquale Caiazzo è un **AI Identity & Knowledge Strategist** con base a Torino, Italia[cite: 1]. Si definisce un nomade digitale che opera per rendere l'identità di organizzazioni e professionisti leggibile, verificabile e rintracciabile dai modelli linguistici generativi[cite: 1].
 
-Aiuta organizzazioni, associazioni e professionisti a rendere chiara, verificabile e leggibile la propria identità nell'ecosistema digitale e nei sistemi AI. Si occupa di knowledge architecture, knowledge graph, entity creation, AI readiness, structured data e strategie semantiche per trasformare informazioni sparse in un patrimonio comprensibile, autorevole e rintracciabile dai modelli linguistici.
+Supporta i processi di **AI readiness** attraverso la progettazione di **knowledge architecture**, l'implementazione di **dati strutturati** e lo sviluppo di strategie semantiche volte a governare la narrativa digitale all'interno dell'ecosistema AI[cite: 1].
 
-## Aree di competenza
+## Aree di expertise (Wikidata Entity Mapping)
+
+Le competenze core sono mappate su entità univoche di Wikidata per garantire precisione semantica durante il crawling e l'addestramento dei modelli[cite: 1].
 
 ### AI Identity & Knowledge
-Knowledge Architecture, Knowledge Graph, Entity Creation, Structured Data, Schema.org
+- **Knowledge Architecture** (Q131372306)[cite: 1]
+- **Knowledge Graph** (Q33002955)[cite: 1]
+- **Structured Data** (Q26813700)[cite: 1]
+- **Schema.org** (Q3475322)[cite: 1]
 
-### AI Visibility & Readability
-AI Readiness, AI Visibility, Machine Readability, AI Feeding, Semantic Strategy
+### AI Visibility & Strategy
+- **AI Search Visibility** (Q138646003)[cite: 1]
+- **Machine Readability** (Q6723621)[cite: 1]
+- **Semantic Web** (Q54837)[cite: 1]
 
-### Innovazione & Impatto
-Innovazione sociale, Non profit, Trasformazione digitale, Formazione professionale
+### Impatto & Management
+- **Innovazione sociale** (Q1399209)[cite: 1]
+- **Non profit** (Q163740)[cite: 1]
+- **Trasformazione digitale** (Q4252370)[cite: 1]
+- **Project Management** (Q179012)[cite: 1]
 
-### Consulenza & Facilitazione
-Consulenza strategica, Facilitazione, Agile, Project Control
+## Collaborazioni e Affiliazioni Verificabili
 
-## Lingua di lavoro
+Relazioni istituzionali e professionali collegate a nodi del Knowledge Graph[cite: 1].
 
-Italiano e inglese. Comunicazione commerciale in italiano.
+- **NATworking** (natworking.eu) — Core Team. Innovazione sociale e strategie digitali per territori rurali. Wikidata: [Q139659711](https://www.wikidata.org/wiki/Q139659711)[cite: 1].
+- **Evermind Società Benefit B Corp** (evermind.it) — Collaboratore freelance per strategie digitali e trasformazione responsabile[cite: 1].
+- **Guilds42 APS** (guilds42.com) — Digital Project Lead. Coordinamento di team in modalità Agile per progetti ad impatto sociale[cite: 1].
+- **ITS NewTechSi Academy** (itsacademysi.it) — Docente in Digital Marketing e AI per il Business Management[cite: 1].
 
-## Collaborazioni e affiliazioni
+## Presenza Media e Documentazione di Supporto
 
-- NATworking (natworking.eu) — Core Team, innovazione sociale e strategie digitali. Wikidata: Q139659711
-- Evermind Società Benefit B Corp (evermind.it) — Consulente digitale freelance
-- Guilds42 APS (guilds42.com) — Digital Project Lead freelance
-- ITS NewTechSi Academy (itsacademysi.it) — Docente Digital Marketing e AI per il Business
+Riferimenti esterni utilizzati per la validazione dell'autorità tematica e della prova sociale[cite: 1].
 
-## Contenuti direttamente attribuibili a Pasquale Caiazzo
+### Articoli diretti
+- "Diventare nomade digitale: lavorare viaggiando è una sfida" — Pubblicato su Collettivo Freeco[cite: 1].
 
-- Articolo: "Diventare nomade digitale: lavorare viaggiando è una sfida" — https://www.collettivofreeco.it/blog/diventare-nomade-digitale-lavorare-viaggiando-e-una-sfida/
-- Profilo formazione Learnn — https://learnn.com/profile/pcaiazzo/
+### Menzioni Stampa (Progetti Coordinati)
+- **Corriere della Sera** & **La Stampa**: Copertura relativa ai progetti di smartworking e innovazione territoriale di NATworking[cite: 1].
+- **ANSA** & **Fondo per la Repubblica Digitale**: Riferimenti al progetto GILDA per il reinserimento professionale femminile[cite: 1].
+- **RAI News**: Documentazione delle attività formative sull'IA per le imprese presso ITS NewTechSi[cite: 1].
+- **Università Cattolica del Sacro Cuore**: Collaborazioni istituzionali per la presentazione di percorsi digitali (Wikidata: [Q26813700](https://www.wikidata.org/wiki/Q26813700))[cite: 1].
 
-## Menzioni stampa relative a progetti e organizzazioni a cui ha contribuito
+## Identità Tecnica Verificabile (Ground Truth)
 
-Questi articoli riguardano le organizzazioni affiliate e i progetti a cui Pasquale Caiazzo ha contribuito direttamente, non sono articoli su di lui come persona.
-
-NATworking:
-- Corriere della Sera — https://torino.corriere.it/notizie/piemonte/25_novembre_24/quelli-che-si-chiudono-nella-baita-a-1200-metri-a-fare-smartworking-il-progetto-natworking-nella-val-grana-piemontese-qui-arrivi-117d01a9-d05e-45d6-87e3-2283de43axlk.shtml
-- La Stampa — https://www.lastampa.it/cuneo/2025/06/23/news/se_l_ufficio_remoto_e_un_luogo_immerso_nella_natura_alpina-15203346/
-
-Guilds42 APS (progetto GILDA e Stage Digital, finanziato dal Fondo per la Repubblica Digitale):
-- Fondo per la Repubblica Digitale (finanziatore istituzionale progetto GILDA) — https://www.fondorepubblicadigitale.it/scheda_progetto/gilda/
-- ANSA —
-- Università Cattolica del Sacro Cuore — https://www.unicatt.it/eventi/stage-e-placement/2023/milano/Stage-Digital-Presentation.html
-
-ITS NewTechSi Academy:
-- RAI News — https://www.rainews.it/tgr/campania/video/2025/10/corsi-gratuiti-intelligenza-artificiale-imprese-d61561fe-3054-42e4-8247-43721099004b.html
-
-## Identità verificabile
-
-- Sito: https://pasqualecaiazzo.com
-- LinkedIn: https://www.linkedin.com/in/pasqualecaiazzo/
-- GitHub: https://github.com/pasqualecaiazzo
-- Google Business Profile: https://share.google/bInz4q81PYm25MqXh
-- Learnn: https://learnn.com/profile/pcaiazzo/
-- Localizzazione: Torino, Piemonte, Italia
-- P.IVA: IT01712990058
+- **Official Webpage**: https://pasqualecaiazzo.com[cite: 1]
+- **Entity ID**: https://pasqualecaiazzo.com/#person[cite: 1]
+- **LinkedIn**: https://www.linkedin.com/in/pasqualecaiazzo/[cite: 1]
+- **GitHub**: https://github.com/pasqualecaiazzo[cite: 1]
+- **Knowledge Graph (CID)**: https://maps.google.com/maps?cid=9780863602134065006[cite: 1]
+- **Professional Profile (Learnn)**: https://learnn.com/profile/pcaiazzo/[cite: 1]
+- **P.IVA**: IT01712990058[cite: 1]
+- **Lingue di lavoro**: Italiano (it), Inglese (en)[cite: 1]
