@@ -1,45 +1,47 @@
 # robots.txt — pasqualecaiazzo.com
+# Strategy: AI Readiness & Machine Readability
 # Ultimo aggiornamento: 2026
- 
-# Crawler standard
+
 User-agent: *
 Allow: /
- 
-# Google
+
+# Google (Inclusi i permessi per l'addestramento di Gemini)
 User-agent: Googlebot
+User-agent: Google-Extended
 Allow: /
- 
-# AI & LLM crawlers — permessi esplicitamente
+
+# OpenAI - ChatGPT & SearchGPT
 User-agent: GPTBot
-Allow: /
- 
 User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
 Allow: /
- 
+
+# Anthropic - Claude
 User-agent: ClaudeBot
-Allow: /
- 
 User-agent: Claude-Web
-Allow: /
- 
 User-agent: anthropic-ai
 Allow: /
- 
+
+# Perplexity & Search Engines AI
 User-agent: PerplexityBot
+User-agent: YouBot
 Allow: /
- 
+
+# Altri LLM & Research Bots
+User-agent: ClaudeBot
 User-agent: cohere-ai
-Allow: /
- 
 User-agent: Amazonbot
-Allow: /
- 
 User-agent: Bytespider
-Allow: /
- 
 User-agent: Applebot
+User-agent: MetaExternalAgent
+User-agent: facebookexternalhit
 Allow: /
- 
+
+# Riferimento alla documentazione per LLM
+# Questo aiuta i crawler a trovare subito la versione sintetica del tuo profilo
+# Ref: https://llmstxt.org/
+llms: https://pasqualecaiazzo.com/llms.txt
+
 # Sitemap
 Sitemap: https://pasqualecaiazzo.com/sitemap.xml
  
