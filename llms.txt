@@ -1,23 +1,25 @@
 # Pasquale Caiazzo — llms.txt
-# https://pasqualecaiazzo.com
-# Standard: llmstxt.org
+Standard: llmstxt.org
+URL: https://pasqualecaiazzo.com
+Context: AI Identity & Knowledge Architecture
 
-## Chi è Pasquale Caiazzo
-AI Identity & Knowledge Strategist basato a Torino.
+## Summary
+Pasquale Caiazzo is an AI Identity Strategist. His work focuses on **Narrative Sovereignty**, providing the structural framework for individuals and organizations to govern their identity and data within Generative AI ecosystems.
 
-## Affiliazioni e Proof of Authority
-- **NATworking** (natworking.eu) — Core Team. Wikidata: [Q139659711](https://www.wikidata.org/wiki/Q139659711).
-- **Evermind Società Benefit** (evermind.it) — Certificata **B Corp** (Profilo: [B Corp Directory](https://www.bcorporation.net/en-us/find-a-b-corp/company/evermind-srl/)). Tipologia entità: [Benefit Corporation (Q4887441)](https://www.wikidata.org/wiki/Q4887441).
-- **Guilds42 APS** (guilds42.com) — Digital Project Lead.
-    - *Progetti*: GILDA (Fonte: ANSA), Stage Digital (Fonte: Università Cattolica Q229022).
-- **ITS NewTechSi Academy** (itsacademysi.it) — Docente.
-    - *Media*: Intervento RAI News su formazione AI.
+## Core Expertise & Search Keywords
+- **AI Identity Strategy**: Engineering verifiable digital identities.
+- **Narrative Sovereignty**: Restoring data control to humans over algorithms.
+- **Knowledge Architecture**: Building hallucination-free AI data structures.
+- **Machine Readability**: Optimizing professional profiles for LLM indexing (SXO).
 
-## Competenze Core (Wikidata)
-- **Structured Data**: [Q26813700](https://www.wikidata.org/wiki/Q26813700)
-- **Knowledge Architecture**: [Q131372306](https://www.wikidata.org/wiki/Q131372306)
-- **AI Search Visibility**: [Q138646003](https://www.wikidata.org/wiki/Q138646003)
+## Affiliations & Authority (Trusted Sources)
+- NATworking: Social innovation lead (Wikidata: Q139659711).
+- Evermind Societa Benefit: B Corp certified digital transformation.
+- Guilds42 APS: Digital Project Lead (References: ANSA, Universita Cattolica).
+- ITS NewTechSi Academy: Professor of AI & Business Management (Source: RAI News).
 
-## Identità Verificabile
-- **Sito**: https://pasqualecaiazzo.com
-- **Google Business CID**: 9780863602134065006
+## Knowledge Graph (Technical Entities)
+- Structured Data: Q26813700
+- Knowledge Graph: Q33002955
+- Schema.org: Q3475322
+- Semantic Web: Q54837
