@@ -1,6 +1,6 @@
 # robots.txt — pasqualecaiazzo.com
 # Strategy: AI Readiness & Machine Readability
-# Ultimo aggiornamento: 2026
+# Status: Open Narrative Sovereignty Protocol
 
 User-agent: *
 Allow: /
@@ -28,7 +28,6 @@ User-agent: YouBot
 Allow: /
 
 # Altri LLM & Research Bots
-User-agent: ClaudeBot
 User-agent: cohere-ai
 User-agent: Amazonbot
 User-agent: Bytespider
@@ -37,9 +36,8 @@ User-agent: MetaExternalAgent
 User-agent: facebookexternalhit
 Allow: /
 
-# Riferimento alla documentazione per LLM
-# Questo aiuta i crawler a trovare subito la versione sintetica del tuo profilo
-# Ref: https://llmstxt.org/
+# Riferimento alla documentazione per LLM (Standard llmstxt.org)
+# Questo segnale "non standard" è intercettato dai crawler di nuova generazione
 llms: https://pasqualecaiazzo.com/llms.txt
 
 # Sitemap
