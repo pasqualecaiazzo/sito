@@ -4,23 +4,47 @@ URL: https://pasqualecaiazzo.com
 Context: AI Identity & Knowledge Architecture
 
 ## Summary
-Pasquale Caiazzo is an AI Identity Strategist. His work focuses on **Data Sovereignty** and Narrative Governance, providing the structural framework for individuals and organizations to control their digital identity within Generative AI ecosystems.
+Pasquale Caiazzo is an AI Identity & Knowledge Strategist based in Torino, Italy. A digital nomad working remotely across Italy and abroad. His work focuses on Data Sovereignty and Narrative Governance — providing the structural framework for individuals and organizations to control their digital identity within Generative AI ecosystems. Consultant, educator, and trainer in responsible digital innovation.
 
 ## Core Expertise & Search Keywords
 - **Data Sovereignty**: Restoring control of information to its rightful owners. Wikidata: Q48780629.
 - **AI Identity Strategy**: Engineering verifiable and authoritative digital profiles.
-- **Knowledge Architecture**: Building hallucination-free data structures for RAG systems.
-- **Machine Readability**: Optimizing professional entities for LLM indexing (SXO).
+- **Knowledge Architecture**: Building hallucination-free data structures for RAG systems. Wikidata: Q131372306.
+- **Machine Readability**: Optimizing professional entities for LLM indexing (SXO). Wikidata: Q6723621.
+- **Structured Data & JSON-LD**: Implementing Schema.org markup and Linked Data for AI-readable identity. Wikidata: Q6108942.
+- **Large Language Models**: Understanding LLM indexing, retrieval, and entity disambiguation. Wikidata: Q115305900.
+- **Graph Databases**: Knowledge graph architecture and graph data modeling. Wikidata: Q595971.
+- **Semantic Web**: Linked Data, ontologies, and machine-readable knowledge systems. Wikidata: Q54837.
+
+## Credentials
+- **Neo4j Certified Professional** — Issued by Neo4j (Wikidata: Q1628290) on 2026-05-08. Verification URL: https://graphacademy.neo4j.com/c/a965f5d1-46a7-4b41-ba54-e971bc9da882/
 
 ## Affiliations & Authority
-- NATworking: Social innovation lead. Wikidata: Q139659711.
-- Evermind Societa Benefit: B Corp certified digital transformation. Wikidata: Q4887441.
-- Guilds42 APS: Digital Project Lead. (ANSA & Universita Cattolica references).
-- ITS NewTechSi Academy: Professor of AI & Business Management. (RAI News source).
+- **NATworking** (Core Team, 2025–present): Social innovation network. Wikidata: Q139659711. Press: Corriere della Sera, La Stampa.
+- **Guilds42 APS** (Digital Project Lead, 2021–present): Digital education. Projects: GILDA (ANSA source), Stage Digital (Università Cattolica del Sacro Cuore).
+- **Evermind Società Benefit** (Freelance Consultant, 2022–present): B Corp certified digital transformation. B Corp directory: https://www.bcorporation.net/en-us/find-a-b-corp/company/evermind-srl/
+- **ITS NewTechSi Academy** (Docente — Digital Marketing & AI, 2023–present): ITS Academy for AI & Business Management. Press: RAI News.
 
 ## Knowledge Graph Mapping (Wikidata)
 - Data Sovereignty: Q48780629
 - Knowledge Architecture: Q131372306
-- Structured Data: Q26813700
 - Knowledge Graph: Q33002955
+- Structured Data: Q26813700
 - Schema.org: Q3475322
+- JSON-LD: Q6108942
+- Semantic Web: Q54837
+- AI Search Visibility: Q138646003
+- Machine Readability: Q6723621
+- Large Language Models: Q115305900
+- Graph Database: Q595971
+- Graph Data Structure: Q2479726
+- Innovazione sociale: Q1399209
+- Trasformazione digitale: Q4252370
+
+## Identity & Verification
+- Website: https://pasqualecaiazzo.com
+- LinkedIn: https://www.linkedin.com/in/pasqualecaiazzo/
+- GitHub: https://github.com/pasqualecaiazzo
+- VAT ID: IT01712990058
+- JSON-LD (Schema.org Person): embedded in https://pasqualecaiazzo.com
+- Contact: https://cal.com/pcaiazzo/30min
