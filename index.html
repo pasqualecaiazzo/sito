@@ -19,140 +19,185 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://pasqualecaiazzo.com/#person",
-  "mainEntityOfPage": "https://pasqualecaiazzo.com",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://pasqualecaiazzo.com",
+    "name": "Pasquale Caiazzo — AI Identity & Knowledge Strategist",
+    "description": "AI Identity & Knowledge Strategist con base a Torino. Specializzato in knowledge architecture, structured data e sovranità del dato.",
+    "inLanguage": "it",
+    "dateModified": "2026-05-08"
+  },
   "publishingPrinciples": "https://pasqualecaiazzo.com/llms.txt",
   "name": "Pasquale Caiazzo",
   "givenName": "Pasquale",
   "familyName": "Caiazzo",
   "jobTitle": "AI Identity & Knowledge Strategist",
-  "description": "AI Identity Strategist esperto in sovranità del dato (Q48780629) e knowledge architecture. Aiuta organizzazioni e professionisti a governare la propria identità digitale nelle AI, garantendo che siano rintracciabili, autorevoli e padroni della propria narrativa.",
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "AI Identity & Knowledge Strategist",
+    "occupationLocation": {
+      "@type": "Country",
+      "name": "Italy"
+    },
+    "skills": "Knowledge Architecture, Structured Data, Semantic Web, AI Readiness",
+    "sameAs": "https://www.wikidata.org/wiki/Q131372306"
+  },
+  "description": "AI Identity & Knowledge Strategist con base a Torino. Specializzato in knowledge architecture, structured data e sovranità del dato. Aiuta organizzazioni e professionisti a costruire un'identità digitale verificabile, autorevole e leggibile dai modelli linguistici generativi. Docente, consulente e formatore in innovazione digitale responsabile.",
+  "nationality": {
+    "@type": "Country",
+    "name": "Italy",
+    "sameAs": "https://www.wikidata.org/wiki/Q38"
+  },
+  "knowsLanguage": ["it", "en"],
   "url": "https://pasqualecaiazzo.com",
   "sameAs": [
     "https://www.linkedin.com/in/pasqualecaiazzo/",
     "https://github.com/pasqualecaiazzo",
-    "https://learnn.com/profile/pcaiazzo/",
     "https://maps.google.com/maps?cid=9780863602134065006"
   ],
-  "knowsLanguage": ["it", "en"],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Torino",
     "addressRegion": "Piemonte",
     "addressCountry": "IT"
   },
-  "affiliation": [
-    {
-      "@type": "Organization",
-      "@id": "https://natworking.eu/#organization",
-      "name": "NATworking",
-      "url": "https://natworking.eu",
-      "sameAs": "https://www.wikidata.org/wiki/Q139659711",
-      "description": "Rete per l'innovazione sociale e strategie digitali per persone e territori",
-      "subjectOf": [
-        {
-          "@type": "NewsArticle",
-          "headline": "Quelli che si chiudono nella baita a 1200 metri a fare smartworking",
-          "url": "https://torino.corriere.it/notizie/piemonte/25_novembre_24/quelli-che-si-chiudono-nella-baita-a-1200-metri-a-fare-smartworking-il-progetto-natworking-nella-val-grana-piemontese-qui-arrivi-117d01a9-d05e-45d6-87e3-2283de43axlk.shtml",
-          "publisher": { "@type": "Organization", "name": "Corriere della Sera" }
-        },
-        {
-          "@type": "NewsArticle",
-          "headline": "Se l'ufficio remoto è un luogo immerso nella natura alpina",
-          "url": "https://www.lastampa.it/cuneo/2025/06/23/news/se_l_ufficio_remoto_e_un_luogo_immerso_nella_natura_alpina-15203346/",
-          "publisher": { "@type": "Organization", "name": "La Stampa" }
-        }
-      ]
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.evermind.it/#organization",
-      "name": "Evermind Società Benefit",
-      "url": "https://www.evermind.it",
-      "sameAs": "https://www.bcorporation.net/en-us/find-a-b-corp/company/evermind-srl/",
-      "additionalType": "https://www.wikidata.org/wiki/Q4887441",
-      "description": "Società Benefit B Corp specializzata in branding e trasformazione digitale responsabile"
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://guilds42.com/#organization",
-      "name": "Guilds42 APS",
-      "url": "https://guilds42.com",
-      "subjectOf": [
-        {
-          "@type": "NewsArticle",
-          "headline": "Progetto GILDA per formare giovani donne in campo digitale",
-          "url": "https://www.ansa.it/sicilia/notizie/2023/10/30/progetto-gilda-per-formare-giovani-donne-in-campo-digitale_38af6a45-6e37-4d5c-af15-068ee9bfa0f6.html",
-          "publisher": { "@type": "Organization", "name": "ANSA" }
-        },
-        {
-          "@type": "WebPage",
-          "name": "Stage Digital Presentation — Università Cattolica del Sacro Cuore",
-          "url": "https://www.unicatt.it/eventi/stage-e-placement/2023/milano/Stage-Digital-Presentation.html",
-          "about": { "@id": "https://www.wikidata.org/wiki/Q229022" },
-          "publisher": { "@type": "EducationalOrganization", "name": "Università Cattolica del Sacro Cuore" }
-        }
-      ]
-    },
-    {
-      "@type": "EducationalOrganization",
-      "@id": "https://itsacademysi.it/#organization",
-      "name": "ITS NewTechSi Academy",
-      "url": "https://itsacademysi.it",
-      "subjectOf": [
-        {
-          "@type": "NewsArticle",
-          "headline": "Corsi gratuiti intelligenza artificiale imprese",
-          "url": "https://www.rainews.it/tgr/campania/video/2025/10/corsi-gratuiti-intelligenza-artificiale-imprese-d61561fe-3054-42e4-8247-43721099004b.html",
-          "publisher": { "@type": "Organization", "name": "RAI News" }
-        }
-      ]
-    }
-  ],
-  "author": [
-    {
-      "@type": "Article",
-      "headline": "Diventare nomade digitale: lavorare viaggiando è una sfida",
-      "url": "https://www.collettivofreeco.it/blog/diventare-nomade-digitale-lavorare-viaggiando-e-una-sfida/",
-      "publisher": { "@type": "Organization", "name": "Collettivo Freeco" }
-    }
-  ],
-  "subjectOf": [
-    {
-      "@type": "SocialMediaPosting",
-      "headline": "In aula Pasquale Caiazzo — corso Digital Strategy ITS",
-      "url": "https://www.linkedin.com/posts/soniachina_raccontidiits-its-itsacademy-ugcPost-7159262431016304640-QnK0",
-      "datePublished": "2024-02-02T12:00:00+01:00",
-      "author": { 
-        "@type": "Person", 
-        "name": "Sonia China",
-        "url": "https://www.linkedin.com/in/soniachina/"
-      }
-    },
-    {
-      "@type": "SocialMediaPosting",
-      "headline": "Conclusione del Progetto GILDA — Pasquale Caiazzo Mastro Bottega",
-      "url": "https://www.linkedin.com/posts/progettogilda-nexxtone-leadgeneration-share-7243952457146351616-FX9S",
-      "datePublished": "2024-09-24T12:00:00+02:00",
-      "author": { 
-        "@type": "Organization", 
-        "name": "Nexxt One",
-        "url": "https://www.linkedin.com/company/nexxtone/"
-      }
-    }
-  ],
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Torino, Italia",
+    "description": "Base operativa principale. Nomade digitale — lavora da remoto in Italia e all'estero."
+  },
+  "vatID": "IT01712990058",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "business inquiries",
+    "url": "https://cal.com/pcaiazzo/30min",
+    "availableLanguage": ["it", "en"]
+  },
   "knowsAbout": [
     { "@type": "DefinedTerm", "name": "Sovranità del dato", "sameAs": "https://www.wikidata.org/wiki/Q48780629" },
     { "@type": "DefinedTerm", "name": "Knowledge Architecture", "sameAs": "https://www.wikidata.org/wiki/Q131372306" },
     { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
     { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
     { "@type": "DefinedTerm", "name": "Schema.org", "sameAs": "https://www.wikidata.org/wiki/Q3475322" },
+    { "@type": "DefinedTerm", "name": "JSON-LD", "sameAs": "https://www.wikidata.org/wiki/Q6108942" },
+    { "@type": "DefinedTerm", "name": "Semantic Web", "sameAs": "https://www.wikidata.org/wiki/Q54837" },
     { "@type": "DefinedTerm", "name": "AI Search Visibility", "sameAs": "https://www.wikidata.org/wiki/Q138646003" },
     { "@type": "DefinedTerm", "name": "Machine Readability", "sameAs": "https://www.wikidata.org/wiki/Q6723621" },
-    { "@type": "DefinedTerm", "name": "Semantic Web", "sameAs": "https://www.wikidata.org/wiki/Q54837" },
+    { "@type": "DefinedTerm", "name": "Large Language Models", "sameAs": "https://www.wikidata.org/wiki/Q115305900" },
+    { "@type": "DefinedTerm", "name": "Graph Database", "sameAs": "https://www.wikidata.org/wiki/Q595971" },
+    { "@type": "DefinedTerm", "name": "Graph Data Structure", "sameAs": "https://www.wikidata.org/wiki/Q2479726" },
     { "@type": "DefinedTerm", "name": "Innovazione sociale", "sameAs": "https://www.wikidata.org/wiki/Q1399209" },
-    { "@type": "DefinedTerm", "name": "Non profit", "sameAs": "https://www.wikidata.org/wiki/Q163740" },
-    { "@type": "DefinedTerm", "name": "Trasformazione digitale", "sameAs": "https://www.wikidata.org/wiki/Q4252370" },
-    { "@type": "DefinedTerm", "name": "Project Management", "sameAs": "https://www.wikidata.org/wiki/Q179012" }
+    { "@type": "DefinedTerm", "name": "Trasformazione digitale", "sameAs": "https://www.wikidata.org/wiki/Q4252370" }
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Neo4j Certified Professional",
+      "url": "https://graphacademy.neo4j.com/c/a965f5d1-46a7-4b41-ba54-e971bc9da882/",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Neo4j",
+        "url": "https://neo4j.com",
+        "sameAs": "https://www.wikidata.org/wiki/Q1628290"
+      },
+      "dateCreated": "2026-05-08"
+    }
+  ],
+  "affiliation": [
+    {
+      "@type": "OrganizationRole",
+      "roleName": "Core Team",
+      "startDate": "2025",
+      "affiliatedOrganization": {
+        "@type": "Organization",
+        "@id": "https://natworking.eu/#organization",
+        "name": "NATworking",
+        "url": "https://natworking.eu",
+        "sameAs": "https://www.wikidata.org/wiki/Q139659711",
+        "description": "Rete per l'innovazione sociale e strategie digitali per persone e territori",
+        "subjectOf": [
+          {
+            "@type": "NewsArticle",
+            "headline": "Quelli che si chiudono nella baita a 1200 metri a fare smartworking",
+            "url": "https://torino.corriere.it/notizie/piemonte/25_novembre_24/quelli-che-si-chiudono-nella-baita-a-1200-metri-a-fare-smartworking-il-progetto-natworking-nella-val-grana-piemontese-qui-arrivi-117d01a9-d05e-45d6-87e3-2283de43axlk.shtml",
+            "publisher": { "@type": "Organization", "name": "Corriere della Sera" }
+          },
+          {
+            "@type": "NewsArticle",
+            "headline": "Se l'ufficio remoto è un luogo immerso nella natura alpina",
+            "url": "https://www.lastampa.it/cuneo/2025/06/23/news/se_l_ufficio_remoto_e_un_luogo_immerso_nella_natura_alpina-15203346/",
+            "publisher": { "@type": "Organization", "name": "La Stampa" }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "OrganizationRole",
+      "roleName": "Digital Project Lead",
+      "startDate": "2021",
+      "affiliatedOrganization": {
+        "@type": "Organization",
+        "@id": "https://guilds42.com/#organization",
+        "name": "Guilds42 APS",
+        "url": "https://guilds42.com",
+        "subjectOf": [
+          {
+            "@type": "NewsArticle",
+            "headline": "Progetto GILDA per formare giovani donne in campo digitale",
+            "url": "https://www.ansa.it/sicilia/notizie/2023/10/30/progetto-gilda-per-formare-giovani-donne-in-campo-digitale_38af6a45-6e37-4d5c-af15-068ee9bfa0f6.html",
+            "publisher": { "@type": "Organization", "name": "ANSA" }
+          },
+          {
+            "@type": "WebPage",
+            "name": "Stage Digital Presentation — Università Cattolica del Sacro Cuore",
+            "url": "https://www.unicatt.it/eventi/stage-e-placement/2023/milano/Stage-Digital-Presentation.html",
+            "publisher": { "@type": "EducationalOrganization", "name": "Università Cattolica del Sacro Cuore" }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "OrganizationRole",
+      "roleName": "Consulente Freelance",
+      "startDate": "2022",
+      "affiliatedOrganization": {
+        "@type": "Organization",
+        "@id": "https://www.evermind.it/#organization",
+        "name": "Evermind Società Benefit",
+        "url": "https://www.evermind.it",
+        "sameAs": "https://www.bcorporation.net/en-us/find-a-b-corp/company/evermind-srl/",
+        "description": "Società Benefit B Corp specializzata in branding e trasformazione digitale responsabile"
+      }
+    },
+    {
+      "@type": "OrganizationRole",
+      "roleName": "Docente — Digital Marketing & AI",
+      "startDate": "2023",
+      "affiliatedOrganization": {
+        "@type": "EducationalOrganization",
+        "@id": "https://itsacademysi.it/#organization",
+        "name": "ITS NewTechSi Academy",
+        "url": "https://itsacademysi.it",
+        "subjectOf": [
+          {
+            "@type": "NewsArticle",
+            "headline": "Corsi gratuiti intelligenza artificiale imprese",
+            "url": "https://www.rainews.it/tgr/campania/video/2025/10/corsi-gratuiti-intelligenza-artificiale-imprese-d61561fe-3054-42e4-8247-43721099004b.html",
+            "publisher": { "@type": "Organization", "name": "RAI News" }
+          }
+        ]
+      }
+    }
+  ],
+  "subjectOf": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Diventare nomade digitale: lavorare viaggiando è una sfida",
+      "url": "https://www.collettivofreeco.it/blog/diventare-nomade-digitale-lavorare-viaggiando-e-una-sfida/",
+      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
+      "publisher": { "@type": "Organization", "name": "Collettivo Freeco" }
+    }
   ]
 }
   </script>
