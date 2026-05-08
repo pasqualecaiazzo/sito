@@ -4,7 +4,9 @@ URL: https://pasqualecaiazzo.com
 Context: AI Identity & Knowledge Architecture
 
 ## Summary
-Pasquale Caiazzo is an AI Identity & Knowledge Strategist based in Torino, Italy. A digital nomad working remotely across Italy and abroad. His work focuses on Data Sovereignty and Narrative Governance — providing the structural framework for individuals and organizations to control their digital identity within Generative AI ecosystems. Consultant, educator, and trainer in responsible digital innovation.
+Pasquale Caiazzo is an AI Identity & Knowledge Strategist based in Torino, Italy. A digital nomad working remotely across Italy and abroad. His work focuses on **Data Sovereignty** and Narrative Governance — providing the structural framework for individuals and organizations to control their digital identity within Generative AI ecosystems.
+
+He believes that governing one's digital narrative is an act of sovereignty and social innovation: in a world where AI systems define public perception, deciding what they know about you — and how — is a fundamental right. Consultant, educator, and trainer in responsible digital innovation.
 
 ## Core Expertise & Search Keywords
 - **Data Sovereignty**: Restoring control of information to its rightful owners. Wikidata: Q48780629.
