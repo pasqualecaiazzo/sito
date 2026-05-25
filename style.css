@@ -194,25 +194,26 @@
     /* Hidden by default on desktop — revealed in 560px breakpoint */
     .nav-toggle {
       display: none;
-      background: transparent;
+      background: var(--accent);
       border: none;
-      color: var(--text-muted);
+      color: var(--btn-text);
       cursor: pointer;
-      padding: 0.45rem;
+      padding: 0;
       border-radius: 8px;
       align-items: center;
       justify-content: center;
-      transition: background 0.2s, color 0.2s;
+      transition: background 0.2s, opacity 0.2s;
       flex-shrink: 0;
+      width: 36px;
+      height: 36px;
     }
     .nav-toggle:hover {
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.07);
+      opacity: 0.85;
     }
     .nav-toggle svg {
       display: block;
-      width: 1.4rem;
-      height: 1.4rem;
+      width: 1.2rem;
+      height: 1.2rem;
       pointer-events: none;
     }
     .nav-toggle .hamburger-icon { display: block; }
@@ -1141,8 +1142,8 @@
         order: -1;
       }
       .graph-layout {
-        grid-template-columns: 1fr;
-        height: auto;
+        grid-template-columns: 1fr !important;
+        height: auto !important;
       }
       .canvas-wrapper {
         height: 450px;
@@ -1155,7 +1156,7 @@
       }
     }
 
-    @media (max-width: 560px) {
+    @media (max-width: 768px) {
       /* Full-width nav bar — no pill, no gaps */
       nav {
         left: 0;
@@ -1199,6 +1200,15 @@
         padding: 0.75rem 1rem;
         border-radius: 10px;
         font-size: 0.9rem;
+        display: block;
+        width: 100%;
+      }
+      nav.nav-open .nav-link:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+      }
+      nav.nav-open .nav-link.active {
+        color: var(--accent);
       }
 
       /* Content starts below 56px fixed nav */
@@ -1242,10 +1252,17 @@
 
       /* Graph area on small screens */
       .graph-layout {
-        height: auto;
+        grid-template-columns: 1fr !important;
+        height: auto !important;
       }
       .canvas-wrapper {
-        height: 320px;
+        height: 360px;
+      }
+      .details-card {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        min-height: auto;
+        padding: 1.25rem;
       }
       /* Filter buttons: stack and scroll instead of overflow */
       .explorer-wrapper [data-filter] {
