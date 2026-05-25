@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Il knowledge graph del web semantico – Pasquale Caiazzo</title>
+  <meta name="description" content="Grafo interattivo del web semantico: 22 entità verificabili su Wikidata, 29 relazioni tipizzate. Da Vannevar Bush all'AI Readiness.">
+  <link rel="canonical" href="https://pasqualecaiazzo.com/grafo.html">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Il knowledge graph del web semantico – Pasquale Caiazzo">
+  <meta property="og:description" content="Grafo interattivo del web semantico: 22 entità verificabili su Wikidata, 29 relazioni tipizzate. Da Vannevar Bush all'AI Readiness.">
+  <meta property="og:url" content="https://pasqualecaiazzo.com/grafo.html">
+  <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script src="main.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+
+    <style>
+    .node-person { fill: var(--color-person); stroke: #BA7517; }
+    .node-concept { fill: var(--color-topic); stroke: #185FA5; }
+    .node-standard { fill: var(--color-org); stroke: #0F6E56; }
+    .node-tool { fill: var(--color-credential); stroke: #5F5E5A; }
+    .node-critique { fill: var(--color-occupation); stroke: #993C1D; }
+    
+    [data-theme="light"] .node-person { stroke: #8c5308; }
+    [data-theme="light"] .node-concept { stroke: #0e447b; }
+    [data-theme="light"] .node-standard { stroke: #074736; }
+    [data-theme="light"] .node-tool { stroke: #3c3c3a; }
+    [data-theme="light"] .node-critique { stroke: #6b240e; }
+
+    .node circle {
+      stroke-width: 2px;
+      cursor: pointer;
+      transition: r 0.2s ease, filter 0.2s ease;
+    }
+    .node:hover circle, .node.highlighted circle {
+      filter: drop-shadow(0 0 8px var(--accent));
+      r: calc(attr(r) + 2px);
+    }
+    .node text {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      pointer-events: none;
+      text-anchor: middle;
+    }
+    .link {
+      stroke: var(--border);
+      stroke-opacity: 0.45;
+      stroke-width: 1.2px;
+      transition: stroke-opacity 0.2s, stroke-width 0.2s;
+    }
+    .link.highlighted {
+      stroke: var(--accent);
+      stroke-opacity: 0.9;
+      stroke-width: 2px;
+    }
+    .link-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.55rem;
+      fill: var(--text-muted);
+      pointer-events: none;
+      text-anchor: middle;
+      display: none;
+    }
+    .link.highlighted + .link-label {
+      display: block;
+      fill: var(--text);
+    }
+    .tooltip {
+      position: absolute;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.4rem 0.60rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+    .methodology-box {
+      max-width: 640px;
+      margin: 4rem auto 6rem;
+      padding: 0 2rem;
+    }
+    .methodology-box p {
+      text-align: left;
+    }
+    
+    .graph-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      min-height: 520px;
+      height: 600px;
+    }
+    .details-card {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 0.5rem 1.15rem;
+      color: var(--text);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .filter-btn:hover {
+      background: var(--card-hover);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--btn-text);
+    }
+    [data-theme="light"] .filter-btn {
+      background: rgba(0, 0, 0, 0.02);
+    }
+    #node-search:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+    }
+    [data-theme="light"] #node-search:focus {
+      box-shadow: 0 0 0 2px rgba(30, 111, 217, 0.2);
+    }
+
+    @media (max-width: 900px) {
+      .graph-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+      .canvas-wrapper {
+        height: 450px;
+      }
+      .details-card {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding: 1.5rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@id": "https://pasqualecaiazzo.com/#website"
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/grafo.html#webpage",
+      "url": "https://pasqualecaiazzo.com/grafo.html",
+      "name": "Il knowledge graph del web semantico – Pasquale Caiazzo",
+      "description": "Grafo interattivo del web semantico: 22 entità verificabili su Wikidata, 29 relazioni tipizzate. Da Vannevar Bush all'AI Readiness.",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@id": "https://pasqualecaiazzo.com/#website"
+      },
+      "about": {
+        "@id": "https://pasqualecaiazzo.com/grafo.html#article"
+      },
+      "breadcrumb": {
+        "@id": "https://pasqualecaiazzo.com/grafo.html#breadcrumb"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/grafo.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pasqualecaiazzo.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Knowledge graph del web semantico",
+          "item": "https://pasqualecaiazzo.com/grafo.html"
+        }
+      ]
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://pasqualecaiazzo.com/grafo.html#article",
+      "headline": "Il knowledge graph del web semantico",
+      "description": "Grafo interattivo del web semantico: 22 entità verificabili su Wikidata, 29 relazioni tipizzate. Da Vannevar Bush all'AI Readiness.",
+      "url": "https://pasqualecaiazzo.com/grafo.html",
+      "inLanguage": "it",
+      "datePublished": "2026-05-25",
+      "author": {
+        "@id": "https://pasqualecaiazzo.com/#person"
+      },
+      "publisher": {
+        "@id": "https://pasqualecaiazzo.com/#person"
+      },
+      "about": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Semantic Web",
+          "sameAs": "https://www.wikidata.org/wiki/Q54837"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Knowledge Graph",
+          "sameAs": "https://www.wikidata.org/wiki/Q33002955"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Linked Data",
+          "sameAs": "https://www.wikidata.org/wiki/Q515701"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "AI Readiness",
+          "sameAs": "https://www.wikidata.org/wiki/Q138646003"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Person",
+          "name": "Vannevar Bush",
+          "sameAs": "https://www.wikidata.org/wiki/Q299595"
+        },
+        {
+          "@type": "Person",
+          "name": "Ted Nelson",
+          "sameAs": "https://www.wikidata.org/wiki/Q62852"
+        },
+        {
+          "@type": "Person",
+          "name": "Tim Berners-Lee",
+          "sameAs": "https://www.wikidata.org/wiki/Q80"
+        },
+        {
+          "@type": "Person",
+          "name": "James Hendler",
+          "sameAs": "https://www.wikidata.org/wiki/Q6135847"
+        },
+        {
+          "@type": "Person",
+          "name": "Shoshana Zuboff",
+          "sameAs": "https://www.wikidata.org/wiki/Q15953956"
+        },
+        {
+          "@type": "Person",
+          "name": "Denny Vrandecic",
+          "sameAs": "https://www.wikidata.org/wiki/Q18618629"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Wikidata",
+          "sameAs": "https://www.wikidata.org/wiki/Q2013"
+        }
+      ]
+    }
+
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <nav aria-label="Navigazione principale">
+    <div class="nav-left">
+      <a href="index.html" class="nav-name">Pasquale Caiazzo</a>
+      <div class="nav-anchors">
+        <a href="index.html#about" class="nav-link">Chi sono</a>
+        <a href="professionisti.html" class="nav-link">Per i professionisti</a>
+        <a href="pmi.html" class="nav-link">Per le PMI</a>
+        <a href="manifesto.html" class="nav-link">Manifesto</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+        <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+        </svg>
+        <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+      <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    </div>
+  </nav>
+
+  <main style="padding-top: 9rem;">
+    <div class="inner" style="text-align: center; margin-bottom: 2rem;">
+      <span class="tag">Progetti & Proof of Work</span>
+      <h1 style="font-family: 'IBM Plex Serif', serif; font-size: clamp(1.8rem, 4vw, 2.3rem); font-weight: 700; margin-top: 0.5rem; margin-bottom: 1rem;">Il knowledge graph del web semantico</h1>
+      <p style="color: var(--text-muted); font-size: 1rem; max-width: 750px; margin: 0 auto; line-height: 1.6;">
+        Una dimostrazione pratica di entity linking: 22 entità reali collegate a Wikidata e 29 relazioni tipizzate. Questo grafo rappresenta un'applicazione sperimentale di architettura semantica per mappare l'evoluzione storica dei dati strutturati.
+      </p>
+    </div>
+
+    <!-- GRAPH CONTAINER -->
+    <div class="inner">
+      <div class="explorer-wrapper" style="margin-top: 2rem; display: flex; flex-direction: column; position: relative;">
+        <!-- Search and filter bar -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: rgba(0,0,0,0.15); border-bottom: 1px solid var(--border); gap: 1rem;">
+          <div class="ai-query-grid" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="filter-btn active" data-filter="all" style="font-family: 'IBM Plex Mono', monospace;">Tutti</button>
+            <button class="filter-btn" data-filter="person" style="font-family: 'IBM Plex Mono', monospace;">Persone</button>
+            <button class="filter-btn" data-filter="concept" style="font-family: 'IBM Plex Mono', monospace;">Concetti</button>
+            <button class="filter-btn" data-filter="standard" style="font-family: 'IBM Plex Mono', monospace;">Standard</button>
+            <button class="filter-btn" data-filter="tool" style="font-family: 'IBM Plex Mono', monospace;">Strumenti</button>
+            <button class="filter-btn" data-filter="critique" style="font-family: 'IBM Plex Mono', monospace;">Critica</button>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="text" id="node-search" placeholder="Cerca nodo..." style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; padding: 0.4rem 0.8rem; border-radius: 20px; border: 1px solid var(--border); background: var(--code-bg); color: var(--text); outline: none; width: 180px;">
+          </div>
+        </div>
+        
+        <div class="graph-layout">
+          <div class="canvas-wrapper">
+            <svg id="d3-graph" style="width: 100%; height: 100%;"></svg>
+            <div class="graph-controls">
+              <button id="btn-zoom-in" title="Aumenta Zoom">+</button>
+              <button id="btn-zoom-out" title="Riduci Zoom">-</button>
+              <button id="btn-reset-layout" title="Ripristina Layout">⟲</button>
+            </div>
+          </div>
+          <div class="details-card">
+            <div id="details-default" class="details-default">
+              <svg class="graph-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 3.5rem; height: 3.5rem; color: var(--text-muted); opacity: 0.6; margin-bottom: 1.25rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+              <p style="font-size: 0.85rem; text-align: center; color: var(--text-muted);">Trascina il grafo per spostarti, usa la rotellina per lo zoom. Fai click su un nodo per visualizzare i dettagli storici e le relazioni semantiche su Wikidata.</p>
+            </div>
+            <div id="details-content" class="details-content hidden" style="display: flex; flex-direction: column; height: 100%;">
+              <div class="details-header" style="margin-bottom: 1.25rem;">
+                <span id="node-type-badge" class="node-badge" style="display: inline-block; padding: 0.25rem 0.65rem; border-radius: 4px; border: 1px solid; font-size: 0.65rem; font-weight: 700; text-transform: uppercase;"></span>
+                <h3 id="node-name" style="font-size: 1.3rem; font-weight: 700; color: var(--text); margin-top: 0.5rem; font-family: 'IBM Plex Serif', serif;"></h3>
+                <span id="node-year" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--text-muted);"></span>
+              </div>
+              <p id="node-description" style="font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.5rem;"></p>
+              
+              <div style="margin-top: auto; border-top: 1px solid var(--border); padding-top: 1.25rem;">
+                <span class="detail-label" style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Wikidata:</span>
+                <a id="node-wikidata-link" href="#" target="_blank" rel="noopener noreferrer" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.75rem; background: rgba(74, 158, 255, 0.05); border: 1px solid rgba(74, 158, 255, 0.15); border-radius: 6px; word-break: break-all;">
+                  <span id="node-wikidata-text">Q00000</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+
+              <div style="margin-top: 1.25rem;">
+                <span class="detail-label" style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Relazioni Collegate:</span>
+                <ul id="node-relations-list" style="list-style: none; padding: 0; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--text-muted); max-height: 160px; overflow-y: auto;">
+                  <!-- relations will be appended here -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- METHODOLOGY SECTION -->
+    <div class="band">
+      <div class="inner">
+        <section class="methodology-box reveal" aria-labelledby="method-title">
+          <span class="tag">Metodologia</span>
+          <h2 id="method-title" style="font-family: 'IBM Plex Serif', serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 1.2rem;">Come è costruito questo grafo</h2>
+          <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.2rem;">
+            Ogni nodo è un'entità reale con un identificatore univoco su Wikidata. Ogni relazione è tipizzata: non una generica connessione ma un predicato con direzione e significato preciso.
+          </p>
+          <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.2rem;">
+            La struttura del grafo rispecchia quella dei dati strutturati che implemento per professionisti e organizzazioni. La differenza è che qui il dominio è il web semantico stesso, non un'entità commerciale o professionale. Il metodo è identico.
+          </p>
+          <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.2rem;">
+            I dati sono liberi: tutto ciò che vedi è open knowledge, verificabile, riutilizzabile sotto licenza CC0.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <footer>
+    <div class="inner">
+      <div class="footer-inner">
+                <div class="footer-meta">
+          <span>Pasquale Caiazzo</span><br>
+          Semantic Entity Architect<br>
+          Torino<br>
+          P.IVA IT01712990058
+        </div>
+        <div class="footer-links" style="display: flex; gap: 2rem;">
+          <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Data structures for 22 nodes
+    const graphNodes = [
+      { id: 'bush', label: 'Vannevar Bush', type: 'person', year: 1945, wikidata: 'Q299595', desc: 'Immagina il Memex nel 1945. In «As We May Think» prefigura un sistema in cui la conoscenza è navigata per associazione invece che per gerarchia. È la prima architettura concettuale del web.' },
+      { id: 'nelson', label: 'Ted Nelson', type: 'person', year: 1963, wikidata: 'Q62852', desc: 'Conia il termine «ipertesto» nel 1963. Progetta Xanadu, un sistema di collegamento universale mai completato. Il web di Berners-Lee eredita la sua visione.' },
+      { id: 'berners-lee', label: 'Tim Berners-Lee', type: 'person', year: 1989, wikidata: 'Q80', desc: 'Inventa il World Wide Web nel 1989, propone il Web Semantico nel 1998, lancia il Protocollo Solid nel 2016. L\'architetto del web aperto.' },
+      { id: 'hendler', label: 'James Hendler', type: 'person', year: 2001, wikidata: 'Q6135847', desc: 'Co-autore del manifesto del Web Semantico su Scientific American (2001). Contribuisce alla definizione di RDF e OWL come standard W3C.' },
+      { id: 'zuboff', label: 'Shoshana Zuboff', type: 'person', year: 2019, wikidata: 'Q15953956', desc: 'In «The Age of Surveillance Capitalism» (2019) analizza come i dati umani siano diventati materia prima per sistemi economici senza consenso degli individui.' },
+      { id: 'vrandevcic', label: 'Denny Vrandecic', type: 'person', year: 2012, wikidata: 'Q18618629', desc: 'Fondatore di Wikidata, il knowledge graph aperto della Wikimedia Foundation. Ha creato l\'infrastruttura che rende verificabili oltre 100 milioni di entità.' },
+      
+      { id: 'memex', label: 'Memex', type: 'concept', year: 1945, wikidata: 'Q471', desc: 'Dispositivo immaginato da Bush nel 1945. Non lineare, associativo, personale. Non è mai stato costruito ma ha ispirato tutto ciò che è venuto dopo: ipertesto, web, knowledge graph.' },
+      { id: 'hypertext', label: 'Ipertesto', type: 'concept', year: 1963, wikidata: 'Q93241', desc: 'Testo non lineare con collegamenti tra documenti. Il principio fondamentale del web: non una sequenza ma una rete di relazioni tra contenuti.' },
+      { id: 'www', label: 'World Wide Web', type: 'concept', year: 1989, wikidata: 'Q466', desc: 'Sistema di documenti ipertestuali su internet. Creato al CERN nel 1989. Ha trasformato la comunicazione globale ma anche abilitato la concentrazione di potere sui dati.' },
+      { id: 'semantic-web', label: 'Web Semantico', type: 'concept', year: 1998, wikidata: 'Q54837', desc: 'Estensione del web proposta da Berners-Lee: i dati hanno significato formale leggibile dalle macchine. La visione non si è realizzata completamente ma i suoi standard sono la base dell\'AI readiness.' },
+      { id: 'linked-data', label: 'Linked Data', type: 'concept', year: 2006, wikidata: 'Q515701', desc: 'Principi definiti da Berners-Lee nel 2006: usa URI stabili, pubblica dati in RDF, collega a dati esterni. La grammatica pratica del Web Semantico.' },
+      { id: 'knowledge-graph', label: 'Knowledge Graph', type: 'concept', year: 2012, wikidata: 'Q33002955', desc: 'Grafo di entità e relazioni verificabili. Introdotto da Google nel 2012. Oggi è la struttura che alimenta i sistemi AI quando citano fatti verificabili su persone e organizzazioni.' },
+      { id: 'data-sovereignty', label: 'Sovranità del Dato', type: 'concept', year: 2016, wikidata: 'Q48780629', desc: 'Principio per cui i dati appartengono a chi li produce. Risposta al capitalismo della sorveglianza. Si realizza nel Protocollo Solid e nella governance della narrativa semantica.' },
+      { id: 'ai-readiness', label: 'AI Readiness', type: 'concept', year: 2023, wikidata: 'Q138646003', desc: 'Capacità di un\'entità di essere letta, citata e rappresentata con precisione dai sistemi AI. Si costruisce con JSON-LD, Wikidata e knowledge graph verificabili.' },
+      
+      { id: 'rdf', label: 'RDF', type: 'standard', year: 1999, wikidata: 'Q54872', desc: 'Resource Description Framework. Standard W3C del 1999. Rappresenta la conoscenza come triple soggetto-predicato-oggetto. La lingua formale del Web Semantico.' },
+      { id: 'json-ld', label: 'JSON-LD', type: 'standard', year: 2010, wikidata: 'Q6108942', desc: 'Serializzazione di Linked Data in JSON. Standard W3C dal 2014. Il modo più pratico per implementare dati strutturati leggibili dai sistemi AI su qualsiasi sito web.' },
+      { id: 'schema-org', label: 'Schema.org', type: 'standard', year: 2011, wikidata: 'Q3475322', desc: 'Vocabolario condiviso per il markup strutturato. Creato da Google, Microsoft, Yahoo e Yandex nel 2011. Definisce i tipi di entità riconosciuti dai sistemi AI.' },
+      { id: 'solid', label: 'Solid Protocol', type: 'standard', year: 2016, wikidata: 'Q55408718', desc: 'Protocollo proposto da Berners-Lee. Archivia i dati in Pod personali controllati dall\'individuo. L\'implementazione tecnica della sovranità del dato.' },
+      { id: 'rag', label: 'RAG', type: 'standard', year: 2020, wikidata: 'Q121362277', desc: 'Retrieval-Augmented Generation. Potenzia i LLM collegandoli a basi di conoscenza esterne strutturate. Richiede dati verificabili e ben organizzati per funzionare senza allucinazioni.' },
+      
+      { id: 'wikidata', label: 'Wikidata', type: 'tool', year: 2012, wikidata: 'Q2013', desc: 'Knowledge graph aperto della Wikimedia Foundation. Oltre 100 milioni di entità con identificatori univoci (Q-ID). La fonte più verificabile per l\'identità semantica.' },
+      { id: 'llm', label: 'LLM', type: 'tool', year: 2020, wikidata: 'Q115305900', desc: 'Modelli linguistici addestrati su enormi quantità di testo: ChatGPT, Gemini, Claude. La qualità della loro rappresentazione di un\'entità dipende dalla struttura dei dati disponibili.' },
+      
+      { id: 'surveillance-cap', label: 'Capitalismo della Sorveglianza', type: 'critique', year: 2019, wikidata: 'Q29096967', desc: 'Sistema economico che estrae valore dai dati comportamentali umani senza consenso. Concetto di Zuboff: il web commerciale come macchina di previsione e modifica del comportamento.' }
+    ];
+
+    const graphLinks = [
+      { source: 'bush', target: 'memex', rel: 'schema:creator' },
+      { source: 'nelson', target: 'hypertext', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'www', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'semantic-web', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'solid', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'linked-data', rel: 'schema:creator' },
+      { source: 'hendler', target: 'semantic-web', rel: 'schema:creator' },
+      { source: 'zuboff', target: 'surveillance-cap', rel: 'schema:creator' },
+      { source: 'vrandevcic', target: 'wikidata', rel: 'schema:creator' },
+      { source: 'memex', target: 'hypertext', rel: 'dcterms:references' },
+      { source: 'hypertext', target: 'www', rel: 'dcterms:references' },
+      { source: 'www', target: 'semantic-web', rel: 'dcterms:relation' },
+      { source: 'www', target: 'surveillance-cap', rel: 'dcterms:relation' },
+      { source: 'semantic-web', target: 'rdf', rel: 'dcterms:relation' },
+      { source: 'semantic-web', target: 'linked-data', rel: 'dcterms:relation' },
+      { source: 'rdf', target: 'json-ld', rel: 'dcterms:hasFormat' },
+      { source: 'json-ld', target: 'schema-org', rel: 'dcterms:relation' },
+      { source: 'linked-data', target: 'wikidata', rel: 'dcterms:relation' },
+      { source: 'schema-org', target: 'knowledge-graph', rel: 'dcterms:relation' },
+      { source: 'wikidata', target: 'knowledge-graph', rel: 'dcterms:relation' },
+      { source: 'knowledge-graph', target: 'llm', rel: 'dcterms:relation' },
+      { source: 'llm', target: 'rag', rel: 'dcterms:relation' },
+      { source: 'rag', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'json-ld', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'schema-org', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'wikidata', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'surveillance-cap', target: 'data-sovereignty', rel: 'dcterms:relation' },
+      { source: 'solid', target: 'data-sovereignty', rel: 'dcterms:relation' },
+      { source: 'data-sovereignty', target: 'ai-readiness', rel: 'dcterms:relation' }
+    ];
+
+    // Helper functions for sizes
+    function getRadius(node) {
+      if (node.id === 'ai-readiness' || node.id === 'berners-lee') return 26;
+      if (node.id === 'www' || node.id === 'semantic-web' || node.id === 'knowledge-graph' || node.id === 'llm') return 22;
+      if (node.id === 'wikidata' || node.id === 'json-ld' || node.id === 'schema-org' || node.id === 'surveillance-cap') return 18;
+      return 15;
+    }
+
+    // Set up D3 Force layout inside DOMContentLoaded to ensure computed styles are active
+    window.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.canvas-wrapper');
+      let width = container.clientWidth || 600;
+      let height = container.clientHeight || 520;
+
+      const svg = d3.select('#d3-graph');
+      
+      // Add g wrapper for zoom/pan
+      const g = svg.append('g').attr('class', 'graph-g');
+
+      // Zoom setup
+      const zoom = d3.zoom()
+        .scaleExtent([0.3, 3])
+        .on('zoom', (event) => {
+          g.attr('transform', event.transform);
+        });
+
+      svg.call(zoom);
+
+      // Zoom controls
+      document.getElementById('btn-zoom-in').addEventListener('click', () => {
+        svg.transition().duration(300).call(zoom.scaleBy, 1.3);
+      });
+      document.getElementById('btn-zoom-out').addEventListener('click', () => {
+        svg.transition().duration(300).call(zoom.scaleBy, 1/1.3);
+      });
+      document.getElementById('btn-reset-layout').addEventListener('click', () => {
+        svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+        d3.selectAll('.node circle').classed('highlighted', false);
+        d3.selectAll('.link').classed('highlighted', false);
+        document.getElementById('details-content').classList.add('hidden');
+        document.getElementById('details-default').classList.remove('hidden');
+      });
+
+      // Dual Arrow marker definition
+      const defs = svg.append('defs');
+      
+      // Default Arrow
+      defs.append('marker')
+        .attr('id', 'arrow-default')
+        .attr('viewBox', '0 -5 10 10')
+        .attr('refX', 9)
+        .attr('refY', 0)
+        .attr('markerWidth', 6)
+        .attr('markerHeight', 6)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M0,-5L10,0L0,5')
+        .attr('fill', 'var(--text-muted)')
+        .attr('opacity', 0.45);
+        
+      // Active Arrow (Highlighted)
+      defs.append('marker')
+        .attr('id', 'arrow-active')
+        .attr('viewBox', '0 -5 10 10')
+        .attr('refX', 9)
+        .attr('refY', 0)
+        .attr('markerWidth', 6)
+        .attr('markerHeight', 6)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M0,-5L10,0L0,5')
+        .attr('fill', 'var(--accent)')
+        .attr('opacity', 0.95);
+
+      // Setup simulation
+      const simulation = d3.forceSimulation(graphNodes)
+        .force('link', d3.forceLink(graphLinks).id(d => d.id).distance(135))
+        .force('charge', d3.forceManyBody().strength(-240))
+        .force('center', d3.forceCenter(width / 2, height / 2))
+        .force('collide', d3.forceCollide().radius(d => getRadius(d) + 18));
+
+      // Render links
+      const linkGroup = g.append('g').attr('class', 'links-g');
+      const linkWrapper = linkGroup.selectAll('.link-container')
+        .data(graphLinks)
+        .enter()
+        .append('g')
+        .attr('class', 'link-container');
+
+      const link = linkWrapper.append('path')
+        .attr('class', 'link')
+        .attr('marker-end', 'url(#arrow-default)');
+
+      const linkLabel = linkWrapper.append('text')
+        .attr('class', 'link-label')
+        .text(d => d.rel);
+
+      // Render nodes
+      const nodeGroup = g.append('g').attr('class', 'nodes-g');
+      const node = nodeGroup.selectAll('.node')
+        .data(graphNodes)
+        .enter()
+        .append('g')
+        .attr('class', 'node')
+        .call(d3.drag()
+          .clickDistance(10)
+          .on('start', dragstarted)
+          .on('drag', dragged)
+          .on('end', dragended));
+
+      node.append('circle')
+        .attr('r', d => getRadius(d))
+        .attr('class', d => `node-${d.type}`);
+
+      node.append('text')
+        .attr('y', d => getRadius(d) + 12)
+        .text(d => d.label)
+        .attr('fill', 'var(--text)')
+        .style('font-family', "'IBM Plex Mono', monospace")
+        .style('font-weight', '600')
+        .style('font-size', '0.65rem');
+
+      // Drag handlers
+      function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      }
+
+      function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+      }
+
+      function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+      }
+
+      // Tooltip setup
+      const tooltip = d3.select('#tooltip');
+
+      node.on('mouseover', function(event, d) {
+        tooltip.style('opacity', 1)
+          .html(`Anno: ${d.year}<br>Tipo: ${d.type.toUpperCase()}`);
+        
+        // Highlight connections
+        link.classed('highlighted', l => l.source.id === d.id || l.target.id === d.id);
+        link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
+      });
+
+      node.on('mousemove', function(event) {
+        tooltip.style('left', (event.pageX + 10) + 'px')
+          .style('top', (event.pageY - 15) + 'px');
+      });
+
+      node.on('mouseout', function() {
+        tooltip.style('opacity', 0);
+        link.classed('highlighted', false);
+        link.attr('marker-end', 'url(#arrow-default)');
+      });
+
+      // Detail card on click
+      node.on('click', function(event, d) {
+        event.stopPropagation();
+        d3.selectAll('.node circle').classed('highlighted', false);
+        d3.select(this).select('circle').classed('highlighted', true);
+        
+        // Highlight clicked node links
+        link.classed('highlighted', l => l.source.id === d.id || l.target.id === d.id);
+        link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
+        showNodeDetails(d);
+      });
+
+      svg.on('click', function() {
+        d3.selectAll('.node circle').classed('highlighted', false);
+        link.classed('highlighted', false);
+        link.attr('marker-end', 'url(#arrow-default)');
+        document.getElementById('details-content').classList.add('hidden');
+        document.getElementById('details-default').classList.remove('hidden');
+      });
+
+      function showNodeDetails(d) {
+        document.getElementById('details-default').classList.add('hidden');
+        document.getElementById('details-content').classList.remove('hidden');
+        
+        document.getElementById('node-name').innerText = d.label;
+        document.getElementById('node-year').innerText = `Definito nel ${d.year}`;
+        document.getElementById('node-description').innerText = d.desc;
+        
+        const badge = document.getElementById('node-type-badge');
+        badge.innerText = d.type;
+        
+        // Reset classes & apply badge color
+        badge.className = 'node-badge';
+        let themeColor = 'var(--accent)';
+        if (d.type === 'person') themeColor = 'var(--color-person)';
+        else if (d.type === 'concept') themeColor = 'var(--color-topic)';
+        else if (d.type === 'standard') themeColor = 'var(--color-org)';
+        else if (d.type === 'tool') themeColor = 'var(--color-credential)';
+        else if (d.type === 'critique') themeColor = 'var(--color-occupation)';
+
+        badge.style.color = themeColor;
+        badge.style.borderColor = themeColor;
+        badge.style.backgroundColor = themeColor + '15';
+
+        const wLink = document.getElementById('node-wikidata-link');
+        wLink.href = `https://www.wikidata.org/wiki/${d.wikidata}`;
+        document.getElementById('node-wikidata-text').innerText = `wikidata.org/wiki/${d.wikidata} ↗`;
+
+        // Fill relations list
+        const rels = graphLinks.filter(l => l.source.id === d.id || l.target.id === d.id);
+        const list = document.getElementById('node-relations-list');
+        list.innerHTML = rels.map(l => {
+          if (l.source.id === d.id) {
+            return `<li style="margin-bottom: 0.35rem;">questo nodo <span style="color: var(--accent);">&rarr; ${l.rel} &rarr;</span> <strong>${l.target.label}</strong></li>`;
+          } else {
+            return `<li style="margin-bottom: 0.35rem;"><strong>${l.source.label}</strong> <span style="color: var(--accent);">&rarr; ${l.rel} &rarr;</span> questo nodo</li>`;
+          }
+        }).join('');
+      }
+
+      // Tick function with canvas clamping
+      simulation.on('tick', () => {
+        link.attr('d', d => {
+          if (!d.source.x || !d.target.x) return 'M0,0L0,0';
+          const rTarget = getRadius(d.target) + 2.5;
+          const dx = d.target.x - d.source.x;
+          const dy = d.target.y - d.source.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist === 0 || isNaN(dist)) return 'M0,0L0,0';
+          const offsetX = (dx / dist) * rTarget;
+          const offsetY = (dy / dist) * rTarget;
+          return `M${d.source.x},${d.source.y}L${d.target.x - offsetX},${d.target.y - offsetY}`;
+        });
+
+        linkLabel.attr('x', d => (d.source.x + d.target.x) / 2)
+                  .attr('y', d => (d.source.y + d.target.y) / 2 - 5);
+
+        node.attr('transform', d => {
+          const r = getRadius(d);
+          d.x = Math.max(r, Math.min(width - r, d.x));
+          d.y = Math.max(r, Math.min(height - r, d.y));
+          return `translate(${d.x},${d.y})`;
+        });
+      });
+
+      // Filters behavior
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          
+          const filterType = this.getAttribute('data-filter');
+          
+          if (filterType === 'all') {
+            node.style('opacity', 1).style('pointer-events', 'auto');
+            link.style('opacity', 0.45);
+          } else {
+            node.style('opacity', d => d.type === filterType ? 1 : 0.15)
+                .style('pointer-events', d => d.type === filterType ? 'auto' : 'none');
+            link.style('opacity', l => (l.source.type === filterType && l.target.type === filterType) ? 0.45 : 0.05);
+          }
+        });
+      });
+
+      // Search bar functionality
+      document.getElementById('node-search').addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        if (!q) {
+          node.style('opacity', 1).style('pointer-events', 'auto');
+          link.style('opacity', 0.45);
+          d3.selectAll('.node circle').classed('highlighted', false);
+        } else {
+          node.style('opacity', d => d.label.toLowerCase().includes(q) ? 1 : 0.15)
+              .style('pointer-events', d => d.label.toLowerCase().includes(q) ? 'auto' : 'none');
+          link.style('opacity', l => (l.source.label.toLowerCase().includes(q) || l.target.label.toLowerCase().includes(q)) ? 0.45 : 0.05);
+          
+          node.each(function(d) {
+            d3.select(this).select('circle').classed('highlighted', d.label.toLowerCase().includes(q));
+          });
+        }
+      });
+
+      // Handle resizing
+      window.addEventListener('resize', () => {
+        width = container.clientWidth;
+        height = container.clientHeight || 520;
+        simulation.force('center', d3.forceCenter(width / 2, height / 2));
+        simulation.alpha(0.3).restart();
+      });
+    });
+  </script>
+</body>
+</html>
