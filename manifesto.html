@@ -155,11 +155,9 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@id": "https://pasqualecaiazzo.com/#website"
     },
-
     {
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/manifesto.html#webpage",
@@ -175,9 +173,9 @@
       },
       "breadcrumb": {
         "@id": "https://pasqualecaiazzo.com/manifesto.html#breadcrumb"
-      }
+      },
+      "dateModified": "2026-05-25"
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://pasqualecaiazzo.com/manifesto.html#breadcrumb",
@@ -196,13 +194,17 @@
         }
       ]
     },
-
     {
       "@type": "Article",
       "@id": "https://pasqualecaiazzo.com/manifesto.html#article",
       "headline": "Sovranità della narrativa digitale",
       "description": "Una posizione sulla sovranità della narrativa digitale nell'era dei motori di risposta AI.",
-      "image": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+        "width": 1200,
+        "height": 1200
+      },
       "url": "https://pasqualecaiazzo.com/manifesto.html",
       "inLanguage": "it",
       "datePublished": "2026-05-25",
@@ -216,10 +218,11 @@
         "Structured Data"
       ],
       "author": {
-        "@id": "https://pasqualecaiazzo.com/#person"
+        "@id": "https://pasqualecaiazzo.com/#person",
+        "@type": "Person"
       },
       "publisher": {
-        "@id": "https://pasqualecaiazzo.com/#person"
+        "@id": "https://pasqualecaiazzo.com/#publisher"
       },
       "about": [
         {
@@ -254,9 +257,21 @@
           "name": "Tim Berners-Lee",
           "sameAs": "https://www.wikidata.org/wiki/Q80"
         }
-      ]
+      ],
+      "dateModified": "2026-05-25"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/favicon.png",
+        "width": 512,
+        "height": 512
+      }
     }
-
   ]
 }
   </script>
