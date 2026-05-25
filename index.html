@@ -35,6 +35,41 @@
     },
 
     {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/#webpage",
+      "url": "https://pasqualecaiazzo.com/",
+      "name": "Pasquale Caiazzo – Semantic Entity Architect",
+      "description": "Pasquale Caiazzo, Semantic Entity Architect. Progetta e implementa architetture semantiche (JSON-LD, schema.org, knowledge graph su Wikidata) che rendono organizzazioni, professionisti e realtà del terzo settore riconoscibili, verificabili e rintracciabili dai sistemi AI.",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@id": "https://pasqualecaiazzo.com/#website"
+      },
+      "about": {
+        "@id": "https://pasqualecaiazzo.com/#person"
+      },
+      "breadcrumb": {
+        "@id": "https://pasqualecaiazzo.com/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pasqualecaiazzo.com"
+        }
+      ]
+    },
+
+    {
       "@type": "Person",
       "@id": "https://pasqualecaiazzo.com/#person",
       "name": "Pasquale Caiazzo",
@@ -44,6 +79,9 @@
       "image": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
       "jobTitle": "Semantic Entity Architect",
       "vatID": "IT01712990058",
+      "mainEntityOfPage": {
+        "@id": "https://pasqualecaiazzo.com/#webpage"
+      },
       "nationality": {
         "@type": "Country",
         "name": "Italy",
@@ -70,6 +108,12 @@
         "https://github.com/pasqualecaiazzo",
         "https://pasqualecaiazzo.solidcommunity.net/profile/card#me"
       ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://cal.com/pcaiazzo/30min",
+        "availableLanguage": ["Italian", "English"]
+      },
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
@@ -148,14 +192,24 @@
           "@type": "DefinedTerm",
           "name": "Solid Protocol",
           "sameAs": "https://www.wikidata.org/wiki/Q55408718"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Knowledge Architecture",
+          "sameAs": "https://www.wikidata.org/wiki/Q131372306"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Machine Readability",
+          "sameAs": "https://www.wikidata.org/wiki/Q6723621"
         }
       ],
-      "affiliation": [
+      "memberOf": [
         {
           "@type": "OrganizationRole",
           "roleName": "Core Team — Innovazione Territoriale",
           "startDate": "2025-03-01",
-          "affiliation": {
+          "memberOf": {
             "@id": "https://natworking.eu/#organization"
           }
         },
@@ -163,7 +217,7 @@
           "@type": "OrganizationRole",
           "roleName": "Digital Project Lead",
           "startDate": "2021-09-01",
-          "affiliation": {
+          "memberOf": {
             "@id": "https://guilds42.com/#organization"
           }
         },
@@ -171,7 +225,7 @@
           "@type": "OrganizationRole",
           "roleName": "Docente — Digital Marketing & AI",
           "startDate": "2023-12-01",
-          "affiliation": {
+          "memberOf": {
             "@id": "https://itsacademysi.it/#organization"
           }
         },
@@ -180,7 +234,7 @@
           "roleName": "Consulente Strategico",
           "startDate": "2025-07-01",
           "endDate": "2026-04-30",
-          "affiliation": {
+          "memberOf": {
             "@id": "https://www.hostinato.it/#organization"
           }
         },
@@ -189,8 +243,16 @@
           "roleName": "Consulente Strategico",
           "startDate": "2025-06-01",
           "endDate": "2026-04-30",
-          "affiliation": {
+          "memberOf": {
             "@id": "https://graffette.it/#organization"
+          }
+        },
+        {
+          "@type": "OrganizationRole",
+          "roleName": "Consulente Freelance — Digital Transformation",
+          "startDate": "2022-01-01",
+          "memberOf": {
+            "@id": "https://evermind.it/#organization"
           }
         }
       ]
@@ -268,17 +330,25 @@
     },
 
     {
-      "@type": "Organization",
+      "@type": "LocalBusiness",
       "@id": "https://www.hostinato.it/#organization",
       "name": "Hostinato",
-      "url": "https://www.hostinato.it/"
+      "url": "https://www.hostinato.it/",
+      "vatID": "IT08807000966"
+    },
+
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://graffette.it/#organization",
+      "name": "Graffette",
+      "url": "https://graffette.it/"
     },
 
     {
       "@type": "Organization",
-      "@id": "https://graffette.it/#organization",
-      "name": "Graffette",
-      "url": "https://graffette.it/"
+      "@id": "https://evermind.it/#organization",
+      "name": "Evermind Società Benefit",
+      "url": "https://evermind.it/"
     }
 
   ]
