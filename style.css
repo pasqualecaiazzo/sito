@@ -1457,11 +1457,14 @@
     padding: 0 !important;
     color: var(--btn-text) !important;
   }
-  #nav-toggle svg {
+  #nav-toggle .hamburger-icon {
     display: block !important;
     width: 1.2rem !important;
     height: 1.2rem !important;
     pointer-events: none !important;
     color: var(--btn-text) !important;
+  }
+  #nav-toggle .close-icon {
+    display: none !important;
   }
 }
