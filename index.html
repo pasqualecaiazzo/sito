@@ -22,7 +22,6 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "WebSite",
       "@id": "https://pasqualecaiazzo.com/#website",
@@ -33,7 +32,6 @@
         "@id": "https://pasqualecaiazzo.com/#person"
       }
     },
-
     {
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/#webpage",
@@ -53,9 +51,9 @@
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg"
-      }
+      },
+      "dateModified": "2026-05-25"
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://pasqualecaiazzo.com/#breadcrumb",
@@ -68,7 +66,6 @@
         }
       ]
     },
-
     {
       "@type": "Person",
       "@id": "https://pasqualecaiazzo.com/#person",
@@ -76,7 +73,12 @@
       "givenName": "Pasquale",
       "familyName": "Caiazzo",
       "url": "https://pasqualecaiazzo.com",
-      "image": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+        "width": 1200,
+        "height": 1200
+      },
       "jobTitle": "Semantic Entity Architect",
       "vatID": "IT01712990058",
       "mainEntityOfPage": {
@@ -110,9 +112,11 @@
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "contactType": "customer service",
         "url": "https://cal.com/pcaiazzo/30min",
-        "availableLanguage": ["Italian", "English"]
+        "availableLanguage": [
+          "Italian",
+          "English"
+        ]
       },
       "hasCredential": [
         {
@@ -139,8 +143,16 @@
         }
       ],
       "knowsLanguage": [
-        { "@type": "Language", "name": "Italian", "alternateName": "it" },
-        { "@type": "Language", "name": "English", "alternateName": "en" }
+        {
+          "@type": "Language",
+          "name": "Italian",
+          "alternateName": "it"
+        },
+        {
+          "@type": "Language",
+          "name": "English",
+          "alternateName": "en"
+        }
       ],
       "knowsAbout": [
         {
@@ -257,7 +269,6 @@
         }
       ]
     },
-
     {
       "@type": "Organization",
       "@id": "https://natworking.eu/#organization",
@@ -289,7 +300,6 @@
         }
       ]
     },
-
     {
       "@type": "Organization",
       "@id": "https://guilds42.com/#organization",
@@ -309,7 +319,6 @@
         }
       ]
     },
-
     {
       "@type": "EducationalOrganization",
       "@id": "https://itsacademysi.it/#organization",
@@ -328,7 +337,6 @@
         }
       ]
     },
-
     {
       "@type": "LocalBusiness",
       "@id": "https://www.hostinato.it/#organization",
@@ -336,21 +344,30 @@
       "url": "https://www.hostinato.it/",
       "vatID": "IT08807000966"
     },
-
     {
       "@type": "LocalBusiness",
       "@id": "https://graffette.it/#organization",
       "name": "Graffette",
       "url": "https://graffette.it/"
     },
-
     {
       "@type": "Organization",
       "@id": "https://evermind.it/#organization",
       "name": "Evermind Società Benefit",
       "url": "https://evermind.it/"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/favicon.png",
+        "width": 512,
+        "height": 512
+      }
     }
-
   ]
 }
   </script>

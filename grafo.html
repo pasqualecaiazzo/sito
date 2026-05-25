@@ -173,11 +173,9 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@id": "https://pasqualecaiazzo.com/#website"
     },
-
     {
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/grafo.html#webpage",
@@ -193,9 +191,9 @@
       },
       "breadcrumb": {
         "@id": "https://pasqualecaiazzo.com/grafo.html#breadcrumb"
-      }
+      },
+      "dateModified": "2026-05-25"
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://pasqualecaiazzo.com/grafo.html#breadcrumb",
@@ -214,17 +212,20 @@
         }
       ]
     },
-
     {
-      "@type": "Article",
+      "@type": "TechArticle",
       "@id": "https://pasqualecaiazzo.com/grafo.html#article",
       "headline": "Il knowledge graph del web semantico",
       "description": "Grafo interattivo del web semantico: 22 entità verificabili su Wikidata, 29 relazioni tipizzate. Da Vannevar Bush all'AI Readiness.",
-      "image": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+        "width": 1200,
+        "height": 1200
+      },
       "url": "https://pasqualecaiazzo.com/grafo.html",
       "inLanguage": "it",
       "datePublished": "2026-05-25",
-      "wordCount": 115,
       "articleSection": "Semantic Web",
       "keywords": [
         "Knowledge Graph",
@@ -234,10 +235,11 @@
         "JSON-LD"
       ],
       "author": {
-        "@id": "https://pasqualecaiazzo.com/#person"
+        "@id": "https://pasqualecaiazzo.com/#person",
+        "@type": "Person"
       },
       "publisher": {
-        "@id": "https://pasqualecaiazzo.com/#person"
+        "@id": "https://pasqualecaiazzo.com/#publisher"
       },
       "about": [
         {
@@ -297,9 +299,21 @@
           "name": "Wikidata",
           "sameAs": "https://www.wikidata.org/wiki/Q2013"
         }
-      ]
+      ],
+      "dateModified": "2026-05-25"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/favicon.png",
+        "width": 512,
+        "height": 512
+      }
     }
-
   ]
 }
   </script>
@@ -326,6 +340,10 @@
         </svg>
       </button>
       <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+        <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
   </nav>
 

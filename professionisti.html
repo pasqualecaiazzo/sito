@@ -63,11 +63,9 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@id": "https://pasqualecaiazzo.com/#website"
     },
-
     {
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/professionisti.html#webpage",
@@ -83,9 +81,9 @@
       },
       "breadcrumb": {
         "@id": "https://pasqualecaiazzo.com/professionisti.html#breadcrumb"
-      }
+      },
+      "dateModified": "2026-05-25"
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://pasqualecaiazzo.com/professionisti.html#breadcrumb",
@@ -104,7 +102,6 @@
         }
       ]
     },
-
     {
       "@type": "Service",
       "@id": "https://pasqualecaiazzo.com/professionisti.html#service",
@@ -113,7 +110,10 @@
       "description": "Costruzione di un'identità semantica precisa e verificabile per professionisti: entità su Wikidata, dati strutturati in JSON-LD, connessioni verificabili con certificazioni e affiliazioni.",
       "url": "https://pasqualecaiazzo.com/professionisti.html",
       "provider": {
-        "@id": "https://pasqualecaiazzo.com/#person"
+        "@type": "Person",
+        "@id": "https://pasqualecaiazzo.com/#person",
+        "name": "Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com"
       },
       "areaServed": {
         "@type": "Country",
@@ -157,10 +157,16 @@
         "description": "Chiamata strategica gratuita di 30 minuti",
         "url": "https://cal.com/pcaiazzo/30min",
         "price": "0",
-        "priceCurrency": "EUR"
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
       }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com"
     }
-
   ]
 }
   </script>
