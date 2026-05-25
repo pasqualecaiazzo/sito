@@ -369,6 +369,30 @@
   </script>
   <script src="main.js" defer></script>
 
+  <style>
+    @media (max-width: 768px) {
+      #nav-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        width: 36px !important;
+        height: 36px !important;
+        background: var(--accent) !important;
+        border: none !important;
+        border-radius: 8px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        cursor: pointer !important;
+        flex-shrink: 0 !important;
+        color: var(--btn-text) !important;
+      }
+      #nav-toggle svg {
+        display: block !important;
+        width: 1.2rem !important;
+        height: 1.2rem !important;
+      }
+    }
+  </style>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -393,6 +417,10 @@
         <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
       <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+        <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
   </nav>
 
