@@ -22,6 +22,38 @@ if (themeToggleBtn) {
   });
 }
 
+
+// ── MOBILE NAV TOGGLE (Hamburger Menu) ──────────────────
+const navToggleBtn = document.getElementById('nav-toggle');
+const navEl = navToggleBtn ? navToggleBtn.closest('nav') : null;
+
+if (navToggleBtn && navEl) {
+  navToggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navEl.classList.toggle('nav-open');
+    navToggleBtn.setAttribute('aria-expanded', isOpen);
+    navToggleBtn.classList.toggle('open', isOpen);
+  });
+
+  // Close menu when a nav link is clicked
+  navEl.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navEl.classList.remove('nav-open');
+      navToggleBtn.setAttribute('aria-expanded', 'false');
+      navToggleBtn.classList.remove('open');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navEl.contains(e.target)) {
+      navEl.classList.remove('nav-open');
+      navToggleBtn.setAttribute('aria-expanded', 'false');
+      navToggleBtn.classList.remove('open');
+    }
+  });
+}
+
 // ── REVEAL SECTIONS ON SCROLL (Intersection Observer) ───
 const revealCallback = (entries, observer) => {
   entries.forEach(entry => {
