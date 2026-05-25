@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,56 +18,58 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pasquale Caiazzo – Semantic Entity Architect">
   <meta name="twitter:description" content="In un mondo fatto di dati, chi governa quello che le AI raccontano di te?">
-  <meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
-
-  <script type="application/ld+json">
+  <meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
 
     {
+      "@type": "WebSite",
+      "@id": "https://pasqualecaiazzo.com/#website",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "inLanguage": "it",
+      "publisher": {
+        "@id": "https://pasqualecaiazzo.com/#person"
+      }
+    },
+
+    {
       "@type": "Person",
       "@id": "https://pasqualecaiazzo.com/#person",
-
       "name": "Pasquale Caiazzo",
       "givenName": "Pasquale",
       "familyName": "Caiazzo",
-
       "url": "https://pasqualecaiazzo.com",
       "image": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
-
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://pasqualecaiazzo.com/"
-      },
-
       "jobTitle": "Semantic Entity Architect",
-
+      "vatID": "IT01712990058",
       "nationality": {
         "@type": "Country",
         "name": "Italy",
         "sameAs": "https://www.wikidata.org/wiki/Q38"
       },
-
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Turin",
+        "sameAs": "https://www.wikidata.org/wiki/Q495"
+      },
       "hasOccupation": {
         "@type": "Occupation",
         "name": "Semantic Entity Architect",
-        "description": "Progetta e implementa architetture semantiche (structured data, knowledge graph e linked data) che rendono l'identità di organizzazioni e professionisti leggibile, verificabile e citabile dai modelli linguistici generativi.",
+        "description": "Progetta e implementa architetture semantiche (structured data, knowledge graph, linked data) che rendono l'identità di organizzazioni e professionisti leggibile, verificabile e citabile dai modelli linguistici generativi.",
         "occupationLocation": {
           "@type": "Country",
           "name": "Italy",
           "sameAs": "https://www.wikidata.org/wiki/Q38"
         }
       },
-
-      "description": "Semantic Entity Architect specializzato in knowledge architecture, structured data e strategie semantiche per l'ecosistema AI. Progetta e implementa infrastrutture informative (JSON-LD, schema.org, knowledge graph su Wikidata) che rendono organizzazioni, professionisti e realtà del terzo settore riconoscibili, verificabili e rintracciabili dai sistemi AI.",
-
+      "description": "Semantic Entity Architect specializzato in knowledge architecture, structured data e sovranità della narrativa digitale nell'ecosistema AI.",
       "sameAs": [
         "https://www.linkedin.com/in/pasqualecaiazzo/",
         "https://github.com/pasqualecaiazzo",
         "https://pasqualecaiazzo.solidcommunity.net/profile/card#me"
       ],
-
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
@@ -92,26 +94,10 @@
           "dateCreated": "2026-05-08"
         }
       ],
-
       "knowsLanguage": [
-        {
-          "@type": "Language",
-          "name": "Italian",
-          "alternateName": "it"
-        },
-        {
-          "@type": "Language",
-          "name": "English",
-          "alternateName": "en"
-        }
+        { "@type": "Language", "name": "Italian", "alternateName": "it" },
+        { "@type": "Language", "name": "English", "alternateName": "en" }
       ],
-
-      "homeLocation": {
-        "@type": "Place",
-        "name": "Turin",
-        "sameAs": "https://www.wikidata.org/wiki/Q495"
-      },
-
       "knowsAbout": [
         {
           "@type": "DefinedTerm",
@@ -135,21 +121,6 @@
         },
         {
           "@type": "DefinedTerm",
-          "name": "Wikidata",
-          "sameAs": "https://www.wikidata.org/wiki/Q2013"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Information Architecture",
-          "sameAs": "https://www.wikidata.org/wiki/Q845921"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Solid Protocol",
-          "sameAs": "https://www.wikidata.org/wiki/Q55408718"
-        },
-        {
-          "@type": "DefinedTerm",
           "name": "Semantic Web",
           "sameAs": "https://www.wikidata.org/wiki/Q54837"
         },
@@ -160,75 +131,68 @@
         },
         {
           "@type": "DefinedTerm",
-          "name": "Knowledge Management",
-          "sameAs": "https://www.wikidata.org/wiki/Q192060"
+          "name": "Large Language Models",
+          "sameAs": "https://www.wikidata.org/wiki/Q115305900"
         },
         {
           "@type": "DefinedTerm",
-          "name": "Social Innovation",
-          "sameAs": "https://www.wikidata.org/wiki/Q1399209"
+          "name": "Data Sovereignty",
+          "sameAs": "https://www.wikidata.org/wiki/Q48780629"
         },
         {
           "@type": "DefinedTerm",
-          "name": "Digital Transformation",
-          "sameAs": "https://www.wikidata.org/wiki/Q4252370"
+          "name": "Graph Database",
+          "sameAs": "https://www.wikidata.org/wiki/Q595971"
         },
         {
           "@type": "DefinedTerm",
-          "name": "Non-profit organization",
-          "sameAs": "https://www.wikidata.org/wiki/Q163740"
+          "name": "Solid Protocol",
+          "sameAs": "https://www.wikidata.org/wiki/Q55408718"
         }
       ],
-
       "affiliation": [
-
         {
           "@type": "OrganizationRole",
           "roleName": "Core Team — Innovazione Territoriale",
           "startDate": "2025-03-01",
-          "memberOf": {
+          "affiliation": {
             "@id": "https://natworking.eu/#organization"
           }
         },
-
         {
           "@type": "OrganizationRole",
           "roleName": "Digital Project Lead",
           "startDate": "2021-09-01",
-          "memberOf": {
+          "affiliation": {
             "@id": "https://guilds42.com/#organization"
           }
         },
-
         {
           "@type": "OrganizationRole",
           "roleName": "Docente — Digital Marketing & AI",
           "startDate": "2023-12-01",
-          "memberOf": {
+          "affiliation": {
             "@id": "https://itsacademysi.it/#organization"
           }
         },
-
         {
           "@type": "OrganizationRole",
           "roleName": "Consulente Strategico",
           "startDate": "2025-07-01",
           "endDate": "2026-04-30",
-          "memberOf": {
+          "affiliation": {
             "@id": "https://www.hostinato.it/#organization"
           }
         },
-
         {
           "@type": "OrganizationRole",
           "roleName": "Consulente Strategico",
           "startDate": "2025-06-01",
           "endDate": "2026-04-30",
-          "memberOf": {
+          "affiliation": {
             "@id": "https://graffette.it/#organization"
           }
         }
-
       ]
     },
 
@@ -238,7 +202,6 @@
       "name": "NATworking",
       "url": "https://natworking.eu",
       "sameAs": "https://www.wikidata.org/wiki/Q139659711",
-
       "subjectOf": [
         {
           "@type": "NewsArticle",
@@ -270,7 +233,6 @@
       "@id": "https://guilds42.com/#organization",
       "name": "Guilds42 APS",
       "url": "https://guilds42.com",
-
       "subjectOf": [
         {
           "@type": "NewsArticle",
@@ -291,7 +253,6 @@
       "@id": "https://itsacademysi.it/#organization",
       "name": "ITS NewTechSi Academy",
       "url": "https://itsacademysi.it",
-
       "subjectOf": [
         {
           "@type": "NewsArticle",
@@ -304,6 +265,20 @@
           }
         }
       ]
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.hostinato.it/#organization",
+      "name": "Hostinato",
+      "url": "https://www.hostinato.it/"
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://graffette.it/#organization",
+      "name": "Graffette",
+      "url": "https://graffette.it/"
     }
 
   ]
@@ -312,919 +287,697 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --blue:        #0A66C2;
-      --blue-dark:   #004182;
-      --blue-deeper: #00305f;
-      --gray:        #F3F2EF;
-      --white:       #FFFFFF;
-      --dark:        #1D2226;
-      --text:        #191919;
-      --muted:       #56687A;
-      --border:      #DFDBD6;
-      --border-blue: rgba(255,255,255,0.12);
-      --max-w:       720px;
-    }
-
-    html { font-size: 16px; scroll-behavior: smooth; }
-
-    body {
-      font-family: 'IBM Plex Sans', sans-serif;
-      font-weight: 400;
-      line-height: 1.75;
-      background: var(--white);
-      color: var(--text);
-    }
-
-    /* ── NAV ─────────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.9rem 2rem;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-name {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-    }
-
-    .nav-link {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      font-weight: 400;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      transition: color 0.2s;
-    }
-    .nav-link:hover { color: var(--blue); }
-
-    /* ── LAYOUT ──────────────────────────────────────────── */
-    .band { width: 100%; }
-    .inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* ── BANDE ALTERNATE ─────────────────────────────────── */
-    .band-white { background: var(--white); color: var(--text); }
-    .band-gray  { background: var(--gray);  color: var(--text); }
-    .band-blue  {
-      background: var(--blue-dark);
-      color: #e8edf2;
-    }
-    .band-dark  { background: var(--dark);  color: #b8c4cc; }
-
-    /* ── TAG (label) ─────────────────────────────────────── */
-    .tag {
-      display: inline-block;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.8rem;
-      border-radius: 2px;
-      margin-bottom: 1.6rem;
-    }
-
-    .band-white .tag,
-    .band-gray  .tag {
-      background: rgba(10,102,194,0.1);
-      color: var(--blue);
-      border: 1.5px solid rgba(10,102,194,0.35);
-    }
-
-    .band-blue .tag {
-      background: rgba(255,255,255,0.12);
-      color: rgba(232,237,242,0.95);
-      border: 1.5px solid rgba(255,255,255,0.25);
-    }
-
-    /* ── TIPOGRAFIA ──────────────────────────────────────── */
-    h1 {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: clamp(2.8rem, 8vw, 5rem);
-      font-weight: 700;
-      line-height: 1.0;
-      letter-spacing: -0.03em;
-      color: var(--text);
-    }
-
-    h2 {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: clamp(1.3rem, 2.8vw, 1.65rem);
-      font-weight: 600;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.2rem;
-    }
-
-    .band-white h2,
-    .band-gray  h2 { color: var(--text); }
-    .band-blue  h2 { color: #e8edf2; }
-
-    p {
-      font-size: 0.97rem;
-      line-height: 1.8;
-      margin-bottom: 1rem;
-      max-width: 600px;
-    }
-    p:last-of-type { margin-bottom: 0; }
-
-    .band-white p,
-    .band-gray  p { color: var(--text); }
-    .band-blue  p { color: rgba(232,237,242,0.85); }
-
-    .intro-p {
-      font-size: 0.92rem;
-      color: var(--muted);
-      max-width: 560px;
-      line-height: 1.75;
-      margin-bottom: 2rem;
-    }
-    .band-blue .intro-p { color: rgba(232,237,242,0.6); }
-
-    /* ── HERO ────────────────────────────────────────────── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-top: 5rem;
-      padding-bottom: 4.5rem;
-      animation: appear 0.6s ease both;
-    }
-
-    .hero-role {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: clamp(0.95rem, 2vw, 1.2rem);
-      font-weight: 400;
-      color: var(--text);
-      letter-spacing: 0.01em;
-      margin-bottom: 1rem;
-      line-height: 1.4;
-    }
-
-    .hero-location {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: clamp(0.82rem, 1.5vw, 0.95rem);
-      font-weight: 400;
-      color: var(--text);
-      letter-spacing: 0.03em;
-      margin-top: 0.8rem;
-      margin-bottom: 2.5rem;
-    }
-
-    hr.rule {
-      border: none;
-      border-top: 2px solid var(--text);
-      margin-bottom: 2rem;
-    }
-
-    .band-blue hr.rule { border-top-color: rgba(255,255,255,0.2); }
-
-    .hero-tagline {
-      font-family: 'IBM Plex Sans', sans-serif;
-      font-size: clamp(1.1rem, 2.4vw, 1.35rem);
-      font-weight: 400;
-      font-style: italic;
-      line-height: 1.55;
-      color: var(--text);
-      max-width: 540px;
-    }
-
-    /* ── SECTION PADDING ─────────────────────────────────── */
-    .band section { padding: 5rem 0; }
-
-    /* ── SERVIZI ─────────────────────────────────────────── */
-    .services-list { margin-top: 0.5rem; }
-
-    .service-item {
-      display: grid;
-      grid-template-columns: 2.4rem 1fr;
-      gap: 1rem;
-      padding: 1.6rem 0;
-    }
-
-    .band-white .service-item,
-    .band-gray  .service-item { border-bottom: 1px solid var(--border); }
-    .band-blue  .service-item { border-bottom: 1px solid var(--border-blue); }
-
-    .band-white .service-item:first-child,
-    .band-gray  .service-item:first-child { border-top: 1px solid var(--border); }
-    .band-blue  .service-item:first-child { border-top: 1px solid var(--border-blue); }
-
-    .service-num {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--blue);
-      padding-top: 0.2rem;
-    }
-    .band-blue .service-num { color: rgba(232,237,242,0.45); }
-
-    .service-item h3 {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.4rem;
-    }
-
-    .band-white .service-item h3,
-    .band-gray  .service-item h3 { color: var(--text); }
-    .band-blue  .service-item h3 { color: #e8edf2; }
-
-    .service-item p {
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin: 0;
-      max-width: 100%;
-    }
-
-    .band-white .service-item p,
-    .band-gray  .service-item p { color: var(--muted); }
-    .band-blue  .service-item p { color: rgba(232,237,242,0.6); }
-
-    /* ── COLLABORAZIONI ──────────────────────────────────── */
-    .collab-list { margin-top: 1.5rem; }
-
-    .collab-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      padding: 1.5rem 0;
-      align-items: start;
-    }
-
-    .band-white .collab-item,
-    .band-gray  .collab-item { border-bottom: 1px solid var(--border); }
-    .band-blue  .collab-item { border-bottom: 1px solid var(--border-blue); }
-
-    .band-white .collab-item:first-child,
-    .band-gray  .collab-item:first-child { border-top: 1px solid var(--border); }
-    .band-blue  .collab-item:first-child { border-top: 1px solid var(--border-blue); }
-
-    .collab-name {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.88rem;
-      font-weight: 600;
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-
-    .band-white .collab-name,
-    .band-gray  .collab-name { color: var(--text); }
-    .band-blue  .collab-name { color: #e8edf2; }
-
-    .collab-role-tag {
-      display: inline-block;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.62rem;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.55rem;
-      border-radius: 2px;
-    }
-
-    .band-white .collab-role-tag,
-    .band-gray  .collab-role-tag {
-      background: rgba(0,0,0,0.06);
-      color: var(--text);
-      border: 1px solid rgba(0,0,0,0.15);
-    }
-
-    .band-blue .collab-role-tag {
-      background: rgba(255,255,255,0.12);
-      color: rgba(232,237,242,0.85);
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .collab-desc {
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin: 0;
-      max-width: 100%;
-    }
-
-    .band-white .collab-desc,
-    .band-gray  .collab-desc { color: var(--muted); }
-    .band-blue  .collab-desc { color: rgba(232,237,242,0.6); }
-
-    /* ── COMPETENZE ──────────────────────────────────────── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem 3rem;
-      margin-top: 2rem;
-    }
-
-    .area-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.15);
-    }
-
-    .band-white .area-label,
-    .band-gray  .area-label {
-      color: var(--blue);
-      border-bottom-color: rgba(10,102,194,0.2);
-    }
-    .band-blue  .area-label {
-      color: #ffffff;
-      border-bottom-color: rgba(255,255,255,0.2);
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .skill-tag {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      padding: 0.32rem 0.75rem;
-      border-radius: 2px;
-      white-space: nowrap;
-    }
-
-    .band-white .skill-tag,
-    .band-gray  .skill-tag {
-      background: rgba(10,102,194,0.1);
-      color: var(--blue);
-      border: 1.5px solid rgba(10,102,194,0.35);
-    }
-
-    .band-blue .skill-tag {
-      background: #ffffff;
-      color: var(--blue-dark);
-      border: 1.5px solid rgba(255,255,255,0.8);
-    }
-
-    /* ── CTA ─────────────────────────────────────────────── */
-    .cta-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1.8rem;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-decoration: none;
-      padding: 0.65rem 1.4rem;
-      border-radius: 2px;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .band-white .cta-link,
-    .band-gray  .cta-link {
-      background: var(--blue);
-      color: #fff;
-    }
-    .band-white .cta-link:hover,
-    .band-gray  .cta-link:hover { background: var(--blue-dark); }
-
-    .cta-group {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-      margin-top: 1.8rem;
-    }
-
-    .cta-link { margin-top: 0; }
-
-    .cta-link-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-decoration: none;
-      padding: 0.65rem 1.4rem;
-      border-radius: 2px;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .band-white .cta-link-outline,
-    .band-gray  .cta-link-outline {
-      background: transparent;
-      color: var(--blue);
-      border: 1.5px solid var(--blue);
-    }
-    .band-white .cta-link-outline:hover,
-    .band-gray  .cta-link-outline:hover {
-      background: rgba(10,102,194,0.07);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 2rem 2rem 2.5rem;
-      max-width: var(--max-w);
-      margin: 0 auto;
-    }
-
-    .footer-meta {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.65rem;
-      color: #6b7c8a;
-      line-height: 1.9;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      align-items: flex-start;
-    }
-
-    .footer-links a {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.65rem;
-      color: #6b7c8a;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--blue); }
-
-    .nav-anchors {
-      display: flex;
-      gap: 1.8rem;
-      align-items: center;
-    }
-
-    @media (max-width: 560px) { .nav-anchors { display: none; } }
-
-    /* ── COMPETENZE REDESIGN ─────────────────────────────── */
-    .comp-intro {
-      margin-bottom: 2rem;
-      color: rgba(232,237,242,0.85);
-      max-width: 560px;
-    }
-
-    .comp-list { margin-top: 0.5rem; }
-
-    .comp-item {
-      padding: 1.8rem 0;
-      border-bottom: 1px solid var(--border-blue);
-    }
-
-    .comp-item:first-child {
-      border-top: 1px solid var(--border-blue);
-    }
-
-    .comp-header {
-      display: grid;
-      grid-template-columns: 2.4rem 1fr;
-      gap: 1rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .comp-num {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: rgba(232,237,242,0.45);
-      padding-top: 0.25rem;
-    }
-
-    .comp-title {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      color: #e8edf2;
-      margin-bottom: 0.4rem;
-    }
-
-    .comp-desc {
-      font-size: 0.85rem;
-      line-height: 1.65;
-      color: rgba(232,237,242,0.6);
-      margin: 0;
-      max-width: 100%;
-    }
-
-    .comp-tags {
-      padding-left: 3.4rem;
-    }
-
-    @media (max-width: 560px) {
-      .comp-header { grid-template-columns: 1.6rem 1fr; }
-      .comp-tags   { padding-left: 2.6rem; }
-    }
-    .proof-intro {
-      margin-bottom: 2.5rem;
-    }
-
-    .code-block {
-      margin-bottom: 2rem;
-    }
-
-    .code-label {
-      display: block;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.63rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 0.6rem;
-    }
-
-    .code-pre {
-      background: var(--dark);
-      border-radius: 2px;
-      padding: 1.25rem 1.5rem;
-      overflow-x: auto;
-      margin: 0;
-      line-height: 1.75;
-    }
-
-    .code-pre code {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.78rem;
-    }
-
-    .tok-k  { color: #7eb8f7; }
-    .tok-s  { color: #e8edf2; }
-    .tok-u  { color: #9cc8f0; font-style: italic; }
-    .tok-p  { color: #56687A; }
-    .tok-t  { color: #a8c8e8; }
-
-    .code-note {
-      font-size: 0.83rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-top: 0.6rem;
-      margin-bottom: 0;
-      max-width: 100%;
-      line-height: 1.6;
-    }
-
-    .proof-closer {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.92rem;
-      color: var(--text);
-      max-width: 560px;
-    }
-    @keyframes appear {
-      from { opacity: 0; transform: translateY(8px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── RESPONSIVE ──────────────────────────────────────── */
-    @media (max-width: 560px) {
-      nav        { padding: 0.85rem 1.25rem; }
-      .inner     { padding: 0 1.25rem; }
-
-      h1         { letter-spacing: -0.02em; }
-      .hero-top  { flex-direction: column; }
-
-      .service-item  { grid-template-columns: 1.6rem 1fr; }
-      .collab-item   { grid-template-columns: 1fr; gap: 0.5rem; }
-      .skills-grid   { grid-template-columns: 1fr; gap: 1.8rem; }
-      .footer-inner  { flex-direction: column; padding: 1.5rem 1.25rem 2rem; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script src="main.js" defer></script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  
+
   <nav aria-label="Navigazione principale">
-    <a href="#" class="nav-name">Pasquale Caiazzo</a>
-    <div class="nav-anchors">
-      <a href="#about" class="nav-link">Chi sono</a>
-      <a href="#servizi" class="nav-link">Come lavoro</a>
-      <a href="#collaborazioni" class="nav-link">Impatto</a>
-      <a href="#competenze" class="nav-link">Competenze</a>
-      <a href="#contatti" class="nav-link">Contatti</a>
+    <div class="nav-left">
+      <a href="#" class="nav-name">Pasquale Caiazzo</a>
+            <div class="nav-anchors">
+        <a href="index.html#about" class="nav-link">Chi sono</a>
+        <a href="professionisti.html" class="nav-link">Per i professionisti</a>
+        <a href="pmi.html" class="nav-link">Per le PMI</a>
+        <a href="manifesto.html" class="nav-link">Manifesto</a>
+      </div>
     </div>
-    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn ↗</a>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+        <!-- Sun icon -->
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <!-- Moon icon -->
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    </div>
   </nav>
 
   <main>
-  <!-- HERO – bianco -->
-  <div class="band band-white">
-    <div class="inner">
-      <header class="hero">
-        <h2 class="hero-role">Semantic Entity Architect</h2>
-        <h1>Pasquale<br>Caiazzo</h1>
-        <p class="hero-location">Nomade digitale con base a Torino</p>
-        <hr class="rule">
-        <p class="hero-tagline">
-          In un mondo fatto di dati,<br>
-          chi governa quello che le AI raccontano di te?
-        </p>
-      </header>
-    </div>
-  </div>
-
-  <!-- CHI SONO – grigio -->
-  <div class="band band-gray">
-    <div class="inner">
-      <section id="about" aria-labelledby="about-h">
-        <span class="tag">Chi sono</span>
-        <h2 id="about-h">Leggibile, verificabile, citabile.</h2>
-        <p>
-          Costruisco le strutture che rendono un'organizzazione leggibile, verificabile e citabile dai sistemi AI. Non contenuti ottimizzati, non SEO: entità semantiche ancorate a standard aperti come JSON-LD, schema.org, knowledge graph su Wikidata.
-        </p>
-        <p>
-          Se sei una nonprofit, un'APS, una PMI o un professionista, il primo passo è capire cosa i sistemi AI già sanno di te, cosa inventano e cosa ignorano. Da lì si costruisce un'infrastruttura informativa che i modelli linguistici possono leggere, citare e usare con precisione, invece di riempire i vuoti con ipotesi.
-        </p>
-      </section>
-    </div>
-  </div>
-
-  <!-- PROOF – bianco -->
-  <div class="band band-white">
-    <div class="inner">
-      <section id="proof" aria-labelledby="proof-h">
-        <span class="tag">Proof of work</span>
-        <h2 id="proof-h">Come appare la mia identità a un sistema AI</h2>
-        <p class="proof-intro">
-          Questo è il dato strutturato che descrive chi sono ai modelli linguistici generativi. Non testo libero: entità verificabili, ancorate a fonti verificabili. È esattamente quello che costruirei per te.
-        </p>
-
-        <div class="code-block">
-          <span class="code-label">Occupazione dichiarata come entità strutturata</span>
-          <pre class="code-pre"><code><span class="tok-p">{</span>
-  <span class="tok-k">"hasOccupation"</span><span class="tok-p">: {</span>
-    <span class="tok-k">"@type"</span><span class="tok-p">:</span>        <span class="tok-s">"Occupation"</span><span class="tok-p">,</span>
-    <span class="tok-k">"name"</span><span class="tok-p">:</span>         <span class="tok-s">"Semantic Entity Architect"</span><span class="tok-p">,</span>
-    <span class="tok-k">"description"</span><span class="tok-p">:</span>  <span class="tok-s">"Progetta e implementa architetture semantiche
-                   che rendono l'identità di organizzazioni
-                   e professionisti leggibile, verificabile
-                   e citabile dai modelli linguistici generativi."</span>
-  <span class="tok-p">}</span>
-<span class="tok-p">}</span></code></pre>
-          <p class="code-note">La professione non come etichetta generica, ma come entità tipizzata con descrizione leggibile dai modelli.</p>
-        </div>
-
-        <div class="code-block">
-          <span class="code-label">Competenze ancorate a identificatori Wikidata</span>
-          <pre class="code-pre"><code><span class="tok-p">{</span>
-  <span class="tok-k">"knowsAbout"</span><span class="tok-p">: [</span>
-    <span class="tok-p">{</span> <span class="tok-k">"name"</span><span class="tok-p">:</span> <span class="tok-s">"Knowledge Graph"</span><span class="tok-p">,</span>  <span class="tok-k">"sameAs"</span><span class="tok-p">:</span> <span class="tok-u">"wikidata.org/wiki/Q33002955"</span> <span class="tok-p">},</span>
-    <span class="tok-p">{</span> <span class="tok-k">"name"</span><span class="tok-p">:</span> <span class="tok-s">"Structured Data"</span><span class="tok-p">,</span>  <span class="tok-k">"sameAs"</span><span class="tok-p">:</span> <span class="tok-u">"wikidata.org/wiki/Q26813700"</span> <span class="tok-p">},</span>
-    <span class="tok-p">{</span> <span class="tok-k">"name"</span><span class="tok-p">:</span> <span class="tok-s">"JSON-LD"</span><span class="tok-p">,</span>          <span class="tok-k">"sameAs"</span><span class="tok-p">:</span> <span class="tok-u">"wikidata.org/wiki/Q6176328"</span>  <span class="tok-p">},</span>
-    <span class="tok-p">{</span> <span class="tok-k">"name"</span><span class="tok-p">:</span> <span class="tok-s">"Schema.org"</span><span class="tok-p">,</span>       <span class="tok-k">"sameAs"</span><span class="tok-p">:</span> <span class="tok-u">"wikidata.org/wiki/Q1472591"</span>  <span class="tok-p">},</span>
-    <span class="tok-p">{</span> <span class="tok-k">"name"</span><span class="tok-p">:</span> <span class="tok-s">"Semantic Web"</span><span class="tok-p">,</span>     <span class="tok-k">"sameAs"</span><span class="tok-p">:</span> <span class="tok-u">"wikidata.org/wiki/Q54837"</span>    <span class="tok-p">},</span>
-    <span class="tok-p">{</span> <span class="tok-k">"name"</span><span class="tok-p">:</span> <span class="tok-s">"Wikidata"</span><span class="tok-p">,</span>         <span class="tok-k">"sameAs"</span><span class="tok-p">:</span> <span class="tok-u">"wikidata.org/wiki/Q2013"</span>     <span class="tok-p">}</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
-          <p class="code-note">Ogni competenza è ancorata a un identificatore univoco su Wikidata. Un sistema AI sa esattamente di cosa si tratta, senza interpretazioni.</p>
-        </div>
-
-        <div class="code-block">
-          <span class="code-label">Identità disambiguata su piattaforme multiple</span>
-          <pre class="code-pre"><code><span class="tok-p">{</span>
-  <span class="tok-k">"sameAs"</span><span class="tok-p">: [</span>
-    <span class="tok-u">"linkedin.com/in/pasqualecaiazzo/"</span><span class="tok-p">,</span>
-    <span class="tok-u">"github.com/pasqualecaiazzo"</span><span class="tok-p">,</span>
-    <span class="tok-u">"pasqualecaiazzo.solidcommunity.net/profile/card#me"</span>
-  <span class="tok-p">]</span>
-<span class="tok-p">}</span></code></pre>
-          <p class="code-note">La stessa entità, riconoscibile su piattaforme diverse tramite URI stabili. Nessuna confusione possibile tra te e qualcun altro.</p>
-        </div>
-
-        <p class="proof-closer">
-          Questo è quello che costruisco per raccontarti meglio: strutture verificabili, non dichiarazioni generiche.
-        </p>
-      </section>
-    </div>
-  </div>
-
-  <!-- COME LAVORO – blu scuro -->
-  <div class="band band-blue">
-    <div class="inner">
-      <section id="servizi" aria-labelledby="servizi-h">
-        <span class="tag">Come lavoro</span>
-        <h2 id="servizi-h">Quattro aree di intervento</h2>
-        <div class="services-list">
-
-          <div class="service-item">
-            <span class="service-num">01</span>
-            <div>
-              <h3>Knowledge Architecture</h3>
-              <p>Progetto la struttura semantica dell'organizzazione: knowledge graph, entità verificabili, dati collegati che codificano il valore in modo rintracciabile dai modelli linguistici. Non si tratta di produrre contenuti migliori o di automatizzare processi. Si tratta di costruire un patrimonio informativo che i sistemi AI possono leggere, citare e usare con precisione, e che non dipende da nessun singolo strumento.</p>
+    <!-- HERO SECTION -->
+    <div class="band hero-band">
+      <div class="inner">
+        <header class="hero-layout">
+          <div class="hero-content">
+            <span class="hero-role">Semantic Entity Architect</span>
+            <h1>Pasquale Caiazzo</h1>
+            <div class="hero-location">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Nomade digitale con base a Torino
+            </div>
+            <hr class="rule">
+            <p class="hero-tagline">
+              In un mondo fatto di dati, chi governa quello che le AI raccontano di te?
+            </p>
+            <div class="cta-group">
+              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">
+                Prenota una chiamata ↗
+              </a>
             </div>
           </div>
-
-          <div class="service-item">
-            <span class="service-num">02</span>
-            <div>
-              <h3>AI Readiness &amp; Machine Readability</h3>
-              <p>Sei online. Ma per i sistemi AI potresti non esistere, o peggio: essere rappresentato in modo scorretto. Mappo i punti ciechi informativi, intervengo sul dato strutturato e costruisco una presenza verificabile che i modelli linguistici possono citare con precisione. Il lavoro non tocca il contenuto: tocca il layer semantico che sta sotto.</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <span class="service-num">03</span>
-            <div>
-              <h3>Semantic Strategy</h3>
-              <p>Partendo dagli obiettivi strategici e non dagli strumenti, costruiamo insieme la versione della tua identità che deve circolare nei sistemi AI: in quale forma, con quale priorità, con quale peso semantico. Non è ottimizzazione per i motori di ricerca tradizionali. È la governance di quello che le AI raccontano di te.</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <span class="service-num">04</span>
-            <div>
-              <h3>Formazione &amp; Consulenza</h3>
-              <p>Trasferisco il metodo all'interno dell'organizzazione, perché la presenza semantica non dipenda da un consulente esterno. I percorsi coprono il layer tecnico (come si costruisce e mantiene un dato strutturato) e quello strategico (cosa dichiarare, con quale frequenza, con quale coerenza). L'obiettivo è che ogni team sappia governare la propria identità informativa nel tempo.</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-    </div>
-  </div>
-
-  <!-- COLLABORAZIONI – bianco -->
-  <div class="band band-white">
-    <div class="inner">
-      <section id="collaborazioni" aria-labelledby="collab-h">
-        <span class="tag">Relazioni &amp; Impatto</span>
-        <h2 id="collab-h">Non solo AI</h2>
-        <p>
-          Credo nel potere delle relazioni umane e nel lavoro con realtà che generano impatti positivi sul territorio e sulle persone reali. Queste collaborazioni sono parte integrante del mio modo di vedere il mondo. Credo sia fondamentale dare forma a idee, progetti e visioni.
-        </p>
-        <div class="collab-list" role="list">
-
-          <div class="collab-item" role="listitem">
-            <div>
-              <span class="collab-name">NATworking</span>
-              <span class="collab-role-tag">Core Team · Innovazione Sociale</span>
-            </div>
-            <p class="collab-desc">Punto di incontro tra direzioni personali e strumento di innovazione sociale. Progetti destinati a impattare positivamente sulle persone prima e sui territori poi. Focus su CRM, campagne ADV e strategie digitali per tradurre la visione in strumenti concreti.</p>
-          </div>
-
-          <div class="collab-item" role="listitem">
-            <div>
-              <span class="collab-name">Evermind B Corp</span>
-              <span class="collab-role-tag">Collaborazione · Freelance</span>
-            </div>
-            <p class="collab-desc">Collaborazione su progetti digitali per organizzazioni che mettono le persone al centro. Il lavoro include architetture informative, supporto alla comunicazione digitale e accompagnamento strategico.</p>
-          </div>
-
-          <div class="collab-item" role="listitem">
-            <div>
-              <span class="collab-name">Guilds42 APS</span>
-              <span class="collab-role-tag">Digital Project Lead · Freelance</span>
-            </div>
-            <p class="collab-desc">Primo miglio nel mondo del digitale, e parte del lavoro ancora oggi per la missione e gli ideali che la muovono. Team di 6-8 persone guidati su progetti digitali reali in Agile, con percorsi hands-on per studenti universitari, professionisti in transizione e donne nel reinserimento professionale.</p>
-          </div>
-
-          <div class="collab-item" role="listitem">
-            <div>
-              <span class="collab-name">ITS NewTechSi Academy</span>
-              <span class="collab-role-tag">Docente · Digital Marketing &amp; AI</span>
-            </div>
-            <p class="collab-desc">Percorso ITS per Tecnici Superiori in AI &amp; Business Management. Casi studio reali, strumenti operativi e una visione aggiornata del mercato digitale portati in aula: dall'advertising ai sistemi CRM applicati al business.</p>
-          </div>
-
-        </div>
-      </section>
-    </div>
-  </div>
-
-  <!-- COMPETENZE – blu scuro -->
-  <div class="band band-blue">
-    <div class="inner">
-      <section id="competenze" aria-labelledby="comp-h">
-        <span class="tag">Competenze</span>
-        <h2 id="comp-h">Metodo, strategia, contesto</h2>
-        <p class="comp-intro">Tre livelli distinti: il layer tecnico di costruzione delle entità semantiche, il layer strategico di visibilità AI, e i contesti organizzativi in cui opero.</p>
-
-        <div class="comp-list">
-
-          <div class="comp-item">
-            <div class="comp-header">
-              <span class="comp-num">01</span>
-              <div>
-                <h3 class="comp-title">Entity Architecture &amp; Semantic Web</h3>
-                <p class="comp-desc">Costruzione di entità strutturate, ancorate e verificabili nel knowledge graph: il layer tecnico del lavoro.</p>
+          <div class="hero-visual">
+            <div class="profile-card">
+              <div class="profile-img-container">
+                <img src="pasquale-caiazzo.jpeg" alt="Pasquale Caiazzo">
+              </div>
+              <div class="profile-meta">
+                <span>rdf:about</span> = "https://pasqualecaiazzo.com/#person"<br>
+                <span>name</span> = "Pasquale Caiazzo"<br>
+                <span>jobTitle</span> = "Semantic Entity Architect"
               </div>
             </div>
-            <div class="comp-tags skill-tags">
-              <span class="skill-tag">Knowledge Graph</span>
-              <span class="skill-tag">Structured Data</span>
-              <span class="skill-tag">JSON-LD</span>
-              <span class="skill-tag">Schema.org</span>
-              <span class="skill-tag">Linked Data</span>
-              <span class="skill-tag">Semantic Web</span>
-            </div>
           </div>
+        </header>
+      </div>
+    </div>
 
-          <div class="comp-item">
-            <div class="comp-header">
-              <span class="comp-num">02</span>
-              <div>
-                <h3 class="comp-title">AI Readiness &amp; Strategy</h3>
-                <p class="comp-desc">Analisi dei gap informativi e progettazione della presenza leggibile dai modelli linguistici: il layer strategico.</p>
+    <!-- CHI SONO & METRICS SECTION -->
+    <div class="band">
+      <div class="inner">
+        <section id="about" class="reveal" aria-labelledby="about-h">
+          <span class="tag">Chi sono</span>
+          <div class="about-layout">
+                        <div class="about-text-column">
+              <h2 id="about-h">Leggibile, verificabile, citabile.</h2>
+              <p class="intro-p">
+                Progetto e implemento architetture semantiche per professionisti e imprese che vogliono controllare come i sistemi AI li rappresentano. Il lavoro riguarda il layer informativo che sta sotto il sito: dati strutturati in JSON-LD, entità su Wikidata, knowledge graph. Non contenuti, non SEO.
+              </p>
+              <p>
+                Il punto di partenza è sempre un audit: cosa sanno di te i principali sistemi AI, cosa inventano, cosa ignorano. Da lì si costruisce un'infrastruttura che i modelli linguistici possono leggere con precisione invece di riempire con ipotesi.
+              </p>
+            </div>
+            <div class="about-metrics-column">
+              <div class="metrics-card">
+                <div class="metric-item">
+                  <span class="metric-val">100%</span>
+                  <span class="metric-lbl">Profilo Machine-Readable</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-val">Wikidata</span>
+                  <span class="metric-lbl">Autorità Disambiguata</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-val">Neo4j</span>
+                  <span class="metric-lbl">Professionista dei Grafi Certificato</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-val">Solid ID</span>
+                  <span class="metric-lbl">WebID Decentralizzato Attivo</span>
+                </div>
               </div>
             </div>
-            <div class="comp-tags skill-tags">
-              <span class="skill-tag">AI Readiness</span>
-              <span class="skill-tag">Machine Readability</span>
-              <span class="skill-tag">Knowledge Architecture</span>
-              <span class="skill-tag">Knowledge Management</span>
+          </div> <!-- closes about-layout -->
+        </section>
+      </div>
+    </div>
+
+    <!-- GRAFO SEMANTICO / PROOF SECTION -->
+    <div class="band">
+      <div class="inner">
+                <section id="proof" class="reveal" aria-labelledby="proof-h">
+          <span class="tag">Progetti & Proof of Work</span>
+          <div class="proof-section-header">
+            <div class="proof-header-left">
+              <h2 id="proof-h">Le applicazioni pratiche dell'architettura semantica</h2>
+              <p class="subtitle">
+                Dall'ottimizzazione per i motori di risposta AI all'organizzazione dei dati aziendali: come trasformiamo le informazioni in conoscenza strutturata e azionabile.
+              </p>
             </div>
           </div>
 
-          <div class="comp-item">
-            <div class="comp-header">
-              <span class="comp-num">03</span>
-              <div>
-                <h3 class="comp-title">Settori &amp; Contesti</h3>
-                <p class="comp-desc">Non competenze tecniche, ma ecosistemi che conosco in profondità: i contesti organizzativi in cui il lavoro ha più impatto.</p>
+          <!-- Grid of other work areas to show the breadth of services -->
+          <div class="work-areas-grid">
+            <div class="work-area-card">
+              <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">01 / Schemi Dati (JSON-LD)</h4>
+              <p style="font-size: 0.8rem; line-height: 1.55; color: var(--text-muted); margin: 0;">Progettazione e integrazione di markup Schema.org personalizzati ad alte prestazioni per rendere siti web, professionisti e cataloghi aziendali leggibili dalle intelligenze artificiali.</p>
+            </div>
+            <div class="work-area-card">
+              <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">02 / Entità Wikidata</h4>
+              <p style="font-size: 0.8rem; line-height: 1.55; color: var(--text-muted); margin: 0;">Mappatura e pubblicazione di entità verificate su Wikidata, creando una firma digitale stabile e disambiguata per prevenire le allucinazioni dei motori di risposta.</p>
+            </div>
+            <div class="work-area-card">
+              <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">03 / Basi Dati per RAG</h4>
+              <p style="font-size: 0.8rem; line-height: 1.55; color: var(--text-muted); margin: 0;">Organizzazione e strutturazione di documentazione interna, manuali e database aziendali in formati semantici stabili per alimentare motori RAG proprietari.</p>
+            </div>
+            <div class="work-area-card">
+              <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">04 / Automazione Dati</h4>
+              <p style="font-size: 0.8rem; line-height: 1.55; color: var(--text-muted); margin: 0;">Costruzione di flussi di lavoro stabili (Make/n8n) per sincronizzare in tempo reale CRM aziendali (HubSpot, Salesforce) e base di conoscenza semantica.</p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text);">Dimostrazione Interattiva: Il Grafo Semantico</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 800px;">
+              Come caso d'uso sperimentale di entity linking, questo grafo mappa l'evoluzione storica dei dati collegati e degli standard semantici. Trascina i nodi ed esplora le connessioni per vedere come l'informazione viene strutturata per le macchine.
+            </p>
+          </div>
+
+          <!-- Elemento 2: Interactive Knowledge Graph -->
+          <div class="explorer-wrapper" id="grafo">
+            <div class="tabs-header">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; font-weight: 700; color: var(--accent);">Visualizzazione Grafo Semantico</span>
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
               </div>
             </div>
-            <div class="comp-tags skill-tags">
-              <span class="skill-tag">Nonprofit &amp; APS</span>
-              <span class="skill-tag">Social Innovation</span>
-              <span class="skill-tag">PMI</span>
-              <span class="skill-tag">Terzo settore</span>
+            
+            <!-- Filter and search bar -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: rgba(0,0,0,0.15); border-bottom: 1px solid var(--border); gap: 1rem;">
+              <div class="ai-query-grid" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all" style="font-family: 'IBM Plex Mono', monospace;">Tutti</button>
+                <button class="filter-btn" data-filter="person" style="font-family: 'IBM Plex Mono', monospace;">Persone</button>
+                <button class="filter-btn" data-filter="concept" style="font-family: 'IBM Plex Mono', monospace;">Concetti</button>
+                <button class="filter-btn" data-filter="standard" style="font-family: 'IBM Plex Mono', monospace;">Standard</button>
+                <button class="filter-btn" data-filter="tool" style="font-family: 'IBM Plex Mono', monospace;">Strumenti</button>
+                <button class="filter-btn" data-filter="critique" style="font-family: 'IBM Plex Mono', monospace;">Critica</button>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="text" id="node-search" placeholder="Cerca nodo..." style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; padding: 0.4rem 0.8rem; border-radius: 20px; border: 1px solid var(--border); background: var(--code-bg); color: var(--text); outline: none; width: 180px;">
+              </div>
+            </div>
+
+            <div class="graph-layout">
+              <div class="canvas-wrapper" style="position: relative;">
+                <svg id="d3-graph" style="width: 100%; height: 100%;"></svg>
+                <div class="graph-controls">
+                  <button id="btn-zoom-in" title="Aumenta Zoom">+</button>
+                  <button id="btn-zoom-out" title="Riduci Zoom">-</button>
+                  <button id="btn-reset-layout" title="Ripristina Layout">⟲</button>
+                </div>
+              </div>
+              <div class="details-card">
+                <div id="details-default" class="details-default">
+                  <svg class="graph-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 3.5rem; height: 3.5rem; color: var(--text-muted); opacity: 0.6; margin-bottom: 1.25rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+                  <p style="font-size: 0.85rem; text-align: center; color: var(--text-muted);">Trascina il grafo per spostarsi, usa la rotellina per lo zoom. Fai click su un nodo per visualizzare i dettagli storici e le relazioni semantiche su Wikidata.</p>
+                </div>
+                <div id="details-content" class="details-content hidden" style="display: flex; flex-direction: column; height: 100%;">
+                  <div class="details-header" style="margin-bottom: 1.25rem;">
+                    <span id="node-type-badge" class="node-badge" style="display: inline-block; padding: 0.25rem 0.65rem; border-radius: 4px; border: 1px solid; font-size: 0.65rem; font-weight: 700; text-transform: uppercase;"></span>
+                    <h3 id="node-name" style="font-size: 1.3rem; font-weight: 700; color: var(--text); margin-top: 0.5rem; font-family: 'IBM Plex Serif', serif;"></h3>
+                    <span id="node-year" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--text-muted);"></span>
+                  </div>
+                  <p id="node-description" style="font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.5rem;"></p>
+                  
+                  <div style="margin-top: auto; border-top: 1px solid var(--border); padding-top: 1.25rem;">
+                    <span class="detail-label" style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Wikidata:</span>
+                    <a id="node-wikidata-link" href="#" target="_blank" rel="noopener noreferrer" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.75rem; background: rgba(74, 158, 255, 0.05); border: 1px solid rgba(74, 158, 255, 0.15); border-radius: 6px; word-break: break-all;">
+                      <span id="node-wikidata-text">Q00000</span>
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+
+                  <div style="margin-top: 1.25rem;">
+                    <span class="detail-label" style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Relazioni Collegate:</span>
+                    <ul id="node-relations-list" style="list-style: none; padding: 0; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--text-muted); max-height: 160px; overflow-y: auto;">
+                      <!-- relations will be appended here -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <!-- CONTATTI – grigio -->
-  <div class="band band-gray">
-    <div class="inner">
-      <section id="contatti" aria-labelledby="cta-h">
-        <span class="tag">Contatti</span>
-        <h2 id="cta-h">Parliamone</h2>
-        <p>
-          Se quello che hai letto ha senso per il tuo contesto, prenota una chiamata di 30 minuti o scrivimi direttamente su LinkedIn.
-        </p>
-        <div class="cta-group">
-          <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-link">
-            Prenota una chiamata ↗
-          </a>
-          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="cta-link-outline">
-            LinkedIn ↗
-          </a>
-        </div>
-      </section>
+    <!-- COME LAVORO SECTION -->
+    <div class="band">
+      <div class="inner">
+                <section id="servizi" class="reveal" aria-labelledby="servizi-h">
+          <span class="tag">Cosa faccio</span>
+          <h2 id="servizi-h">Il problema cambia. Il metodo no.</h2>
+          <p class="intro-p">
+            Lavoro con professionisti che vogliono un'identità semantica precisa e con imprese che vogliono essere presenti nei motori di risposta AI. Il metodo è lo stesso in entrambi i casi. Quello che cambia è il problema di partenza.
+          </p>
+          <div class="services-grid">
+
+            <div class="service-card">
+              <div class="service-header">
+                <h3>Per i professionisti</h3>
+                <span class="service-num">01</span>
+              </div>
+              <p>Costruzione della presenza semantica e della reputazione digitale per esperti, autori e consulenti. Attraverso Wikidata e implementazioni JSON-LD mirate, faccio in modo che i motori di risposta AI (ChatGPT, Claude, Gemini) comprendano e descrivano accuratamente le tue competenze e la tua storia, riducendo al minimo le allucinazioni algoritmiche.</p>
+              <a href="professionisti.html" class="service-card-link">
+                Approfondisci il servizio
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+              </a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-header">
+                <h3>Per le PMI</h3>
+                <span class="service-num">02</span>
+              </div>
+              <p>Preparazione dell'infrastruttura dati aziendale per l'indicizzazione semantica dei sistemi generativi. Mappo la struttura societaria, i prodotti e i servizi in grafi di conoscenza proprietari e dati strutturati Schema.org, garantendo che l'azienda sia rintracciabile e citata nelle risposte dell'AI.</p>
+              <a href="pmi.html" class="service-card-link">
+                Approfondisci il servizio
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+              </a>
+            </div>
+
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
+
+    <!-- COLLABORAZIONI SECTION -->
+    <div class="band">
+      <div class="inner">
+                <section id="collaborazioni" class="reveal" aria-labelledby="collab-h">
+          <span class="tag">Oltre la consulenza</span>
+          <h2 id="collab-h">Progetti che sposano la mia visione del mondo</h2>
+          <p class="intro-p">
+            Non tutto passa per le logiche commerciali. Seguo e supporto attivamente iniziative che rispecchiano i miei valori e il mio modo di vedere il futuro: dalla formazione delle competenze digitali alla sostenibilità delle società B Corp e delle APS, passando per la valorizzazione del lavoro da remoto in armonia con la natura. Sono laboratori di idee prima che collaborazioni, in cui la tecnologia è uno strumento per generare valore condiviso.
+          </p>
+          <div class="collab-grid">
+
+            <div class="collab-card">
+              <div class="collab-header">
+                <span class="collab-name">NATworking</span>
+                <span class="collab-role-tag">Core Team</span>
+              </div>
+              <p class="collab-desc">Rete di innovazione sociale che promuove la rigenerazione territoriale ed il networking rurale attraverso il coworking in natura e il lavoro da remoto. All'interno del core team mi occupo della progettazione dell'infrastruttura digitale, dell'integrazione del CRM e dello sviluppo di strategie di visibilità semantica.</p>
+            </div>
+
+            <div class="collab-card">
+              <div class="collab-header">
+                <span class="collab-name">Guilds42 APS</span>
+                <span class="collab-role-tag">Digital Project Lead</span>
+              </div>
+              <p class="collab-desc">Associazione non profit nata per colmare il divario tra formazione e mercato del lavoro nel settore digitale. In qualità di Project Lead guido gli studenti nella realizzazione di progetti tecnologici reali a supporto del terzo settore. È il luogo dove ho mosso i primi passi ed iniziato a sperimentare l'impatto sociale della tecnologia.</p>
+            </div>
+
+            <div class="collab-card">
+              <div class="collab-header">
+                <span class="collab-name">Evermind B Corp</span>
+                <span class="collab-role-tag">Consulente</span>
+              </div>
+              <p class="collab-desc">Società benefit e B Corp focalizzata sullo sviluppo di soluzioni digitali per l'innovazione sociale ed ambientale. Collaboro come consulente esterno per la definizione delle architetture informative e l'organizzazione semantica dei dati, con l'obiettivo di dimostrare che il digitale può essere etico, trasparente e orientato al bene comune.</p>
+            </div>
+
+            <div class="collab-card">
+              <div class="collab-header">
+                <span class="collab-name">ITS NewTechSi Academy</span>
+                <span class="collab-role-tag">Docente</span>
+              </div>
+              <p class="collab-desc">Istituto piemontese focalizzato sull'alta formazione tecnologica post-diploma. Insegno Digital Marketing e offro percorsi pratici sull'AI readiness all'interno del corso per Tecnici Superiori in Artificial Intelligence & Business Management, trasferendo competenze concrete sulla strutturazione semantica dei dati.</p>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- CONTATTI SECTION -->
+    <div class="band">
+      <div class="inner">
+                <section id="contatti" class="reveal" aria-labelledby="cta-h">
+          <span class="tag">Contatti</span>
+          <h2 id="cta-h">Parliamone</h2>
+          <p class="intro-p">
+            Se il problema che descrivo esiste nella tua situazione, prenota una chiamata di 30 minuti. Non serve sapere già cosa ti serve.
+          </p>
+          <div class="cta-group">
+            <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">
+              Prenota una chiamata ↗
+            </a>
+            <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-outline">
+              LinkedIn ↗
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
 
   </main>
 
-  <!-- FOOTER – scuro -->
-  <footer class="band band-dark">
-    <div class="footer-inner">
-      <div class="footer-meta">
-        Pasquale Caiazzo<br>
-        Nomade digitale con base a Torino<br>
-        P.IVA IT01712990058
-      </div>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+  <!-- FOOTER -->
+    <footer>
+    <div class="inner">
+      <div class="footer-inner">
+                <div class="footer-meta">
+          <span>Pasquale Caiazzo</span><br>
+          Semantic Entity Architect<br>
+          Torino<br>
+          P.IVA IT01712990058
+        </div>
+        <div class="footer-links" style="display: flex; gap: 2rem;">
+          <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <div class="tooltip" id="tooltip"></div>
+
+  <script>
+    const graphNodes = [
+      { id: 'bush', label: 'Vannevar Bush', type: 'person', year: 1945, wikidata: 'Q299595', desc: 'Immagina il Memex nel 1945. In «As We May Think» prefigura un sistema in cui la conoscenza è navigata per associazione invece che per gerarchia. È la prima architettura concettuale del web.' },
+      { id: 'nelson', label: 'Ted Nelson', type: 'person', year: 1963, wikidata: 'Q62852', desc: 'Conia il termine «ipertesto» nel 1963. Progetta Xanadu, un sistema di collegamento universale mai completato. Il web di Berners-Lee eredita la sua visione.' },
+      { id: 'berners-lee', label: 'Tim Berners-Lee', type: 'person', year: 1989, wikidata: 'Q80', desc: 'Inventa il World Wide Web nel 1989, propone il Web Semantico nel 1998, lancia il Protocollo Solid nel 2016. L\'architetto del web aperto.' },
+      { id: 'hendler', label: 'James Hendler', type: 'person', year: 2001, wikidata: 'Q6135847', desc: 'Co-autore del manifesto del Web Semantico su Scientific American (2001). Contribuisce alla definizione di RDF e OWL come standard W3C.' },
+      { id: 'zuboff', label: 'Shoshana Zuboff', type: 'person', year: 2019, wikidata: 'Q15953956', desc: 'In «The Age of Surveillance Capitalism» (2019) analizza come i dati umani siano diventati materia prima per sistemi economici senza consenso degli individui.' },
+      { id: 'vrandevcic', label: 'Denny Vrandecic', type: 'person', year: 2012, wikidata: 'Q18618629', desc: 'Fondatore di Wikidata, il knowledge graph aperto della Wikimedia Foundation. Ha creato l\'infrastruttura che rende verificabili oltre 100 milioni di entità.' },
+      
+      { id: 'memex', label: 'Memex', type: 'concept', year: 1945, wikidata: 'Q471', desc: 'Dispositivo immaginato da Bush nel 1945. Non lineare, associativo, personale. Non è mai stato costruito ma ha ispirato tutto ciò che è venuto dopo: ipertesto, web, knowledge graph.' },
+      { id: 'hypertext', label: 'Ipertesto', type: 'concept', year: 1963, wikidata: 'Q93241', desc: 'Testo non lineare con collegamenti tra documenti. Il principio fondamentale del web: non una sequenza ma una rete di relazioni tra contenuti.' },
+      { id: 'www', label: 'World Wide Web', type: 'concept', year: 1989, wikidata: 'Q466', desc: 'Sistema di documenti ipertestuali su internet. Creato al CERN nel 1989. Ha trasformato la comunicazione globale ma anche abilitato la concentrazione di potere sui dati.' },
+      { id: 'semantic-web', label: 'Web Semantico', type: 'concept', year: 1998, wikidata: 'Q54837', desc: 'Estensione del web proposta da Berners-Lee: i dati hanno significato formale leggibile dalle macchine. La visione non si è realizzata completamente ma i suoi standard sono la base dell\'AI readiness.' },
+      { id: 'linked-data', label: 'Linked Data', type: 'concept', year: 2006, wikidata: 'Q515701', desc: 'Principi definiti da Berners-Lee nel 2006: usa URI stabili, pubblica dati in RDF, collega a dati esterni. La grammatica pratica del Web Semantico.' },
+      { id: 'knowledge-graph', label: 'Knowledge Graph', type: 'concept', year: 2012, wikidata: 'Q33002955', desc: 'Grafo di entità e relazioni verificabili. Introdotto da Google nel 2012. Oggi è la struttura che alimenta i sistemi AI quando citano fatti verificabili su persone e organizzazioni.' },
+      { id: 'data-sovereignty', label: 'Sovranità del Dato', type: 'concept', year: 2016, wikidata: 'Q48780629', desc: 'Principio per cui i dati appartengono a chi li produce. Risposta al capitalismo della sorveglianza. Si realizza nel Protocollo Solid e nella governance della narrativa semantica.' },
+      { id: 'ai-readiness', label: 'AI Readiness', type: 'concept', year: 2023, wikidata: 'Q138646003', desc: 'Capacità di un\'entità di essere letta, citata e rappresentata con precisione dai sistemi AI. Si costruisce con JSON-LD, Wikidata e knowledge graph verificabili.' },
+      
+      { id: 'rdf', label: 'RDF', type: 'standard', year: 1999, wikidata: 'Q54872', desc: 'Resource Description Framework. Standard W3C del 1999. Rappresenta la conoscenza come triple soggetto-predicato-oggetto. La lingua formale del Web Semantico.' },
+      { id: 'json-ld', label: 'JSON-LD', type: 'standard', year: 2010, wikidata: 'Q6108942', desc: 'Serializzazione di Linked Data in JSON. Standard W3C dal 2014. Il modo più pratico per implementare dati strutturati leggibili dai sistemi AI su qualsiasi sito web.' },
+      { id: 'schema-org', label: 'Schema.org', type: 'standard', year: 2011, wikidata: 'Q3475322', desc: 'Vocabolario condiviso per il markup strutturato. Creato da Google, Microsoft, Yahoo e Yandex nel 2011. Definisce i tipi di entità riconosciuti dai sistemi AI.' },
+      { id: 'solid', label: 'Solid Protocol', type: 'standard', year: 2016, wikidata: 'Q55408718', desc: 'Protocollo proposto da Berners-Lee. Archivia i dati in Pod personali controllati dall\'individuo. L\'implementazione tecnica della sovranità del dato.' },
+      { id: 'rag', label: 'RAG', type: 'standard', year: 2020, wikidata: 'Q121362277', desc: 'Retrieval-Augmented Generation. Potenzia i LLM collegandoli a basi di conoscenza esterne strutturate. Richiede dati verificabili e ben organizzati per funzionare senza allucinazioni.' },
+      
+      { id: 'wikidata', label: 'Wikidata', type: 'tool', year: 2012, wikidata: 'Q2013', desc: 'Knowledge graph aperto della Wikimedia Foundation. Oltre 100 milioni di entità con identificatori univoci (Q-ID). La fonte più verificabile per l\'identità semantica.' },
+      { id: 'llm', label: 'LLM', type: 'tool', year: 2020, wikidata: 'Q115305900', desc: 'Modelli linguistici addestrati su enormi quantità di testo: ChatGPT, Gemini, Claude. La qualità della loro rappresentazione di un\'entità dipende dalla struttura dei dati disponibili.' },
+      
+      { id: 'surveillance-cap', label: 'Capitalismo della Sorveglianza', type: 'critique', year: 2019, wikidata: 'Q29096967', desc: 'Sistema economico che estrae valore dai dati comportamentali umani senza consenso. Concetto di Zuboff: il web commerciale come macchina di previsione e modifica del comportamento.' }
+    ];
+
+    const graphLinks = [
+      { source: 'bush', target: 'memex', rel: 'schema:creator' },
+      { source: 'nelson', target: 'hypertext', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'www', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'semantic-web', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'solid', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'linked-data', rel: 'schema:creator' },
+      { source: 'hendler', target: 'semantic-web', rel: 'schema:creator' },
+      { source: 'zuboff', target: 'surveillance-cap', rel: 'schema:creator' },
+      { source: 'vrandevcic', target: 'wikidata', rel: 'schema:creator' },
+      { source: 'memex', target: 'hypertext', rel: 'dcterms:references' },
+      { source: 'hypertext', target: 'www', rel: 'dcterms:references' },
+      { source: 'www', target: 'semantic-web', rel: 'dcterms:relation' },
+      { source: 'www', target: 'surveillance-cap', rel: 'dcterms:relation' },
+      { source: 'semantic-web', target: 'rdf', rel: 'dcterms:relation' },
+      { source: 'semantic-web', target: 'linked-data', rel: 'dcterms:relation' },
+      { source: 'rdf', target: 'json-ld', rel: 'dcterms:hasFormat' },
+      { source: 'json-ld', target: 'schema-org', rel: 'dcterms:relation' },
+      { source: 'linked-data', target: 'wikidata', rel: 'dcterms:relation' },
+      { source: 'schema-org', target: 'knowledge-graph', rel: 'dcterms:relation' },
+      { source: 'wikidata', target: 'knowledge-graph', rel: 'dcterms:relation' },
+      { source: 'knowledge-graph', target: 'llm', rel: 'dcterms:relation' },
+      { source: 'llm', target: 'rag', rel: 'dcterms:relation' },
+      { source: 'rag', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'json-ld', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'schema-org', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'wikidata', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'surveillance-cap', target: 'data-sovereignty', rel: 'dcterms:relation' },
+      { source: 'solid', target: 'data-sovereignty', rel: 'dcterms:relation' },
+      { source: 'data-sovereignty', target: 'ai-readiness', rel: 'dcterms:relation' }
+    ];
+
+    function getRadius(node) {
+      if (node.id === 'ai-readiness' || node.id === 'berners-lee') return 26;
+      if (node.id === 'www' || node.id === 'semantic-web' || node.id === 'knowledge-graph' || node.id === 'llm') return 22;
+      if (node.id === 'wikidata' || node.id === 'json-ld' || node.id === 'schema-org' || node.id === 'surveillance-cap') return 18;
+      return 15;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.canvas-wrapper');
+      let width = container.clientWidth || 600;
+      let height = container.clientHeight || 520;
+
+      const svg = d3.select('#d3-graph');
+      const g = svg.append('g').attr('class', 'graph-g');
+
+      const zoom = d3.zoom()
+        .scaleExtent([0.3, 3])
+        .on('zoom', (event) => {
+          g.attr('transform', event.transform);
+        });
+
+      svg.call(zoom);
+
+      document.getElementById('btn-zoom-in').addEventListener('click', () => {
+        svg.transition().duration(300).call(zoom.scaleBy, 1.3);
+      });
+      document.getElementById('btn-zoom-out').addEventListener('click', () => {
+        svg.transition().duration(300).call(zoom.scaleBy, 1/1.3);
+      });
+      document.getElementById('btn-reset-layout').addEventListener('click', () => {
+        svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+        d3.selectAll('.node circle').classed('highlighted', false);
+        d3.selectAll('.link').classed('highlighted', false);
+        document.getElementById('details-content').classList.add('hidden');
+        document.getElementById('details-default').classList.remove('hidden');
+      });
+
+      const defs = svg.append('defs');
+      
+      defs.append('marker')
+        .attr('id', 'arrow-default')
+        .attr('viewBox', '0 -5 10 10')
+        .attr('refX', 9)
+        .attr('refY', 0)
+        .attr('markerWidth', 6)
+        .attr('markerHeight', 6)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M0,-5L10,0L0,5')
+        .attr('fill', 'var(--text-muted)')
+        .attr('opacity', 0.45);
+        
+      defs.append('marker')
+        .attr('id', 'arrow-active')
+        .attr('viewBox', '0 -5 10 10')
+        .attr('refX', 9)
+        .attr('refY', 0)
+        .attr('markerWidth', 6)
+        .attr('markerHeight', 6)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M0,-5L10,0L0,5')
+        .attr('fill', 'var(--accent)')
+        .attr('opacity', 0.95);
+
+      const simulation = d3.forceSimulation(graphNodes)
+        .force('link', d3.forceLink(graphLinks).id(d => d.id).distance(135))
+        .force('charge', d3.forceManyBody().strength(-240))
+        .force('center', d3.forceCenter(width / 2, height / 2))
+        .force('collide', d3.forceCollide().radius(d => getRadius(d) + 18));
+
+      const linkGroup = g.append('g').attr('class', 'links-g');
+      const linkWrapper = linkGroup.selectAll('.link-container')
+        .data(graphLinks)
+        .enter()
+        .append('g')
+        .attr('class', 'link-container');
+
+      const link = linkWrapper.append('path')
+        .attr('class', 'link')
+        .attr('marker-end', 'url(#arrow-default)');
+
+      const linkLabel = linkWrapper.append('text')
+        .attr('class', 'link-label')
+        .text(d => d.rel);
+
+      const nodeGroup = g.append('g').attr('class', 'nodes-g');
+      const node = nodeGroup.selectAll('.node')
+        .data(graphNodes)
+        .enter()
+        .append('g')
+        .attr('class', 'node')
+        .call(d3.drag()
+          .clickDistance(10)
+          .on('start', dragstarted)
+          .on('drag', dragged)
+          .on('end', dragended));
+
+      node.append('circle')
+        .attr('r', d => getRadius(d))
+        .attr('class', d => `node-${d.type}`);
+
+      node.append('text')
+        .attr('y', d => getRadius(d) + 12)
+        .text(d => d.label)
+        .style('font-family', "'IBM Plex Mono', monospace")
+        .style('font-weight', '600')
+        .style('font-size', '0.65rem');
+
+      function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      }
+
+      function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+      }
+
+      function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+      }
+
+      const tooltip = d3.select('#tooltip');
+
+      node.on('mouseover', function(event, d) {
+        tooltip.style('opacity', 1)
+          .html(`Anno: ${d.year}<br>Tipo: ${d.type.toUpperCase()}`);
+        
+        link.classed('highlighted', l => l.source.id === d.id || l.target.id === d.id);
+        link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
+      });
+
+      node.on('mousemove', function(event) {
+        tooltip.style('left', (event.pageX + 10) + 'px')
+          .style('top', (event.pageY - 15) + 'px');
+      });
+
+      node.on('mouseout', function() {
+        tooltip.style('opacity', 0);
+        link.classed('highlighted', false);
+        link.attr('marker-end', 'url(#arrow-default)');
+      });
+
+      node.on('click', function(event, d) {
+        event.stopPropagation();
+        d3.selectAll('.node circle').classed('highlighted', false);
+        d3.select(this).select('circle').classed('highlighted', true);
+        
+        link.classed('highlighted', l => l.source.id === d.id || l.target.id === d.id);
+        link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
+        showNodeDetails(d);
+      });
+
+      svg.on('click', function() {
+        d3.selectAll('.node circle').classed('highlighted', false);
+        link.classed('highlighted', false);
+        link.attr('marker-end', 'url(#arrow-default)');
+        document.getElementById('details-content').classList.add('hidden');
+        document.getElementById('details-default').classList.remove('hidden');
+      });
+
+      function showNodeDetails(d) {
+        document.getElementById('details-default').classList.add('hidden');
+        document.getElementById('details-content').classList.remove('hidden');
+        
+        document.getElementById('node-name').innerText = d.label;
+        document.getElementById('node-year').innerText = `Definito nel ${d.year}`;
+        document.getElementById('node-description').innerText = d.desc;
+        
+        const badge = document.getElementById('node-type-badge');
+        badge.innerText = d.type;
+        
+        badge.className = 'node-badge';
+        let themeColor = 'var(--accent)';
+        if (d.type === 'person') themeColor = 'var(--color-person)';
+        else if (d.type === 'concept') themeColor = 'var(--color-topic)';
+        else if (d.type === 'standard') themeColor = 'var(--color-org)';
+        else if (d.type === 'tool') themeColor = 'var(--color-credential)';
+        else if (d.type === 'critique') themeColor = 'var(--color-occupation)';
+
+        badge.style.color = themeColor;
+        badge.style.borderColor = themeColor;
+        badge.style.backgroundColor = themeColor + '15';
+
+        const wLink = document.getElementById('node-wikidata-link');
+        wLink.href = `https://www.wikidata.org/wiki/${d.wikidata}`;
+        document.getElementById('node-wikidata-text').innerText = `wikidata.org/wiki/${d.wikidata} ↗`;
+
+        const rels = graphLinks.filter(l => l.source.id === d.id || l.target.id === d.id);
+        const list = document.getElementById('node-relations-list');
+        list.innerHTML = rels.map(l => {
+          if (l.source.id === d.id) {
+            return `<li style="margin-bottom: 0.35rem;">questo nodo <span style="color: var(--accent);">&rarr; ${l.rel} &rarr;</span> <strong>${l.target.label}</strong></li>`;
+          } else {
+            return `<li style="margin-bottom: 0.35rem;"><strong>${l.source.label}</strong> <span style="color: var(--accent);">&rarr; ${l.rel} &rarr;</span> questo nodo</li>`;
+          }
+        }).join('');
+      }
+
+      simulation.on('tick', () => {
+        link.attr('d', d => {
+          if (!d.source.x || !d.target.x) return 'M0,0L0,0';
+          const rTarget = getRadius(d.target) + 2.5;
+          const dx = d.target.x - d.source.x;
+          const dy = d.target.y - d.source.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist === 0 || isNaN(dist)) return 'M0,0L0,0';
+          const offsetX = (dx / dist) * rTarget;
+          const offsetY = (dy / dist) * rTarget;
+          return `M${d.source.x},${d.source.y}L${d.target.x - offsetX},${d.target.y - offsetY}`;
+        });
+
+        linkLabel.attr('x', d => (d.source.x + d.target.x) / 2)
+                  .attr('y', d => (d.source.y + d.target.y) / 2 - 5);
+
+        node.attr('transform', d => {
+          const r = getRadius(d);
+          d.x = Math.max(r, Math.min(width - r, d.x));
+          d.y = Math.max(r, Math.min(height - r, d.y));
+          return `translate(${d.x},${d.y})`;
+        });
+      });
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          
+          const filterType = this.getAttribute('data-filter');
+          
+          if (filterType === 'all') {
+            node.style('opacity', 1).style('pointer-events', 'auto');
+            link.style('opacity', 0.45);
+          } else {
+            node.style('opacity', d => d.type === filterType ? 1 : 0.15)
+                .style('pointer-events', d => d.type === filterType ? 'auto' : 'none');
+            link.style('opacity', l => (l.source.type === filterType && l.target.type === filterType) ? 0.45 : 0.05);
+          }
+        });
+      });
+
+      document.getElementById('node-search').addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        if (!q) {
+          node.style('opacity', 1).style('pointer-events', 'auto');
+          link.style('opacity', 0.45);
+          d3.selectAll('.node circle').classed('highlighted', false);
+        } else {
+          node.style('opacity', d => d.label.toLowerCase().includes(q) ? 1 : 0.15)
+              .style('pointer-events', d => d.label.toLowerCase().includes(q) ? 'auto' : 'none');
+          link.style('opacity', l => (l.source.label.toLowerCase().includes(q) || l.target.label.toLowerCase().includes(q)) ? 0.45 : 0.05);
+          
+          node.each(function(d) {
+            d3.select(this).select('circle').classed('highlighted', d.label.toLowerCase().includes(q));
+          });
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        width = container.clientWidth;
+        height = container.clientHeight || 520;
+        simulation.force('center', d3.forceCenter(width / 2, height / 2));
+        simulation.alpha(0.3).restart();
+      });
+    });
+  </script>
 </body>
 </html>

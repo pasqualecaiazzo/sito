@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Sovranità della narrativa digitale – Manifesto di Pasquale Caiazzo</title>
+  <meta name="description" content="Una posizione sulla sovranità della narrativa digitale nell'era dei motori di risposta AI. Invisibilità semantica, capitalismo della sorveglianza, Protocollo Solid.">
+  <link rel="canonical" href="https://pasqualecaiazzo.com/manifesto.html">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sovranità della narrativa digitale – Manifesto di Pasquale Caiazzo">
+  <meta property="og:description" content="Una posizione sulla sovranità della narrativa digitale nell'era dei motori di risposta AI. Invisibilità semantica, capitalismo della sorveglianza, Protocollo Solid.">
+  <meta property="og:url" content="https://pasqualecaiazzo.com/manifesto.html">
+  <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script src="main.js" defer></script>
+
+  <style>
+    .manifesto-header {
+      text-align: center;
+      padding-top: 9rem;
+      padding-bottom: 4rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .manifesto-title {
+      font-size: clamp(2.0rem, 5vw, 2.8rem);
+      line-height: 1.15;
+      font-family: 'IBM Plex Serif', serif;
+      font-weight: 700;
+      margin-top: 1rem;
+      margin-bottom: 1.25rem;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .manifesto-subtitle {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+      line-height: 1.5;
+    }
+    .manifesto-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .manifesto-meta span strong {
+      color: var(--text);
+    }
+    .manifesto-body {
+      max-width: 640px;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 6rem;
+    }
+    .manifesto-body h2 {
+      font-family: 'IBM Plex Serif', serif;
+      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+      line-height: 1.3;
+      margin-top: 3.5rem;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+    .manifesto-body p {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .manifesto-separator {
+      height: 1px;
+      background: var(--border);
+      margin: 4rem 0;
+      border: none;
+    }
+    .manifesto-cta {
+      text-align: center;
+      padding: 3.5rem 2rem;
+      background: rgba(74, 158, 255, 0.03);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      max-width: 640px;
+      margin: 0 auto 6rem;
+    }
+    [data-theme="light"] .manifesto-cta {
+      background: rgba(30, 111, 217, 0.02);
+    }
+    .manifesto-cta p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+      color: var(--text);
+    }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@id": "https://pasqualecaiazzo.com/#website"
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/manifesto.html#webpage",
+      "url": "https://pasqualecaiazzo.com/manifesto.html",
+      "name": "Sovranità della narrativa digitale – Manifesto di Pasquale Caiazzo",
+      "description": "Una posizione sulla sovranità della narrativa digitale nell'era dei motori di risposta AI. Invisibilità semantica, capitalismo della sorveglianza, Protocollo Solid.",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@id": "https://pasqualecaiazzo.com/#website"
+      },
+      "about": {
+        "@id": "https://pasqualecaiazzo.com/manifesto.html#article"
+      },
+      "breadcrumb": {
+        "@id": "https://pasqualecaiazzo.com/manifesto.html#breadcrumb"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/manifesto.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pasqualecaiazzo.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Manifesto",
+          "item": "https://pasqualecaiazzo.com/manifesto.html"
+        }
+      ]
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://pasqualecaiazzo.com/manifesto.html#article",
+      "headline": "Sovranità della narrativa digitale",
+      "description": "Una posizione sulla sovranità della narrativa digitale nell'era dei motori di risposta AI.",
+      "url": "https://pasqualecaiazzo.com/manifesto.html",
+      "inLanguage": "it",
+      "datePublished": "2026-05-25",
+      "author": {
+        "@id": "https://pasqualecaiazzo.com/#person"
+      },
+      "publisher": {
+        "@id": "https://pasqualecaiazzo.com/#person"
+      },
+      "about": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Data Sovereignty",
+          "sameAs": "https://www.wikidata.org/wiki/Q48780629"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Semantic Web",
+          "sameAs": "https://www.wikidata.org/wiki/Q54837"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Solid Protocol",
+          "sameAs": "https://www.wikidata.org/wiki/Q55408718"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Large Language Models",
+          "sameAs": "https://www.wikidata.org/wiki/Q115305900"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Person",
+          "name": "Shoshana Zuboff",
+          "sameAs": "https://www.wikidata.org/wiki/Q15953956"
+        },
+        {
+          "@type": "Person",
+          "name": "Tim Berners-Lee",
+          "sameAs": "https://www.wikidata.org/wiki/Q80"
+        }
+      ]
+    }
+
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <nav aria-label="Navigazione principale">
+    <div class="nav-left">
+      <a href="index.html" class="nav-name">Pasquale Caiazzo</a>
+      <div class="nav-anchors">
+        <a href="index.html#about" class="nav-link">Chi sono</a>
+        <a href="professionisti.html" class="nav-link">Per i professionisti</a>
+        <a href="pmi.html" class="nav-link">Per le PMI</a>
+        <a href="manifesto.html" class="nav-link active">Manifesto</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+        <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+        </svg>
+        <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+      <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="manifesto-header">
+      <span class="tag">Manifesto</span>
+      <h1 class="manifesto-title">Sovranità della narrativa digitale</h1>
+      <p class="manifesto-subtitle">Una posizione sull'era dei motori di risposta AI</p>
+      <div class="manifesto-meta">
+        <span>Anno: <strong>2026</strong></span>
+        <span>Autore: <strong>Pasquale Caiazzo</strong></span>
+      </div>
+    </header>
+
+    <article class="manifesto-body">
+      <h2>Una dimensione dell'invisibilità algoritmica che il dibattito corrente non copre</h2>
+      <p>
+        Il discorso sull'invisibilità algoritmica è consolidato. Riguarda i sistemi che discriminano in modo opaco, che profilano senza consenso, che producono disuguaglianze invisibili nelle decisioni su lavoro, credito, accesso all'informazione. È un problema reale, documentato, e oggetto di regolamentazione crescente a livello europeo.
+      </p>
+      <p>
+        Esiste però una dimensione di questo fenomeno che quel discorso non copre. Non riguarda chi viene trattato in modo iniquo da un sistema automatizzato. Riguarda chi da quel sistema non viene riconosciuto nel modo corretto, o non viene riconosciuto affatto.
+      </p>
+      <p>
+        Ho lavorato con organizzazioni del terzo settore che producono impatto misurabile su comunità reali. Gestiscono progetti finanziati da bandi europei, costruiscono reti in territori difficili, formano persone che altrimenti non avrebbero accesso a certi percorsi. Quando ho interrogato i principali sistemi AI su di loro, i risultati erano sistematicamente inaccurati o assenti.
+      </p>
+      <p>
+        Non per discriminazione. Non per bias nel senso tecnico del termine. Perché tutta la loro presenza digitale era costruita in formati che le macchine non riescono a leggere in modo coerente. Un sistema AI non riesce a disambiguare un'associazione nel mare del web, non sa distinguere un progetto da un altro, non conosce i bandi vinti, non capisce la struttura delle affiliazioni. La conoscenza esiste ma è intrappolata in formati che i modelli linguistici non possono usare con precisione.
+      </p>
+      <p>
+        Questo è il problema che ho iniziato a chiamare con un nome preciso: invisibilità semantica. Non sei soppresso, non sei penalizzato, non sei discriminato. Sei semplicemente assente dal knowledge graph delle macchine, o presente in modo così frammentato da essere irriconoscibile. E nei prossimi anni, mentre i motori di risposta AI diventano il primo punto di contatto tra chi cerca e chi esiste, questa assenza avrà conseguenze concrete e misurabili.
+      </p>
+
+      <h2>La domanda che ha cambiato il mio modo di lavorare</h2>
+      <p>
+        Shoshana Zuboff ha descritto con precisione il meccanismo del capitalismo della sorveglianza: i dati prodotti dalle nostre attività digitali diventano materia prima per sistemi che li trasformano in valore a nostra insaputa e a nostro svantaggio. La descrizione è corretta.
+      </p>
+      <p>
+        La risposta che ne deriva è solitamente difensiva: limitare, bloccare, rifiutare. Ma esiste una posizione alternativa. Se il problema è che i dati che ci riguardano vengono letti, interpretati e usati da sistemi che non controlliamo, una risposta possibile è costruire quella presenza in modo così preciso e verificabile da rendere difficile la distorsione. Non cedere il dato in modo passivo, ma governarlo in modo attivo. Non subire la narrativa, ma costruirla.
+      </p>
+      <p>
+        Tim Berners-Lee ha proposto una direzione tecnica con il Protocollo Solid: i dati appartengono a chi li produce, non alla piattaforma che li ospita, e il controllo dell'accesso rimane all'individuo o all'organizzazione. Siamo lontani da un'adozione diffusa di quel modello. Ma lavorare oggi con standard aperti come JSON-LD, schema.org e Wikidata è un passo nella stessa direzione: costruire una presenza semantica che non dipende da nessun singolo intermediario e che un sistema AI può leggere senza distorcere.
+      </p>
+
+      <h2>Sovranità della narrativa digitale</h2>
+      <p>
+        La domanda di fondo non è tecnica. È questa: chi decide come sei raccontato nel mondo che le macchine mediano?
+      </p>
+      <p>
+        Oggi, per la grande maggioranza di professionisti e organizzazioni, quella decisione non viene presa da nessuno. I sistemi AI costruiscono rappresentazioni a partire da dati frammentati, non strutturati, non verificabili. Le inferenze che ne derivano diventano la versione pubblica di quell'entità nel mondo dei motori di risposta. Non esiste un meccanismo automatico di correzione. Non esiste un diritto di replica tecnico nel senso in cui lo intendiamo nel discorso pubblico tradizionale.
+      </p>
+      <p>
+        Rivendicare la sovranità della propria narrativa digitale significa intervenire su questa asimmetria. Non elimina il problema nella sua interezza. Ma sposta il controllo dalla deriva algoritmica verso una dichiarazione verificabile: questo sono, queste sono le fonti che lo dimostrano, questa è la struttura che un sistema AI può leggere senza inventare.
+      </p>
+      <p>
+        Non è un privilegio tecnico per chi ha competenze specifiche. È una posizione che qualsiasi professionista o organizzazione può adottare, con gli strumenti giusti. Nei prossimi anni questa capacità sarà la differenza tra essere raccontati bene e scomparire nel rumore del web generativo.
+      </p>
+
+      <h2>Il lavoro che ne è derivato</h2>
+      <p>
+        Ho fatto questa transizione in prima persona. Ho ricostruito la mia presenza digitale a partire dal layer semantico invece che dal contenuto. Ho smesso di ottimizzare testi e ho iniziato a costruire entità. Questo sito è la dimostrazione di quel metodo: ogni dato che mi riguarda è ancorata a una fonte verificabile, ogni competenza è collegata a un identificatore su Wikidata, ogni affiliazione è dichiarata in modo che un sistema AI possa citarla con precisione.
+      </p>
+      <p>
+        Il lavoro che propongo a professionisti e imprese parte dallo stesso principio. Non si tratta di marketing, non si tratta di SEO nel senso tradizionale. Si tratta di costruire le strutture che rendono un'entità leggibile, verificabile e citabile dai sistemi che stanno diventando il principale intermediario tra chi cerca e chi esiste.
+      </p>
+      <p>
+        La sovranità della narrativa digitale non è inevitabile. Richiede un intervento consapevole e strutturato. Questo è il lavoro che faccio.
+      </p>
+
+      <hr class="manifesto-separator">
+
+      <div class="manifesto-cta">
+        <p>Se quello che hai letto descrive un problema che riconosci, prenota una chiamata di 30 minuti.</p>
+        <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">
+          Prenota una chiamata ↗
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="inner">
+      <div class="footer-inner">
+                <div class="footer-meta">
+          <span>Pasquale Caiazzo</span><br>
+          Semantic Entity Architect<br>
+          Torino<br>
+          P.IVA IT01712990058
+        </div>
+        <div class="footer-links" style="display: flex; gap: 2rem;">
+          <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
