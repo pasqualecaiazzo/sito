@@ -1,1178 +1,1080 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Readiness Scanner – Identity & Semantics</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#07070F;--surface:#0D0D1C;--surface2:#111120;
-  --border:#1C1C30;--border2:#252540;
-  --gold:#C9A84C;--gold-l:#E5C96A;
-  --teal:#2DB885;--amber:#D4870E;--coral:#D84F35;
-  --text:#EDE8DF;--muted:#8080A0;--dim:#2E2E4A;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Pasquale Caiazzo – Semantic Entity Architect</title>
+  <meta name="description" content="Pasquale Caiazzo, Semantic Entity Architect. Progetta e implementa architetture semantiche (JSON-LD, schema.org, knowledge graph su Wikidata) che rendono organizzazioni, professionisti e realtà del terzo settore riconoscibili, verificabili e rintracciabili dai sistemi AI.">
+  <link rel="canonical" href="https://pasqualecaiazzo.com">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Pasquale Caiazzo – Semantic Entity Architect">
+  <meta property="og:description" content="In un mondo fatto di dati, chi governa quello che le AI raccontano di te?">
+  <meta property="og:url" content="https://pasqualecaiazzo.com">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+  <meta name="author" content="Pasquale Caiazzo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pasquale Caiazzo – Semantic Entity Architect">
+  <meta name="twitter:description" content="In un mondo fatto di dati, chi governa quello che le AI raccontano di te?">
+  <meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://pasqualecaiazzo.com/#website",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "inLanguage": "it",
+      "publisher": {
+        "@id": "https://pasqualecaiazzo.com/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/#webpage",
+      "url": "https://pasqualecaiazzo.com/",
+      "name": "Pasquale Caiazzo – Semantic Entity Architect",
+      "description": "Pasquale Caiazzo, Semantic Entity Architect. Progetta e implementa architetture semantiche (JSON-LD, schema.org, knowledge graph su Wikidata) che rendono organizzazioni, professionisti e realtà del terzo settore riconoscibili, verificabili e rintracciabili dai sistemi AI.",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@id": "https://pasqualecaiazzo.com/#website"
+      },
+      "about": {
+        "@id": "https://pasqualecaiazzo.com/#person"
+      },
+      "breadcrumb": {
+        "@id": "https://pasqualecaiazzo.com/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg"
+      },
+      "dateModified": "2026-05-25"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pasqualecaiazzo.com"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "givenName": "Pasquale",
+      "familyName": "Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+        "width": 1200,
+        "height": 1200
+      },
+      "jobTitle": "Semantic Entity Architect",
+      "vatID": "IT01712990058",
+      "mainEntityOfPage": {
+        "@id": "https://pasqualecaiazzo.com/#webpage"
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "Italy",
+        "sameAs": "https://www.wikidata.org/wiki/Q38"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Turin",
+        "sameAs": "https://www.wikidata.org/wiki/Q495"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Semantic Entity Architect",
+        "description": "Progetta e implementa architetture semantiche (structured data, knowledge graph, linked data) che rendono l'identità di organizzazioni e professionisti leggibile, verificabile e citabile dai modelli linguistici generativi.",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Italy",
+          "sameAs": "https://www.wikidata.org/wiki/Q38"
+        }
+      },
+      "description": "Semantic Entity Architect specializzato in knowledge architecture, structured data e sovranità della narrativa digitale nell'ecosistema AI.",
+      "sameAs": [
+        "https://www.linkedin.com/in/pasqualecaiazzo/",
+        "https://github.com/pasqualecaiazzo",
+        "https://pasqualecaiazzo.solidcommunity.net/profile/card#me"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "url": "https://cal.com/pcaiazzo/30min",
+        "availableLanguage": [
+          "Italian",
+          "English"
+        ]
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Neo4j Certified Professional",
+          "url": "https://graphacademy.neo4j.com/c/a965f5d1-46a7-4b41-ba54-e971bc9da882/",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Neo4j",
+            "sameAs": "https://www.wikidata.org/wiki/Q1628290"
+          },
+          "dateCreated": "2026-05-08"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Wikibase and Semantic MediaWiki",
+          "url": "https://academy.europa.eu/mod/customcert/verify_certificate.php?contextid=26531&code=Njm7emC2c0&qrcode=1",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "European Union",
+            "sameAs": "https://www.wikidata.org/wiki/Q458"
+          },
+          "dateCreated": "2026-05-08"
+        }
+      ],
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "Italian",
+          "alternateName": "it"
+        },
+        {
+          "@type": "Language",
+          "name": "English",
+          "alternateName": "en"
+        }
+      ],
+      "knowsAbout": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Knowledge Graph",
+          "sameAs": "https://www.wikidata.org/wiki/Q33002955"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Structured Data",
+          "sameAs": "https://www.wikidata.org/wiki/Q26813700"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "JSON-LD",
+          "sameAs": "https://www.wikidata.org/wiki/Q6108942"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Schema.org",
+          "sameAs": "https://www.wikidata.org/wiki/Q3475322"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Semantic Web",
+          "sameAs": "https://www.wikidata.org/wiki/Q54837"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Linked Data",
+          "sameAs": "https://www.wikidata.org/wiki/Q515701"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Large Language Models",
+          "sameAs": "https://www.wikidata.org/wiki/Q115305900"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Data Sovereignty",
+          "sameAs": "https://www.wikidata.org/wiki/Q48780629"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Graph Database",
+          "sameAs": "https://www.wikidata.org/wiki/Q595971"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Solid Protocol",
+          "sameAs": "https://www.wikidata.org/wiki/Q55408718"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Knowledge Architecture",
+          "sameAs": "https://www.wikidata.org/wiki/Q131372306"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Machine Readability",
+          "sameAs": "https://www.wikidata.org/wiki/Q6723621"
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "OrganizationRole",
+          "roleName": "Core Team — Innovazione Territoriale",
+          "startDate": "2025-03-01",
+          "memberOf": {
+            "@id": "https://natworking.eu/#organization"
+          }
+        },
+        {
+          "@type": "OrganizationRole",
+          "roleName": "Digital Project Lead",
+          "startDate": "2021-09-01",
+          "memberOf": {
+            "@id": "https://guilds42.com/#organization"
+          }
+        },
+        {
+          "@type": "OrganizationRole",
+          "roleName": "Docente — Digital Marketing & AI",
+          "startDate": "2023-12-01",
+          "memberOf": {
+            "@id": "https://itsacademysi.it/#organization"
+          }
+        },
+        {
+          "@type": "OrganizationRole",
+          "roleName": "Consulente Strategico",
+          "startDate": "2025-07-01",
+          "endDate": "2026-04-30",
+          "memberOf": {
+            "@id": "https://www.hostinato.it/#organization"
+          }
+        },
+        {
+          "@type": "OrganizationRole",
+          "roleName": "Consulente Strategico",
+          "startDate": "2025-06-01",
+          "endDate": "2026-04-30",
+          "memberOf": {
+            "@id": "https://graffette.it/#organization"
+          }
+        },
+        {
+          "@type": "OrganizationRole",
+          "roleName": "Consulente Freelance — Digital Transformation",
+          "startDate": "2022-01-01",
+          "memberOf": {
+            "@id": "https://evermind.it/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://natworking.eu/#organization",
+      "name": "NATworking",
+      "url": "https://natworking.eu",
+      "sameAs": "https://www.wikidata.org/wiki/Q139659711",
+      "subjectOf": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Quelli che si chiudono nella baita a 1200 metri a fare smartworking",
+          "url": "https://torino.corriere.it/notizie/piemonte/25_novembre_24/quelli-che-si-chiudono-nella-baita-a-1200-metri-a-fare-smartworking-il-progetto-natworking-nella-val-grana-piemontese-qui-arrivi-117d01a9-d05e-45d6-87e3-2283de43axlk.shtml",
+          "datePublished": "2024-11-25",
+          "publisher": {
+            "@type": "NewsMediaOrganization",
+            "name": "Corriere della Sera",
+            "sameAs": "https://www.wikidata.org/wiki/Q309135"
+          }
+        },
+        {
+          "@type": "NewsArticle",
+          "headline": "Se l'ufficio remoto è un luogo immerso nella natura alpina",
+          "url": "https://www.lastampa.it/cuneo/2025/06/23/news/se_l_ufficio_remoto_e_un_luogo_immerso_nella_natura_alpina-15203346/",
+          "datePublished": "2025-06-23",
+          "publisher": {
+            "@type": "NewsMediaOrganization",
+            "name": "La Stampa",
+            "sameAs": "https://www.wikidata.org/wiki/Q923353"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://guilds42.com/#organization",
+      "name": "Guilds42 APS",
+      "url": "https://guilds42.com",
+      "subjectOf": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Progetto GILDA per formare giovani donne in campo digitale",
+          "url": "https://www.ansa.it/sicilia/notizie/2023/10/30/progetto-gilda-per-formare-giovani-donne-in-campo-digitale_38af6a45-6e37-4d5c-af15-068ee9bfa0f6.html",
+          "datePublished": "2023-10-30",
+          "publisher": {
+            "@type": "NewsMediaOrganization",
+            "name": "ANSA",
+            "sameAs": "https://www.wikidata.org/wiki/Q392934"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://itsacademysi.it/#organization",
+      "name": "ITS NewTechSi Academy",
+      "url": "https://itsacademysi.it",
+      "subjectOf": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Corsi gratuiti intelligenza artificiale imprese",
+          "url": "https://www.rainews.it/tgr/campania/video/2025/10/corsi-gratuiti-intelligenza-artificiale-imprese-d61561fe-3054-42e4-8247-43721099004b.html",
+          "publisher": {
+            "@type": "NewsMediaOrganization",
+            "name": "RAI News",
+            "sameAs": "https://www.wikidata.org/wiki/Q21196779"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.hostinato.it/#organization",
+      "name": "Hostinato",
+      "url": "https://www.hostinato.it/",
+      "vatID": "IT08807000966"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://graffette.it/#organization",
+      "name": "Graffette",
+      "url": "https://graffette.it/"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://evermind.it/#organization",
+      "name": "Evermind Società Benefit",
+      "url": "https://evermind.it/"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/favicon.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ]
 }
-body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;min-height:100vh;padding:0 1rem}
-.wrap{max-width:820px;margin:0 auto;padding:3rem 0 5rem}
-.header{text-align:center;padding:0 0 2.5rem;border-bottom:1px solid var(--border);margin-bottom:2.5rem}
-.eyebrow{font-size:.6rem;letter-spacing:.35em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;display:block}
-.header h1{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:700;line-height:1.15;margin-bottom:.75rem}
-.header h1 em{font-style:italic;color:var(--gold)}
-.header p{font-size:.78rem;color:var(--muted);line-height:1.8;max-width:460px;margin:0 auto}
-.input-section{background:var(--surface);border:1px solid var(--border);padding:1.5rem;margin-bottom:1rem}
-.field-label{display:block;font-size:.6rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:.75rem}
-.input-row{display:flex;gap:.75rem}
-.url-input{flex:1;background:var(--bg);border:1px solid var(--border);color:var(--text);font-family:'DM Mono',monospace;font-size:.82rem;padding:.85rem 1rem;outline:none;transition:border-color .2s}
-.url-input:focus{border-color:var(--gold)}
-.url-input::placeholder{color:var(--dim)}
-.btn-analyze{background:var(--gold);color:var(--bg);border:none;font-family:'DM Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:.85rem 1.4rem;cursor:pointer;transition:background .2s;white-space:nowrap}
-.btn-analyze:hover{background:var(--gold-l)}
-.btn-analyze:disabled{background:var(--dim);cursor:not-allowed}
-.error-box{display:none;background:rgba(216,79,53,.08);border:1px solid rgba(216,79,53,.3);color:var(--coral);padding:.75rem 1rem;font-size:.72rem;margin-top:.75rem;line-height:1.6}
-.loading{display:none;padding:3rem 1rem}
-.spinner{width:38px;height:38px;border:2px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin .9s linear infinite;margin:0 auto 1.5rem}
-@keyframes spin{to{transform:rotate(360deg)}}
-.steps{max-width:260px;margin:0 auto}
-.step-line{font-size:.65rem;color:var(--dim);letter-spacing:.05em;padding:.3rem 0;transition:color .3s}
-.step-line.active{color:var(--text);animation:fade 1.5s ease-in-out infinite}
-.step-line.done{color:var(--teal)}
-@keyframes fade{0%,100%{opacity:1}50%{opacity:.35}}
-.results{display:none;animation:slideIn .5s ease}
-@keyframes slideIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.score-hero{background:var(--surface);border:1px solid var(--border);padding:1.75rem 2rem;display:flex;align-items:center;gap:2rem;margin-bottom:1rem}
-.ring-wrap{position:relative;flex-shrink:0;width:100px;height:100px}
-.ring-wrap svg{transform:rotate(-90deg);display:block}
-.ring-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:90px}
-.ring-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;display:block;line-height:1}
-.ring-sub{font-size:.55rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;display:block;margin-top:2px}
-.hero-info .tipo{display:inline-block;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.4);padding:.2rem .55rem;margin-bottom:.6rem}
-.hero-info h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:.5rem}
-.hero-info .sintesi{font-size:.78rem;color:var(--muted);line-height:1.8}
-.data-bar{background:var(--surface2);border:1px solid var(--border);padding:.75rem 1.25rem;margin-bottom:1rem;font-size:.62rem;color:var(--muted);display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
-.dtag{background:var(--surface);border:1px solid var(--border2);padding:.15rem .5rem;font-size:.6rem}
-.dtag.yes{border-color:rgba(45,184,133,.4);color:var(--teal)}
-.dtag.no{border-color:rgba(216,79,53,.25);color:var(--coral);opacity:.6}
-.dtag.warn{border-color:rgba(212,135,14,.4);color:var(--amber)}
-.dims-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:1rem}
-.dim-card{background:var(--surface);padding:1.25rem 1.5rem}
-.dim-card:nth-child(5){grid-column:span 2}
-.dim-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.85rem}
-.dim-name{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);max-width:120px;line-height:1.4}
-.dim-score-n{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700}
-.bar-bg{height:2px;background:var(--border2);margin-bottom:.85rem;overflow:hidden}
-.bar-fill{height:100%;width:0%;transition:width 1.3s cubic-bezier(.22,1,.36,1)}
-.dim-sintesi{font-size:.73rem;color:var(--text);line-height:1.65;margin-bottom:.35rem}
-.dim-gap{font-size:.68rem;color:var(--muted);line-height:1.5}
-.dim-gap::before{content:"↳ ";color:var(--coral);opacity:.8}
-.bottom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:1rem}
-.bottom-card{background:var(--surface2);padding:1.25rem 1.5rem}
-.bottom-title{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.9rem}
-.b-item{font-size:.7rem;color:var(--text);line-height:1.6;padding:.38rem 0;border-bottom:1px solid var(--border);display:flex;gap:.5rem;align-items:flex-start}
-.b-item:last-child{border-bottom:none}
-.b-icon{flex-shrink:0;font-size:.6rem;margin-top:.15rem}
-.step-item{padding:.38rem 0;border-bottom:1px solid var(--border)}
-.step-item:last-child{border-bottom:none}
-.step-p{font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.2rem}
-.step-a{font-size:.7rem;color:var(--text);line-height:1.55}
-.btn-reset{display:block;width:100%;background:transparent;border:1px solid var(--border);color:var(--muted);font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;padding:.9rem;cursor:pointer;transition:all .2s}
-.btn-reset:hover{border-color:var(--gold);color:var(--gold)}
-.footer{text-align:center;padding:2rem 0 0;font-size:.6rem;color:var(--dim);letter-spacing:.08em;border-top:1px solid var(--border)}
-.result-actions{display:flex;align-items:center;gap:1rem;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-.btn-pdf{background:var(--gold);color:var(--bg);border:none;font-family:'DM Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:.85rem 1.4rem;cursor:pointer;transition:background .2s;white-space:nowrap}
-.btn-pdf:hover{background:var(--gold-l)}
-@media print{
-  @page{margin:1.2cm 1.4cm;size:A4}
-  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-  body{background:#0D0D0D!important;color:#EDE8DF!important;font-size:9pt}
-  .wrap{max-width:100%!important;padding:0!important}
-  .header,.input-section,.loading,.result-actions,.footer,.lang-bar,#technicalAuditBox{display:none!important}
-  .results{display:block!important}
-  .score-hero{background:#161616!important;border:1px solid #2a2a2a!important;padding:12pt 16pt!important;display:flex!important;align-items:center!important;gap:16pt!important;margin-bottom:8pt!important;page-break-inside:avoid}
-  .hero-info h2{font-size:16pt!important;color:#EDE8DF!important}
-  .hero-info .sintesi{font-size:8pt!important;color:#8A8577!important}
-  .ring-num{font-size:22pt!important;color:#C9A84C!important}
-  .ring-sub{color:#8A8577!important}
-  .hero-info .tipo{color:#C9A84C!important;border-color:rgba(201,168,76,.4)!important}
-  .data-bar{background:#1A1A1A!important;border:1px solid #2a2a2a!important;padding:6pt 10pt!important;margin-bottom:8pt!important;page-break-inside:avoid}
-  .dtag{border:1px solid #2a2a2a!important;background:#161616!important;color:#8A8577!important;font-size:6.5pt!important;padding:1pt 4pt!important}
-  .dtag.yes{border-color:rgba(45,184,133,.5)!important;color:#2DB885!important}
-  .dtag.no{border-color:rgba(216,79,53,.3)!important;color:#D84F35!important}
-  .dims-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:6pt!important;margin-bottom:8pt}
-  .dim-card:nth-child(5){grid-column:span 2!important}
-  .dim-card{background:#161616!important;border:1px solid #2a2a2a!important;padding:10pt!important;page-break-inside:avoid}
-  .dim-name{font-size:7pt!important;color:#8A8577!important;letter-spacing:.15em}
-  .dim-score{font-size:18pt!important;color:#C9A84C!important}
-  .dim-bar-fill{background:#C9A84C!important;print-color-adjust:exact}
-  .dim-text{font-size:7.5pt!important;color:#EDE8DF!important;line-height:1.6}
-  .dim-gap{font-size:7pt!important;color:#8A8577!important}
-  .bottom-grid{display:grid!important;grid-template-columns:1fr 1fr 1fr!important;gap:6pt!important}
-  .bottom-card{background:#161616!important;border:1px solid #2a2a2a!important;padding:10pt!important;page-break-inside:avoid}
-  .bottom-card h3{font-size:7pt!important;color:#8A8577!important;letter-spacing:.15em}
-  .step-p{font-size:6pt!important}
-  .step-p.alta{color:#C9A84C!important}
-  .step-p.media{color:#8A8577!important}
-  a{color:#C9A84C!important;text-decoration:none}
-}
-.lang-bar{display:flex;justify-content:flex-end;margin-bottom:1rem;gap:.25rem}
-.lang-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.18em;padding:.3rem .65rem;cursor:pointer;transition:all .2s}
-.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
-.lang-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.08)}
-.tone-row{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap}
-.tone-label{font-size:.6rem;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;white-space:nowrap}
-.tone-btns{display:flex;gap:.35rem}
-.tone-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;padding:.3rem .65rem;cursor:pointer;transition:all .2s;position:relative}
-.tone-btn:hover{border-color:var(--gold);color:var(--gold)}
-.tone-btn.active{border-color:var(--gold);color:var(--bg);background:var(--gold)}
-.tone-desc{font-size:.62rem;color:var(--dim);font-style:italic;flex:1;min-width:140px}
-@media(max-width:600px){
-  .score-hero{flex-direction:column;align-items:flex-start;gap:1.2rem}
-  .dims-grid{grid-template-columns:1fr}.dim-card:nth-child(5){grid-column:span 1}
-  .bottom-grid{grid-template-columns:1fr}
-  .header h1{font-size:1.9rem}
-  .input-row{flex-direction:column}.btn-analyze{width:100%}
-  .tone-row{flex-direction:column;align-items:flex-start}
-}
-</style>
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script src="main.js" defer></script>
+
+  <style>
+    @media (max-width: 768px) {
+      #nav-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        width: 36px !important;
+        height: 36px !important;
+        background: var(--accent) !important;
+        border: none !important;
+        border-radius: 8px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        cursor: pointer !important;
+        flex-shrink: 0 !important;
+        color: var(--btn-text) !important;
+      }
+      #nav-toggle .hamburger-icon {
+        display: block !important;
+        width: 1.2rem !important;
+        height: 1.2rem !important;
+      }
+      #nav-toggle .close-icon {
+        display: none !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-  <div class="lang-bar">
-    <button id="btnLangIT" class="lang-btn active" onclick="setLang('it')">IT</button>
-    <button id="btnLangEN" class="lang-btn" onclick="setLang('en')">EN</button>
-  </div>
-  <div class="header">
-    <span class="eyebrow">Digital Identity Assessment</span>
-    <h1 id="i18n-headline"></h1>
-    <p id="i18n-subhead"></p>
-  </div>
-  <div class="input-section" id="inputSection">
-    <label class="field-label" id="i18n-fieldLabel" for="urlInput"></label>
-    <div class="input-row">
-      <input type="url" id="urlInput" class="url-input" />
-      <button class="btn-analyze" id="btnAnalyze" onclick="runAnalysis()"></button>
-    </div>
-    <div class="tone-row">
-      <span class="tone-label" id="i18n-toneLabel"></span>
-      <div class="tone-btns">
-        <button class="tone-btn" onclick="setTone(1)">1</button>
-        <button class="tone-btn" onclick="setTone(2)">2</button>
-        <button class="tone-btn active" onclick="setTone(3)">3</button>
-        <button class="tone-btn" onclick="setTone(4)">4</button>
-        <button class="tone-btn" onclick="setTone(5)">5</button>
-      </div>
-      <span class="tone-desc" id="toneDesc"></span>
-    </div>
-    <div class="error-box" id="errorBox"></div>
-    <div id="fallbackHtmlContainer" style="display:none; margin-top: 1.5rem; background: var(--surface2); border: 1px solid var(--border); padding: 1.25rem;">
-      <label class="field-label" style="color:var(--gold); margin-bottom:.5rem; display:block;" id="i18n-fallbackLabel"></label>
-      <p style="font-size: .65rem; color: var(--muted); margin-bottom: .75rem; line-height: 1.5;" id="i18n-fallbackDesc"></p>
-      <textarea id="fallbackHtmlInput" style="width: 100%; height: 120px; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-family: monospace; font-size: .7rem; padding: .6rem; outline: none; margin-bottom: .75rem; resize: vertical;" placeholder="<!DOCTYPE html>..."></textarea>
-      <button class="btn-analyze" style="width: 100%; background: var(--gold); font-size: .65rem;" id="i18n-btnAnalyzePasted" onclick="runAnalysisWithPastedHtml()"></button>
-    </div>
-  </div>
-  <div class="loading" id="loadingSection">
-    <div class="spinner" id="loadingSpinner"></div>
-    <div class="steps">
-      <div id="s1" class="step-line"></div>
-      <div id="s2" class="step-line"></div>
-      <div id="s3" class="step-line"></div>
-      <div id="s4" class="step-line"></div>
-    </div>
-  </div>
-  <div class="results" id="resultsSection">
-    <div id="scoreHeroWrap"></div>
-    <div id="dataBar"></div>
-    <div class="dims-grid" id="dimsGrid"></div>
-    <div id="technicalAuditBox" style="background:var(--surface); border:1px solid var(--border); padding:1.25rem 1.5rem; margin-bottom:1rem;">
-      <div onclick="toggleTechAudit()" style="display:flex; justify-content:space-between; align-items:center; cursor:pointer; user-select:none;">
-        <span style="font-size:.58rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold);" id="i18n-techAuditTitle">Dettagli Audit Tecnico</span>
-        <span id="techAuditToggleSign" style="font-size:.7rem; color:var(--gold); font-weight:bold;">[+]</span>
-      </div>
-      <div id="techAuditContent" style="display:none; margin-top:1.25rem; font-size:.7rem; line-height:1.7; border-top:1px solid var(--border); padding-top:1rem; color:var(--text);">
+
+  
+
+  <nav aria-label="Navigazione principale">
+    <div class="nav-left">
+      <a href="#" class="nav-name">Pasquale Caiazzo</a>
+            <div class="nav-anchors">
+        <a href="index.html#about" class="nav-link">Chi sono</a>
+        <a href="professionisti.html" class="nav-link">Per i professionisti</a>
+        <a href="pmi.html" class="nav-link">Per le PMI</a>
+        <a href="manifesto.html" class="nav-link">Manifesto</a>
       </div>
     </div>
-    <div class="bottom-grid" id="bottomGrid"></div>
-    <div class="result-actions">
-      <button class="btn-reset" id="i18n-btnReset" onclick="resetTool()"></button>
-      <button class="btn-pdf" id="btnPdf" onclick="downloadPdf()"></button>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+        <!-- Sun icon -->
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <!-- Moon icon -->
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+        <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
-  </div>
-  <div class="footer" id="i18n-footer"></div>
-</div>
-<script>
-// =======================  LINGUE E UI  =======================
-let TONE = 3;
-let LANG = 'it';
-const I18N = {
-  it: {
-    headline: 'Chi sei<br><em>nell\'era dell\'AI?</em>',
-    subhead: 'Analisi reale della struttura della tua presenza digitale — JSON-LD, meta tag, coerenza narrativa, AI-readiness — in 5 dimensioni.',
-    fieldLabel: 'URL da analizzare',
-    placeholder: 'https://tuosito.com',
-    btnAnalyze: 'Analizza →',
-    s1: '— Recupero pagina...', s2: '— Estrazione dati strutturati e semantica...',
-    s3: '— Verifica llms.txt, agents.md e robots.txt...', s4: '— Analisi AI readability...',
-    btnReset: '← Nuova analisi',
-    btnPdf: '↓ PDF',
-    footer: 'Digital Identity Scanner — powered by Gemini AI',
-    errNoUrl: 'Inserisci un URL valido.',
-    errInvalidUrl: 'URL non valido. Usa formato: sito.com',
-    errApi: 'Errore API',
-    errNoJson: 'JSON non trovato nella risposta — vedi Console per dettagli.',
-    toneLabel: 'Livello di dettaglio',
-    toneLevels: ['Imprenditore — solo impatto business', 'Manager — risultati e opportunità', 'Consulente — bilanciato, spiegazioni chiare', 'Sviluppatore — termini tecnici', 'Esperto AI — massimo dettaglio'],
-    promptLang: '',
-    fallbackLabel: 'Incolla il codice HTML (Sorgente Pagina)',
-    fallbackDesc: 'Il sito sembra protetto da sistemi anti-bot (Cloudflare/Errore 422). Per procedere: apri il sito nel tuo browser, premi CTRL+U (o tasto destro -> Visualizza sorgente pagina), copia tutto il codice e incollalo qui sotto.',
-    btnAnalyzePasted: 'Analizza HTML Incollato →',
-    errFetch: 'Impossibile recuperare il sito direttamente (Errore 422 - blocco anti-bot o Cloudflare). Puoi incollare il codice HTML manualmente qui sotto per procedere.',
-    techAuditTitle: 'Dettagli Audit Tecnico'
-  },
-  en: {
-    headline: 'Who are you<br><em>in the AI era?</em>',
-    subhead: 'Real analysis of your digital presence — JSON-LD, meta tags, narrative coherence, AI-readiness — across 5 dimensions.',
-    fieldLabel: 'URL to analyze',
-    placeholder: 'https://yoursite.com',
-    btnAnalyze: 'Analyze →',
-    s1: '— Fetching page...', s2: '— Extracting structured data & HTML semantics...',
-    s3: '— Checking llms.txt, agents.md and robots.txt...', s4: '— AI readability analysis...',
-    btnReset: '← New analysis',
-    btnPdf: '↓ PDF',
-    footer: 'Digital Identity Scanner — powered by Gemini AI',
-    errNoUrl: 'Please enter a valid URL.',
-    errInvalidUrl: 'Invalid URL. Format: site.com',
-    errApi: 'API Error',
-    errNoJson: 'JSON not found in response — check the Console for details.',
-    toneLabel: 'Detail level',
-    toneLevels: ['Executive — business impact only', 'Manager — results and opportunities', 'Consultant — balanced, clear explanations', 'Developer — technical terms', 'AI Expert — maximum detail'],
-    promptLang: '\n\nIMPORTANT: Respond entirely in ENGLISH. Every text field must be in English.',
-    fallbackLabel: 'Paste HTML Source Code',
-    fallbackDesc: 'The site seems protected by anti-bot systems (Cloudflare/Error 422). To proceed: open the site in your browser, view page source (CTRL+U or Cmd+Option+U), copy all the code and paste it below.',
-    btnAnalyzePasted: 'Analyze Pasted HTML →',
-    errFetch: 'Unable to fetch the site directly (Error 422 - anti-bot or Cloudflare block). You can manually paste the HTML source code below to proceed.',
-    techAuditTitle: 'Technical Audit Details'
-  }
-};
-function t(k){ return I18N[LANG][k]??k; }
-function setLang(l){ LANG=l; document.getElementById('btnLangIT').classList.toggle('active',l==='it'); document.getElementById('btnLangEN').classList.toggle('active',l==='en'); renderLang(); }
-function renderLang(){
-  const ids={ 'i18n-headline':'headline','i18n-subhead':'subhead','i18n-fieldLabel':'fieldLabel','i18n-btnReset':'btnReset','i18n-footer':'footer','i18n-toneLabel':'toneLabel','i18n-fallbackLabel':'fallbackLabel','i18n-fallbackDesc':'fallbackDesc','i18n-techAuditTitle':'techAuditTitle' };
-  Object.entries(ids).forEach(([id,key])=>{ el=document.getElementById(id); if(el) el.innerHTML=t(key); });
-  document.getElementById('urlInput').placeholder=t('placeholder');
-  document.getElementById('btnAnalyze').textContent=t('btnAnalyze');
-  document.getElementById('btnPdf').textContent=t('btnPdf');
-  const btnP = document.getElementById('i18n-btnAnalyzePasted');
-  if(btnP) btnP.textContent=t('btnAnalyzePasted');
-  for(let i=1;i<=4;i++){ let el=document.getElementById('s'+i); if(el) el.textContent=t('s'+i); }
-  document.getElementById('toneDesc').textContent=t('toneLevels')[TONE-1]||'';
-}
-function setTone(n){ TONE=n; document.querySelectorAll('.tone-btn').forEach((b,i)=>b.classList.toggle('active',i+1===n)); document.getElementById('toneDesc').textContent=t('toneLevels')[n-1]||''; }
-function showErr(m){ let e=document.getElementById('errorBox'); e.textContent=m; e.style.display='block'; }
-function hideErr(){ document.getElementById('errorBox').style.display='none'; }
-function setStep(n){ for(let i=1;i<=4;i++){ let e=document.getElementById('s'+i); if(e){ e.classList.remove('active','done'); if(i<n) e.classList.add('done'); else if(i===n) e.classList.add('active'); } } }
-function clearResults(){
-  document.getElementById('scoreHeroWrap').innerHTML='';
-  document.getElementById('dataBar').innerHTML='';
-  document.getElementById('dimsGrid').innerHTML='';
-  document.getElementById('bottomGrid').innerHTML='';
-  let p=document.getElementById('percezioneBox'); if(p) p.remove();
-  const c = document.getElementById('techAuditContent'); if(c) c.innerHTML='';
-  const s = document.getElementById('techAuditToggleSign'); if(s) s.textContent='[+]';
-  const content = document.getElementById('techAuditContent'); if(content) content.style.display='none';
-}
-function toggleTechAudit() {
-  const content = document.getElementById('techAuditContent');
-  const sign = document.getElementById('techAuditToggleSign');
-  if (!content || !sign) return;
-  if (content.style.display === 'none') {
-    content.style.display = 'block';
-    sign.textContent = '[-]';
-  } else {
-    content.style.display = 'none';
-    sign.textContent = '[+]';
-  }
-}
-function renderTechAudit(signals, aiFiles, scores, fetchBlocked) {
-  const content = document.getElementById('techAuditContent');
-  if (!content) return;
-  const isIt = LANG === 'it';
-  const yesTag = `<span style="color:var(--teal)">✓ ${isIt?'Sì':'Yes'}</span>`;
-  const noTag = `<span style="color:var(--coral)">✗ ${isIt?'No':'No'}</span>`;
-  const warnTag = (msg) => `<span style="color:var(--amber)">⚠ ${msg}</span>`;
-  const errorTag = (msg) => `<span style="color:var(--coral)">✗ ${msg}</span>`;
-  const okTag = (msg) => `<span style="color:var(--teal)">✓ ${msg}</span>`;
-  const jq = signals?.jsonLdQuality || {};
-  let html = '';
-  html += `<div style="margin-bottom:1.5rem">
-    <div style="font-weight:bold; color:var(--gold); font-size:.65rem; text-transform:uppercase; margin-bottom:.5rem; letter-spacing:.1em">${isIt?'1. Leggibilità & Struttura HTML':'1. Readability & HTML Structure'}</div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Language (lang):</span>
-      <span>${signals?.htmlLang ? okTag(`lang="${signals.htmlLang}"`) : errorTag(isIt?'Mancante (Penalità -5)' : 'Missing (Penalty -5)')}</span>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <div class="band hero-band">
+      <div class="inner">
+        <header class="hero-layout">
+          <div class="hero-content">
+            <span class="hero-role">Semantic Entity Architect</span>
+            <h1>Pasquale Caiazzo</h1>
+            <div class="hero-location">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Nomade digitale con base a Torino
+            </div>
+            <hr class="rule">
+            <p class="hero-tagline">
+              In un mondo fatto di dati, chi governa quello che le AI raccontano di te?
+            </p>
+            <div class="cta-group">
+              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">
+                Prenota una chiamata ↗
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="profile-card">
+              <div class="profile-img-container">
+                <img src="pasquale-caiazzo.jpeg" alt="Pasquale Caiazzo">
+              </div>
+              <div class="profile-meta">
+                <span>rdf:about</span> = "https://pasqualecaiazzo.com/#person"<br>
+                <span>name</span> = "Pasquale Caiazzo"<br>
+                <span>jobTitle</span> = "Semantic Entity Architect"
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
     </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Text/HTML Ratio:</span>
-      <span>${signals?.signalToNoiseRatio}% (HTML: ${signals?.htmlLength||0} B, Text: ${signals?.textLength||0} B) ${
-        signals?.signalToNoiseRatio >= 15 ? okTag(isIt?'Ottimo (Bonus +5)':'Excellent (Bonus +5)') :
-        signals?.signalToNoiseRatio < 5 ? errorTag(isIt?'Troppo codice rispetto al testo (Penalità -5)':'Too much code/low density (Penalty -5)') :
-        `<span>(Normale)</span>`
-      }</span>
+
+    <!-- CHI SONO & METRICS SECTION -->
+    <div class="band">
+      <div class="inner">
+        <section id="about" class="reveal" aria-labelledby="about-h">
+          <span class="tag">Chi sono</span>
+          <h2 id="about-h">Leggibile, verificabile, citabile.</h2>
+          <p class="intro-p">
+            Progetto e implemento architetture semantiche per professionisti e imprese che vogliono controllare come i sistemi AI li rappresentano. Il lavoro riguarda il layer informativo che sta sotto il sito: dati strutturati in JSON-LD, entità su Wikidata, knowledge graph. Non contenuti, non SEO.
+          </p>
+          <p>
+            Il punto di partenza è sempre un audit: cosa sanno di te i principali sistemi AI, cosa inventano, cosa ignorano. Da lì si costruisce un'infrastruttura che i modelli linguistici possono leggere con precisione invece di riempire con ipotesi.
+          </p>
+          <p>
+            Ho passato anni nel digital marketing. Poi ho scelto di stare dall'altra parte del tavolo: non più ottimizzare messaggi per le persone, ma dare alle AI gli strumenti per capirle. In un mondo sempre più agentico, è lì che si gioca la partita.
+          </p>
+        </section>
+      </div>
     </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Charset (UTF-8):</span>
-      <span>${signals?.hasUtf8 ? yesTag : errorTag(isIt?'Charset non UTF-8 o non rilevato (Penalità -5)':'Charset not UTF-8 or not detected (Penalty -5)')}</span>
+
+    <!-- GRAFO SEMANTICO / PROOF SECTION -->
+    <div class="band">
+      <div class="inner">
+                <section id="proof" class="reveal" aria-labelledby="proof-h">
+          <span class="tag">Progetti & Proof of Work</span>
+          <div class="proof-section-header">
+            <div class="proof-header-left">
+              <h2 id="proof-h">Le applicazioni pratiche dell'architettura semantica</h2>
+              <p class="subtitle">
+                Dall'ottimizzazione per i motori di risposta AI all'organizzazione dei dati aziendali: come trasformiamo le informazioni in conoscenza strutturata e azionabile.
+              </p>
+            </div>
+          </div>
+
+          <!-- Grid of other work areas to show the breadth of services -->
+          <div class="work-areas-grid">
+            <div class="work-area-card">
+              <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">01 / Schemi Dati (JSON-LD)</h4>
+              <p style="font-size: 0.8rem; line-height: 1.55; color: var(--text-muted); margin: 0;">Progettazione e integrazione di markup Schema.org personalizzati ad alte prestazioni per rendere siti web, professionisti e cataloghi aziendali leggibili dalle intelligenze artificiali.</p>
+            </div>
+            <div class="work-area-card">
+              <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">02 / Entità Wikidata</h4>
+              <p style="font-size: 0.8rem; line-height: 1.55; color: var(--text-muted); margin: 0;">Mappatura e pubblicazione di entità verificate su Wikidata, creando una firma digitale stabile e disambiguata per prevenire le allucinazioni dei motori di risposta.</p>
+            </div>
+            <div class="work-area-card">
+              <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">03 / Basi Dati per RAG</h4>
+              <p style="font-size: 0.8rem; line-height: 1.55; color: var(--text-muted); margin: 0;">Organizzazione e strutturazione di documentazione interna, manuali e database aziendali in formati semantici stabili per alimentare motori RAG proprietari.</p>
+            </div>
+            <div class="work-area-card">
+              <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">04 / Automazione Dati</h4>
+              <p style="font-size: 0.8rem; line-height: 1.55; color: var(--text-muted); margin: 0;">Costruzione di flussi di lavoro stabili (Make/n8n) per sincronizzare in tempo reale CRM aziendali (HubSpot, Salesforce) e base di conoscenza semantica.</p>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text);">Dimostrazione Interattiva: Il Grafo Semantico</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 800px;">
+              Come caso d'uso sperimentale di entity linking, questo grafo mappa l'evoluzione storica dei dati collegati e degli standard semantici. Trascina i nodi ed esplora le connessioni per vedere come l'informazione viene strutturata per le macchine.
+            </p>
+          </div>
+
+          <!-- Elemento 2: Interactive Knowledge Graph -->
+          <div class="explorer-wrapper" id="grafo">
+            <div class="tabs-header">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; font-weight: 700; color: var(--accent);">Visualizzazione Grafo Semantico</span>
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+            </div>
+            
+            <!-- Filter and search bar -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: rgba(0,0,0,0.15); border-bottom: 1px solid var(--border); gap: 1rem;">
+              <div class="ai-query-grid" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all" style="font-family: 'IBM Plex Mono', monospace;">Tutti</button>
+                <button class="filter-btn" data-filter="person" style="font-family: 'IBM Plex Mono', monospace;">Persone</button>
+                <button class="filter-btn" data-filter="concept" style="font-family: 'IBM Plex Mono', monospace;">Concetti</button>
+                <button class="filter-btn" data-filter="standard" style="font-family: 'IBM Plex Mono', monospace;">Standard</button>
+                <button class="filter-btn" data-filter="tool" style="font-family: 'IBM Plex Mono', monospace;">Strumenti</button>
+                <button class="filter-btn" data-filter="critique" style="font-family: 'IBM Plex Mono', monospace;">Critica</button>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="text" id="node-search" placeholder="Cerca nodo..." style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; padding: 0.4rem 0.8rem; border-radius: 20px; border: 1px solid var(--border); background: var(--code-bg); color: var(--text); outline: none; width: 180px;">
+              </div>
+            </div>
+
+            <div class="graph-layout">
+              <div class="canvas-wrapper" style="position: relative;">
+                <svg id="d3-graph" style="width: 100%; height: 100%;"></svg>
+                <div class="graph-controls">
+                  <button id="btn-zoom-in" title="Aumenta Zoom">+</button>
+                  <button id="btn-zoom-out" title="Riduci Zoom">-</button>
+                  <button id="btn-reset-layout" title="Ripristina Layout">⟲</button>
+                </div>
+              </div>
+              <div class="details-card">
+                <div id="details-default" class="details-default">
+                  <svg class="graph-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 3.5rem; height: 3.5rem; color: var(--text-muted); opacity: 0.6; margin-bottom: 1.25rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+                  <p style="font-size: 0.85rem; text-align: center; color: var(--text-muted);">Trascina il grafo per spostarsi, usa la rotellina per lo zoom. Fai click su un nodo per visualizzare i dettagli storici e le relazioni semantiche su Wikidata.</p>
+                </div>
+                <div id="details-content" class="details-content hidden" style="display: flex; flex-direction: column; height: 100%;">
+                  <div class="details-header" style="margin-bottom: 1.25rem;">
+                    <span id="node-type-badge" class="node-badge" style="display: inline-block; padding: 0.25rem 0.65rem; border-radius: 4px; border: 1px solid; font-size: 0.65rem; font-weight: 700; text-transform: uppercase;"></span>
+                    <h3 id="node-name" style="font-size: 1.3rem; font-weight: 700; color: var(--text); margin-top: 0.5rem; font-family: 'IBM Plex Serif', serif;"></h3>
+                    <span id="node-year" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--text-muted);"></span>
+                  </div>
+                  <p id="node-description" style="font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.5rem;"></p>
+                  
+                  <div style="margin-top: auto; border-top: 1px solid var(--border); padding-top: 1.25rem;">
+                    <span class="detail-label" style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Wikidata:</span>
+                    <a id="node-wikidata-link" href="#" target="_blank" rel="noopener noreferrer" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.75rem; background: rgba(74, 158, 255, 0.05); border: 1px solid rgba(74, 158, 255, 0.15); border-radius: 6px; word-break: break-all;">
+                      <span id="node-wikidata-text">Q00000</span>
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+
+                  <div style="margin-top: 1.25rem;">
+                    <span class="detail-label" style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Relazioni Collegate:</span>
+                    <ul id="node-relations-list" style="list-style: none; padding: 0; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--text-muted); max-height: 160px; overflow-y: auto;">
+                      <!-- relations will be appended here -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
     </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">JS Dependency (CSR):</span>
-      <span>${signals?.isPossibleCsr ? errorTag(isIt?'Rilevata dipendenza Javascript elevata (Penalità -15)':'JS dependency/empty page detected (Penalty -15)') : okTag(isIt?'No (Contenuto testuale pronto)':'No (Text content fully pre-rendered)')}</span>
+
+    <!-- COME LAVORO SECTION -->
+    <div class="band">
+      <div class="inner">
+                <section id="servizi" class="reveal" aria-labelledby="servizi-h">
+          <span class="tag">Cosa faccio</span>
+          <h2 id="servizi-h">Il problema cambia. Il metodo no.</h2>
+          <p class="intro-p">
+            Lavoro con professionisti che vogliono un'identità semantica precisa e con imprese che vogliono essere presenti nei motori di risposta AI. Il metodo è lo stesso in entrambi i casi. Quello che cambia è il problema di partenza.
+          </p>
+          <div class="services-grid">
+
+            <div class="service-card">
+              <div class="service-header">
+                <h3>Per i professionisti</h3>
+                <span class="service-num">01</span>
+              </div>
+              <p>Costruzione della presenza semantica e della reputazione digitale per esperti, autori e consulenti. Attraverso Wikidata e implementazioni JSON-LD mirate, faccio in modo che i motori di risposta AI (ChatGPT, Claude, Gemini) comprendano e descrivano accuratamente le tue competenze e la tua storia, riducendo al minimo le allucinazioni algoritmiche.</p>
+              <a href="professionisti.html" class="service-card-link">
+                Approfondisci il servizio
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+              </a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-header">
+                <h3>Per le PMI</h3>
+                <span class="service-num">02</span>
+              </div>
+              <p>Preparazione dell'infrastruttura dati aziendale per l'indicizzazione semantica dei sistemi generativi. Mappo la struttura societaria, i prodotti e i servizi in grafi di conoscenza proprietari e dati strutturati Schema.org, garantendo che l'azienda sia rintracciabile e citata nelle risposte dell'AI.</p>
+              <a href="pmi.html" class="service-card-link">
+                Approfondisci il servizio
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+              </a>
+            </div>
+
+          </div>
+        </section>
+      </div>
     </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Semantic HTML5 Tags:</span>
-      <span>${signals?.hasSemanticTags ? yesTag : warnTag(isIt?'Mancano tag semantici (<main>, <article>, etc.)':'Missing semantic tags (<main>, <article>, etc.)')}</span>
+
+    <!-- COLLABORAZIONI SECTION -->
+    <div class="band">
+      <div class="inner">
+                <section id="collaborazioni" class="reveal" aria-labelledby="collab-h">
+          <span class="tag">Oltre la consulenza</span>
+          <h2 id="collab-h">Progetti che sposano la mia visione del mondo</h2>
+          <p class="intro-p">
+            Non tutto passa per le logiche commerciali. Seguo e supporto attivamente iniziative che rispecchiano i miei valori e il mio modo di vedere il futuro: dalla formazione delle competenze digitali alla sostenibilità delle società B Corp e delle APS, passando per la valorizzazione del lavoro da remoto in armonia con la natura. Sono laboratori di idee prima che collaborazioni, in cui la tecnologia è uno strumento per generare valore condiviso.
+          </p>
+          <div class="collab-grid">
+
+            <div class="collab-card">
+              <div class="collab-header">
+                <span class="collab-name">NATworking</span>
+                <span class="collab-role-tag">Core Team</span>
+              </div>
+              <p class="collab-desc">Rete di innovazione sociale che promuove la rigenerazione territoriale ed il networking rurale attraverso il coworking in natura e il lavoro da remoto. All'interno del core team mi occupo della progettazione dell'infrastruttura digitale, dell'integrazione del CRM e dello sviluppo di strategie di visibilità semantica.</p>
+            </div>
+
+            <div class="collab-card">
+              <div class="collab-header">
+                <span class="collab-name">Guilds42 APS</span>
+                <span class="collab-role-tag">Digital Project Lead</span>
+              </div>
+              <p class="collab-desc">Associazione non profit nata per colmare il divario tra formazione e mercato del lavoro nel settore digitale. In qualità di Project Lead guido gli studenti nella realizzazione di progetti tecnologici reali a supporto del terzo settore. È il luogo dove ho mosso i primi passi ed iniziato a sperimentare l'impatto sociale della tecnologia.</p>
+            </div>
+
+            <div class="collab-card">
+              <div class="collab-header">
+                <span class="collab-name">Evermind B Corp</span>
+                <span class="collab-role-tag">Consulente</span>
+              </div>
+              <p class="collab-desc">Società benefit e B Corp focalizzata sullo sviluppo di soluzioni digitali per l'innovazione sociale ed ambientale. Collaboro come consulente esterno per la definizione delle architetture informative e l'organizzazione semantica dei dati, con l'obiettivo di dimostrare che il digitale può essere etico, trasparente e orientato al bene comune.</p>
+            </div>
+
+            <div class="collab-card">
+              <div class="collab-header">
+                <span class="collab-name">ITS NewTechSi Academy</span>
+                <span class="collab-role-tag">Docente</span>
+              </div>
+              <p class="collab-desc">Istituto piemontese focalizzato sull'alta formazione tecnologica post-diploma. Insegno Digital Marketing e offro percorsi pratici sull'AI readiness all'interno del corso per Tecnici Superiori in Artificial Intelligence & Business Management, trasferendo competenze concrete sulla strutturazione semantica dei dati.</p>
+            </div>
+
+          </div>
+        </section>
+      </div>
     </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Heading Hierarchy:</span>
-      <span>${signals?.headingErrors && signals.headingErrors.length > 0 ? 
-        errorTag(signals.headingErrors.join(' | ')) : yesTag}</span>
+
+    <!-- CONTATTI SECTION -->
+    <div class="band">
+      <div class="inner">
+                <section id="contatti" class="reveal" aria-labelledby="cta-h">
+          <span class="tag">Contatti</span>
+          <h2 id="cta-h">Parliamone</h2>
+          <p class="intro-p">
+            Se il problema che descrivo esiste nella tua situazione, prenota una chiamata di 30 minuti. Non serve sapere già cosa ti serve.
+          </p>
+          <div class="cta-group">
+            <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">
+              Prenota una chiamata ↗
+            </a>
+            <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-outline">
+              LinkedIn ↗
+            </a>
+          </div>
+        </section>
+      </div>
     </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Image ALTs:</span>
-      <span>${signals?.totalImages > 0 ? 
-        (signals.missingAlt === 0 ? okTag(isIt?'Tutte le immagini hanno ALT':'All images have ALT') : warnTag(`${signals.missingAlt} su ${signals.totalImages} immagini senza ALT`)) : 
-        `<span style="color:var(--muted)">${isIt?'Nessuna immagine rilevata':'No images detected'}</span>`}</span>
+
+  </main>
+
+  <!-- FOOTER -->
+    <footer>
+    <div class="inner">
+      <div class="footer-inner">
+                <div class="footer-meta">
+          <span>Pasquale Caiazzo</span><br>
+          Semantic Entity Architect<br>
+          Torino<br>
+          P.IVA IT01712990058
+        </div>
+        <div class="footer-links" style="display: flex; gap: 2rem;">
+          <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
     </div>
-  </div>`;
-  html += `<div style="margin-bottom:1.5rem">
-    <div style="font-weight:bold; color:var(--gold); font-size:.65rem; text-transform:uppercase; margin-bottom:.5rem; letter-spacing:.1em">${isIt?'2. Policy di Accesso AI':'2. AI Accessibility Policy'}</div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">robots.txt:</span>
-      <span>${aiFiles?.robotsTxtStatus === 'found' ? yesTag : noTag}</span>
-    </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">llms.txt:</span>
-      <span>${aiFiles?.llmsTxtStatus === 'found' ? yesTag : noTag}</span>
-    </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">agents.md:</span>
-      <span>${aiFiles?.agentsMdStatus === 'found' ? yesTag : noTag}</span>
-    </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">XML Sitemap:</span>
-      <span>${aiFiles?.sitemapXml ? yesTag : noTag}</span>
-    </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">WAF Firewall Status:</span>
-      <span>${fetchBlocked ? errorTag(isIt?'Attivo (Blocco Crawler AI automatico)':'Active (Blocks AI Crawlers)') : okTag(isIt?'Nessun blocco WAF rilevato':'No WAF blocks detected')}</span>
-    </div>
-  </div>`;
-  html += `<div style="margin-bottom:0.5rem">
-    <div style="font-weight:bold; color:var(--gold); font-size:.65rem; text-transform:uppercase; margin-bottom:.5rem; letter-spacing:.1em">${isIt?'3. Dati Strutturati & Grafo Identità':'3. Structured Data & Identity Graph'}</div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">JSON-LD Blocks:</span>
-      <span>${signals?.jsonLd?.length > 0 ? okTag(`${signals.jsonLd.length} blocchi trovati (${jq.source||''})`) : noTag}</span>
-    </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Entity Types:</span>
-      <span>${signals?.jsonLdTypes && signals.jsonLdTypes.length > 0 ? signals.jsonLdTypes.join(', ') : noTag}</span>
-    </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">sameAs Connections:</span>
-      <span>${signals?.sameAs && signals.sameAs.length > 0 ? signals.sameAs.map(link => `<a href="${link}" target="_blank" style="color:var(--gold); text-decoration:underline; word-break:break-all; display:block; margin-bottom:.2rem;">${link}</a>`).join('') : noTag}</span>
-    </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Official VAT/Tax ID:</span>
-      <span>${signals?.hasVatOrTaxId ? yesTag : noTag}</span>
-    </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Organization / Person Schema:</span>
-      <span>${signals?.hasOrgSchema ? okTag('Organization/LocalBusiness') : signals?.hasPersonSchema ? okTag('Person') : errorTag(isIt?'Mancanti schemi identità principali':'Identity schemas missing')}</span>
-    </div>
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:.5rem; border-bottom:1px solid var(--border2); padding:.4rem 0;">
-      <span style="color:var(--muted)">Wikidata / Wikipedia:</span>
-      <span>${jq.hasWikidata ? okTag('Wikidata sameAs') : ''} ${jq.hasWikipedia ? okTag('Wikipedia sameAs') : ''} ${(!jq.hasWikidata && !jq.hasWikipedia) ? `<span style="color:var(--muted)">${isIt?'Assenti (opzionali per PMI/Professionisti)':'Absent (optional for SMEs/Pros)'}</span>` : ''}</span>
-    </div>
-  </div>`;
-  content.innerHTML = html;
-}
-function resetTool(){ clearResults(); document.getElementById('resultsSection').style.display='none'; document.getElementById('inputSection').style.display='block'; document.getElementById('inputSection').style.opacity='1'; document.getElementById('btnAnalyze').disabled=false; document.getElementById('urlInput').value=''; hideErr(); }
-// ================ CRONOLOGIA DOMINIO (via backend) ================
-async function checkDomainHistory(url){
-  const domain = new URL(url).hostname;
-  const years=[1,2,5];
-  let historyBonus=0, found=[];
-  const currentYear = 2026; // Fissiamo l'anno corrente per determinismo matematico assoluto
-  const checks=years.map(async(y)=>{
-    const ts = `${currentYear - y}0101`; // Interroghiamo sempre il 1° gennaio di quell'anno storico
-    try{
-      const proxyUrl = `/api/fetch-page?url=${encodeURIComponent(`https://archive.org/wayback/available?url=${domain}&timestamp=${ts}`)}`;
-      const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(10000) });
-      const data = await res.json();
-      let parsed = data.contents ? JSON.parse(data.contents) : data;
-      if(parsed.archived_snapshots?.closest){ found.push(y); return true; }
-    }catch(e){ console.warn(`Wayback failed ${y}y:`,e.message); }
-    return false;
-  });
-  await Promise.all(checks);
-  if(found.includes(1)) historyBonus+=5;
-  if(found.includes(2)) historyBonus+=5;
-  if(found.includes(5)) historyBonus+=10;
-  return { bonus:historyBonus, years:found };
-}
-// ================ FETCH PAGINA (solo backend) ================
-async function fetchPage(url){
-  try{
-    const res = await fetch(`/api/fetch-page?url=${encodeURIComponent(url)}`);
-    if(res.ok){
-      const html = await res.text();
-      if(html && html.length>200){ console.log('Backend OK, length:',html.length); window._fetchTrapped=false; return html; }
-      else console.warn('HTML too short');
-    }else console.warn('Backend status:',res.status);
-  }catch(e){ console.error('Backend fetch error:',e); }
-  return null;
-}
-// ================ ESTRAZIONE SEGNALI E SEMANTICA HTML ================
-function extractSignals(html, url){
-  const doc = new DOMParser().parseFromString(html,'text/html');
-  const content = (sel)=>doc.querySelector(sel)?.getAttribute('content')||null;
-  const hrefAttr = (sel)=>doc.querySelector(sel)?.href||null;
-  const jsonLdScripts = [...doc.querySelectorAll('script[type="application/ld+json"]')];
-  const jsonLd = jsonLdScripts.map(s=>{ try{ return JSON.parse(s.textContent); }catch{ return null; } }).filter(Boolean);
-  const links = [...doc.querySelectorAll('a[href]')].map(a=>a.href);
-  const allObjects = jsonLd.flatMap(j=>j['@graph']||[j]);
-  
-  // Rilevamento E-mail e Discrepanze di Dominio (Disambiguazione)
-  const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
-  const emails = [...new Set((html || '').match(emailRegex) || [])];
-  const emailDiscrepancies = [];
-  let siteDomain = '';
-  try {
-    siteDomain = new URL(url).hostname.replace('www.', '').toLowerCase();
-  } catch(e) {}
-  // Trova le entità principali candidate (Person o Organization/LocalBusiness)
-  const candidateEntities = allObjects.filter(o => 
-    o && o['@type'] && 
-    (
-      ['Person', 'ProfilePage'].includes(o['@type']) || 
-      ['Organization', 'LocalBusiness', 'Store', 'ProfessionalService', 'Showroom', 'NGO', 'Association', 'EducationalOrganization'].includes(o['@type']) ||
-      (Array.isArray(o['@type']) && o['@type'].some(t => ['Person', 'Organization', 'LocalBusiness'].includes(t)))
-    )
-  );
-  let primaryEntity = null;
-  // Regola A: Cerca l'entità referenziata da WebPage (about o mainEntity)
-  const webPageObj = allObjects.find(o => o && (o['@type'] === 'WebPage' || o['@type'] === 'WebSite'));
-  if (webPageObj) {
-    const ref = webPageObj.about || webPageObj.mainEntity;
-    if (ref) {
-      const refId = ref['@id'] || (typeof ref === 'string' ? ref : null);
-      if (refId) {
-        primaryEntity = candidateEntities.find(c => c['@id'] === refId);
+  </footer>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <script>
+    const graphNodes = [
+      { id: 'bush', label: 'Vannevar Bush', type: 'person', year: 1945, wikidata: 'Q299595', desc: 'Immagina il Memex nel 1945. In «As We May Think» prefigura un sistema in cui la conoscenza è navigata per associazione invece che per gerarchia. È la prima architettura concettuale del web.' },
+      { id: 'nelson', label: 'Ted Nelson', type: 'person', year: 1963, wikidata: 'Q62852', desc: 'Conia il termine «ipertesto» nel 1963. Progetta Xanadu, un sistema di collegamento universale mai completato. Il web di Berners-Lee eredita la sua visione.' },
+      { id: 'berners-lee', label: 'Tim Berners-Lee', type: 'person', year: 1989, wikidata: 'Q80', desc: 'Inventa il World Wide Web nel 1989, propone il Web Semantico nel 1998, lancia il Protocollo Solid nel 2016. L\'architetto del web aperto.' },
+      { id: 'hendler', label: 'James Hendler', type: 'person', year: 2001, wikidata: 'Q6135847', desc: 'Co-autore del manifesto del Web Semantico su Scientific American (2001). Contribuisce alla definizione di RDF e OWL come standard W3C.' },
+      { id: 'zuboff', label: 'Shoshana Zuboff', type: 'person', year: 2019, wikidata: 'Q15953956', desc: 'In «The Age of Surveillance Capitalism» (2019) analizza come i dati umani siano diventati materia prima per sistemi economici senza consenso degli individui.' },
+      { id: 'vrandevcic', label: 'Denny Vrandecic', type: 'person', year: 2012, wikidata: 'Q18618629', desc: 'Fondatore di Wikidata, il knowledge graph aperto della Wikimedia Foundation. Ha creato l\'infrastruttura che rende verificabili oltre 100 milioni di entità.' },
+      
+      { id: 'memex', label: 'Memex', type: 'concept', year: 1945, wikidata: 'Q471', desc: 'Dispositivo immaginato da Bush nel 1945. Non lineare, associativo, personale. Non è mai stato costruito ma ha ispirato tutto ciò che è venuto dopo: ipertesto, web, knowledge graph.' },
+      { id: 'hypertext', label: 'Ipertesto', type: 'concept', year: 1963, wikidata: 'Q93241', desc: 'Testo non lineare con collegamenti tra documenti. Il principio fondamentale del web: non una sequenza ma una rete di relazioni tra contenuti.' },
+      { id: 'www', label: 'World Wide Web', type: 'concept', year: 1989, wikidata: 'Q466', desc: 'Sistema di documenti ipertestuali su internet. Creato al CERN nel 1989. Ha trasformato la comunicazione globale ma anche abilitato la concentrazione di potere sui dati.' },
+      { id: 'semantic-web', label: 'Web Semantico', type: 'concept', year: 1998, wikidata: 'Q54837', desc: 'Estensione del web proposta da Berners-Lee: i dati hanno significato formale leggibile dalle macchine. La visione non si è realizzata completamente ma i suoi standard sono la base dell\'AI readiness.' },
+      { id: 'linked-data', label: 'Linked Data', type: 'concept', year: 2006, wikidata: 'Q515701', desc: 'Principi definiti da Berners-Lee nel 2006: usa URI stabili, pubblica dati in RDF, collega a dati esterni. La grammatica pratica del Web Semantico.' },
+      { id: 'knowledge-graph', label: 'Knowledge Graph', type: 'concept', year: 2012, wikidata: 'Q33002955', desc: 'Grafo di entità e relazioni verificabili. Introdotto da Google nel 2012. Oggi è la struttura che alimenta i sistemi AI quando citano fatti verificabili su persone e organizzazioni.' },
+      { id: 'data-sovereignty', label: 'Sovranità del Dato', type: 'concept', year: 2016, wikidata: 'Q48780629', desc: 'Principio per cui i dati appartengono a chi li produce. Risposta al capitalismo della sorveglianza. Si realizza nel Protocollo Solid e nella governance della narrativa semantica.' },
+      { id: 'ai-readiness', label: 'AI Readiness', type: 'concept', year: 2023, wikidata: 'Q138646003', desc: 'Capacità di un\'entità di essere letta, citata e rappresentata con precisione dai sistemi AI. Si costruisce con JSON-LD, Wikidata e knowledge graph verificabili.' },
+      
+      { id: 'rdf', label: 'RDF', type: 'standard', year: 1999, wikidata: 'Q54872', desc: 'Resource Description Framework. Standard W3C del 1999. Rappresenta la conoscenza come triple soggetto-predicato-oggetto. La lingua formale del Web Semantico.' },
+      { id: 'json-ld', label: 'JSON-LD', type: 'standard', year: 2010, wikidata: 'Q6108942', desc: 'Serializzazione di Linked Data in JSON. Standard W3C dal 2014. Il modo più pratico per implementare dati strutturati leggibili dai sistemi AI su qualsiasi sito web.' },
+      { id: 'schema-org', label: 'Schema.org', type: 'standard', year: 2011, wikidata: 'Q3475322', desc: 'Vocabolario condiviso per il markup strutturato. Creato da Google, Microsoft, Yahoo e Yandex nel 2011. Definisce i tipi di entità riconosciuti dai sistemi AI.' },
+      { id: 'solid', label: 'Solid Protocol', type: 'standard', year: 2016, wikidata: 'Q55408718', desc: 'Protocollo proposto da Berners-Lee. Archivia i dati in Pod personali controllati dall\'individuo. L\'implementazione tecnica della sovranità del dato.' },
+      { id: 'rag', label: 'RAG', type: 'standard', year: 2020, wikidata: 'Q121362277', desc: 'Retrieval-Augmented Generation. Potenzia i LLM collegandoli a basi di conoscenza esterne strutturate. Richiede dati verificabili e ben organizzati per funzionare senza allucinazioni.' },
+      
+      { id: 'wikidata', label: 'Wikidata', type: 'tool', year: 2012, wikidata: 'Q2013', desc: 'Knowledge graph aperto della Wikimedia Foundation. Oltre 100 milioni di entità con identificatori univoci (Q-ID). La fonte più verificabile per l\'identità semantica.' },
+      { id: 'llm', label: 'LLM', type: 'tool', year: 2020, wikidata: 'Q115305900', desc: 'Modelli linguistici addestrati su enormi quantità di testo: ChatGPT, Gemini, Claude. La qualità della loro rappresentazione di un\'entità dipende dalla struttura dei dati disponibili.' },
+      
+      { id: 'surveillance-cap', label: 'Capitalismo della Sorveglianza', type: 'critique', year: 2019, wikidata: 'Q29096967', desc: 'Sistema economico che estrae valore dai dati comportamentali umani senza consenso. Concetto di Zuboff: il web commerciale come macchina di previsione e modifica del comportamento.' }
+    ];
+
+    const graphLinks = [
+      { source: 'bush', target: 'memex', rel: 'schema:creator' },
+      { source: 'nelson', target: 'hypertext', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'www', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'semantic-web', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'solid', rel: 'schema:creator' },
+      { source: 'berners-lee', target: 'linked-data', rel: 'schema:creator' },
+      { source: 'hendler', target: 'semantic-web', rel: 'schema:creator' },
+      { source: 'zuboff', target: 'surveillance-cap', rel: 'schema:creator' },
+      { source: 'vrandevcic', target: 'wikidata', rel: 'schema:creator' },
+      { source: 'memex', target: 'hypertext', rel: 'dcterms:references' },
+      { source: 'hypertext', target: 'www', rel: 'dcterms:references' },
+      { source: 'www', target: 'semantic-web', rel: 'dcterms:relation' },
+      { source: 'www', target: 'surveillance-cap', rel: 'dcterms:relation' },
+      { source: 'semantic-web', target: 'rdf', rel: 'dcterms:relation' },
+      { source: 'semantic-web', target: 'linked-data', rel: 'dcterms:relation' },
+      { source: 'rdf', target: 'json-ld', rel: 'dcterms:hasFormat' },
+      { source: 'json-ld', target: 'schema-org', rel: 'dcterms:relation' },
+      { source: 'linked-data', target: 'wikidata', rel: 'dcterms:relation' },
+      { source: 'schema-org', target: 'knowledge-graph', rel: 'dcterms:relation' },
+      { source: 'wikidata', target: 'knowledge-graph', rel: 'dcterms:relation' },
+      { source: 'knowledge-graph', target: 'llm', rel: 'dcterms:relation' },
+      { source: 'llm', target: 'rag', rel: 'dcterms:relation' },
+      { source: 'rag', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'json-ld', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'schema-org', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'wikidata', target: 'ai-readiness', rel: 'dcterms:relation' },
+      { source: 'surveillance-cap', target: 'data-sovereignty', rel: 'dcterms:relation' },
+      { source: 'solid', target: 'data-sovereignty', rel: 'dcterms:relation' },
+      { source: 'data-sovereignty', target: 'ai-readiness', rel: 'dcterms:relation' }
+    ];
+
+    function getRadius(node) {
+      if (node.id === 'ai-readiness' || node.id === 'berners-lee') return 26;
+      if (node.id === 'www' || node.id === 'semantic-web' || node.id === 'knowledge-graph' || node.id === 'llm') return 22;
+      if (node.id === 'wikidata' || node.id === 'json-ld' || node.id === 'schema-org' || node.id === 'surveillance-cap') return 18;
+      return 15;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.canvas-wrapper');
+      let width = container.clientWidth || 600;
+      let height = container.clientHeight || 520;
+
+      const svg = d3.select('#d3-graph');
+      const g = svg.append('g').attr('class', 'graph-g');
+
+      const zoom = d3.zoom()
+        .scaleExtent([0.3, 3])
+        .on('zoom', (event) => {
+          g.attr('transform', event.transform);
+        });
+
+      svg.call(zoom);
+
+      document.getElementById('btn-zoom-in').addEventListener('click', () => {
+        svg.transition().duration(300).call(zoom.scaleBy, 1.3);
+      });
+      document.getElementById('btn-zoom-out').addEventListener('click', () => {
+        svg.transition().duration(300).call(zoom.scaleBy, 1/1.3);
+      });
+      document.getElementById('btn-reset-layout').addEventListener('click', () => {
+        svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+        d3.selectAll('.node circle').classed('highlighted', false);
+        d3.selectAll('.link').classed('highlighted', false);
+        document.getElementById('details-content').classList.add('hidden');
+        document.getElementById('details-default').classList.remove('hidden');
+      });
+
+      const defs = svg.append('defs');
+      
+      defs.append('marker')
+        .attr('id', 'arrow-default')
+        .attr('viewBox', '0 -5 10 10')
+        .attr('refX', 9)
+        .attr('refY', 0)
+        .attr('markerWidth', 6)
+        .attr('markerHeight', 6)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M0,-5L10,0L0,5')
+        .attr('fill', 'var(--text-muted)')
+        .attr('opacity', 0.45);
+        
+      defs.append('marker')
+        .attr('id', 'arrow-active')
+        .attr('viewBox', '0 -5 10 10')
+        .attr('refX', 9)
+        .attr('refY', 0)
+        .attr('markerWidth', 6)
+        .attr('markerHeight', 6)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M0,-5L10,0L0,5')
+        .attr('fill', 'var(--accent)')
+        .attr('opacity', 0.95);
+
+      const simulation = d3.forceSimulation(graphNodes)
+        .force('link', d3.forceLink(graphLinks).id(d => d.id).distance(135))
+        .force('charge', d3.forceManyBody().strength(-240))
+        .force('center', d3.forceCenter(width / 2, height / 2))
+        .force('collide', d3.forceCollide().radius(d => getRadius(d) + 18));
+
+      const linkGroup = g.append('g').attr('class', 'links-g');
+      const linkWrapper = linkGroup.selectAll('.link-container')
+        .data(graphLinks)
+        .enter()
+        .append('g')
+        .attr('class', 'link-container');
+
+      const link = linkWrapper.append('path')
+        .attr('class', 'link')
+        .attr('marker-end', 'url(#arrow-default)');
+
+      const linkLabel = linkWrapper.append('text')
+        .attr('class', 'link-label')
+        .text(d => d.rel);
+
+      const nodeGroup = g.append('g').attr('class', 'nodes-g');
+      const node = nodeGroup.selectAll('.node')
+        .data(graphNodes)
+        .enter()
+        .append('g')
+        .attr('class', 'node')
+        .call(d3.drag()
+          .clickDistance(10)
+          .on('start', dragstarted)
+          .on('drag', dragged)
+          .on('end', dragended));
+
+      node.append('circle')
+        .attr('r', d => getRadius(d))
+        .attr('class', d => `node-${d.type}`);
+
+      node.append('text')
+        .attr('y', d => getRadius(d) + 12)
+        .text(d => d.label)
+        .style('font-family', "'IBM Plex Mono', monospace")
+        .style('font-weight', '600')
+        .style('font-size', '0.65rem');
+
+      function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
       }
-    }
-  }
-  // Regola B: Cerca l'entità il cui "url" o "@id" corrisponde al dominio del sito
-  if (!primaryEntity && siteDomain) {
-    primaryEntity = candidateEntities.find(c => {
-      const cUrl = c.url || c['@id'];
-      if (!cUrl || typeof cUrl !== 'string') return false;
-      try {
-        return new URL(cUrl).hostname.replace('www.', '').toLowerCase() === siteDomain;
-      } catch(e) {
-        return false;
+
+      function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
       }
-    });
-  }
-  // Regola C: Cerca il primo Person
-  if (!primaryEntity) {
-    primaryEntity = candidateEntities.find(c => ['Person', 'ProfilePage'].includes(c['@type'])) || 
-                    candidateEntities.find(c => ['Organization', 'LocalBusiness', 'Store', 'ProfessionalService', 'Showroom'].includes(c['@type']));
-  }
-  // Estrai sameAs SOLO dall'entità principale
-  const sameAsList = primaryEntity && primaryEntity.sameAs 
-    ? (Array.isArray(primaryEntity.sameAs) ? primaryEntity.sameAs : [primaryEntity.sameAs]) 
-    : [];
-  
-  for (const email of emails) {
-    const emailDomain = email.split('@')[1]?.toLowerCase();
-    if (emailDomain && siteDomain && emailDomain !== siteDomain) {
-      // Verifica se questo dominio secondario/email è menzionato nel grafo dell'entità principale
-      const isDeclared = sameAsList.some(s => s.toLowerCase().includes(emailDomain)) || JSON.stringify(jsonLd).toLowerCase().includes(email.toLowerCase());
-      emailDiscrepancies.push({ email, domain: emailDomain, declared: isDeclared });
-    }
-  }
-  // Analisi Intestazioni (Gerarchia Titoli)
-  const headings = [...doc.querySelectorAll('h1, h2, h3, h4, h5, h6')].map(h => ({
-    level: parseInt(h.tagName[1]),
-    text: h.textContent.trim()
-  }));
-  const h1Count = headings.filter(h => h.level === 1).length;
-  const headingErrors = [];
-  let prevLevel = 0;
-  headings.forEach((h, idx) => {
-    if (idx === 0 && h.level !== 1) {
-      headingErrors.push(`Il primo titolo è H${h.level} anziché H1`);
-    } else if (idx > 0 && h.level > prevLevel + 1) {
-      headingErrors.push(`Salto di gerarchia: H${prevLevel} seguito da H${h.level}`);
-    }
-    prevLevel = h.level;
-  });
-  if (h1Count === 0) headingErrors.push("Manca H1 principale sulla homepage");
-  else if (h1Count > 1) headingErrors.push(`Trovati molteplici tag H1 (${h1Count})`);
-  // Analisi Immagini (ALT Text)
-  const images = [...doc.querySelectorAll('img')];
-  const totalImages = images.length;
-  const missingAlt = images.filter(img => !img.hasAttribute('alt') || img.getAttribute('alt').trim() === '').length;
-  // Analisi Dati Strutturati Addizionali
-  const hasLocalBusiness = allObjects.some(o => ['LocalBusiness', 'Store', 'ProfessionalService', 'Showroom'].includes(o['@type']) || (Array.isArray(o['@type']) && o['@type'].some(t => ['LocalBusiness', 'Store'].includes(t))));
-  // Segnali di Grafo per Rete Professionale
-  const hasVatOrTaxId = allObjects.some(o => o && (o.vatID || o.taxID || o.leiCode || o.iso6523Code));
-  const hasFounderOrEmployee = allObjects.some(o => o && (o.founder || o.employee || o.founders || o.employees || o.member || o.members));
-  const hasMemberOfOrParent = allObjects.some(o => o && (o.memberOf || o.parentOrganization || o.subOrganization || o.sponsor || o.brand || o.knows));
-  const hasContactPoint = allObjects.some(o => o && (o.contactPoint || o.contactPoints || o['@type'] === 'ContactPoint'));
-  const hasAlumniOrCredential = allObjects.some(o => o && (o.alumniOf || o.hasCredential));
-  const hasAffiliation = allObjects.some(o => o && (o.worksFor || o.affiliation));
-  // Metatag lingua e rapporto testo/codice (Signal-to-Noise Ratio)
-  const htmlLength = html ? html.length : 0;
-  const textLength = doc.body ? doc.body.textContent.replace(/\s+/g,' ').trim().length : 0;
-  const signalToNoiseRatio = htmlLength > 0 ? Math.round((textLength / htmlLength) * 100) : 0;
-  const htmlLang = doc.documentElement ? doc.documentElement.getAttribute('lang') : null;
-  const hasUtf8 = /<meta[^>]+charset=["']?utf-8["']?/i.test(html) || doc.characterSet?.toLowerCase() === 'utf-8';
-  const isPossibleCsr = htmlLength > 1200 && textLength < 350 && html.includes('<script');
-  return {
-    url, title:doc.title||null, description:content('meta[name="description"]'), canonical:hrefAttr('link[rel="canonical"]'),
-    ogTitle:content('meta[property="og:title"]'), ogDescription:content('meta[property="og:description"]'),
-    ogType:content('meta[property="og:type"]'), ogImage:content('meta[property="og:image"]'), author:content('meta[name="author"]'),
-    jsonLd, jsonLdTypes:allObjects.map(o=>o['@type']).filter(Boolean).flat(),
-    hasPersonSchema: primaryEntity ? ['Person','ProfilePage'].includes(primaryEntity['@type']) : allObjects.some(o=>['Person','ProfilePage'].includes(o['@type'])),
-    hasOrgSchema: primaryEntity ? !['Person','ProfilePage'].includes(primaryEntity['@type']) : allObjects.some(o=>['Organization','LocalBusiness','NGO','Association','EducationalOrganization'].includes(o['@type'])),
-    primaryEntity,
-    hasLocalBusiness,
-    sameAs: sameAsList,
-    hasCustomDomain:(()=>{try{return !/^(www\.)?(linkedin|facebook|instagram|twitter|x\.com|linktree|bio\.link|linktr\.ee)/i.test(new URL(url).hostname);}catch{return true;}})(),
-    socials:{ linkedin:links.find(h=>/linkedin\.com\/(in|company)\//i.test(h))||null, github:links.find(h=>/github\.com\//i.test(h))||null },
-    h1s:[...doc.querySelectorAll('h1')].map(h=>h.textContent.trim()).filter(Boolean).slice(0,3),
-    bodyExcerpt:(doc.body?.textContent||'').replace(/\s+/g,' ').trim().substring(0,400),
-    platform:detectPlatform(html,jsonLd),
-    jsonLdQuality:analyzeJsonLdQuality(jsonLd, detectPlatform(html,jsonLd), html),
-    
-    // Nuove metriche semantiche/strutturali
-    emails,
-    emailDiscrepancies,
-    headingErrors,
-    h1Count,
-    totalImages,
-    missingAlt,
-    hasSemanticTags: /<(main|article|header|footer|nav)/i.test(html),
-    hasHeaderTag: /<header/i.test(html),
-    
-    // Nuovi segnali per Rete Professionale
-    hasVatOrTaxId,
-    hasFounderOrEmployee,
-    hasMemberOfOrParent,
-    hasContactPoint,
-    hasAlumniOrCredential,
-    hasAffiliation,
-    // Nuovi segnali di Readability
-    htmlLength,
-    textLength,
-    signalToNoiseRatio,
-    htmlLang,
-    hasUtf8,
-    isPossibleCsr
-  };
-}
-function detectPlatform(html, jsonLd){
-  const raw=JSON.stringify(jsonLd), head=(html||'').substring(0,8000);
-  if(/cdn\.shopify\.com|shopify\.com\/s\//i.test(raw)||/Shopify\./i.test(head)) return 'shopify';
-  if(/prestashop/i.test(head)||/"prestashop"/i.test(raw)) return 'prestashop';
-  if(/woocommerce|woo-commerce/i.test(raw)||/woocommerce/i.test(head)) return 'woocommerce';
-  if(raw.includes('wp-')||raw.includes('wordpress')||/\/wp-content\//i.test(head)) return 'wordpress';
-  if(/squarespace\.com/i.test(raw)||/squarespace/i.test(head)) return 'squarespace';
-  if(/wixsite\.com|static\.wixstatic/i.test(raw)||/wix-code/i.test(head)) return 'wix';
-  return 'unknown';
-}
-function analyzeJsonLdQuality(jsonLd, platform='', html=''){
-  if(!jsonLd.length) return { present:false, source:'nessuno', isPlugin:false, details:[] };
-  const raw=JSON.stringify(jsonLd);
-  const fullHtml=(html||'').toLowerCase();
-  const isYoast = raw.includes('#/schema/')||raw.includes('yoast')||fullHtml.includes('wpseo');
-  const isRankMath = raw.includes('rank-math')||raw.includes('rankmath')||raw.includes('#richSnippet');
-  const isWpAuto = (raw.includes('wp-')||raw.includes('wordpress')) && (fullHtml.includes('/wp-content/plugins/')||fullHtml.includes('wp-json/wp/v2'));
-  let isPlugin=false, source='manuale';
-  if(isYoast){ source='Yoast SEO (plugin)'; isPlugin=true; }
-  else if(isRankMath){ source='RankMath (plugin)'; isPlugin=true; }
-  else if(isWpAuto){ source='WordPress automatico (plugin)'; isPlugin=true; }
-  else if(['shopify','prestashop','squarespace','wix'].includes(platform)){ source=`${platform} (nativo)`; isPlugin=true; }
-  const allObjects = jsonLd.flatMap(j=>j['@graph']||[j]);
-  const person = allObjects.find(o=>o['@type']==='Person'||o['@type']==='ProfilePage');
-  let details=[];
-  if(person){
-    const sameAs=Array.isArray(person.sameAs)?person.sameAs:(person.sameAs?[person.sameAs]:[]);
-    const hasWikidata=sameAs.some(s=>/wikidata\.org/i.test(s));
-    if(!hasWikidata) details.push('Wikidata mancante');
-  } else details.push('Nessuno schema Person');
-  return { present:true, source, isPlugin, details, hasWikidata:JSON.stringify(allObjects).includes('wikidata.org'), hasWikipedia:JSON.stringify(allObjects).includes('wikipedia.org') };
-}
-// ================ FETCH AI FILES (con supporto agents.md) ================
-async function fetchAiFiles(baseUrl){
-  const base = new URL(baseUrl).origin;
-  const results = { llmsTxt:null, robotsTxt:null, agentsMd:null, sitemapXml:false, sitemapUrl:null, llmsTxtStatus:'absent', robotsTxtStatus:'absent', agentsMdStatus:'absent', sitemapStatus:'absent' };
-  const isHtmlOrTrash = (t)=> /^<(!doctype|html|!--|saved from)/i.test(t.substring(0,400).toLowerCase()) || /<html[\s>]/i.test(t.substring(0,200));
-  const isXmlSitemap = (t)=> /<urlset|<sitemapindex/i.test(t.substring(0,600));
-  async function tryFetch(pathOrUrl){
-    const fullUrl = pathOrUrl.startsWith('http')?pathOrUrl:base+pathOrUrl;
-    try{
-      const r = await fetch(`/api/fetch-page?raw=1&url=${encodeURIComponent(fullUrl)}`);
-      if(r.ok){
-        const txt = await r.text();
-        return { content:txt, status:'found' };
+
+      function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
       }
-      return { content:null, status:r.status===444 || r.status===404 ?'absent':'unreachable' };
-    }catch(e){ return { content:null, status:'unreachable' }; }
-  }
-  const rb = await tryFetch('/robots.txt');
-  if(rb.status==='found' && rb.content && !isHtmlOrTrash(rb.content)){ results.robotsTxt=rb.content.substring(0,1200); results.robotsTxtStatus='found'; }
-  const ll = await tryFetch('/llms.txt');
-  if(ll.status==='found' && ll.content && !isHtmlOrTrash(ll.content) && ll.content.trim().length>5){ results.llmsTxt=ll.content.substring(0,800); results.llmsTxtStatus='found'; }
-  
-  // Shopify specific agents.md
-  const ag = await tryFetch('/agents.md');
-  if(ag.status==='found' && ag.content && !isHtmlOrTrash(ag.content)){ results.agentsMd=ag.content.substring(0,800); results.agentsMdStatus='found'; }
-  let sitemapPaths = ['/sitemap.xml','/sitemap_index.xml','/wp-sitemap.xml','/sitemap-index.xml','/page-sitemap.xml'];
-  if(results.robotsTxt){
-    const match = results.robotsTxt.match(/^Sitemap:\s*(.+)$/im);
-    if(match) sitemapPaths.unshift(match[1].trim());
-  }
-  for(let path of sitemapPaths){
-    if(results.sitemapXml) break;
-    const sm = await tryFetch(path);
-    if(sm.status==='found' && sm.content && isXmlSitemap(sm.content)){ results.sitemapXml=true; results.sitemapUrl=path.startsWith('http')?path:base+path; results.sitemapStatus='found'; break; }
-  }
-  return results;
-}
-// ================ ALGORITMO DI PUNTEGGIO OTTIMIZZATO PER PROFESSIONISTI E PMI ================
-function computeScores(signals, aiFiles, history, html, fetchBlocked = false) {
-  if(!signals) return { leggibilita:20, grafo:20, coerenza:20, politica:20, profilo:20, overall:20 };
-  const allObjects = signals.jsonLd.flatMap(j=>j['@graph']||[j]);
-  const isOrg = signals.hasOrgSchema;
-  const person = isOrg ? null : (signals.primaryEntity || allObjects.find(o=>o['@type']==='Person'||o['@type']==='ProfilePage'));
-  const org = isOrg ? (signals.primaryEntity || allObjects.find(o=>['Organization', 'LocalBusiness'].includes(o['@type']) || (Array.isArray(o['@type']) && o['@type'].some(t => ['Organization', 'LocalBusiness'].includes(t))))) : null;
-  
-  // 1. LEGGIBILITÀ AI (Readability) - Focus solo su semantica strutturale, escludendo robots/llms.txt
-  let l = 0;
-  
-  // JSON-LD presenza
-  if (signals.jsonLd.length > 0) {
-    const isManual = signals.jsonLdQuality && !signals.jsonLdQuality.isPlugin;
-    l += isManual ? 45 : 30;
-    if (JSON.stringify(signals.jsonLd).includes('"@graph"')) l += 5;
-  }
-  
-  // Metadati di base
-  if (signals.title) l += 3;
-  if (signals.description && signals.description.length > 50) l += 3;
-  if (signals.canonical) l += 2;
-  if (signals.ogTitle && signals.ogDescription) l += 5;
-  if (signals.ogImage) l += 2;
-  
-  // Tag semantici strutturali HTML5
-  if (signals.hasSemanticTags) l += 5;
-  if (signals.hasHeaderTag) l += 5;
-  
-  // Titoli intestazione (gerarchia titoli H1-H6)
-  let headingPts = 15;
-  if (signals.headingErrors && signals.headingErrors.length > 0) {
-    headingPts -= Math.min(15, signals.headingErrors.length * 3);
-  }
-  l += Math.max(0, headingPts);
-  
-  // Immagini alt text
-  let imgPts = 10;
-  if (signals.totalImages > 0) {
-    const missingRatio = signals.missingAlt / signals.totalImages;
-    imgPts -= Math.min(10, Math.round(missingRatio * 10));
-  }
-  l += Math.max(0, imgPts);
-  // Tag lingua html lang (Penalizzazione se assente: -5 punti)
-  if (!signals.htmlLang) {
-    l -= 5;
-  }
-  
-  // Rapporto testo/codice (Signal-to-Noise Ratio)
-  // Penalizzazione se c'è troppo codice rispetto al testo utile (bloat)
-  if (signals.signalToNoiseRatio > 0 && signals.signalToNoiseRatio < 5) {
-    l -= 5;
-  } else if (signals.signalToNoiseRatio >= 15) {
-    l += 5; // Bonus per pagine molto dense di contenuto testuale pulito
-  }
-  // Set di caratteri UTF-8 (Penalizzazione se assente: -5 punti)
-  if (!signals.hasUtf8) {
-    l -= 5;
-  }
-  // Dipendenza Javascript / Client-Side Rendering (Penalizzazione se sospetto CSR: -15 punti)
-  if (signals.isPossibleCsr) {
-    l -= 15;
-  }
-  l = Math.max(0, Math.min(100, l));
-  
-  // 2. COERENZA IDENTITÀ (c) - Calcolo sdoppiato Persona / Organizzazione
-  let c = 100;
-  
-  if (isOrg && org) {
-    // Coerenza Aziendale (Organization)
-    // 1. Corrispondenza Brand / Titolo Sito
-    if (signals.title && org.name) {
-      const titleClean = signals.title.toLowerCase().replace(/[^a-z0-9\s]/g,'');
-      const nameClean = org.name.toLowerCase().replace(/[^a-z0-9\s]/g,'');
-      if (!titleClean.includes(nameClean) && !nameClean.includes(titleClean)) {
-        c -= 15;
+
+      const tooltip = d3.select('#tooltip');
+
+      node.on('mouseover', function(event, d) {
+        tooltip.style('opacity', 1)
+          .html(`Anno: ${d.year}<br>Tipo: ${d.type.toUpperCase()}`);
+        
+        link.classed('highlighted', l => l.source.id === d.id || l.target.id === d.id);
+        link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
+      });
+
+      node.on('mousemove', function(event) {
+        tooltip.style('left', (event.pageX + 10) + 'px')
+          .style('top', (event.pageY - 15) + 'px');
+      });
+
+      node.on('mouseout', function() {
+        tooltip.style('opacity', 0);
+        link.classed('highlighted', false);
+        link.attr('marker-end', 'url(#arrow-default)');
+      });
+
+      node.on('click', function(event, d) {
+        event.stopPropagation();
+        d3.selectAll('.node circle').classed('highlighted', false);
+        d3.select(this).select('circle').classed('highlighted', true);
+        
+        link.classed('highlighted', l => l.source.id === d.id || l.target.id === d.id);
+        link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
+        showNodeDetails(d);
+      });
+
+      svg.on('click', function() {
+        d3.selectAll('.node circle').classed('highlighted', false);
+        link.classed('highlighted', false);
+        link.attr('marker-end', 'url(#arrow-default)');
+        document.getElementById('details-content').classList.add('hidden');
+        document.getElementById('details-default').classList.remove('hidden');
+      });
+
+      function showNodeDetails(d) {
+        document.getElementById('details-default').classList.add('hidden');
+        document.getElementById('details-content').classList.remove('hidden');
+        
+        document.getElementById('node-name').innerText = d.label;
+        document.getElementById('node-year').innerText = `Definito nel ${d.year}`;
+        document.getElementById('node-description').innerText = d.desc;
+        
+        const badge = document.getElementById('node-type-badge');
+        badge.innerText = d.type;
+        
+        badge.className = 'node-badge';
+        let themeColor = 'var(--accent)';
+        if (d.type === 'person') themeColor = 'var(--color-person)';
+        else if (d.type === 'concept') themeColor = 'var(--color-topic)';
+        else if (d.type === 'standard') themeColor = 'var(--color-org)';
+        else if (d.type === 'tool') themeColor = 'var(--color-credential)';
+        else if (d.type === 'critique') themeColor = 'var(--color-occupation)';
+
+        badge.style.color = themeColor;
+        badge.style.borderColor = themeColor;
+        badge.style.backgroundColor = themeColor + '15';
+
+        const wLink = document.getElementById('node-wikidata-link');
+        wLink.href = `https://www.wikidata.org/wiki/${d.wikidata}`;
+        document.getElementById('node-wikidata-text').innerText = `wikidata.org/wiki/${d.wikidata} ↗`;
+
+        const rels = graphLinks.filter(l => l.source.id === d.id || l.target.id === d.id);
+        const list = document.getElementById('node-relations-list');
+        list.innerHTML = rels.map(l => {
+          if (l.source.id === d.id) {
+            return `<li style="margin-bottom: 0.35rem;">questo nodo <span style="color: var(--accent);">&rarr; ${l.rel} &rarr;</span> <strong>${l.target.label}</strong></li>`;
+          } else {
+            return `<li style="margin-bottom: 0.35rem;"><strong>${l.source.label}</strong> <span style="color: var(--accent);">&rarr; ${l.rel} &rarr;</span> questo nodo</li>`;
+          }
+        }).join('');
       }
-    }
-    // 2. Allineamento E-mail e domini collegati
-    if (signals.emailDiscrepancies && signals.emailDiscrepancies.length > 0) {
-      c -= 15;
-      if (signals.emailDiscrepancies.some(d => !d.declared)) {
-        c -= 15; // Penalità severa se l'email non è disambiguata/associata
-      }
-    }
-    // 3. Social sameAs
-    const sameAs = Array.isArray(org.sameAs)?org.sameAs:(org.sameAs?[org.sameAs]:[]);
-    if (sameAs.length === 0) {
-      c -= 15;
-    }
-    // 4. LocalBusiness schema
-    if (!signals.hasLocalBusiness) {
-      c -= 15;
-    }
-    // 5. Canonical
-    if (signals.canonical && signals.url) {
-      try {
-        const canon = new URL(signals.canonical);
-        const page = new URL(signals.url);
-        if (canon.href !== page.href && canon.pathname !== page.pathname) c -= 10;
-      } catch(e) {}
-    }
-  } else {
-    // Coerenza Personale (Person - Default)
-    c = 0;
-    if(signals.title && person?.name){
-      const titleClean = signals.title.toLowerCase().replace(/[^a-z0-9\s]/g,'');
-      const nameClean = person.name.toLowerCase().replace(/[^a-z0-9\s]/g,'');
-      if(titleClean === nameClean) c+=25;
-      else if(titleClean.includes(nameClean)) c+=22;
-      else if(nameClean.includes(titleClean)) c+=18;
-      else c+=10;
-    } else if(signals.title) c+=5;
-    
-    if(signals.description && person?.description){
-      const descWords = signals.description.toLowerCase().split(/\s+/).filter(w=>w.length>3);
-      const persWords = person.description.toLowerCase().split(/\s+/).filter(w=>w.length>3);
-      const common = descWords.filter(w=>persWords.includes(w)).length;
-      const maxPossible = Math.min(descWords.length, persWords.length);
-      let ratio = maxPossible > 0 ? common / maxPossible : 0;
-      c += Math.min(20, Math.round(ratio * 20));
-    } else if(signals.description) c+=5;
-    
-    let imageMatch = false;
-    if(signals.ogImage && person?.image) {
-      try { imageMatch = (new URL(signals.ogImage).origin === new URL(person.image).origin); } catch(e) {}
-    }
-    if(imageMatch) c+=10;
-    
-    if(signals.canonical && signals.url) {
-      try {
-        const canon = new URL(signals.canonical);
-        const page = new URL(signals.url);
-        if(canon.href === page.href || canon.pathname === page.pathname) c+=10;
-      } catch(e) {}
-    }
-    
-    if(person && person['@id']) c+=10;
-    if(person && person.sameAs && (Array.isArray(person.sameAs)?person.sameAs.length:1)>0) c+=5;
-    
-    let affCount = 0;
-    if(person){
-      if(person.affiliation) affCount += Array.isArray(person.affiliation)?person.affiliation.length:1;
-      if(person.worksFor) affCount += Array.isArray(person.worksFor)?person.worksFor.length:1;
-    }
-    c += Math.min(15, affCount * 3);
-    
-    // Penalità e-mail secondaria per Person
-    if (signals.emailDiscrepancies && signals.emailDiscrepancies.length > 0) {
-      c -= 10;
-      if (signals.emailDiscrepancies.some(d => !d.declared)) c -= 10;
-    }
-  }
-  
-  c += Math.min(5, history.bonus);
-  c = Math.max(0, Math.min(100, c));
-  
-  // 3. ACCESSIBILITÀ AI (p)
-  let p = 0;
-  if (fetchBlocked) {
-    p = 10; // Accesso AI bloccato preventivamente da firewall/Cloudflare
-  } else {
-    if(aiFiles?.llmsTxt || aiFiles?.agentsMd) p+=50;
-    if(aiFiles?.robotsTxt){ if(/gptbot|claudebot|google-extended|perplexity/i.test(aiFiles.robotsTxt)) p+=35; else p+=20; }
-    if(aiFiles?.sitemapXml) p+=15;
-    p = Math.min(100,p);
-  }
-  
-  // 4. PROFILO (pr)
-  let pr = 0;
-  if (isOrg) {
-    // Profilo Aziendale
-    pr += 20; // Presenza Org
-    if (signals.hasLocalBusiness) pr += 20; // Showroom/LocalBusiness fisico
-    if (signals.emails && signals.emails.length > 0) pr += 15;
-    if (signals.socials?.linkedin) pr += 15;
-    if (signals.totalImages > 0 && signals.missingAlt === 0) pr += 10;
-    if (signals.jsonLdQuality?.present) pr += 20;
-  } else if(person){
-    // Profilo Personale
-    if(person.name) pr+=15;
-    if(person.description && person.description.length>50) pr+=15;
-    if(person.image) pr+=10;
-    if(person.jobTitle) pr+=15;
-    if(person.worksFor || person.affiliation) pr+=15;
-    const knows = person.knowsAbout;
-    if(knows){ const cnt=Array.isArray(knows)?knows.length:1; pr+=Math.min(20, cnt*5); }
-    const sameAs = Array.isArray(person.sameAs)?person.sameAs:(person.sameAs?[person.sameAs]:[]);
-    let profLinks=0;
-    for(const link of sameAs){
-      if(/linkedin\.com/i.test(link)) profLinks+=5;
-      else if(/github\.com/i.test(link)) profLinks+=4;
-      else if(/orcid\.org/i.test(link)) profLinks+=5;
-      else profLinks+=1;
-    }
-    pr += Math.min(10, profLinks);
-    if(person.identifier) pr+=5;
-  }
-  pr = Math.max(0, Math.min(100, Math.round(pr)));
-  
-  // 5. RETE PROFESSIONALE (g) - Riprogettata per professionisti e PMI (Wikipedia/Wikidata non sono bloccanti)
-  let g = 0;
-  const hasGraph = signals.hasOrgSchema || signals.hasPersonSchema;
-  if (hasGraph) {
-    const orgOrPerson = person || allObjects.find(o => o && o['@type'] && (['Organization', 'LocalBusiness', 'Store', 'ProfessionalService', 'Showroom'].includes(o['@type']) || (Array.isArray(o['@type']) && o['@type'].some(t => ['Organization', 'LocalBusiness'].includes(t)))));
-    if(orgOrPerson){
-      const sameAs = Array.isArray(orgOrPerson.sameAs)?orgOrPerson.sameAs:(orgOrPerson.sameAs?[orgOrPerson.sameAs]:[]);
-      let kg = 0;
-      let hasWikidataSameAs = false;
-      let hasWikipediaSameAs = false;
-      let socialCount = 0;
-      // Punteggi realistici per i canali professionali reali di PMI e professionisti
-      for(const link of sameAs){
-        const lLower = link.toLowerCase();
-        if(lLower.includes('linkedin.com')) {
-          kg += 30; // Rete professionale centrale
-        } else if(lLower.includes('google.com/maps') || lLower.includes('google.it/maps') || lLower.includes('trustpilot.com')) {
-          kg += 20; // Local directories o recensioni certificate
-        } else if(lLower.includes('github.com') || lLower.includes('behance.net') || lLower.includes('dribbble.com') || lLower.includes('medium.com')) {
-          kg += 20; // Portfolio o canali di settore
-        } else if(lLower.includes('wikidata.org')) {
-          kg += 25; // Wikidata opzionale (bonus)
-          hasWikidataSameAs = true;
-        } else if(lLower.includes('wikipedia.org')) {
-          kg += 25; // Wikipedia opzionale (bonus)
-          hasWikipediaSameAs = true;
-        } else if(lLower.includes('instagram.com') || lLower.includes('facebook.com') || lLower.includes('twitter.com') || lLower.includes('x.com') || lLower.includes('youtube.com')) {
-          socialCount++;
-          if (socialCount === 1) kg += 15; // Primo social standard
-          else kg += 5; // Social successivi
+
+      simulation.on('tick', () => {
+        link.attr('d', d => {
+          if (!d.source.x || !d.target.x) return 'M0,0L0,0';
+          const rTarget = getRadius(d.target) + 2.5;
+          const dx = d.target.x - d.source.x;
+          const dy = d.target.y - d.source.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist === 0 || isNaN(dist)) return 'M0,0L0,0';
+          const offsetX = (dx / dist) * rTarget;
+          const offsetY = (dy / dist) * rTarget;
+          return `M${d.source.x},${d.source.y}L${d.target.x - offsetX},${d.target.y - offsetY}`;
+        });
+
+        linkLabel.attr('x', d => (d.source.x + d.target.x) / 2)
+                  .attr('y', d => (d.source.y + d.target.y) / 2 - 5);
+
+        node.attr('transform', d => {
+          const r = getRadius(d);
+          d.x = Math.max(r, Math.min(width - r, d.x));
+          d.y = Math.max(r, Math.min(height - r, d.y));
+          return `translate(${d.x},${d.y})`;
+        });
+      });
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          
+          const filterType = this.getAttribute('data-filter');
+          
+          if (filterType === 'all') {
+            node.style('opacity', 1).style('pointer-events', 'auto');
+            link.style('opacity', 0.45);
+          } else {
+            node.style('opacity', d => d.type === filterType ? 1 : 0.15)
+                .style('pointer-events', d => d.type === filterType ? 'auto' : 'none');
+            link.style('opacity', l => (l.source.type === filterType && l.target.type === filterType) ? 0.45 : 0.05);
+          }
+        });
+      });
+
+      document.getElementById('node-search').addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        if (!q) {
+          node.style('opacity', 1).style('pointer-events', 'auto');
+          link.style('opacity', 0.45);
+          d3.selectAll('.node circle').classed('highlighted', false);
         } else {
-          kg += 5; // Altri link di qualità (es. albi, siti partner, directory locali)
+          node.style('opacity', d => d.label.toLowerCase().includes(q) ? 1 : 0.15)
+              .style('pointer-events', d => d.label.toLowerCase().includes(q) ? 'auto' : 'none');
+          link.style('opacity', l => (l.source.label.toLowerCase().includes(q) || l.target.label.toLowerCase().includes(q)) ? 0.45 : 0.05);
+          
+          node.each(function(d) {
+            d3.select(this).select('circle').classed('highlighted', d.label.toLowerCase().includes(q));
+          });
         }
-      }
-      // Se c'è P.IVA / taxID / Registro Imprese nel JSON-LD, contiamo come certificazione ufficiale (20 pts)
-      if (signals.hasVatOrTaxId) {
-        kg += 20;
-      }
-      
-      // Il blocco dei canali professionali / sameAs vale fino a un massimo di 70 punti (raggiungibile facilmente senza wikipedia/wikidata)
-      g += Math.min(70, kg);
-      
-      // 2. Connessioni di Grafo / Ecosistema (max 30 punti)
-      let connPts = 0;
-      if (isOrg) {
-        // Collegamento ai Fondatori/Dipendenti (Person entities)
-        if (signals.hasFounderOrEmployee) connPts += 15;
-        // Relazioni con partner, parent/sub org, o brand
-        if (signals.hasMemberOfOrParent) connPts += 10;
-        // Punti di contatto o e-mail certificate (PEC, ContactPoint)
-        if (signals.hasContactPoint || (signals.emails && signals.emails.length > 0)) connPts += 5;
-      } else {
-        // Per Professionista: Collegamento ad aziende/istituzioni reali
-        if (signals.hasAffiliation) connPts += 15;
-        // Competenze e abilità (knowsAbout)
-        const knows = orgOrPerson.knowsAbout;
-        if (knows) {
-          const cnt = Array.isArray(knows) ? knows.length : 1;
-          connPts += Math.min(10, cnt * 5);
-        }
-        // Credenziali, certificazioni, istruzione (alumniOf, hasCredential)
-        if (signals.hasAlumniOrCredential) connPts += 5;
-      }
-      g += connPts;
-      
-      g = Math.min(100, g);
-    }
-  } else {
-    g = 15; // default basso se non esiste alcun grafo semantico
-  }
-  
-  // Calcolo del punteggio Overall con Pesi Dinamici
-  const scores = { leggibilita:l, grafo:g, coerenza:c, politica:p, profilo:pr };
-  if (isOrg) {
-    // Pesi per Azienda (LocalBusiness/Organization)
-    scores.overall = Math.round(l*0.30 + c*0.25 + pr*0.20 + p*0.15 + g*0.10);
-  } else {
-    // Pesi per Persona (Person)
-    scores.overall = Math.round(l*0.30 + g*0.25 + c*0.20 + p*0.15 + pr*0.10);
-  }
-  
-  return scores;
-}
-function normalizeUrl(raw){ raw=raw.trim().replace(/\s+/g,''); if(!raw) return null; if(/^@/.test(raw)) raw=raw.substring(1); if(!/^https?:\/\//i.test(raw)) raw='https://'+raw; try{ new URL(raw); return raw; }catch{return null;} }
-// ================ ANALISI PRINCIPALE ================
-async function runAnalysis(){
-  let url = document.getElementById('urlInput').value.trim();
-  if(!url){ showErr(t('errNoUrl')); return; }
-  url = normalizeUrl(url);
-  if(!url){ showErr(t('errInvalidUrl')); return; }
-  hideErr(); clearResults();
-  document.getElementById('fallbackHtmlContainer').style.display='none';
-  document.getElementById('inputSection').style.opacity='0.4';
-  document.getElementById('loadingSection').style.display='block';
-  document.getElementById('resultsSection').style.display='none';
-  document.getElementById('btnAnalyze').disabled=true;
-  setStep(1);
-  const history = await checkDomainHistory(url);
-  const html = await fetchPage(url);
-  
-  if (!html) {
-    document.getElementById('loadingSection').style.display = 'none';
-    document.getElementById('inputSection').style.opacity = '1';
-    document.getElementById('btnAnalyze').disabled = false;
-    showErr(t('errFetch'));
-    document.getElementById('fallbackHtmlContainer').style.display = 'block';
-    return;
-  }
-  setStep(2);
-  const signals = extractSignals(html, url);
-  setStep(3);
-  let aiFiles = { llmsTxt:null, robotsTxt:null, agentsMd:null, sitemapXml:false };
-  try{ aiFiles = await fetchAiFiles(url); }catch(e){ console.warn(e); }
-  setStep(4);
-  const scores = computeScores(signals, aiFiles, history, html, false);
-  
-  await executeGeminiAnalysis(url, signals, aiFiles, scores, history, html, false);
-}
-async function runAnalysisWithPastedHtml(){
-  let url = document.getElementById('urlInput').value.trim();
-  url = normalizeUrl(url) || 'https://example.com';
-  const html = document.getElementById('fallbackHtmlInput').value.trim();
-  if(!html || html.length < 200){
-    alert(LANG === 'en' ? 'Please paste a valid HTML source code.' : 'Inserisci un codice HTML valido.');
-    return;
-  }
-  
-  hideErr(); clearResults();
-  document.getElementById('fallbackHtmlContainer').style.display = 'none';
-  document.getElementById('inputSection').style.opacity = '0.4';
-  document.getElementById('loadingSection').style.display = 'block';
-  document.getElementById('resultsSection').style.display = 'none';
-  document.getElementById('btnAnalyze').disabled = true;
-  
-  setStep(1);
-  const history = await checkDomainHistory(url);
-  
-  setStep(2);
-  const signals = extractSignals(html, url);
-  
-  setStep(3);
-  const aiFiles = { llmsTxt:null, robotsTxt:null, agentsMd:null, sitemapXml:false };
-  
-  setStep(4);
-  const scores = computeScores(signals, aiFiles, history, html, true);
-  
-  await executeGeminiAnalysis(url, signals, aiFiles, scores, history, html, true);
-}
-async function executeGeminiAnalysis(url, signals, aiFiles, scores, history, html, fetchBlocked = false) {
-  const langInstruction = (LANG==='en')?'CRITICAL: Respond ENTIRELY in ENGLISH.\n\n':'';
-  const toneInstructionDetail = (LANG==='en')
-    ? 'TONE: Consultant. Provide detailed insights (3-5 sentences per dimension). Explain why each strength or gap matters. Next steps must be concrete and actionable. Never mention Wikipedia, news articles, external citations, or authority based on third-party publications. Focus only on the site structure, data quality, coherence, and AI accessibility. ALIGN TEXT WITH SCORE: If a dimension score is below 50, the description must be critical and focus on failures, avoiding words like "eccellente" or "solido". If firewallBlocked is true, explain in the AI Accessibility dimension that the main barrier is the network block from the WAF/Cloudflare (error 422/403) preventing AI bots from scanning the site, indicating firewall configuration as the priority next step.'
-    : 'TONO: Consulente. Fornisci commenti dettagliati (3-5 frasi per dimensione). Spiega perché ogni punto di forza o lacuna è rilevante. I passi operativi devono essere concreti e attuabili. Non menzionare Wikipedia, articoli di giornale, citazioni esterne o autorità basata su pubblicazioni terze. Concentrati solo sulla struttura del sito, qualità dei dati, coerenza e accessibilità AI. ALLINEA IL TESTO AL PUNTEGGIO: Se il punteggio di una dimensione è sotto 50 (Critico), la descrizione deve essere critica ed evidenziare le lacune, evitando aggettivi come "eccellente" o "solido". Se è alto (sopra 80), enfatizza la qualità. Se firewallBlocked è true, spiega nella dimensione Accessibilità AI che la barriera principale è il blocco di rete del WAF/Cloudflare (errore 422/403) che impedisce ai bot delle AI di scansionare il sito, indicando come passo prioritario la configurazione del firewall.';
-  
-  const sysPrompt = langInstruction + (LANG==='en'?
-    `You are an AI Identity expert. Respond ONLY with valid JSON.
-    LOCKED SCORES (DO NOT CHANGE): Overall:${scores.overall}, Leggibilita:${scores.leggibilita}, Grafo:${scores.grafo}, Coerenza:${scores.coerenza}, Politica:${scores.politica}, Profilo:${scores.profilo}.
-    Domain history: ${history.years.join(',')||'none'}.
-    Output format: {"nome":"...","tipo":"Person|Organization","percezione_ai":"...","dimensioni":[{"id":"leggibilita","nome":"AI Readability","sintesi":"...","gap":"..."},{"id":"grafo","nome":"Professional Network","sintesi":"...","gap":"..."},{"id":"coerenza","nome":"Identity Consistency","sintesi":"...","gap":"..."},{"id":"politica","nome":"AI Accessibility","sintesi":"...","gap":"..."},{"id":"profilo","nome":"Profile & Expertise","sintesi":"...","gap":"..."}],"forze":[],"lacune":[],"passi":[{"p":"alta|media|bassa","a":"..."}],"sintesi":"..."}\n`
-    :`Sei esperto AI Identity. Rispondi SOLO con JSON.
-    PUNTEGGI BLOCCATI: Overall:${scores.overall}, Leggibilita:${scores.leggibilita}, Grafo:${scores.grafo}, Coerenza:${scores.coerenza}, Politica:${scores.politica}, Profilo:${scores.profilo}.
-    Storia dominio: ${history.years.join(',')||'nessuno'}.
-    Output: {"nome":"...","tipo":"Persona|Organizzazione","percezione_ai":"...","dimensioni":[{"id":"leggibilita","nome":"Leggibilità AI","sintesi":"...","gap":"..."},{"id":"grafo","nome":"Rete Professionale","sintesi":"...","gap":"..."},{"id":"coerenza","nome":"Coerenza Identità","sintesi":"...","gap":"..."},{"id":"politica","nome":"Accessibilità AI","sintesi":"...","gap":"..."},{"id":"profilo","nome":"Profilo","sintesi":"...","gap":"..."}],"forze":[],"lacune":[],"passi":[{"p":"alta|media|bassa","a":"..."}],"sintesi":"..."}\n`)
-    + `\n${toneInstructionDetail}\n`;
-  
-  // Audit sintattico locale da passare a Gemini per la stesura del commento
-  const htmlAuditSummary = signals ? {
-    piattaforma: signals.platform,
-    hasLocalBusiness: signals.hasLocalBusiness,
-    hasOrgSchema: signals.hasOrgSchema,
-    headingErrors: signals.headingErrors,
-    missingAltImages: `${signals.missingAlt} su ${signals.totalImages}`,
-    emailDiscrepancies: signals.emailDiscrepancies,
-    hasAgentsMd: !!aiFiles?.agentsMd,
-    hasLlmsTxt: !!aiFiles?.llmsTxt,
-    firewallBlocked: fetchBlocked
-  } : {};
-  const userMsg = signals ? `Analizza: ${url}
-Dati Audit HTML rilevati: ${JSON.stringify(htmlAuditSummary, null, 2)}
-Dati principali estratti:\n${JSON.stringify({title:signals.title,description:signals.description,ogTitle:signals.ogTitle,ogDescription:signals.ogDescription,jsonLd:signals.jsonLd},null,2)}` : `Pagina non accessibile: ${url}`;
-  
-  const geminiBody = JSON.stringify({ system_instruction:{parts:[{text:sysPrompt}]}, contents:[{role:'user',parts:[{text:userMsg}]}], generationConfig:{maxOutputTokens:2500,temperature:0.3} });
-  try{
-    const res = await fetch('/api/gemini-analyze', { method:'POST', headers:{'Content-Type':'application/json'}, body:geminiBody });
-    const rawText = await res.text();
-    if(!res.ok) throw new Error(`${t('errApi')} ${res.status}`);
-    const data = JSON.parse(rawText);
-    const parts = data?.candidates?.[0]?.content?.parts || [];
-    const txt = parts.filter(p=>!p.thought).map(p=>p.text).join('');
-    const clean = txt.replace(/```json\n?/g,'').replace(/```\n?/g,'').trim();
-    const start = clean.indexOf('{'), end = clean.lastIndexOf('}');
-    if(start===-1||end===-1) throw new Error(t('errNoJson'));
-    const parsed = JSON.parse(clean.substring(start,end+1));
-    renderResults(parsed, signals, aiFiles, scores, fetchBlocked);
-  }catch(err){
-    document.getElementById('loadingSection').style.display='none';
-    document.getElementById('inputSection').style.opacity='1';
-    document.getElementById('btnAnalyze').disabled=false;
-    showErr('Errore: '+err.message);
-  }
-}
-// Funzione di mappatura colore dinamica basata sul nuovo range di rating
-function sc(s){ return s>=85?'#2DB885':s>=70?'#A9C94C':s>=50?'#D4870E':'#D84F35'; }
-// Scala di classificazione professionale aggiornata con etichette corte e sicure per la larghezza
-function scoreToRating(score){
-  if(score>=85) return { label:(LANG==='en'?'Excellent':'Eccellente'), color:'#2DB885' };
-  if(score>=70) return { label:(LANG==='en'?'Good':'Buono'), color:'#A9C94C' };
-  if(score>=50) return { label:(LANG==='en'?'Partial':'Parziale'), color:'#D4870E' };
-  return { label:(LANG==='en'?'Critical':'Critico'), color:'#D84F35' };
-}
-function renderResults(d, signals, aiFiles, scores, fetchBlocked = false) {
-  d.score = scores.overall;
-  const dimMap = {
-    'leggibilita':'leggibilita', 'leggibilità':'leggibilita',
-    'grafo':'grafo', 'autorita':'grafo', 'autorità':'grafo', 'rete professionale':'grafo', 'rete_professionale':'grafo', 'rete':'grafo', 'professional network':'grafo',
-    'coerenza':'coerenza',
-    'politica':'politica', 'accessibilita':'politica', 'accessibilità':'politica', 'accessibilita_ai':'politica', 'accessibilità ai':'politica',
-    'profilo':'profilo'
-  };
-  const standardDims = {
-    leggibilita: { id:'leggibilita', nome:LANG==='en'?'AI Readability':'Leggibilità AI', score:scores.leggibilita, sintesi:'', gap:'' },
-    grafo: { id:'grafo', nome:LANG==='en'?'Professional Network':'Rete Professionale', score:scores.grafo, sintesi:'', gap:'' },
-    coerenza: { id:'coerenza', nome:LANG==='en'?'Identity Consistency':'Coerenza Identità', score:scores.coerenza, sintesi:'', gap:'' },
-    politica: { id:'politica', nome:LANG==='en'?'AI Accessibility':'Accessibilità AI', score:scores.politica, sintesi:'', gap:'' },
-    profilo: { id:'profilo', nome:LANG==='en'?'Profile':'Profilo', score:scores.profilo, sintesi:'', gap:'' }
-  };
-  if (d.dimensioni && Array.isArray(d.dimensioni)) {
-    for (let gemDim of d.dimensioni) {
-      let originalId = (gemDim.id || '').toLowerCase();
-      let mappedId = dimMap[originalId] || originalId;
-      if (standardDims[mappedId]) {
-        if (gemDim.sintesi) standardDims[mappedId].sintesi = gemDim.sintesi;
-        if (gemDim.gap) standardDims[mappedId].gap = gemDim.gap;
-      }
-    }
-  }
-  const dimensioniArray = Object.values(standardDims);
-  document.getElementById('loadingSection').style.display = 'none';
-  document.getElementById('inputSection').style.display = 'none';
-  const R = 40, circ = (2 * Math.PI * R).toFixed(2), off = (circ - (d.score/100)*circ).toFixed(2), color = sc(d.score);
-  const ratingTotal = scoreToRating(d.score);
-  document.getElementById('scoreHeroWrap').innerHTML = `<div class="score-hero"><div class="ring-wrap"><svg width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="${R}" fill="none" stroke="#1C1C30" stroke-width="6"/><circle cx="50" cy="50" r="${R}" fill="none" stroke="${color}" stroke-width="6" stroke-dasharray="${circ}" stroke-dashoffset="${circ}" stroke-linecap="round" id="scoreRing"/></svg><div class="ring-center"><span class="ring-num" id="scoreNum" style="color:${color}">0</span><span class="ring-sub">/100</span><div style="font-size:.38rem;color:${ratingTotal.color};margin-top:4px;white-space:nowrap;width:100%;text-align:center;overflow:visible;">${ratingTotal.label}</div></div></div><div class="hero-info"><span class="tipo">${d.tipo || (LANG==='en'?'Entity':'Entità')}</span><h2>${d.nome || ''}</h2><p class="sintesi">${d.sintesi || ''}</p></div></div>`;
-  if (d.percezione_ai && !document.getElementById('percezioneBox')) {
-    document.getElementById('scoreHeroWrap').insertAdjacentHTML('afterend', `<div id="percezioneBox" style="background:var(--surface);border:1px solid var(--border);padding:1.25rem 1.5rem;margin-bottom:1rem"><div style="font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">${LANG==='en'?'How an AI perceives me':'Come mi percepisce un sistema AI'}</div><p style="font-size:.78rem;color:var(--muted);line-height:1.8;margin:0;font-style:italic">"${d.percezione_ai}"</p></div>`);
-  }
-  if (signals || aiFiles) {
-    const jq = signals?.jsonLdQuality;
-    const hasDiscrepancy = signals?.emailDiscrepancies?.length > 0;
-    const hasUnresolvedDiscrepancy = signals?.emailDiscrepancies?.some(d => !d.declared);
-    const tags = [];
-    if (fetchBlocked) {
-      tags.push({l: (LANG==='en'?'Firewall Blocked':'Blocco Firewall WAF'), v: false, warn: true});
-    }
-    tags.push(
-      {l: signals?.jsonLd?.length>0 ? (jq?.isPlugin ? `Plugin (${(jq.source||'').split(' ')[0]})` : 'Schema manuale') : 'JSON-LD assente', v: signals?.jsonLd?.length>0, warn: jq?.isPlugin},
-      {l:'sameAs', v:(signals?.sameAs?.length||0)>0},
-      {l:'Wikidata', v:jq?.hasWikidata||false},
-      {l:'Wikipedia', v:jq?.hasWikipedia||false},
-      {l:'llms.txt', v:!!aiFiles?.llmsTxt},
-      {l:'agents.md', v:!!aiFiles?.agentsMd},
-      {l:'robots.txt', v:!!aiFiles?.robotsTxt},
-      {l:'sitemap', v:!!aiFiles?.sitemapXml},
-      {l: hasDiscrepancy ? (hasUnresolvedDiscrepancy ? 'E-mail Disallineata' : 'E-mail Alternativa') : 'E-mail Allineata', v: !hasDiscrepancy, warn: hasUnresolvedDiscrepancy}
-    );
-    // Nuovi tag per la validazione della Readability
-    if (signals?.htmlLang) {
-      tags.push({l: `Lang: "${signals.htmlLang.toUpperCase()}"`, v: true});
-    } else {
-      tags.push({l: (LANG==='en'?'Lang: missing':'Lang: assente'), v: false, warn: true});
-    }
-    if (signals?.signalToNoiseRatio !== undefined) {
-      const ratio = signals.signalToNoiseRatio;
-      tags.push({
-        l: LANG==='en' ? `Text/HTML: ${ratio}%` : `Testo/Codice: ${ratio}%`,
-        v: ratio >= 15,
-        warn: ratio < 5
       });
-    }
-    if (signals?.isPossibleCsr) {
-      tags.push({l: (LANG==='en'?'JS Dependency (CSR)':'Dipendenza JS (CSR)'), v: false, warn: true});
-    }
-    if (signals?.headingErrors && signals.headingErrors.length > 0) {
-      tags.push({l: (LANG==='en'?'Heading Errors':'Errori Gerarchia Titoli'), v: false, warn: true});
-    } else {
-      tags.push({l: (LANG==='en'?'Heading Hierarchy OK':'Gerarchia Titoli OK'), v: true});
-    }
-    if (signals?.hasUtf8) {
-      tags.push({l: 'UTF-8 Charset', v: true});
-    } else {
-      tags.push({l: (LANG==='en'?'No UTF-8 Charset':'Charset non UTF-8'), v: false, warn: true});
-    }
-    if (signals?.totalImages > 0) {
-      const missingAlt = signals.missingAlt;
-      tags.push({
-        l: LANG==='en' ? `ALT Images: ${signals.totalImages - missingAlt}/${signals.totalImages}` : `ALT Immagini: ${signals.totalImages - missingAlt}/${signals.totalImages}`,
-        v: missingAlt === 0,
-        warn: missingAlt > 0
+
+      window.addEventListener('resize', () => {
+        width = container.clientWidth;
+        height = container.clientHeight || 520;
+        simulation.force('center', d3.forceCenter(width / 2, height / 2));
+        simulation.alpha(0.3).restart();
       });
-    }
-    document.getElementById('dataBar').innerHTML = `<div class="data-bar">${tags.map(t=>`<span class="dtag ${t.warn?'warn':t.v?'yes':'no'}">${t.warn?'⚠':t.v?'✓':'✗'} ${t.l}</span>`).join('')}</div>`;
-  }
-  if (signals) {
-    renderTechAudit(signals, aiFiles, scores, fetchBlocked);
-  }
-  document.getElementById('dimsGrid').innerHTML = dimensioniArray.map(dim => {
-    const rating = scoreToRating(dim.score);
-    return `<div class="dim-card"><div class="dim-top"><div class="dim-name">${dim.nome}</div><div style="text-align:right"><div class="dim-score-n" style="color:${sc(dim.score)}">${dim.score}</div><div style="font-size:.6rem;color:${rating.color}">${rating.label}</div></div></div><div class="bar-bg"><div class="bar-fill" data-w="${dim.score}" style="background:${sc(dim.score)}"></div></div><div class="dim-sintesi">${dim.sintesi || ''}</div>${dim.gap && dim.gap!=='undefined' ? `<div class="dim-gap">${dim.gap}</div>` : ''}</div>`;
-  }).join('');
-  let passi = (d.passi || []).filter(p => p && typeof p==='object' && p.a);
-  if (passi.length === 0 && d.lacune && d.lacune.length) passi = [{p:'media', a:'Verifica la configurazione dell\'array "passi" nel JSON restituito.'}];
-  document.getElementById('bottomGrid').innerHTML = `<div class="bottom-card"><div class="bottom-title" style="color:#2DB885">${LANG==='en'?'Strengths':'Punti di forza'}</div>${(d.forze||[]).map(f=>`<div class="b-item"><span class="b-icon" style="color:#2DB885">◆</span>${f}</div>`).join('')}</div><div class="bottom-card"><div class="bottom-title" style="color:#D84F35">${LANG==='en'?'Critical gaps':'Lacune critiche'}</div>${(d.lacune||[]).map(l=>`<div class="b-item"><span class="b-icon" style="color:#D84F35">◆</span>${l}</div>`).join('')}</div><div class="bottom-card"><div class="bottom-title" style="color:#D4870E">${LANG==='en'?'Next steps':'Prossimi passi'}</div>${passi.map(p=>`<div class="step-item"><div class="step-p" style="color:${p.p==='alta'||p.p==='high'?'#D84F35':p.p==='media'||p.p==='medium'?'#D4870E':'#8080A0'}">↑ ${p.p}</div><div class="step-a">${p.a}</div></div>`).join('')}</div>`;
-  document.getElementById('resultsSection').style.display = 'block';
-  requestAnimationFrame(() => setTimeout(() => {
-    const ring = document.getElementById('scoreRing');
-    if (ring) ring.style.strokeDashoffset = off;
-    let c = 0, total = d.score;
-    const iv = setInterval(() => { c = Math.min(c+1, total); const el = document.getElementById('scoreNum'); if (el) el.textContent = c; if (c >= total) clearInterval(iv); }, 1500/total);
-    document.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w + '%'; });
-  }, 60));
-}
-function downloadPdf(){ const url=document.getElementById('urlInput')?.value||'report'; const domain=url.replace(/https?:\/\//,'').replace(/\/.*/,'').replace(/[^a-z0-9.-]/gi,'_'); document.title='AI Readiness — '+domain; window.print(); setTimeout(()=>{ document.title=(LANG==='en'?'Who are you in the AI era?':"Chi sei nell'era dell'AI?"); },1000); }
-window.addEventListener('DOMContentLoaded',()=>{ renderLang(); document.getElementById('urlInput').addEventListener('keydown',e=>{ if(e.key==='Enter') runAnalysis(); }); });
-</script>
+    });
+  </script>
 </body>
 </html>
