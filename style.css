@@ -1662,6 +1662,12 @@
 .prose p.lead { color: var(--text-muted); }
 .prose a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--border); }
 .prose a:hover { border-color: var(--accent); }
+.prose a.cta-btn { border-bottom: none; }
+.prose a.cta-btn:hover { border-bottom: none; }
+.prose a.cta-btn-primary { color: var(--btn-text); }
+.prose a.cta-btn-primary:hover { color: var(--btn-text); }
+.prose a.cta-btn-outline { color: var(--text); }
+.prose a.cta-btn-outline:hover { color: var(--text); }
 .prose ul { margin: 0 0 1.15rem; padding-left: 1.2rem; }
 .prose li { font-size: 1.02rem; line-height: 1.7; color: var(--text); margin-bottom: .6rem; }
 .article-cta { border-top: 1px solid var(--border); margin-top: 3rem; padding-top: 2rem; }
