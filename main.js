@@ -23,34 +23,55 @@ if (themeToggleBtn) {
 }
 
 
-// ── MOBILE NAV TOGGLE (Hamburger Menu) ──────────────────
+// ── NAV DRAWER LOGIC (Unified Desktop & Mobile) ──────────
 const navToggleBtn = document.getElementById('nav-toggle');
-const navEl = navToggleBtn ? navToggleBtn.closest('nav') : null;
+const navDrawer = document.getElementById('nav-drawer');
+const drawerCloseBtn = document.getElementById('drawer-close');
+const drawerBackdrop = document.getElementById('drawer-backdrop');
 
-if (navToggleBtn && navEl) {
+function openDrawer() {
+  if (navDrawer && drawerBackdrop && navToggleBtn) {
+    navDrawer.classList.add('open');
+    drawerBackdrop.classList.add('active');
+    navToggleBtn.setAttribute('aria-expanded', 'true');
+    navDrawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+}
+
+function closeDrawer() {
+  if (navDrawer && drawerBackdrop && navToggleBtn) {
+    navDrawer.classList.remove('open');
+    drawerBackdrop.classList.remove('active');
+    navToggleBtn.setAttribute('aria-expanded', 'false');
+    navDrawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = ''; // Restore background scrolling
+  }
+}
+
+if (navToggleBtn) {
   navToggleBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    const isOpen = navEl.classList.toggle('nav-open');
-    navToggleBtn.setAttribute('aria-expanded', isOpen);
-    navToggleBtn.classList.toggle('open', isOpen);
-  });
-
-  // Close menu when a nav link is clicked
-  navEl.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      navEl.classList.remove('nav-open');
-      navToggleBtn.setAttribute('aria-expanded', 'false');
-      navToggleBtn.classList.remove('open');
-    });
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!navEl.contains(e.target)) {
-      navEl.classList.remove('nav-open');
-      navToggleBtn.setAttribute('aria-expanded', 'false');
-      navToggleBtn.classList.remove('open');
+    if (navDrawer && navDrawer.classList.contains('open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
     }
+  });
+}
+
+if (drawerCloseBtn) {
+  drawerCloseBtn.addEventListener('click', closeDrawer);
+}
+
+if (drawerBackdrop) {
+  drawerBackdrop.addEventListener('click', closeDrawer);
+}
+
+// Close drawer when a link is clicked
+if (navDrawer) {
+  navDrawer.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', closeDrawer);
   });
 }
 

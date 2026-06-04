@@ -20,33 +20,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   
-  <style>
-    @media (max-width: 1024px) {
-      #nav-toggle {
-        display: flex !important;
-        visibility: visible !important;
-        width: 36px !important;
-        height: 36px !important;
-        background: var(--accent) !important;
-        border: none !important;
-        border-radius: 8px !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 !important;
-        cursor: pointer !important;
-        flex-shrink: 0 !important;
-        color: var(--btn-text) !important;
-      }
-      #nav-toggle .hamburger-icon {
-        display: block !important;
-        width: 1.2rem !important;
-        height: 1.2rem !important;
-      }
-      #nav-toggle .close-icon {
-        display: none !important;
-      }
-    }
-  </style>
   <link rel="stylesheet" href="style.css">
   
   <script>
@@ -282,14 +255,6 @@
     <div class="nav-left">
       <a href="index.html" class="nav-name">Pasquale Caiazzo</a>
     </div>
-    <div class="nav-anchors">
-      <a href="index.html#about" class="nav-link">Chi sono</a>
-      <a href="professionisti.html" class="nav-link">Per i professionisti</a>
-      <a href="pmi.html" class="nav-link">Per le PMI</a>
-      <a href="impatto.html" class="nav-link">Per le organizzazioni a impatto</a>
-      <a href="manifesto.html" class="nav-link active">Manifesto</a>
-      <a href="note/index.html" class="nav-link">Note</a>
-    </div>
     <div class="nav-right">
       <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
         <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -301,11 +266,43 @@
       </button>
       <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
       <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+        <span class="nav-toggle-text">Menu</span>
         <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
         <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
   </nav>
+
+  <!-- Drawer Menu (Sleek slide-out panel) -->
+  <div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <button id="drawer-close" class="drawer-close" aria-label="Chiudi menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="drawer-content">
+      <div class="nav-anchors">
+        <a href="index.html#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">Chi sono</span></a>
+        <a href="professionisti.html" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">Per i professionisti</span></a>
+        <a href="pmi.html" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">Per le PMI</span></a>
+        <a href="impatto.html" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">Per le organizzazioni a impatto</span></a>
+        <a href="manifesto.html" class="nav-link active"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+        <a href="note/index.html" class="nav-link"><span class="drawer-num">06</span> <span class="drawer-text">Note</span></a>
+      </div>
+      <div class="drawer-footer">
+        <div class="drawer-meta">
+          <h3>Contatti & Risorse</h3>
+          <p>Base operativa a Torino &bull; Disponibile per progetti da remoto</p>
+          <p>Richieste: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Prenota un incontro di 30 min ↗</a></p>
+        </div>
+        <div class="drawer-socials">
+          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
 
   <main>
     <header class="manifesto-header">
