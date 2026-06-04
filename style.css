@@ -1534,7 +1534,7 @@
   align-items: center;
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   font-weight: 600;
   color: var(--text-muted);
   transition: all 0.2s ease;
@@ -1553,7 +1553,7 @@
 
 .drawer-num {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   color: var(--accent);
   margin-right: 1rem;
   font-weight: 700;
@@ -1568,7 +1568,7 @@
 
 .drawer-meta h3 {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--accent);
@@ -1576,7 +1576,7 @@
 }
 
 .drawer-meta p {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   margin: 0.35rem 0;
   line-height: 1.5;
@@ -1600,7 +1600,7 @@
 
 .drawer-socials a {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
