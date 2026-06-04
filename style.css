@@ -116,7 +116,7 @@
 
     .nav-name {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--text);
       text-decoration: none;
@@ -140,7 +140,7 @@
 
     .nav-link {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.8rem;
+      font-size: 0.90rem;
       font-weight: 600;
       color: var(--text-muted);
       text-decoration: none;
@@ -244,7 +244,7 @@
 
     .nav-btn-linkedin {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--btn-text);
       background: var(--btn-bg);
@@ -1182,12 +1182,12 @@
         gap: 0.5rem;
       }
       .nav-link {
-        font-size: 0.72rem;
+        font-size: 0.82rem;
         padding: 0.25rem 0.45rem;
       }
       .nav-btn-linkedin {
         padding: 0.35rem 0.75rem;
-        font-size: 0.7rem;
+        font-size: 0.80rem;
       }
     }
 
