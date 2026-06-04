@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../favicon.png">
+<title>Perché un'AI ti scambia per un altro: omonimia e disambiguazione – Pasquale Caiazzo</title>
+<meta name="description" content="Perché i sistemi AI confondono persone con lo stesso nome, quali danni provoca e come la disambiguazione semantica costruisce un'identità verificabile e distinta.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Perché un'AI ti scambia per un altro: omonimia e disambiguazione">
+<meta property="og:description" content="Perché i sistemi AI confondono persone con lo stesso nome, e come la disambiguazione semantica costruisce un'identità verificabile e distinta.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta property="article:published_time" content="2026-06-04">
+<meta property="article:modified_time" content="2026-06-04">
+<meta property="article:author" content="Pasquale Caiazzo">
+<meta name="author" content="Pasquale Caiazzo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Perché un'AI ti scambia per un altro: omonimia e disambiguazione">
+<meta name="twitter:description" content="Perché i sistemi AI confondono persone omonime, e come la disambiguazione semantica costruisce un'identità distinta.">
+<meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html#article",
+      "url": "https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html",
+      "headline": "Perché un'AI ti scambia per un altro: omonimia e disambiguazione",
+      "description": "Perché i sistemi AI confondono persone con lo stesso nome, quali danni provoca e come la disambiguazione semantica costruisce un'identità verificabile e distinta.",
+      "inLanguage": "it",
+      "datePublished": "2026-06-04",
+      "dateModified": "2026-06-04",
+      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
+      "publisher": { "@id": "https://pasqualecaiazzo.com/#publisher" },
+      "mainEntityOfPage": { "@id": "https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html#webpage" },
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/note/#blog" },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+        "width": 1200,
+        "height": 1200
+      },
+      "articleSection": "Note",
+      "wordCount": 2354,
+      "keywords": [
+        "omonimia", "disambiguazione", "identità digitale", "entità",
+        "Wikidata", "ORCID", "dati strutturati", "reputazione", "AI", "knowledge graph"
+      ],
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".article-tldr"] },
+      "about": [
+        { "@type": "DefinedTerm", "name": "Disambiguation", "sameAs": "https://www.wikidata.org/wiki/Q149301" },
+        { "@type": "DefinedTerm", "name": "Digital identity", "sameAs": "https://www.wikidata.org/wiki/Q2256763" },
+        { "@type": "DefinedTerm", "name": "Large Language Models", "sameAs": "https://www.wikidata.org/wiki/Q115305900" }
+      ],
+      "mentions": [
+        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html#webpage",
+      "url": "https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html",
+      "name": "Perché un'AI ti scambia per un altro: omonimia e disambiguazione",
+      "inLanguage": "it",
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
+      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html#breadcrumb" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg" },
+      "dateModified": "2026-06-04"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Note", "item": "https://pasqualecaiazzo.com/note/" },
+        { "@type": "ListItem", "position": 3, "name": "Omonimia e disambiguazione", "item": "https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="../main.js" defer></script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav aria-label="Navigazione principale">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-name">Pasquale Caiazzo</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+      </svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <span class="nav-toggle-text">Menu</span>
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Drawer Menu (Sleek slide-out panel) -->
+<div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <button id="drawer-close" class="drawer-close" aria-label="Chiudi menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-content">
+    <div class="nav-anchors">
+      <a href="../index.html#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">Chi sono</span></a>
+      <a href="../professionisti.html" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">Per i professionisti</span></a>
+      <a href="../pmi.html" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">Per le PMI</span></a>
+      <a href="../impatto.html" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">Per le organizzazioni a impatto</span></a>
+      <a href="../manifesto.html" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+      <a href="index.html" class="nav-link active"><span class="drawer-num">06</span> <span class="drawer-text">Note</span></a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-meta">
+        <h3>Contatti & Risorse</h3>
+        <p>Base operativa a Torino &bull; Disponibile per progetti da remoto</p>
+        <p>Richieste: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Prenota un incontro di 30 min ↗</a></p>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+<main>
+  <div class="band hero-band">
+    <div class="inner">
+      <article class="article-wrap">
+        <a href="index.html" class="article-back">← Note</a>
+        <span class="tag">Professionisti</span>
+        <h1 class="article-title">Perché un'AI ti scambia per un altro: omonimia e disambiguazione</h1>
+        <div class="article-meta">
+          <span>Pasquale Caiazzo</span>
+          <span class="sep">/</span>
+          <time datetime="2026-06-04">4 giugno 2026</time>
+          <span class="sep">/</span>
+          <span>13 min di lettura</span>
+        </div>
+
+        <p class="article-tldr">
+          <strong>In breve</strong>
+          Se condividi nome e cognome con altre persone, i sistemi AI possono fondere le vostre storie: attribuirti ruoli e opere non tuoi, o ignorarti perché un omonimo è più visibile. Non si risolve scrivendo una bio migliore, ma costruendo un'entità verificabile, con un identificatore stabile e collegamenti a riferimenti univoci, che dia ai modelli un modo per separarti dagli altri con certezza.
+        </p>
+
+        <div class="prose">
+          <h2>Cosa succede quando un'AI cerca il tuo nome</h2>
+          <p>
+            Quando qualcuno chiede a un assistente AI chi sei, il modello non apre una scheda con la tua identità: raccoglie i segnali sparsi che trova in rete e li ricompone in una risposta. Se quei segnali sono coerenti e collegati, la risposta è precisa. Se invece il tuo nome è condiviso con altre persone, o la tua presenza è frammentata, il modello fa l'unica cosa che sa fare: indovina la versione più probabile, mescolando ciò che trova.
+          </p>
+          <p>
+            Il risultato è che la tua prima impressione, per chi non ti conosce, la scrive un sistema che sta tirando a indovinare. E spesso non te ne accorgi nemmeno, perché quella risposta arriva a un cliente o a un recruiter, non a te.
+          </p>
+
+          <h2>Un esempio concreto</h2>
+          <p>
+            Faccio un esempio. Esistono due persone con lo stesso nome e cognome: una è un avvocato, l'altra un musicista con una discreta presenza online. Chiedo a un assistente AI chi è quella persona: il modello, trovando più materiale sul musicista, descrive l'avvocato come se suonasse, oppure costruisce un profilo ibrido che non corrisponde a nessuno dei due.
+          </p>
+          <p>
+            Cambia poco se l'omonimo è famoso o no. Conta chi lascia più tracce strutturate. Senza un modo per separare le due identità, il modello le tratta come una sola, e a perderci è chi non ha costruito i propri ancoraggi.
+          </p>
+
+          <p>
+            Un altro caso comune: un consulente con lo stesso nome di una figura pubblica in un campo diverso. Chi cerca il consulente si vede restituire la biografia del personaggio noto, e il professionista reale resta coperto dalla sua ombra. Non perché sia meno competente, ma perché l'altro è più presente e più collegato.
+          </p>
+
+          <h2>Perché un nome non è un identificatore</h2>
+          <p>
+            Un nome non è unico, e non lo è mai stato. In un archivio cartaceo si disambiguava con il contesto: la città, la professione, la data di nascita. Sul web quel contesto spesso manca, o è sparso su fonti che non si parlano tra loro.
+          </p>
+          <p>
+            Le persone, leggendo, ricostruiscono il contesto da sole. Un modello no: ha bisogno che la distinzione sia esplicita e collegata. Finché la tua identità resta un nome senza ancoraggi, per una macchina sei indistinguibile da chiunque si chiami come te.
+          </p>
+
+          <h2>I tre modi in cui l'omonimia ti danneggia</h2>
+          <p>Il danno non è teorico, e prende tre forme.</p>
+          <ul>
+            <li><strong>Attribuzione errata.</strong> Ti vengono assegnati ruoli, titoli o opere che non sono tuoi, oppure i tuoi finiscono attribuiti a un altro. La tua storia professionale si confonde con una che non ti appartiene.</li>
+            <li><strong>Invisibilità.</strong> Quando un omonimo è più presente, il modello sceglie lui. Tu non vieni contraddetto, semplicemente non vieni nominato: scompari dalla risposta senza un perché visibile.</li>
+            <li><strong>Contaminazione reputazionale.</strong> Se chi condivide il tuo nome ha associato a sé qualcosa di negativo, quel qualcosa può ricadere su di te per semplice somiglianza. È il rischio più insidioso, perché non dipende da te.</li>
+          </ul>
+
+          <h2>Chi rischia di più</h2>
+          <p>
+            Alcune situazioni rendono il problema più probabile. Chi ha un nome e un cognome comuni parte svantaggiato per ragioni statistiche. Ma il rischio cresce anche per chi ha cambiato campo, perché la vecchia identità professionale continua a coesistere con la nuova e i modelli faticano a capire quale sia quella attuale.
+          </p>
+          <p>
+            Lo stesso vale per chi ha cambiato nome, per chi lavora in un settore affollato di profili simili, o per chi ha una presenza online recente e ancora sottile rispetto a quella di un omonimo affermato. In tutti questi casi non basta esserci: serve dichiarare con chiarezza chi sei adesso, e legarlo a prove che lo confermino.
+          </p>
+
+          <h2>Quando l'omonimo è un'azienda o un brand</h2>
+          <p>
+            L'omonimia non riguarda solo altre persone. Capita che il tuo nome coincida con quello di un'azienda, di un prodotto o di un marchio più visibile. In quel caso un sistema AI tende a privilegiare l'entità commerciale, perché è quasi sempre più strutturata e citata, e la persona finisce in secondo piano o assorbita.
+          </p>
+          <p>
+            La logica della soluzione non cambia: serve un'entità personale chiara e ancorata, che dichiari in modo esplicito di essere una persona, con il proprio percorso e i propri riferimenti. Senza quel presidio, il brand vince per inerzia.
+          </p>
+
+          <h2>Perché LinkedIn e Google non bastano</h2>
+          <p>
+            La risposta istintiva è curare il profilo LinkedIn e sperare che Google faccia il resto. Ma sono strumenti che lavorano su un altro piano. LinkedIn è una pagina che un modello deve interpretare, non un'entità che può leggere senza ambiguità. E una ricerca su Google, davanti a un nome condiviso, restituisce più persone diverse: utile per un umano che sa scegliere, inutile per un modello che deve decidere da solo.
+          </p>
+          <p>
+            Curare quei canali serve, ma non risolve il problema di fondo: nessuno dei due dice a un sistema AI quale di quelle persone sei tu, e a quali fatti verificabili sei legato. È lo stesso motivo per cui, in generale, comparire nelle risposte di un modello richiede dati strutturati e non solo contenuti.
+          </p>
+
+          <h2>Cos'è un'entità, e perché risolve il problema</h2>
+          <p>
+            La soluzione non è scrivere una bio migliore, è costruire un'entità. Un'entità è la rappresentazione strutturata di chi sei, con un identificatore stabile che resta lo stesso ovunque e con collegamenti espliciti alle fonti che ti riguardano.
+          </p>
+          <p>
+            È la differenza tra dire il tuo nome in una stanza affollata e indossare un riferimento che rimanda a un documento verificabile. Una volta che questo punto fermo esiste, il modello ha un modo per ancorarti: non deve più scegliere tra te e i tuoi omonimi, perché sei diventato un riferimento univoco invece di una stringa di testo ambigua.
+          </p>
+
+          <h2>Disambiguazione in pratica: gli ancoraggi che contano</h2>
+          <p>In concreto, la disambiguazione si costruisce con i collegamenti. Più sono verificabili, più la separazione è netta.</p>
+          <ul>
+            <li><strong>I profili ufficiali che controlli,</strong> dichiarati come tuoi con la proprietà sameAs: sito, LinkedIn, GitHub, e per chi pubblica anche ORCID o Google Scholar.</li>
+            <li><strong>Le affiliazioni:</strong> gli atenei, le organizzazioni e le reti di cui fai parte, collegate alle loro voci già esistenti. Sei la persona legata a quelle entità, non un'altra.</li>
+            <li><strong>Le opere e i risultati:</strong> pubblicazioni, progetti, interventi, con date e contesto, che fissano un percorso che nessun omonimo può rivendicare.</li>
+          </ul>
+          <p>
+            Ognuno di questi collegamenti è una coordinata. Da solo dice poco; tutti insieme individuano un punto unico, che sei tu.
+          </p>
+
+          <h2>Schema.org per le persone: le proprietà che disambiguano</h2>
+          <p>
+            C'è un livello tecnico che vale la pena rendere esplicito. Schema.org, il vocabolario che i sistemi AI usano per riconoscere le entità, prevede un tipo Person con proprietà pensate proprio per fissare un'identità e distinguerla da un'altra.
+          </p>
+          <p>
+            La proprietà sameAs collega l'entità ai profili ufficiali che la confermano; identifier ospita riferimenti univoci come un ORCID; worksFor e affiliation la legano alle organizzazioni; alumniOf agli atenei; knowsAbout qualifica le competenze; hasOccupation descrive il ruolo; award e le pubblicazioni fissano i risultati. Ognuna di queste proprietà, compilata con un riferimento verificabile, è un muro che separa la tua identità da quella di un omonimo.
+          </p>
+          <p>
+            Il punto non è riempire tutti i campi, ma scegliere quelli che ti distinguono davvero e collegarli a fonti che reggono. È una scelta di merito, non un compito da automatizzare: quali prove contano per te, e dove si trovano.
+          </p>
+
+          <h2>Il caso dei ricercatori e degli autori</h2>
+          <p>
+            Per chi pubblica, il problema è più acuto e la soluzione più matura. Un ricercatore con un cognome diffuso vede le proprie citazioni divise tra più profili, o mescolate con quelle di un omonimo in un altro campo. Identificatori come ORCID nascono esattamente per questo: dare a ogni autore un riferimento univoco a cui legare la propria produzione.
+          </p>
+          <p>
+            Collegare l'entità a un ORCID, alle pubblicazioni e agli enti di ricerca trasforma un nome ambiguo in un'identità accademica tracciabile. È uno dei casi in cui la disambiguazione semantica ha l'effetto più immediato e misurabile.
+          </p>
+
+          <h2>Wikidata: serve una voce su di te?</h2>
+          <p>
+            Arriva la domanda inevitabile: devo avere una voce su Wikidata? Quasi sempre no. Wikidata richiede notabilità, e una voce creata su una persona non notabile viene rimossa, con un effetto controproducente.
+          </p>
+          <p>
+            Il valore, di nuovo, sta nel collegamento, non nella creazione. Puoi ancorare la tua entità alle voci che esistono già: il tuo ateneo, le organizzazioni di cui fai parte, i temi di cui ti occupi. Una voce dedicata su di te ha senso solo se e quando la notabilità è reale e verificabile. Fino ad allora, forzarla è tempo perso.
+          </p>
+
+          <h2>L'errore di affidarsi a un plugin</h2>
+          <p>
+            A questo punto la tentazione è automatizzare: un plugin che genera il markup Person, e via. Il markup uscirà, e sarà pure formalmente corretto. Ma un plugin non sa quale dei tuoi omonimi sei, non sceglie quali fonti provano cosa, non trova i collegamenti autorevoli che ti distinguono.
+          </p>
+          <p>
+            La disambiguazione è un lavoro di giudizio: capire cosa va detto, recuperare le prove, decidere a quali entità agganciarti. Se quel lavoro lo potesse fare uno strumento, vorrebbe dire che non andava fatto. Il valore non è nella sintassi, è nelle scelte che la precedono.
+          </p>
+
+          <h2>Come si misura</h2>
+          <p>
+            Verificare se ha funzionato è semplice, e puoi farlo da solo. Prima di intervenire, chiedi ai principali sistemi AI chi sei, cosa fai e cosa hai realizzato, e annota le risposte. È la fotografia di partenza.
+          </p>
+          <p>
+            Dopo l'intervento ripeti le stesse domande. Quello che osservi è concreto: il modello ti separa dai tuoi omonimi? I ruoli e le opere citati sono davvero i tuoi? Sei comparso dove prima venivi ignorato? È un confronto verificabile, da rifare ogni tanto, perché i modelli si aggiornano.
+          </p>
+
+          <h2>La disambiguazione non è personal branding</h2>
+          <p>
+            Vale la pena chiarire cosa questo lavoro non è. Non è personal branding: non si tratta di costruire un'immagine o un tono di voce. Non è gestione della reputazione nel senso di spingere contenuti positivi per coprire quelli sgraditi. E non è ottimizzare il proprio nome per Google.
+          </p>
+          <p>
+            È un'operazione più fredda e più strutturale: dare a una macchina le coordinate per riconoscerti come entità unica. Il branding decide come appari, la disambiguazione decide se il sistema sa che quello sei tu. Si può avere il miglior personal branding del mondo e restare, per un modello, indistinguibili da un omonimo.
+          </p>
+
+          <h2>Reputazione: si dichiara o si documenta?</h2>
+          <p>
+            Sotto tutto questo c'è un principio semplice. Dire di essere qualcosa è un'affermazione; collegarla a fonti verificabili è una prova. I sistemi AI, come le persone competenti, danno peso alla seconda.
+          </p>
+          <p>
+            La disambiguazione non è una questione di parole migliori, ma di evidenze collegate. La tua reputazione smette di essere una storia che racconti e diventa una rete di fatti che reggono da soli, indipendenti da chiunque condivida il tuo nome.
+          </p>
+
+          <h2>Perché conviene muoversi adesso</h2>
+          <p>
+            Una domanda ragionevole è se valga la pena occuparsene ora. La risposta è che un'identità mal definita non si corregge da sola: più passa il tempo, più i modelli consolidano la versione confusa, e più materiale ambiguo si accumula attorno al tuo nome.
+          </p>
+          <p>
+            Costruire presto l'entità corretta significa dare ai sistemi un riferimento pulito prima che la confusione si sedimenti. E gli ancoraggi verificabili non si consumano: una volta posati, continuano a separarti dai tuoi omonimi a ogni nuova interrogazione. È un investimento che lavora da solo nel tempo, e il momento migliore per farlo è prima che serva.
+          </p>
+
+          <h2>Da dove si parte</h2>
+          <p>
+            Il primo passo è sempre lo stesso: chiedere ai sistemi AI chi sei oggi, e guardare cosa è corretto, cosa manca e cosa appartiene a qualcun altro. Da quella fotografia si capisce quanto l'omonimia ti sta costando, e da dove conviene cominciare.
+          </p>
+
+          <div class="article-cta">
+            <p class="lead">Lavoro con professionisti, consulenti e autori per costruire un'identità semantica che i sistemi AI leggono e citano senza confonderla con quella di altri.</p>
+            <div class="cta-group">
+              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Prenota una chiamata ↗</a>
+              <a href="../professionisti.html" class="cta-btn cta-btn-outline">Per i professionisti →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links" style="display: flex; gap: 2rem;">
+        <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fnote%2Fomonimia-disambiguazione.html" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
