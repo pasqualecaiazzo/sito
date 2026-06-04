@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../favicon.png">
+<title>Note – Pasquale Caiazzo</title>
+<meta name="description" content="Note di Pasquale Caiazzo su architettura semantica, dati strutturati, knowledge graph e sovranità della narrativa digitale nei sistemi AI.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/note/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Note – Pasquale Caiazzo">
+<meta property="og:description" content="Note su architettura semantica, dati strutturati e sovranità della narrativa digitale nei sistemi AI.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/note/">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta name="author" content="Pasquale Caiazzo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Note – Pasquale Caiazzo">
+<meta name="twitter:description" content="Note su architettura semantica, dati strutturati e sovranità della narrativa digitale nei sistemi AI.">
+<meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["CollectionPage", "Blog"],
+      "@id": "https://pasqualecaiazzo.com/note/#blog",
+      "url": "https://pasqualecaiazzo.com/note/",
+      "name": "Note – Pasquale Caiazzo",
+      "description": "Note su architettura semantica, dati strutturati, knowledge graph e sovranità della narrativa digitale nei sistemi AI.",
+      "inLanguage": "it",
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
+      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
+      "publisher": { "@id": "https://pasqualecaiazzo.com/#publisher" },
+      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/note/#breadcrumb" },
+      "blogPost": [
+        { "@id": "https://pasqualecaiazzo.com/note/geo-terzo-settore.html#article" },
+        { "@id": "https://pasqualecaiazzo.com/note/geo-generative-engine-optimization.html#article" }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://pasqualecaiazzo.com/note/geo-generative-engine-optimization.html#article",
+      "headline": "GEO: come farsi citare dai sistemi AI (e perché non è SEO)",
+      "description": "Che cos'è la Generative Engine Optimization, in cosa differisce dalla SEO e quali scelte strutturali rendono un contenuto citabile da un modello linguistico.",
+      "url": "https://pasqualecaiazzo.com/note/geo-generative-engine-optimization.html",
+      "datePublished": "2026-06-03",
+      "dateModified": "2026-06-03",
+      "inLanguage": "it",
+      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
+      "publisher": { "@id": "https://pasqualecaiazzo.com/#publisher" },
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/note/#blog" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/note/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Note", "item": "https://pasqualecaiazzo.com/note/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="../main.js" defer></script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav aria-label="Navigazione principale">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-name">Pasquale Caiazzo</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+      </svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <span class="nav-toggle-text">Menu</span>
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Drawer Menu (Sleek slide-out panel) -->
+<div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <button id="drawer-close" class="drawer-close" aria-label="Chiudi menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-content">
+    <div class="nav-anchors">
+      <a href="../index.html#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">Chi sono</span></a>
+      <a href="../professionisti.html" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">Per i professionisti</span></a>
+      <a href="../pmi.html" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">Per le PMI</span></a>
+      <a href="../impatto.html" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">Per le organizzazioni a impatto</span></a>
+      <a href="../manifesto.html" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+      <a href="index.html" class="nav-link active"><span class="drawer-num">06</span> <span class="drawer-text">Note</span></a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-meta">
+        <h3>Contatti & Risorse</h3>
+        <p>Base operativa a Torino &bull; Disponibile per progetti da remoto</p>
+        <p>Richieste: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Prenota un incontro di 30 min ↗</a></p>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+<main>
+  <div class="band hero-band">
+    <div class="inner">
+      <section class="reveal" aria-labelledby="note-h">
+        <span class="tag">Note</span>
+        <h1 id="note-h">Note</h1>
+        <p class="intro-p note-intro">
+          Appunti su architettura semantica, dati strutturati, knowledge graph e sovranità della narrativa digitale. Niente content marketing: ragionamenti sul layer informativo che decide come i sistemi AI leggono persone e organizzazioni.
+        </p>
+
+        <div class="note-list">
+          <a class="note-card" href="geo-terzo-settore.html">
+            <span class="note-kicker">
+              <span>3 giugno 2026</span><span class="sep">/</span><span>Terzo settore</span><span class="sep">/</span><span>6 min</span>
+            </span>
+            <h2>GEO per il terzo settore: come un'associazione si fa trovare dall'AI</h2>
+            <p>Perché gli enti del terzo settore sono quasi invisibili ai sistemi AI, e cosa serve perché missione e attività vengano descritte e citate con accuratezza.</p>
+            <span class="note-more">Leggi →</span>
+          </a>
+          <a class="note-card" href="geo-generative-engine-optimization.html">
+            <span class="note-kicker">
+              <span>3 giugno 2026</span><span class="sep">/</span><span>GEO</span><span class="sep">/</span><span>5 min</span>
+            </span>
+            <h2>GEO: come farsi citare dai sistemi AI (e perché non è SEO)</h2>
+            <p>Che cos'è la Generative Engine Optimization, in cosa differisce dalla SEO classica e quali scelte strutturali rendono un contenuto effettivamente citabile da un modello linguistico.</p>
+            <span class="note-more">Leggi →</span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links" style="display: flex; gap: 2rem;">
+        <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fnote%2F" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
