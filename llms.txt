@@ -50,6 +50,8 @@ VAT ID: IT01712990058
 
 ## Note (Writing)
 Articles on semantic architecture, structured data and narrative sovereignty in AI systems. Author: Pasquale Caiazzo.
+- https://pasqualecaiazzo.com/note/ai-search-aziende.html
+  "Come far comparire la tua azienda nelle risposte dell'AI" - 2026-06-04. Why clients look for suppliers using AI search, and what it takes for a company to be discovered and cited accurately by answer engines like ChatGPT, Gemini, and Perplexity.
 - https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html
   "Perché un'AI ti scambia per un altro: omonimia e disambiguazione" - 2026-06-04. Why AI systems confuse people with the same name, the reputational risks, and how semantic entity disambiguation establishes a clear, machine-verifiable identity.
 - https://pasqualecaiazzo.com/note/geo-terzo-settore.html
