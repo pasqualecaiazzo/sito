@@ -1,105 +1,76 @@
 <!DOCTYPE html>
 <html lang="it" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <title>AI Readiness per PMI – Pasquale Caiazzo</title>
-  <meta name="description" content="Strutturazione della presenza informativa di imprese per i motori di risposta AI e preparazione di dati per sistemi RAG proprietari.">
-  <link rel="canonical" href="https://pasqualecaiazzo.com/pmi.html">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AI Readiness per PMI – Pasquale Caiazzo">
-  <meta property="og:description" content="Strutturazione della presenza informativa di imprese per i motori di risposta AI e preparazione di dati per sistemi RAG proprietari.">
-  <meta property="og:url" content="https://pasqualecaiazzo.com/pmi.html">
-  <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  
-  <style>
-    @media (max-width: 768px) {
-      #nav-toggle {
-        display: flex !important;
-        visibility: visible !important;
-        width: 36px !important;
-        height: 36px !important;
-        background: var(--accent) !important;
-        border: none !important;
-        border-radius: 8px !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 !important;
-        cursor: pointer !important;
-        flex-shrink: 0 !important;
-        color: var(--btn-text) !important;
-      }
-      #nav-toggle .hamburger-icon {
-        display: block !important;
-        width: 1.2rem !important;
-        height: 1.2rem !important;
-      }
-      #nav-toggle .close-icon {
-        display: none !important;
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="style.css">
-  
-  <script>
-    (function() {
-      const savedTheme = localStorage.getItem('theme');
-      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-      const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
-  <script src="main.js" defer></script>
-
-  <script type="application/ld+json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/favicon.png">
+<title>AI Readiness per le aziende – Pasquale Caiazzo</title>
+<meta name="description" content="Come far comparire la tua impresa nelle risposte di ChatGPT, Perplexity e Gemini: dati strutturati, grafi di conoscenza e GEO per le PMI, oltre alla preparazione dei dati per sistemi RAG proprietari.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/pmi.html">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Readiness per le aziende – Pasquale Caiazzo">
+<meta property="og:description" content="Far comparire la tua impresa nelle risposte di ChatGPT, Perplexity e Gemini con dati strutturati e grafi di conoscenza.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/pmi.html">
+<meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+@media (max-width: 768px) {
+  #nav-toggle {
+    display: flex !important;
+    visibility: visible !important;
+    width: 36px !important;
+    height: 36px !important;
+    background: var(--accent) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    color: var(--btn-text) !important;
+  }
+  #nav-toggle .hamburger-icon { display: block !important; width: 1.2rem !important; height: 1.2rem !important; }
+  #nav-toggle .close-icon { display: none !important; }
+}
+</style>
+<link rel="stylesheet" href="style.css">
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="main.js" defer></script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@id": "https://pasqualecaiazzo.com/#website"
-    },
+    { "@id": "https://pasqualecaiazzo.com/#website" },
     {
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/pmi.html#webpage",
       "url": "https://pasqualecaiazzo.com/pmi.html",
-      "name": "AI Readiness per PMI – Pasquale Caiazzo",
+      "name": "AI Readiness per le aziende – Pasquale Caiazzo",
       "description": "Strutturazione della presenza informativa di imprese per i motori di risposta AI e preparazione di dati per sistemi RAG proprietari.",
       "inLanguage": "it",
-      "isPartOf": {
-        "@id": "https://pasqualecaiazzo.com/#website"
-      },
-      "about": {
-        "@id": "https://pasqualecaiazzo.com/pmi.html#service"
-      },
-      "breadcrumb": {
-        "@id": "https://pasqualecaiazzo.com/pmi.html#breadcrumb"
-      },
-      "dateModified": "2026-05-25"
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
+      "about": { "@id": "https://pasqualecaiazzo.com/pmi.html#service" },
+      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/pmi.html#breadcrumb" },
+      "dateModified": "2026-06-03"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://pasqualecaiazzo.com/pmi.html#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://pasqualecaiazzo.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Per le PMI",
-          "item": "https://pasqualecaiazzo.com/pmi.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com" },
+        { "@type": "ListItem", "position": 2, "name": "Per le PMI", "item": "https://pasqualecaiazzo.com/pmi.html" }
       ]
     },
     {
@@ -115,42 +86,15 @@
         "name": "Pasquale Caiazzo",
         "url": "https://pasqualecaiazzo.com"
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Italy",
-        "sameAs": "https://www.wikidata.org/wiki/Q38"
-      },
+      "areaServed": { "@type": "Country", "name": "Italy", "sameAs": "https://www.wikidata.org/wiki/Q38" },
       "about": [
-        {
-          "@type": "DefinedTerm",
-          "name": "Artificial Intelligence",
-          "sameAs": "https://www.wikidata.org/wiki/Q11660"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Knowledge Graph",
-          "sameAs": "https://www.wikidata.org/wiki/Q33002955"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Retrieval-Augmented Generation",
-          "sameAs": "https://www.wikidata.org/wiki/Q121362277"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Structured Data",
-          "sameAs": "https://www.wikidata.org/wiki/Q26813700"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "AI Search Visibility",
-          "sameAs": "https://www.wikidata.org/wiki/Q138646003"
-        }
+        { "@type": "DefinedTerm", "name": "Generative Engine Optimization", "sameAs": "https://www.wikidata.org/wiki/Q134083964" },
+        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
+        { "@type": "DefinedTerm", "name": "Retrieval-Augmented Generation", "sameAs": "https://www.wikidata.org/wiki/Q121362277" },
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
+        { "@type": "DefinedTerm", "name": "AI Readiness", "sameAs": "https://www.wikidata.org/wiki/Q138646003" }
       ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "PMI, startup, imprese che vogliono presidiare i motori di risposta AI"
-      },
+      "audience": { "@type": "Audience", "audienceType": "PMI, startup, imprese che vogliono presidiare i motori di risposta AI" },
       "offers": {
         "@type": "Offer",
         "name": "Chiamata strategica gratuita",
@@ -162,195 +106,265 @@
       }
     },
     {
-      "@type": "Person",
-      "@id": "https://pasqualecaiazzo.com/#person",
-      "name": "Pasquale Caiazzo",
-      "url": "https://pasqualecaiazzo.com"
-    }
+      "@type": "FAQPage",
+      "@id": "https://pasqualecaiazzo.com/pmi.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Devo rifare il sito per essere leggibile dall'AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Nella maggior parte dei casi il sito resta com'è: si aggiunge un livello di dati strutturati (JSON-LD) e si riorganizzano alcune informazioni chiave. L'intervento è sul layer informativo, non sulla grafica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funziona anche per una piccola impresa locale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, e spesso conta di più. Per un'attività locale comparire correttamente quando qualcuno chiede a un assistente AI un fornitore in zona può valere più di molte campagne. La notabilità non è un requisito, l'ancoraggio a riferimenti verificabili sì."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo serve per vedere effetti?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'implementazione tecnica è rapida. La comparsa nelle risposte AI dipende da quando i sistemi rielaborano le fonti, e si valuta nel tempo con un monitoraggio ricorrente, non con una singola misurazione."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come si misura il risultato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interrogando i principali sistemi AI con domande pertinenti e osservando se e come citano l'azienda: presenza, accuratezza, assenza di informazioni inventate. È un confronto prima e dopo, ripetuto periodicamente."
+          }
+        }
+      ]
+    },
+    { "@type": "Person", "@id": "https://pasqualecaiazzo.com/#person", "name": "Pasquale Caiazzo", "url": "https://pasqualecaiazzo.com" }
   ]
 }
-  </script>
+</script>
 </head>
 <body>
-
-  <nav aria-label="Navigazione principale">
-    <div class="nav-left">
-      <a href="index.html" class="nav-name">Pasquale Caiazzo</a>
-      <div class="nav-anchors">
-        <a href="index.html#about" class="nav-link">Chi sono</a>
-        <a href="professionisti.html" class="nav-link">Per i professionisti</a>
-        <a href="pmi.html" class="nav-link active">Per le PMI</a>
-        <a href="manifesto.html" class="nav-link">Manifesto</a>
-      </div>
+<nav aria-label="Navigazione principale">
+  <div class="nav-left">
+    <a href="index.html" class="nav-name">Pasquale Caiazzo</a>
+    <div class="nav-anchors">
+      <a href="index.html#about" class="nav-link">Chi sono</a>
+      <a href="professionisti.html" class="nav-link">Per i professionisti</a>
+      <a href="pmi.html" class="nav-link active">Per le PMI</a>
+      <a href="impatto.html" class="nav-link">Per le organizzazioni a impatto</a>
+      <a href="manifesto.html" class="nav-link">Manifesto</a>
+      <a href="note/index.html" class="nav-link">Note</a>
     </div>
-    <div class="nav-right">
-      <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
-        <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
-        </svg>
-        <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-        </svg>
-      </button>
-      <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
-        <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-  </nav>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+      </svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
 
-  <main>
-    <!-- HERO SECTION -->
-    <div class="band hero-band">
-      <div class="inner">
-        <div class="hero-layout">
-          <div class="hero-content">
-            <span class="tag">AI Readiness</span>
-            <h1>Per le aziende</h1>
-            <hr class="rule">
-            <p class="hero-tagline">
-              I motori di risposta AI stanno diventando il primo punto di contatto tra un'impresa e i suoi potenziali clienti. La presenza in quella risposta non dipende dal budget pubblicitario. Dipende dall'infrastruttura informativa.
-            </p>
-            <div class="cta-group">
-              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">
-                Prenota una chiamata ↗
-              </a>
-              <a href="index.html#servizi" class="cta-btn cta-btn-outline">Altri Servizi</a>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="metrics-card">
-              <div class="metric-item">
-                <span class="metric-val">GEO & AI Search</span>
-                <span class="metric-lbl">Posizionare il brand e i prodotti nelle risposte di ChatGPT, Perplexity e Gemini</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-val">Reputazione & Trust</span>
-                <span class="metric-lbl">Dati societari ed economici protetti da risposte errate o allucinazioni dell'AI</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-val">Data Readiness</span>
-                <span class="metric-lbl">Cataloghi, dati interni e manuali pronti per alimentare motori RAG proprietari</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MAIN BODY -->
-    <div class="band">
-      <div class="inner">
-        <div class="about-layout" style="margin-bottom: 2.5rem;">
-          <div>
-            <h2>Come l'azienda viene percepita e citata dai motori AI</h2>
-            <p class="intro-p">
-              Gli agenti generativi (ChatGPT, Gemini, Perplexity) non scansionano le pagine come i vecchi motori di ricerca. Compongono risposte in tempo reale estraendo relazioni logiche da sorgenti verificate. Se il patrimonio informativo di un'azienda è assente, ambiguo o non strutturato per le macchine, l'azienda semplicemente non esiste per l'AI.
-            </p>
-
-            <div style="margin: 2rem 0; display: flex; flex-direction: column; gap: 1.50rem;">
-              <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
-                <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">1. GEO (Generative Engine Optimization)</h4>
-                <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
-                  Ottimizzazione delle informazioni commerciali e societarie per garantire che brand, servizi e prodotti principali compaiano con priorità nelle risposte fornite agli utenti che compiono ricerche d'acquisto complesse.
-                </p>
-              </div>
-              <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
-                <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">2. Brand Integrity & Anti-Hallucination</h4>
-                <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
-                  Protezione delle informazioni sensibili (listini, sedi, organigramma). Ancorando i dati aziendali a fonti stabili e certificate (Schema.org e Wikidata), impediamo ai LLM di inventare o allucinare dettagli errati sul conto dell'azienda.
-                </p>
-              </div>
-              <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
-                <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">3. Enterprise RAG Readiness</h4>
-                <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
-                  Preparazione, normalizzazione e strutturazione di documentazione interna, cataloghi prodotto e file tecnici in grafi di conoscenza proprietari, pronti per essere interrogati da assistenti AI interni in modo preciso.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="details-card">
-            <span class="detail-label">Cosa facciamo</span>
-            <h3 style="margin-bottom: 1rem; font-weight: 700;">AI Readiness Aziendale</h3>
-            <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">
-              Preparazione delle informazioni societarie, commerciali e di catalogo per essere pienamente accessibili e indicizzabili dai motori generativi e dagli agenti intelligenti.
-            </p>
-            
-            <span class="detail-label">Aree di intervento</span>
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; font-family: 'IBM Plex Sans', sans-serif; font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
-              <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
-                <span style="color: var(--accent); font-weight: bold;">&bull;</span>
-                <span>Strutturazione dei dati di prodotti, servizi e sedi territoriali</span>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
-                <span style="color: var(--accent); font-weight: bold;">&bull;</span>
-                <span>Ottimizzazione dei canali ufficiali per l'indicizzazione dei motori AI</span>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
-                <span style="color: var(--accent); font-weight: bold;">&bull;</span>
-                <span>Organizzazione dei dati interni per facilitare la ricerca documentale</span>
-              </div>
-            </div>
-
-            <span class="detail-label">Per chi è pensato</span>
-            <p style="font-size: 0.85rem; margin: 0; line-height: 1.6;">
-              Piccole e medie imprese che vogliono posizionare il proprio brand e la propria offerta dove i clienti formulano domande complesse.
-            </p>
-          </div>
-        </div>
-
-        <!-- Manifesto Box moved outside and made full width -->
-        <div class="manifesto-box" style="margin-top: 3.5rem; margin-bottom: 5.5rem;">
-          <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem;">Il percorso di AI Readiness per le aziende</h4>
-          <div class="manifesto-grid">
-            <div>
-              <h5 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">FASE 1: AI Exposure Audit</h5>
-              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">
-                Mappatura preliminare per comprendere come i principali LLM interpretano l'azienda oggi. Analizziamo dove le informazioni sono corrette, lacunose, assenti o allucinate su marchi, prodotti o sedi.
-              </p>
-            </div>
-            <div>
-              <h5 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">FASE 2: Identità Semantica</h5>
-              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">
-                Registrazione e ottimizzazione del profilo aziendale nei registri semantici aperti (Wikidata). Forniamo al brand una firma digitale univoca e stabile nell'ecosistema dei linked data per eliminare allucinazioni algoritmiche.
-              </p>
-            </div>
-            <div>
-              <h5 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">FASE 3: Grafi di Conoscenza & Schema.org</h5>
-              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">
-                Progettazione del grafo aziendale e implementazione del codice JSON-LD (Schema.org) sul sito ufficiale. Creiamo un layer di dati strutturati firmato e leggibile da motori di risposta ed agenti AI.
-              </p>
-            </div>
-            <div>
-              <h5 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">FASE 4: AI Data Integration (RAG)</h5>
-              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">
-                Preparazione e strutturazione di cataloghi, documentazione tecnica e dati interni. Strutturiamo il patrimonio informativo aziendale per alimentare sistemi RAG e assistenti AI aziendali stabili ed esenti da allucinazioni.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
+<main>
+  <div class="band hero-band">
     <div class="inner">
-      <div class="footer-inner">
-                <div class="footer-meta">
-          <span>Pasquale Caiazzo</span><br>
-          Semantic Entity Architect<br>
-          Torino<br>
-          P.IVA IT01712990058
+      <div class="hero-layout">
+        <div class="hero-content">
+          <span class="tag">AI Readiness</span>
+          <h1>Per le aziende</h1>
+          <hr class="rule">
+          <p class="hero-tagline">
+            Per molti clienti il primo contatto con la tua impresa non è più Google: è una risposta generata da un'AI. E comparire in quella risposta non si compra col budget pubblicitario, si costruisce nell'infrastruttura dei dati.
+          </p>
+          <div class="cta-group">
+            <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Prenota una chiamata ↗</a>
+            <a href="index.html#servizi" class="cta-btn cta-btn-outline">Altri Servizi</a>
+          </div>
         </div>
-        <div class="footer-links" style="display: flex; gap: 2rem;">
-          <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
-          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <div class="hero-visual">
+          <div class="metrics-card">
+            <div class="metric-item">
+              <span class="metric-val">GEO & AI Search</span>
+              <span class="metric-lbl">Brand, prodotti e servizi presenti nelle risposte di ChatGPT, Perplexity e Gemini</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">Reputazione & Trust</span>
+              <span class="metric-lbl">Dati societari e commerciali protetti da risposte errate e allucinazioni</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">Data Readiness</span>
+              <span class="metric-lbl">Cataloghi, manuali e dati interni pronti per alimentare un motore RAG proprietario</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
 
+  <div class="band">
+    <div class="inner">
+      <div class="about-layout" style="margin-bottom: 2.5rem;">
+        <div>
+          <h2>Come la tua azienda viene capita e citata dai motori AI</h2>
+          <p class="intro-p">
+            Gli agenti generativi non scansionano le pagine come i vecchi motori: compongono risposte in tempo reale estraendo relazioni da fonti verificabili. Se il patrimonio informativo dell'azienda è assente, ambiguo o illeggibile per le macchine, per l'AI quell'azienda semplicemente non esiste.
+          </p>
+
+          <div style="margin: 2rem 0; display: flex; flex-direction: column; gap: 1.50rem;">
+            <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
+              <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">1. GEO (Generative Engine Optimization)</h3>
+              <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
+                Far sì che brand, servizi e prodotti compaiano con priorità nelle ricerche d'acquisto complesse, quelle in cui il cliente non cerca una parola chiave ma una soluzione.
+              </p>
+            </div>
+            <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
+              <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">2. Brand Integrity e anti-allucinazione</h3>
+              <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
+                Ancorare dati societari, sedi e listini a fonti stabili (Schema.org, Wikidata), così che i modelli non inventino dettagli sbagliati. La reputazione smette di dipendere da ciò che l'AI immagina.
+              </p>
+            </div>
+            <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
+              <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">3. Enterprise RAG Readiness</h3>
+              <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
+                Documentazione, cataloghi e file tecnici strutturati in un grafo di conoscenza proprietario, pronti per essere interrogati da un assistente AI interno con precisione, non a probabilità.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-card">
+          <span class="detail-label">Cosa faccio</span>
+          <h3 style="margin-bottom: 1rem; font-weight: 700;">AI Readiness aziendale</h3>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Preparazione delle informazioni societarie, commerciali e di catalogo per essere pienamente accessibili e indicizzabili dai motori generativi e dagli agenti intelligenti.
+          </p>
+
+          <span class="detail-label">Aree di intervento</span>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; font-family: 'IBM Plex Sans', sans-serif; font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+              <span style="color: var(--accent); font-weight: bold;">&bull;</span>
+              <span>Strutturazione dei dati di prodotti, servizi e sedi territoriali</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+              <span style="color: var(--accent); font-weight: bold;">&bull;</span>
+              <span>Ottimizzazione dei canali ufficiali per l'indicizzazione dei motori AI</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+              <span style="color: var(--accent); font-weight: bold;">&bull;</span>
+              <span>Organizzazione dei dati interni per la ricerca documentale</span>
+            </div>
+          </div>
+
+          <span class="detail-label">Per chi è pensato</span>
+          <p style="font-size: 0.85rem; margin: 0; line-height: 1.6;">
+            Piccole e medie imprese che vogliono posizionare brand e offerta dove i clienti formulano domande complesse.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 2.5rem; max-width: 760px;">
+        <h2>Perché la SEO classica non basta più</h2>
+        <p class="intro-p">La SEO ottimizza per una lista di risultati su cui l'utente clicca. I motori di risposta saltano la lista: leggono le fonti e compongono direttamente la risposta, spesso senza che l'utente visiti alcun sito. Posizionarsi bene su Google non garantisce più di comparire in quella risposta.</p>
+        <p>Cambia la posta in gioco. Non basta contenere le parole giuste: servono dati strutturati che dichiarino in modo esplicito cosa fa l'azienda, dove opera e a quali entità verificabili è collegata. È la differenza tra una pagina che un motore deve interpretare e una che può leggere senza margine di errore.</p>
+      </div>
+
+      <div style="margin-bottom: 2.5rem; max-width: 760px;">
+        <h2>Quando un'azienda è pronta per l'AI search, e quando no</h2>
+        <p class="intro-p">Alcuni segnali dicono che il lavoro serve adesso: i sistemi AI descrivono l'azienda in modo vago o sbagliato, la confondono con un'altra, o non la citano affatto quando si cercano soluzioni nel suo settore. Se un potenziale cliente chiede a ChatGPT chi offre ciò che offri tu e il tuo nome non compare, quel cliente non sa nemmeno di averti escluso.</p>
+        <p>Non sempre è il momento giusto. Se l'azienda non ha ancora un'offerta chiara o informazioni stabili da pubblicare, prima viene il posizionamento e poi la strutturazione. Strutturare dati confusi li rende solo più leggibili, non più convincenti.</p>
+      </div>
+
+      <div style="margin-bottom: 2.5rem; max-width: 760px;">
+        <h2>L'altra metà del lavoro: i tuoi dati interni</h2>
+        <p class="intro-p">La visibilità verso l'esterno è solo metà del valore. La stessa conoscenza strutturata che rende l'azienda leggibile ai motori pubblici può alimentare un assistente interno: un sistema che risponde a clienti o colleghi attingendo a cataloghi, manuali e procedure verificate invece di inventare.</p>
+        <p>È il principio del RAG applicato all'impresa. Più i dati interni sono organizzati e collegati, più le risposte sono precise e meno soggette ad allucinazioni. L'infrastruttura semantica costruita per farsi trovare diventa anche l'ossatura della conoscenza aziendale.</p>
+      </div>
+
+      <div class="manifesto-box" style="margin-top: 3.5rem; margin-bottom: 5.5rem;">
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem;">Il percorso di AI Readiness per le aziende</h2>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--text-muted); margin: 0 0 1.75rem; max-width: 720px;">Il valore non sta nel codice finale, ma nelle decisioni che lo precedono. Si parte da cosa raccontare e si arriva alla sintassi, mai il contrario.</p>
+        <div class="manifesto-grid">
+          <div>
+            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 1: Cosa vuoi che si sappia</h3>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">AI Exposure Audit & strategia</span>
+            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">Prima del codice viene una decisione. Mappo come i sistemi AI interpretano oggi l'azienda e definisco con te cosa deve sapere di voi chi vi cerca, e perché. Il posizionamento si sceglie qui, non si rincorre dopo.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 2: Il paniere di informazioni</h3>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">Recupero e verifica dati</span>
+            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">È il lavoro vero. Recupero e verifico le informazioni che reggono ogni affermazione: dati societari, prodotti, sedi, certificazioni, casi cliente, numeri. Decido con te cosa entra, cosa resta fuori, cosa è davvero dimostrabile. Un'azienda non si dichiara, si documenta.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 3: La tessitura delle entità</h3>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">Knowledge graph & entity linking</span>
+            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">Nessuna azienda esiste da sola. Collego l'entità a quelle già verificate a cui è legata: partner, fornitori, settore, territorio, riconoscimenti. Il significato dell'impresa nasce dalle relazioni, ed è questo che un sistema AI legge per collocarla.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 4: Implementazione e presidio</h3>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">JSON-LD, Schema.org, RAG, monitoraggio</span>
+            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">Solo a questo punto traduco le decisioni in JSON-LD e dati strutturati, e tengo l'infrastruttura viva nel tempo. La sintassi è l'ultimo passo, non il lavoro: se potesse generarla un plugin, vorrebbe dire che le scelte a monte non erano state fatte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="band">
+    <div class="inner">
+      <section aria-labelledby="faq-h" style="max-width: 760px; margin-bottom: 4rem;">
+        <span class="tag">FAQ</span>
+        <h2 id="faq-h">Domande frequenti</h2>
+        <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+          <div>
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text);">Devo rifare il sito per essere leggibile dall'AI?</h3>
+            <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin: 0;">No. Nella maggior parte dei casi il sito resta com'è: si aggiunge un livello di dati strutturati (JSON-LD) e si riorganizzano alcune informazioni chiave. L'intervento è sul layer informativo, non sulla grafica.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text);">Funziona anche per una piccola impresa locale?</h3>
+            <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin: 0;">Sì, e spesso conta di più. Per un'attività locale comparire correttamente quando qualcuno chiede a un assistente AI un fornitore in zona può valere più di molte campagne. La notabilità non è un requisito, l'ancoraggio a riferimenti verificabili sì.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text);">Quanto tempo serve per vedere effetti?</h3>
+            <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin: 0;">L'implementazione tecnica è rapida. La comparsa nelle risposte AI dipende da quando i sistemi rielaborano le fonti, e si valuta nel tempo con un monitoraggio ricorrente, non con una singola misurazione.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text);">Come si misura il risultato?</h3>
+            <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin: 0;">Interrogando i principali sistemi AI con domande pertinenti e osservando se e come citano l'azienda: presenza, accuratezza, assenza di informazioni inventate. È un confronto prima e dopo, ripetuto periodicamente.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links" style="display: flex; gap: 2rem;">
+        <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fpmi.html" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

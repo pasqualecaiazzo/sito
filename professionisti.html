@@ -1,113 +1,84 @@
 <!DOCTYPE html>
 <html lang="it" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <title>Identità Semantica per Professionisti – Pasquale Caiazzo</title>
-  <meta name="description" content="Costruzione di identità semantica verificabile per professionisti che vogliono controllare come i sistemi AI li rappresentano.">
-  <link rel="canonical" href="https://pasqualecaiazzo.com/professionisti.html">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Identità Semantica per Professionisti – Pasquale Caiazzo">
-  <meta property="og:description" content="Costruzione di identità semantica verificabile per professionisti che vogliono controllare come i sistemi AI li rappresentano.">
-  <meta property="og:url" content="https://pasqualecaiazzo.com/professionisti.html">
-  <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  
-  <style>
-    @media (max-width: 768px) {
-      #nav-toggle {
-        display: flex !important;
-        visibility: visible !important;
-        width: 36px !important;
-        height: 36px !important;
-        background: var(--accent) !important;
-        border: none !important;
-        border-radius: 8px !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 !important;
-        cursor: pointer !important;
-        flex-shrink: 0 !important;
-        color: var(--btn-text) !important;
-      }
-      #nav-toggle .hamburger-icon {
-        display: block !important;
-        width: 1.2rem !important;
-        height: 1.2rem !important;
-      }
-      #nav-toggle .close-icon {
-        display: none !important;
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="style.css">
-  
-  <script>
-    (function() {
-      const savedTheme = localStorage.getItem('theme');
-      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-      const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
-  <script src="main.js" defer></script>
-
-  <script type="application/ld+json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/favicon.png">
+<title>Identità semantica per professionisti – Pasquale Caiazzo</title>
+<meta name="description" content="Come farsi descrivere correttamente da ChatGPT, Claude e Gemini: l'identità digitale di consulenti e professionisti costruita come entità leggibile e citabile dai motori di risposta AI.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/professionisti.html">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Identità semantica per professionisti – Pasquale Caiazzo">
+<meta property="og:description" content="L'identità digitale di consulenti e professionisti costruita come entità leggibile e citabile dai motori di risposta AI.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/professionisti.html">
+<meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+@media (max-width: 768px) {
+  #nav-toggle {
+    display: flex !important;
+    visibility: visible !important;
+    width: 36px !important;
+    height: 36px !important;
+    background: var(--accent) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    color: var(--btn-text) !important;
+  }
+  #nav-toggle .hamburger-icon { display: block !important; width: 1.2rem !important; height: 1.2rem !important; }
+  #nav-toggle .close-icon { display: none !important; }
+}
+</style>
+<link rel="stylesheet" href="style.css">
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="main.js" defer></script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@id": "https://pasqualecaiazzo.com/#website"
-    },
+    { "@id": "https://pasqualecaiazzo.com/#website" },
     {
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/professionisti.html#webpage",
       "url": "https://pasqualecaiazzo.com/professionisti.html",
-      "name": "Identità Semantica per Professionisti – Pasquale Caiazzo",
-      "description": "Costruzione di identità semantica verificabile per professionisti che vogliono controllare come i sistemi AI li rappresentano.",
+      "name": "Identità semantica per professionisti – Pasquale Caiazzo",
+      "description": "L'identità digitale di consulenti e professionisti costruita come entità leggibile e citabile dai motori di risposta AI.",
       "inLanguage": "it",
-      "isPartOf": {
-        "@id": "https://pasqualecaiazzo.com/#website"
-      },
-      "about": {
-        "@id": "https://pasqualecaiazzo.com/professionisti.html#service"
-      },
-      "breadcrumb": {
-        "@id": "https://pasqualecaiazzo.com/professionisti.html#breadcrumb"
-      },
-      "dateModified": "2026-05-25"
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
+      "about": { "@id": "https://pasqualecaiazzo.com/professionisti.html#service" },
+      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/professionisti.html#breadcrumb" },
+      "dateModified": "2026-06-03"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://pasqualecaiazzo.com/professionisti.html#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://pasqualecaiazzo.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Per i professionisti",
-          "item": "https://pasqualecaiazzo.com/professionisti.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com" },
+        { "@type": "ListItem", "position": 2, "name": "Per i professionisti", "item": "https://pasqualecaiazzo.com/professionisti.html" }
       ]
     },
     {
       "@type": "Service",
       "@id": "https://pasqualecaiazzo.com/professionisti.html#service",
-      "name": "Identità Semantica per Professionisti",
-      "serviceType": "Semantic Identity Architecture",
-      "description": "Costruzione di un'identità semantica precisa e verificabile per professionisti: entità su Wikidata, dati strutturati in JSON-LD, connessioni verificabili con certificazioni e affiliazioni.",
+      "name": "Identità semantica per professionisti",
+      "serviceType": "Semantic Entity Architecture",
+      "description": "Costruzione dell'identità digitale di un professionista come entità leggibile dalle macchine, ancorata e collegata a riferimenti verificabili, così da essere interpretata e citata correttamente dai motori di risposta AI.",
       "url": "https://pasqualecaiazzo.com/professionisti.html",
       "provider": {
         "@type": "Person",
@@ -115,42 +86,15 @@
         "name": "Pasquale Caiazzo",
         "url": "https://pasqualecaiazzo.com"
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Italy",
-        "sameAs": "https://www.wikidata.org/wiki/Q38"
-      },
+      "areaServed": { "@type": "Country", "name": "Italy", "sameAs": "https://www.wikidata.org/wiki/Q38" },
       "about": [
-        {
-          "@type": "DefinedTerm",
-          "name": "Large Language Models",
-          "sameAs": "https://www.wikidata.org/wiki/Q115305900"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Knowledge Graph",
-          "sameAs": "https://www.wikidata.org/wiki/Q33002955"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "JSON-LD",
-          "sameAs": "https://www.wikidata.org/wiki/Q6108942"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Schema.org",
-          "sameAs": "https://www.wikidata.org/wiki/Q3475322"
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Data Sovereignty",
-          "sameAs": "https://www.wikidata.org/wiki/Q48780629"
-        }
+        { "@type": "DefinedTerm", "name": "Generative Engine Optimization", "sameAs": "https://www.wikidata.org/wiki/Q134083964" },
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
+        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
+        { "@type": "DefinedTerm", "name": "AI Readiness", "sameAs": "https://www.wikidata.org/wiki/Q138646003" },
+        { "@type": "DefinedTerm", "name": "Large Language Models", "sameAs": "https://www.wikidata.org/wiki/Q115305900" }
       ],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Professionisti, consulenti, liberi professionisti"
-      },
+      "audience": { "@type": "Audience", "audienceType": "Professionisti, consulenti, founder, autori e ricercatori" },
       "offers": {
         "@type": "Offer",
         "name": "Chiamata strategica gratuita",
@@ -162,195 +106,265 @@
       }
     },
     {
-      "@type": "Person",
-      "@id": "https://pasqualecaiazzo.com/#person",
-      "name": "Pasquale Caiazzo",
-      "url": "https://pasqualecaiazzo.com"
-    }
+      "@type": "FAQPage",
+      "@id": "https://pasqualecaiazzo.com/professionisti.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mi crei una pagina Wikidata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quasi mai, e non perché non si possa: Wikidata richiede notabilità, e una voce creata su una persona non notabile viene rimossa. Il lavoro è collegare la tua entità alle voci che esistono già (temi, atenei, organizzazioni) e ai tuoi profili autorevoli. Più onesto e più efficace."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funziona se non sono una persona famosa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì. Non serve essere notabili per essere leggibili, serve essere ancorati a riferimenti verificabili. È proprio chi non ha grande copertura online a guadagnare di più dalla disambiguazione."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Devo avere già un sito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aiuta, ma non è indispensabile. Si può lavorare sui canali che controlli e su una entità ben strutturata. Un sito tuo resta però il punto d'ancoraggio più solido nel tempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come capisco se sta funzionando?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si chiede ai principali sistemi AI chi sei e cosa fai, prima e dopo, e si osserva come cambia la risposta: accuratezza, completezza, assenza di confusioni con omonimi."
+          }
+        }
+      ]
+    },
+    { "@type": "Person", "@id": "https://pasqualecaiazzo.com/#person", "name": "Pasquale Caiazzo", "url": "https://pasqualecaiazzo.com" }
   ]
 }
-  </script>
+</script>
 </head>
 <body>
-
-  <nav aria-label="Navigazione principale">
-    <div class="nav-left">
-      <a href="index.html" class="nav-name">Pasquale Caiazzo</a>
-      <div class="nav-anchors">
-        <a href="index.html#about" class="nav-link">Chi sono</a>
-        <a href="professionisti.html" class="nav-link active">Per i professionisti</a>
-        <a href="pmi.html" class="nav-link">Per le PMI</a>
-        <a href="manifesto.html" class="nav-link">Manifesto</a>
-      </div>
+<nav aria-label="Navigazione principale">
+  <div class="nav-left">
+    <a href="index.html" class="nav-name">Pasquale Caiazzo</a>
+    <div class="nav-anchors">
+      <a href="index.html#about" class="nav-link">Chi sono</a>
+      <a href="professionisti.html" class="nav-link active">Per i professionisti</a>
+      <a href="pmi.html" class="nav-link">Per le PMI</a>
+      <a href="impatto.html" class="nav-link">Per le organizzazioni a impatto</a>
+      <a href="manifesto.html" class="nav-link">Manifesto</a>
+      <a href="note/index.html" class="nav-link">Note</a>
     </div>
-    <div class="nav-right">
-      <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
-        <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
-        </svg>
-        <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-        </svg>
-      </button>
-      <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
-        <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-  </nav>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+      </svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
 
-  <main>
-    <!-- HERO SECTION -->
-    <div class="band hero-band">
-      <div class="inner">
-        <div class="hero-layout">
-          <div class="hero-content">
-            <span class="tag">Identità Semantica</span>
-            <h1>Per i professionisti</h1>
-            <hr class="rule">
-            <p class="hero-tagline">
-              I sistemi AI costruiscono una rappresentazione di te a partire dai dati che trovano sul web. Se quei dati sono frammentati, incompleti o non verificabili, la rappresentazione sarà sbagliata. Il contenuto del tuo sito non risolve il problema.
-            </p>
-            <div class="cta-group">
-              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">
-                Prenota una chiamata ↗
-              </a>
-              <a href="index.html#servizi" class="cta-btn cta-btn-outline">Altri Servizi</a>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="metrics-card">
-              <div class="metric-item">
-                <span class="metric-val">Presenza</span>
-                <span class="metric-lbl">Le tue competenze comprese e indicizzate dai sistemi AI</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-val">Controllo</span>
-                <span class="metric-lbl">Nessuna allucinazione o informazione errata sul tuo conto</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-val">Autorevolezza</span>
-                <span class="metric-lbl">Le tue fonti e i tuoi lavori certificati digitalmente</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MAIN BODY -->
-    <div class="band">
-      <div class="inner">
-        <div class="about-layout" style="margin-bottom: 2.5rem;">
-          <div>
-            <h2>Il layer che i motori di risposta AI effettivamente leggono</h2>
-            <p class="intro-p">
-              Quando un potenziale partner, cliente o lettore cerca il tuo nome su ChatGPT, Claude o Gemini, il modello non naviga il tuo sito come un umano. Cerca relazioni logiche, fonti esterne verificate e schemi di dati strutturati. Se queste informazioni mancano, l'AI comporrà la risposta basandosi su ipotesi ed errori.
-            </p>
-
-            <div style="margin: 2rem 0; display: flex; flex-direction: column; gap: 1.50rem;">
-              <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
-                <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">1. Disambiguazione dell'Identità</h4>
-                <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
-                  Creiamo e consolidiamo la tua presenza sui principali registri semantici aperti (Wikidata), per dare ai modelli linguistici un riferimento univoco che distingua il tuo profilo da qualsiasi omonimo.
-                </p>
-              </div>
-              <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
-                <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">2. Controllo delle Citazioni (E-A-T)</h4>
-                <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
-                  Certifichiamo le tue affiliazioni, pubblicazioni e progetti storici collegandoli a fonti ufficiali esterne, assicurando che l'AI ti descriva con precisione e ti citi come autorevole nel tuo campo.
-                </p>
-              </div>
-              <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
-                <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">3. Integrazione Dati Strutturati</h4>
-                <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
-                  Implementiamo markup JSON-LD (Schema.org) personalizzati sulle tue piattaforme proprietarie, creando una mappa chiara delle tue competenze leggibile dalle macchine.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="details-card">
-            <span class="detail-label">Cosa facciamo</span>
-            <h3 style="margin-bottom: 1rem; font-weight: 700;">Identità Digitale per l'AI</h3>
-            <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">
-              Mappatura ed estensione delle tue competenze professionali in formati leggibili dalle macchine. Il servizio certifica digitalmente chi sei e cosa offri, assicurando che i sistemi generativi ti rappresentino senza allucinazioni.
-            </p>
-            
-            <span class="detail-label">Aree di intervento</span>
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; font-family: 'IBM Plex Sans', sans-serif; font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
-              <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
-                <span style="color: var(--accent); font-weight: bold;">&bull;</span>
-                <span>Dichiarazione formale delle competenze e della biografia lavorativa</span>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
-                <span style="color: var(--accent); font-weight: bold;">&bull;</span>
-                <span>Certificazione digitale delle affiliazioni e collaborazioni esterne</span>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
-                <span style="color: var(--accent); font-weight: bold;">&bull;</span>
-                <span>Ottimizzazione delle citazioni nelle risposte di ChatGPT, Claude e Gemini</span>
-              </div>
-            </div>
-
-            <span class="detail-label">Per chi è pensato</span>
-            <p style="font-size: 0.85rem; margin: 0; line-height: 1.6;">
-              Autori, consulenti e professionisti esperti che vogliono governare la propria presenza e autorevolezza nell'ecosistema dell'intelligenza artificiale.
-            </p>
-          </div>
-        </div>
-
-        <!-- Manifesto Box moved outside and made full width -->
-        <div class="manifesto-box" style="margin-top: 3.5rem; margin-bottom: 5.5rem;">
-          <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem;">Il percorso di ottimizzazione per i professionisti</h4>
-          <div class="manifesto-grid">
-            <div>
-              <h5 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">FASE 1: Identificazione & Audit E-A-T</h5>
-              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">
-                Mappatura iniziale della reputazione digitale sui motori di risposta AI. Rileviamo come i modelli linguistici sintetizzano la biografia, le competenze e i lavori del professionista, evidenziando omonimi o inesattezze.
-              </p>
-            </div>
-            <div>
-              <h5 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">FASE 2: Disambiguazione Wikidata</h5>
-              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">
-                Creazione e ottimizzazione di un record autoritativo su Wikidata, garantendo una firma digitale univoca e stabile nell'ecosistema dei linked data per differenziarti da qualsiasi omonimo.
-              </p>
-            </div>
-            <div>
-              <h5 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">FASE 3: Schema JSON-LD</h5>
-              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">
-                Integrazione di markup strutturato Schema.org (tipo Person) sul sito web personale. Questo layer descrive in modo formale e inequivocabile competenze, biografia, pubblicazioni ed esperienze per le macchine.
-              </p>
-            </div>
-            <div>
-              <h5 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">FASE 4: Collegamento delle Fonti</h5>
-              <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">
-                Certificazione delle affiliazioni, delle pubblicazioni (ORCID, Google Scholar) e dei profili social ufficiali, creando una rete di citazioni autorevoli e incrociate che i modelli AI possono referenziare.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer>
+<main>
+  <div class="band hero-band">
     <div class="inner">
-      <div class="footer-inner">
-                <div class="footer-meta">
-          <span>Pasquale Caiazzo</span><br>
-          Semantic Entity Architect<br>
-          Torino<br>
-          P.IVA IT01712990058
+      <div class="hero-layout">
+        <div class="hero-content">
+          <span class="tag">Identità Semantica</span>
+          <h1>Per i professionisti</h1>
+          <hr class="rule">
+          <p class="hero-tagline">
+            Hai costruito la tua competenza in anni. A chi ti cerca oggi, la riassume un modello linguistico in due righe, quando le indovina.
+          </p>
+          <div class="cta-group">
+            <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Prenota una chiamata ↗</a>
+            <a href="index.html#servizi" class="cta-btn cta-btn-outline">Altri Servizi</a>
+          </div>
         </div>
-        <div class="footer-links" style="display: flex; gap: 2rem;">
-          <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
-          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <div class="hero-visual">
+          <div class="metrics-card">
+            <div class="metric-item">
+              <span class="metric-val">Autorità citabile</span>
+              <span class="metric-lbl">Comparire come fonte quando un'AI risponde a chi cerca la tua area di competenza</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">Disambiguazione</span>
+              <span class="metric-lbl">Smettere di essere confuso con un omonimo: una sola entità, verificata</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">Controllo della narrativa</span>
+              <span class="metric-lbl">Decidere tu come ruoli, competenze e risultati vengono raccontati</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
 
+  <div class="band">
+    <div class="inner">
+      <div class="about-layout" style="margin-bottom: 2.5rem;">
+        <div>
+          <h2>Come un'AI riassume chi sei a chi non ti conosce</h2>
+          <p class="intro-p">
+            Un potenziale cliente, un recruiter, un giornalista non aprono più dieci schede del browser: chiedono a ChatGPT o a Perplexity chi sei. La risposta che ricevono è la tua prima impressione, e non l'hai scritta tu. Se la tua presenza è sparsa tra profili, PDF e articoli non strutturati, il modello tira a indovinare.
+          </p>
+
+          <div style="margin: 2rem 0; display: flex; flex-direction: column; gap: 1.50rem;">
+            <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
+              <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">1. Identità e disambiguazione</h3>
+              <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
+                Un'entità che controlli tu (nome, ruoli, competenze, risultati) collegata ai tuoi profili autorevoli e alle voci Wikidata già esistenti dei tuoi temi e delle tue affiliazioni. La disambiguazione non nasce da una pagina creata ad arte, ma da questi collegamenti verificabili: così un sistema AI sa chi sei e non ti sovrappone a un omonimo.
+              </p>
+            </div>
+            <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
+              <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">2. GEO: essere citato, non solo trovato</h3>
+              <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
+                Comparire nelle risposte generative quando qualcuno cerca la tua area di competenza. Non un profilo da scovare, ma una fonte che il modello sceglie di citare.
+              </p>
+            </div>
+            <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
+              <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">3. Integrità della narrativa</h3>
+              <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
+                Ancorare ciò che dichiari di te a fonti verificabili, così che i modelli non inventino titoli, ruoli o affiliazioni. La tua reputazione smette di essere materia di inferenza.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-card">
+          <span class="detail-label">Cosa faccio</span>
+          <h3 style="margin-bottom: 1rem; font-weight: 700;">Identità semantica per professionisti</h3>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Costruzione della tua presenza come entità leggibile dalle macchine: chi sei, cosa sai fare, cosa hai fatto, in un formato che i motori di risposta citano con precisione.
+          </p>
+
+          <span class="detail-label">Aree di intervento</span>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; font-family: 'IBM Plex Sans', sans-serif; font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+              <span style="color: var(--accent); font-weight: bold;">&bull;</span>
+              <span>Entità Person (JSON-LD) sul sito e sui canali che controlli, con identificatore stabile</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+              <span style="color: var(--accent); font-weight: bold;">&bull;</span>
+              <span>Collegamento (sameAs, knowsAbout) ai tuoi profili autorevoli e alle voci Wikidata esistenti di temi e affiliazioni</span>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+              <span style="color: var(--accent); font-weight: bold;">&bull;</span>
+              <span>Allineamento dei segnali tra LinkedIn, sito ed entità per una sola lettura coerente</span>
+            </div>
+          </div>
+
+          <span class="detail-label">Per chi è pensato</span>
+          <p style="font-size: 0.85rem; margin: 0; line-height: 1.6;">
+            Consulenti, founder, autori, ricercatori e liberi professionisti la cui reputazione è il vero asset, e che vogliono governare come l'AI la racconta.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 2.5rem; max-width: 760px;">
+        <h2>Perché un profilo LinkedIn non basta</h2>
+        <p class="intro-p">Un profilo LinkedIn è una pagina che un'AI deve interpretare, non un'identità che può leggere senza ambiguità. Dice cosa scrivi di te, non collega in modo verificabile chi sei, cosa hai fatto e con chi. I modelli ne ricavano un'impressione, non una certezza.</p>
+        <p>L'identità semantica lavora a un livello diverso: un'entità con un identificatore stabile, collegata alle fonti che reggono ogni affermazione e alle voci già esistenti di temi, atenei e organizzazioni a cui sei legato. Non un'altra pagina da scrivere, ma il tessuto che dà significato a quelle che hai già.</p>
+      </div>
+
+      <div style="margin-bottom: 2.5rem; max-width: 760px;">
+        <h2>Cosa succede quando un'AI ti confonde con un altro</h2>
+        <p class="intro-p">Se condividi nome e cognome con altre persone, un sistema AI può fondere le vostre storie: attribuirti ruoli che non hai, opere che non sono tue, o ignorarti perché un omonimo è più presente online. Per chi vive di reputazione è un danno silenzioso, di cui è difficile accorgersi.</p>
+        <p>La disambiguazione risolve esattamente questo. Collegando la tua entità a riferimenti univoci e verificabili, dai ai modelli un modo per separarti dagli omonimi con certezza. Smetti di essere una delle tante interpretazioni possibili del tuo nome.</p>
+      </div>
+
+      <div style="margin-bottom: 2.5rem; max-width: 760px;">
+        <h2>Reputazione: si dichiara o si documenta?</h2>
+        <p class="intro-p">Dire di essere esperto di qualcosa è un'affermazione. Collegarla a talk, pubblicazioni, progetti e ruoli verificabili è una prova. I sistemi AI, come le persone competenti, danno peso alla seconda.</p>
+        <p>Il lavoro non è scrivere una bio migliore, ma costruire il paniere di evidenze che la sostiene e renderlo leggibile. La reputazione smette di essere una questione di parole e diventa una questione di fonti.</p>
+      </div>
+
+      <div class="manifesto-box" style="margin-top: 3.5rem; margin-bottom: 5.5rem;">
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem;">Il percorso di identità semantica per i professionisti</h2>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--text-muted); margin: 0 0 1.75rem; max-width: 720px;">Il valore non sta nel codice finale, ma nelle decisioni che lo precedono. Si parte da cosa raccontare e si arriva alla sintassi, mai il contrario.</p>
+        <div class="manifesto-grid">
+          <div>
+            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 1: Cosa vuoi che si sappia</h3>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">AI Exposure Audit & strategia</span>
+            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">Prima del codice viene una decisione. Mappo come ti raccontano oggi i sistemi AI e definisco con te la versione da affermare: cosa deve sapere di te chi non ti conosce, e perché. La storia si sceglie qui, non si rincorre dopo.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 2: Il paniere di informazioni</h3>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">Recupero e verifica fonti</span>
+            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">È il lavoro vero. Recupero e verifico le fonti che reggono ogni affermazione: credenziali, pubblicazioni, talk, progetti, ruoli, date. Decido con te cosa entra, cosa resta fuori, cosa è davvero dimostrabile. Un'identità non si dichiara, si documenta.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 3: La tessitura delle entità</h3>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">Entity linking a voci esistenti</span>
+            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">Nessuno esiste da solo. Collego la tua entità a quelle già verificate a cui sei legato: persone con cui hai lavorato, atenei, organizzazioni di cui fai parte, pubblicazioni. Il significato di chi sei nasce dalle relazioni, ed è questo che un sistema AI legge per collocarti.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 4: Implementazione e presidio</h3>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">JSON-LD, Schema.org, monitoraggio</span>
+            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">Solo a questo punto traduco le decisioni in JSON-LD e dati strutturati, e tengo l'infrastruttura viva nel tempo. La sintassi è l'ultimo passo, non il lavoro: se potesse generarla un plugin, vorrebbe dire che le scelte a monte non erano state fatte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="band">
+    <div class="inner">
+      <section aria-labelledby="faq-h" style="max-width: 760px; margin-bottom: 4rem;">
+        <span class="tag">FAQ</span>
+        <h2 id="faq-h">Domande frequenti</h2>
+        <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+          <div>
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text);">Mi crei una pagina Wikidata?</h3>
+            <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin: 0;">Quasi mai, e non perché non si possa: Wikidata richiede notabilità, e una voce creata su una persona non notabile viene rimossa. Il lavoro è collegare la tua entità alle voci che esistono già (temi, atenei, organizzazioni) e ai tuoi profili autorevoli. Più onesto e più efficace.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text);">Funziona se non sono una persona famosa?</h3>
+            <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin: 0;">Sì. Non serve essere notabili per essere leggibili, serve essere ancorati a riferimenti verificabili. È proprio chi non ha grande copertura online a guadagnare di più dalla disambiguazione.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text);">Devo avere già un sito?</h3>
+            <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin: 0;">Aiuta, ma non è indispensabile. Si può lavorare sui canali che controlli e su una entità ben strutturata. Un sito tuo resta però il punto d'ancoraggio più solido nel tempo.</p>
+          </div>
+          <div>
+            <h3 style="font-family: 'IBM Plex Serif', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text);">Come capisco se sta funzionando?</h3>
+            <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin: 0;">Si chiede ai principali sistemi AI chi sei e cosa fai, prima e dopo, e si osserva come cambia la risposta: accuratezza, completezza, assenza di confusioni con omonimi.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links" style="display: flex; gap: 2rem;">
+        <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fprofessionisti.html" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
