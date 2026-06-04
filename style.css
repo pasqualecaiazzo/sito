@@ -122,6 +122,8 @@
       text-decoration: none;
       letter-spacing: 0.05em;
       position: relative;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .nav-name::after {
@@ -136,6 +138,7 @@
       display: flex;
       gap: 1.25rem;
       align-items: center;
+      flex-shrink: 0;
     }
 
     .nav-link {
@@ -148,6 +151,8 @@
       padding: 0.35rem 0.65rem;
       border-radius: 20px;
       transition: all 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .nav-link:hover, .nav-link.active {
       color: var(--text);
@@ -231,6 +236,8 @@
       padding: 0.45rem 1rem;
       border-radius: 20px;
       transition: background 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .nav-btn-linkedin:hover {
       background: var(--btn-hover);
@@ -1156,7 +1163,27 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 1025px) and (max-width: 1240px) {
+      nav {
+        padding: 0.75rem 1.5rem;
+      }
+      .nav-left {
+        gap: 0.75rem;
+      }
+      .nav-anchors {
+        gap: 0.5rem;
+      }
+      .nav-link {
+        font-size: 0.72rem;
+        padding: 0.25rem 0.45rem;
+      }
+      .nav-btn-linkedin {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.7rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
       /* Full-width nav bar — no pill, no gaps */
       nav {
         left: 0;
@@ -1440,7 +1467,7 @@
     }
 
 /* ── HAMBURGER OVERRIDE (fine file, massima priorità cascade) ── */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #nav-toggle {
     display: flex !important;
     visibility: visible !important;
