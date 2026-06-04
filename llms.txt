@@ -52,8 +52,6 @@ VAT ID: IT01712990058
 Articles on semantic architecture, structured data and narrative sovereignty in AI systems. Author: Pasquale Caiazzo.
 - https://pasqualecaiazzo.com/note/geo-terzo-settore.html
   "GEO per il terzo settore: come un'associazione si fa trovare dall'AI" - 2026-06-03. Why third-sector organizations are nearly invisible to AI systems, and what it takes for their mission and activities to be described and cited accurately.
-- https://pasqualecaiazzo.com/note/geo-generative-engine-optimization.html
-  "GEO: come farsi citare dai sistemi AI (e perché non è SEO)" — 2026-06-03. What Generative Engine Optimization is, how it differs from SEO, and which structural choices make content citable by a language model.
 
 ## Identity & Verification
 - Website: https://pasqualecaiazzo.com
