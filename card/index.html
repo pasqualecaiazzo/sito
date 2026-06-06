@@ -178,6 +178,117 @@
     letter-spacing: 0.06em;
     color: var(--muted);
   }
+
+  /* ── mobile optimizations (fullscreen, fixed, no scroll) ── */
+  @media (max-width: 480px) {
+    html, body {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      overflow: hidden;
+      position: fixed;
+    }
+
+    body {
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      max-width: none;
+      border: none;
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-header {
+      padding: 16px 20px 14px;
+      flex-shrink: 0;
+    }
+
+    .card-qr {
+      padding: 16px 20px 0;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .qr-wrapper {
+      padding: 8px;
+      border-radius: 8px;
+    }
+    .qr-wrapper img {
+      width: 140px;
+      height: 140px;
+    }
+
+    .btn-contact {
+      margin: 12px 20px;
+      padding: 11px 0;
+      font-size: 0.74rem;
+      flex-shrink: 0;
+    }
+
+    .divider {
+      margin: 0 20px;
+      flex-shrink: 0;
+    }
+
+    .card-contacts {
+      padding: 16px 20px;
+      gap: 12px;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      overflow: hidden;
+    }
+    
+    .contact-row {
+      gap: 10px;
+    }
+    .contact-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+    }
+    .contact-icon svg {
+      width: 13px;
+      height: 13px;
+    }
+    .contact-value {
+      font-size: 0.7rem;
+    }
+
+    .card-footer {
+      padding: 10px 20px;
+      flex-shrink: 0;
+    }
+  }
+
+  /* ── safety scale for very short screens (e.g. iPhone SE) ── */
+  @media (max-width: 480px) and (max-height: 667px) {
+    .card-qr {
+      padding: 10px 20px 0;
+    }
+    .qr-wrapper img {
+      width: 110px;
+      height: 110px;
+    }
+    .btn-contact {
+      margin: 8px 20px;
+      padding: 9px 0;
+    }
+    .card-contacts {
+      padding: 10px 20px;
+      gap: 8px;
+    }
+  }
 </style>
 </head>
 <body>
