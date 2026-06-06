@@ -354,7 +354,7 @@
     <div class="qr-wrapper">
       <img id="qr" alt="QR contatto" src="">
     </div>
-    <div class="qr-caption">Inquadra per salvare il contatto</div>
+    <div class="qr-caption">Inquadra per visualizzare la card</div>
   </div>
 
   <!-- add contact button -->
@@ -445,11 +445,11 @@
 </div>
 
 <script>
-// QR punta all'URL del vcf — QR piccolo e facile da scansionare
-const vcfUrl = 'https://pasqualecaiazzo.com/card/pasquale-caiazzo.vcf';
+// Il QR code punta alla pagina stessa della card
+const cardUrl = window.location.href;
 document.getElementById('qr').src =
   'https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=0&data=' +
-  encodeURIComponent(vcfUrl);
+  encodeURIComponent(cardUrl);
 </script>
 
 </body>
