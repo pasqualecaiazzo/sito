@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="../favicon.png">
-<title>Come far comparire la tua azienda nelle risposte dell'AI – Pasquale Caiazzo</title>
+<title>AI Search per le aziende: GEO e dati strutturati – Pasquale Caiazzo</title>
 <meta name="description" content="Come far comparire la tua azienda nelle risposte di ChatGPT, Perplexity e Gemini: GEO, dati strutturati e knowledge graph per PMI e imprese locali.">
 <link rel="canonical" href="https://pasqualecaiazzo.com/note/ai-search-aziende.html">
 <meta name="robots" content="index, follow">
@@ -16,14 +16,16 @@
 <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
 <meta property="article:published_time" content="2026-06-04">
 <meta property="article:modified_time" content="2026-06-06">
 <meta property="article:author" content="Pasquale Caiazzo">
 <meta name="author" content="Pasquale Caiazzo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Come far comparire la tua azienda nelle risposte dell'AI">
+<meta name="twitter:title" content="AI Search per le aziende: GEO e dati strutturati">
 <meta name="twitter:description" content="Cosa serve perché un'azienda venga trovata e citata correttamente nelle risposte generate dall'AI.">
 <meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta name="twitter:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
 
 <script type="application/ld+json">
 {
@@ -62,8 +64,39 @@
       ],
       "mentions": [
         { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
-        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" }
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
+        { "@type": "SoftwareApplication", "name": "ChatGPT", "sameAs": "https://www.wikidata.org/wiki/Q116756101" },
+        { "@type": "SoftwareApplication", "name": "Perplexity AI", "sameAs": "https://www.wikidata.org/wiki/Q117251938" },
+        { "@type": "SoftwareApplication", "name": "Gemini", "sameAs": "https://www.wikidata.org/wiki/Q120330040" },
+        { "@type": "DefinedTerm", "name": "Local Business", "sameAs": "https://schema.org/LocalBusiness" },
+        { "@type": "DefinedTerm", "name": "Schema.org", "sameAs": "https://www.wikidata.org/wiki/Q5628774" }
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "jobTitle": "Semantic Entity Architect",
+      "sameAs": [
+        "https://www.linkedin.com/in/pasqualecaiazzo/",
+        "https://github.com/pasqualecaiazzo"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/favicon.png" }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://pasqualecaiazzo.com/note/#blog",
+      "name": "Note – Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com/note/",
+      "description": "Analisi e riflessioni su AI search, semantic entity architecture e GEO.",
+      "inLanguage": "it"
     },
     {
       "@type": "WebPage",
@@ -173,7 +206,7 @@
 
         <p class="article-tldr">
           <strong>In breve</strong>
-          Per una quota crescente di clienti il primo contatto con un'azienda non è più una ricerca su Google, ma una domanda a un assistente AI. Comparire in quella risposta non si compra con il budget pubblicitario: si costruisce rendendo leggibili e verificabili i dati dell'impresa, dall'identità societaria all'offerta, e collegandoli alle entità giuste. È un lavoro di struttura, non di contenuto.
+          Per una quota crescente di clienti il primo contatto con un'azienda non è più Google, ma un assistente AI. Comparire in quella risposta non si compra: si costruisce rendendo leggibili e verificabili i dati dell'impresa, collegandoli alle entità giuste. È un lavoro di struttura, non di contenuto.
         </p>
 
         <div class="prose">
@@ -241,7 +274,7 @@
             C'è un livello tecnico che conviene rendere esplicito, perché è dove molti interventi generici si fermano. Schema.org prevede tipi specifici per le imprese, e usarli bene cambia il modo in cui l'azienda viene interpretata.
           </p>
           <p>
-            Il tipo base è Organization, ma per chi ha una sede fisica conta LocalBusiness, con address, openingHours e areaServed. L'offerta si descrive con Product, Service e Offer, collegando prezzi e disponibilità; brand identifica il marchio; makesOffer lega l'azienda a ciò che vende; sameAs la collega ai profili e ai registri ufficiali. La reputazione, dove esiste in modo verificabile, si aggancia con aggregateRating e con subjectOf per la stampa.
+            Il tipo base è <a href="https://schema.org/Organization" target="_blank" rel="noopener noreferrer">Organization</a>, ma per chi ha una sede fisica conta <a href="https://schema.org/LocalBusiness" target="_blank" rel="noopener noreferrer">LocalBusiness</a>, con address, openingHours e areaServed. L'offerta si descrive con <a href="https://schema.org/Product" target="_blank" rel="noopener noreferrer">Product</a>, Service e Offer, collegando prezzi e disponibilità; brand identifica il marchio; makesOffer lega l'azienda a ciò che vende; sameAs la collega ai profili e ai registri ufficiali. La reputazione, dove esiste in modo verificabile, si aggancia con aggregateRating e con subjectOf per la stampa.
           </p>
           <p>
             Non è completezza fine a sé stessa: ogni proprietà verificabile è un appiglio in più che riduce l'ambiguità. La scelta di quali campi valorizzare, e con quali fonti riempirli, è il lavoro che un plugin non sa fare.
@@ -321,7 +354,7 @@
 
           <h2>Perché conviene muoversi adesso</h2>
           <p>
-            Le ricerche tramite assistenti AI crescono in fretta, e in molti settori l'infrastruttura dati delle aziende è ancora povera. Vuol dire che chi struttura la propria presenza adesso diventa uno dei pochi riferimenti chiari per un prodotto, un servizio o un territorio.
+            Le ricerche tramite assistenti AI crescono a una velocità che pochi settori hanno ancora misurato. <a href="https://openai.com" target="_blank" rel="noopener noreferrer">ChatGPT</a> ha raggiunto 900 milioni di utenti attivi settimanali nel febbraio 2026, il doppio rispetto ai 400 milioni dell'anno precedente; il traffico complessivo verso le piattaforme AI è cresciuto di sette volte tra il 2024 e il 2025 (fonte: <a href="https://seranking.com/blog/ai-statistics/" target="_blank" rel="noopener noreferrer">SE Ranking</a>). In molti settori l'infrastruttura dati delle aziende è ancora povera. Vuol dire che chi struttura la propria presenza adesso diventa uno dei pochi riferimenti chiari per un prodotto, un servizio o un territorio.
           </p>
           <p>
             E gli ancoraggi a fonti verificabili non si consumano, si depositano e si rinforzano nel tempo. Arrivare presto significa essere l'azienda già leggibile quando i concorrenti cominceranno a esserlo, in una posizione difficile da scalzare.

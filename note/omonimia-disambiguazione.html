@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="../favicon.png">
-<title>Perché un'AI ti scambia per un altro: omonimia e disambiguazione – Pasquale Caiazzo</title>
+<title>Omonimia e AI: costruire un'identità verificabile – Pasquale Caiazzo</title>
 <meta name="description" content="Perché i sistemi AI confondono persone omonime e come la disambiguazione semantica costruisce un'identità verificabile e distinta per i modelli AI.">
 <link rel="canonical" href="https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html">
 <meta name="robots" content="index, follow">
@@ -16,14 +16,16 @@
 <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
 <meta property="article:published_time" content="2026-06-04">
 <meta property="article:modified_time" content="2026-06-06">
 <meta property="article:author" content="Pasquale Caiazzo">
 <meta name="author" content="Pasquale Caiazzo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Perché un'AI ti scambia per un altro: omonimia e disambiguazione">
+<meta name="twitter:title" content="Omonimia e AI: costruire un'identità verificabile">
 <meta name="twitter:description" content="Perché i sistemi AI confondono persone omonime, e come la disambiguazione semantica costruisce un'identità distinta.">
 <meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta name="twitter:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
 
 <script type="application/ld+json">
 {
@@ -62,8 +64,37 @@
       ],
       "mentions": [
         { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
-        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" }
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
+        { "@type": "Organization", "name": "ORCID", "url": "https://orcid.org", "sameAs": "https://www.wikidata.org/wiki/Q51044" },
+        { "@type": "Thing", "name": "Wikidata", "sameAs": "https://www.wikidata.org/wiki/Q2013" },
+        { "@type": "DefinedTerm", "name": "Schema.org Person", "url": "https://schema.org/Person" }
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "jobTitle": "Semantic Entity Architect",
+      "sameAs": [
+        "https://www.linkedin.com/in/pasqualecaiazzo/",
+        "https://github.com/pasqualecaiazzo"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/favicon.png" }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://pasqualecaiazzo.com/note/#blog",
+      "name": "Note – Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com/note/",
+      "description": "Analisi e riflessioni su AI search, semantic entity architecture e GEO.",
+      "inLanguage": "it"
     },
     {
       "@type": "WebPage",
@@ -268,7 +299,10 @@
 
           <h2>Il caso dei ricercatori e degli autori</h2>
           <p>
-            Per chi pubblica, il problema è più acuto e la soluzione più matura. Un ricercatore con un cognome diffuso vede le proprie citazioni divise tra più profili, o mescolate con quelle di un omonimo in un altro campo. Identificatori come ORCID nascono esattamente per questo: dare a ogni autore un riferimento univoco a cui legare la propria produzione.
+            Per chi pubblica, il problema è più acuto e la soluzione più matura. Un ricercatore con un cognome diffuso vede le proprie citazioni divise tra più profili, o mescolate con quelle di un omonimo in un altro campo. Identificatori come <a href="https://orcid.org" target="_blank" rel="noopener noreferrer">ORCID</a> nascono esattamente per questo: dare a ogni autore un riferimento univoco a cui legare la propria produzione.
+          </p>
+          <p>
+            A oggi ORCID ha emesso oltre 20 milioni di identificativi a ricercatori in ogni paese e disciplina; dal luglio 2025 il NIH degli Stati Uniti richiede un ORCID per tutti i ricercatori senior che richiedono finanziamenti federali (fonte: <a href="https://scholarlykitchen.sspnet.org/2025/07/16/better-together-orcid-and-other-researcher-identifiers/" target="_blank" rel="noopener noreferrer">Scholarly Kitchen</a>). È il segnale più chiaro di quanto il problema della disambiguazione sia ormai sistemico, e di quanto la soluzione non sia più un'eccentricità accademica.
           </p>
           <p>
             Collegare l'entità a un ORCID, alle pubblicazioni e agli enti di ricerca trasforma un nome ambiguo in un'identità accademica tracciabile. È uno dei casi in cui la disambiguazione semantica ha l'effetto più immediato e misurabile.
@@ -276,7 +310,7 @@
 
           <h2>Wikidata: serve una voce su di te?</h2>
           <p>
-            Arriva la domanda inevitabile: devo avere una voce su Wikidata? Quasi sempre no. Wikidata richiede notabilità, e una voce creata su una persona non notabile viene rimossa, con un effetto controproducente.
+            Arriva la domanda inevitabile: devo avere una voce su <a href="https://www.wikidata.org" target="_blank" rel="noopener noreferrer">Wikidata</a>? Quasi sempre no. Wikidata richiede notabilità, e una voce creata su una persona non notabile viene rimossa, con un effetto controproducente.
           </p>
           <p>
             Il valore, di nuovo, sta nel collegamento, non nella creazione. Puoi ancorare la tua entità alle voci che esistono già: il tuo ateneo, le organizzazioni di cui fai parte, i temi di cui ti occupi. Una voce dedicata su di te ha senso solo se e quando la notabilità è reale e verificabile. Fino ad allora, forzarla è tempo perso.
@@ -326,6 +360,12 @@
           <p>
             Il primo passo è sempre lo stesso: chiedere ai sistemi AI chi sei oggi, e guardare cosa è corretto, cosa manca e cosa appartiene a qualcun altro. Da quella fotografia si capisce quanto l'omonimia ti sta costando, e da dove conviene cominciare.
           </p>
+          <p>Tre azioni concrete, in ordine:</p>
+          <ul>
+            <li><strong>Testa la tua visibilità.</strong> Interroga <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">ChatGPT</a>, <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">Perplexity</a> e Gemini con il tuo nome, da solo e con il contesto professionale. Annota chi compari, cosa ti viene attribuito, e se c'è confusione con un omonimo.</li>
+            <li><strong>Identifica i tuoi ancoraggi reali.</strong> Quali profili, affiliazioni e opere puoi citare come prove verificabili? Sono raggiungibili con un URL stabile? Parti da quelli che esistono già.</li>
+            <li><strong>Struttura un'entità minima.</strong> Un markup <a href="https://schema.org/Person" target="_blank" rel="noopener noreferrer">Person</a> con sameAs verso i profili ufficiali è spesso sufficiente per avviare la disambiguazione. Il resto si costruisce sopra.</li>
+          </ul>
 
           <div class="article-cta">
             <p class="lead">Lavoro con professionisti, consulenti e autori per costruire un'identità semantica che i sistemi AI leggono e citano senza confonderla con quella di altri.</p>
