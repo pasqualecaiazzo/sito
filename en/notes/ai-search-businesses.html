@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<title>AI Search for Businesses: GEO and Structured Data – Pasquale Caiazzo</title>
+<meta name="description" content="How to make your business appear in ChatGPT, Perplexity, and Gemini responses: GEO, structured data, and knowledge graph for SMEs and local businesses.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html">
+<link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/ai-search-aziende.html">
+<link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html">
+<link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/ai-search-aziende.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Make Your Business Appear in AI Responses">
+<meta property="og:description" content="Why customers look for suppliers and solutions by asking AI, and what a business needs to be found and cited correctly.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+<meta property="article:published_time" content="2026-06-04">
+<meta property="article:modified_time" content="2026-06-06">
+<meta property="article:author" content="Pasquale Caiazzo">
+<meta name="author" content="Pasquale Caiazzo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Search for Businesses: GEO and Structured Data">
+<meta name="twitter:description" content="What a business needs to be found and cited correctly in AI-generated responses.">
+<meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta name="twitter:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html#article",
+      "url": "https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html",
+      "headline": "How to Make Your Business Appear in AI Responses",
+      "description": "Why customers look for suppliers and solutions by asking ChatGPT, Perplexity, and Gemini, and what a business needs to be found and cited correctly in AI-generated responses.",
+      "inLanguage": "en",
+      "datePublished": "2026-06-04",
+      "dateModified": "2026-06-06",
+      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
+      "publisher": { "@id": "https://pasqualecaiazzo.com/#publisher" },
+      "mainEntityOfPage": { "@id": "https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html#webpage" },
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/en/notes/#blog" },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+        "width": 1200,
+        "height": 1200
+      },
+      "articleSection": "Notes",
+      "wordCount": 2100,
+      "keywords": [
+        "AI search", "GEO", "SMEs", "businesses", "answer engines",
+        "structured data", "Schema.org", "RAG", "knowledge graph", "Wikidata"
+      ],
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".article-tldr"] },
+      "about": [
+        { "@type": "DefinedTerm", "name": "Generative Engine Optimization", "sameAs": "https://www.wikidata.org/wiki/Q134083964" },
+        { "@type": "DefinedTerm", "name": "Retrieval-Augmented Generation", "sameAs": "https://www.wikidata.org/wiki/Q121362277" },
+        { "@type": "DefinedTerm", "name": "AI Readiness", "sameAs": "https://www.wikidata.org/wiki/Q138646003" }
+      ],
+      "mentions": [
+        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
+        { "@type": "SoftwareApplication", "name": "ChatGPT", "sameAs": "https://www.wikidata.org/wiki/Q116756101" },
+        { "@type": "SoftwareApplication", "name": "Perplexity AI", "sameAs": "https://www.wikidata.org/wiki/Q117251938" },
+        { "@type": "SoftwareApplication", "name": "Gemini", "sameAs": "https://www.wikidata.org/wiki/Q120330040" },
+        { "@type": "DefinedTerm", "name": "Local Business", "sameAs": "https://schema.org/LocalBusiness" },
+        { "@type": "DefinedTerm", "name": "Schema.org", "sameAs": "https://www.wikidata.org/wiki/Q5628774" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "jobTitle": "Semantic Entity Architect",
+      "sameAs": [
+        "https://www.linkedin.com/in/pasqualecaiazzo/",
+        "https://github.com/pasqualecaiazzo"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/favicon.png" }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://pasqualecaiazzo.com/en/notes/#blog",
+      "name": "Notes – Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com/en/notes/",
+      "description": "Analysis and reflections on AI search, semantic entity architecture, and GEO.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html#webpage",
+      "url": "https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html",
+      "name": "How to Make Your Business Appear in AI Responses",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
+      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html#breadcrumb" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg" },
+      "dateModified": "2026-06-06"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Notes", "item": "https://pasqualecaiazzo.com/en/notes/" },
+        { "@type": "ListItem", "position": 3, "name": "AI search for businesses", "item": "https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="../../main.js" defer></script>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<nav aria-label="Main navigation">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-name">Pasquale Caiazzo</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+    </button>
+    <div class="lang-toggle"><a href="/note/ai-search-aziende.html" hreflang="it" class="lang-link">IT</a><span class="lang-sep">·</span><span class="lang-current">EN</span></div>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-toggle-text">Menu</span>
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <button id="drawer-close" class="drawer-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-content">
+    <div class="nav-anchors">
+      <a href="../index.html#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">About</span></a>
+      <a href="../professionals.html" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">For Professionals</span></a>
+      <a href="../smes.html" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">For SMEs</span></a>
+      <a href="../impact.html" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">For Nonprofits &amp; B Corps</span></a>
+      <a href="../manifesto.html" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+      <a href="index.html" class="nav-link active"><span class="drawer-num">06</span> <span class="drawer-text">Notes</span></a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-meta">
+        <h3>Contact &amp; Resources</h3>
+        <p>Based in Turin &bull; Available for remote projects</p>
+        <p>Enquiries: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Book a 30-min call ↗</a></p>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+<main>
+  <div class="band hero-band">
+    <div class="inner">
+      <article class="article-wrap">
+        <a href="index.html" class="article-back">← Notes</a>
+        <span class="tag">SMEs</span>
+        <h1 class="article-title">How to Make Your Business Appear in AI Responses</h1>
+        <div class="article-meta">
+          <span>Pasquale Caiazzo</span>
+          <span class="sep">/</span>
+          <time datetime="2026-06-04">4 June 2026</time>
+          <span class="sep">/</span>
+          <span>10 min read</span>
+        </div>
+
+        <p class="article-tldr">
+          <strong>In brief</strong>
+          For a growing share of customers, the first contact with a business is no longer Google, but an AI assistant. Appearing in that response can't be bought: it's built by making company data readable and verifiable, linking it to the right entities. It's structural work, not content work.
+        </p>
+
+        <div class="prose">
+          <h2>The first contact with your business is no longer your website</h2>
+          <p>
+            For a growing share of customers, the first encounter with a business no longer involves a Google search and a click on its website. It starts with a question to an AI assistant: who offers this service in my area, what's the best product for this problem, what does this company do? The answer arrives already composed, often without the person visiting any page.
+          </p>
+          <p>
+            That means the decision is formed before the website. If the business doesn't appear in that response — or appears with inaccurate data — a large part of the work is already lost, and the business may not even notice: there's no missed click to measure, just an opportunity that never existed.
+          </p>
+
+          <h2>A concrete example</h2>
+          <p>
+            A business makes bespoke office furniture. A potential client asks an AI assistant who makes office furniture in their county. If the business exists online only with an unstructured brochure site and a few social profiles, the response cites more readable competitors — perhaps less suitable ones — and ignores it.
+          </p>
+          <p>
+            Then I try asking directly about the company, by name. The model, finding fragmented data, gets the location wrong, attributes products it doesn't make, or cites an invented price list. For someone evaluating a supplier, those inaccuracies weigh as much as an absence.
+          </p>
+
+          <h2>What an answer engine actually reads</h2>
+          <p>
+            An answer engine doesn't browse pages the way old search engines did, counting keywords and links. It composes the response by extracting relationships from sources it can interpret reliably: who the company is, what it offers, where it operates, which verifiable entities it's connected to.
+          </p>
+          <p>
+            If this information lives only in free text, images, and PDFs, the model has to guess. If it's declared in structured form, it reads it as fact. The difference between being cited or ignored almost always comes down to this: not how much you write, but how readable you are.
+          </p>
+
+          <h2>Beyond the website: where AI looks for business data</h2>
+          <p>
+            A common mistake is thinking the website is enough. A model draws from many more sources: Google Business Profile, public registries, industry directories, marketplaces, and review platforms. The picture it builds is the sum of all these traces.
+          </p>
+          <p>
+            That's why consistency matters. If the company name, address, or category differs across sources, the model struggles to build a single coherent picture and tends to pick the most frequent version, not the correct one. Aligning and linking these presences — starting from the website as the authoritative source — is as much a part of the work as the markup itself.
+          </p>
+
+          <h2>Why classic SEO is no longer enough</h2>
+          <p>
+            SEO was built for a world of lists: you optimise to rank higher in the results, and the user chooses. Answer engines skip the list and compose a response directly. Being first on Google no longer guarantees appearing in that synthesis — and sometimes doesn't even guarantee a click, because the person has already got what they were looking for.
+          </p>
+          <p>
+            That doesn't make SEO useless, it means it operates on a different plane. Visibility in answer engines isn't won with the same levers: it's built in the data infrastructure, not just in content.
+          </p>
+
+          <h2>Three fronts for a business</h2>
+          <p>For a company, the work plays out on three distinct fronts.</p>
+          <ul>
+            <li><strong>Being cited (GEO).</strong> Ensuring brand, products, and services appear in responses when a customer searches for a solution, not a keyword.</li>
+            <li><strong>Protecting brand integrity.</strong> Preventing models from inventing company data, addresses, prices, or characteristics, by anchoring information to stable sources.</li>
+            <li><strong>Preparing internal data.</strong> Organising catalogues, manuals, and procedures so they can feed a reliable in-house AI assistant.</li>
+          </ul>
+
+          <h2>What data to expose, in practice</h2>
+          <p>The practical question is what to make readable. For a business, the data that matters is what identifies it and qualifies its offering unambiguously.</p>
+          <ul>
+            <li><strong>Company identity:</strong> exact legal name, VAT or company registration number, locations, contacts, geographic area served.</li>
+            <li><strong>Offering:</strong> products and services, with categories, characteristics, and where relevant, prices and availability.</li>
+            <li><strong>Evidence and context:</strong> certifications, sectors served, client cases, partners, and accolades that give the offering credibility.</li>
+          </ul>
+          <p>
+            Translated into structured markup, these data points stop being text to interpret and become declared facts that an answer engine can cite without margin for error.
+          </p>
+
+          <h2>Schema.org for businesses: the types that matter</h2>
+          <p>
+            There's a technical level worth making explicit, because this is where many generic interventions fall short. Schema.org provides specific types for businesses, and using them well changes how the company is interpreted.
+          </p>
+          <p>
+            The base type is <a href="https://schema.org/Organization" target="_blank" rel="noopener noreferrer">Organization</a>, but for businesses with a physical presence, <a href="https://schema.org/LocalBusiness" target="_blank" rel="noopener noreferrer">LocalBusiness</a> matters — with address, openingHours, and areaServed. The offering is described with <a href="https://schema.org/Product" target="_blank" rel="noopener noreferrer">Product</a>, Service, and Offer, linking prices and availability; brand identifies the trademark; makesOffer connects the company to what it sells; sameAs connects it to official profiles and registries. Reputation, where it exists in verifiable form, is attached with aggregateRating and subjectOf for press coverage.
+          </p>
+          <p>
+            It's not completeness for its own sake: every verifiable property is one more anchor that reduces ambiguity. Choosing which fields to populate, and with which sources, is the work that a plugin cannot do.
+          </p>
+
+          <h2>The local business case</h2>
+          <p>
+            For a local business the stakes are even more concrete. When someone asks an AI assistant for a supplier, a shop, or a service in a given area, appearing correctly is worth more than many ad campaigns. That's a customer with a precise intent, in the right location, at the moment of decision.
+          </p>
+          <p>
+            What matters here is the consistency of contact and location data across all sources, correct categorisation as a local business, and connection to the territory. It's precisely small businesses that gain most, because they're often the least structured and therefore the most invisible to a model.
+          </p>
+
+          <h2>Products and catalogues: the e-commerce case</h2>
+          <p>
+            For businesses that sell products, the point becomes even more concrete. An AI assistant recommending an item for a specific need can only cite that product if it's described in structured form: category, characteristics, price, availability, identifiers.
+          </p>
+          <p>
+            Structuring the catalogue with Product and Offer types, and linking it to a clear brand and company, means making every item a candidate to be recommended. An unreadable catalogue, by contrast, exists only for those who already arrive at the site: for an answer engine, the products might as well not exist.
+          </p>
+
+          <h2>Brand integrity: when AI invents data about your business</h2>
+          <p>
+            An underappreciated risk is hallucination about company data. A model, lacking clear sources, may attribute a wrong address, a location closed for years, a non-existent price, or a product feature that doesn't match. Not malice — just the normal behaviour of a system filling gaps.
+          </p>
+          <p>
+            The damage is real: a customer who receives inaccurate information attributes it to the company, not the model. Anchoring data to stable, verifiable sources reduces that margin and removes the space models have to invent.
+          </p>
+
+          <h2>The other half: your internal data and RAG</h2>
+          <p>
+            External visibility is only half the value. The same structured knowledge that makes a business readable to public engines can feed an internal assistant: a system that answers customer or colleague queries by drawing on verified catalogues, manuals, and procedures rather than guessing.
+          </p>
+          <p>
+            This is the RAG principle applied to business. The better organised and linked the internal data, the more precise the responses and the less prone to hallucination. The infrastructure built to be found also becomes the backbone of company knowledge.
+          </p>
+
+          <h2>Companies House, Wikidata, and open registers: does your business need an entry?</h2>
+          <p>
+            The Wikidata question is inevitable. For a business the same rule applies as for a person: a dedicated entry makes sense, and is valuable, only where there's verifiable notability — press coverage, industry recognition. Forcing one without those conditions leads to removal.
+          </p>
+          <p>
+            In most cases the value lies in connection: anchoring the business to already-existing entries for its sector, territory, partners, and trade associations. These links give a model a way to place and distinguish it from businesses with similar names.
+          </p>
+
+          <h2>This isn't advertising, and it isn't social media</h2>
+          <p>
+            It's worth clarifying what this work is not. It's not advertising: no space is bought, and the result doesn't disappear when you stop paying. It's not social media management: there's no posting schedule to maintain to feed a feed algorithm.
+          </p>
+          <p>
+            It's a structural operation: making a company's data readable and verifiable once, so it stays that way over time. Campaigns bring traffic today; this work builds an asset that keeps working tomorrow, on a channel — answer engines — that campaigns don't reach.
+          </p>
+
+          <h2>Three mistakes I see often</h2>
+          <p>Three recurring beliefs cost businesses visibility.</p>
+          <ul>
+            <li><strong>Thinking advertising is enough.</strong> Campaigns bring traffic while you're paying, but they don't make the business readable or citable by a model. They're different levers.</li>
+            <li><strong>Relying on a generic SEO plugin.</strong> It adds standard markup, but it doesn't know what distinguishes your offering, which data to highlight, or which entities to connect to. The markup comes out; the meaning doesn't.</li>
+            <li><strong>Believing the website is sufficient.</strong> A well-designed site that isn't structured remains, for a model, text to interpret. Readability isn't a design question.</li>
+          </ul>
+
+          <h2>When a business is ready, and when it isn't</h2>
+          <p>
+            The timing isn't always right. If the business has a clear offering, stable locations, and consistent data, the work pays off immediately. If the positioning is still fuzzy, or the offering keeps changing, it's better to establish that clarity first: structuring uncertain data only makes it more readable, not more convincing.
+          </p>
+          <p>
+            The signal that the moment has arrived is simple: when customers start citing AI responses in their decisions, or when a query shows the business is absent or misdescribed, the cost of invisibility is already running.
+          </p>
+
+          <h2>How to measure it</h2>
+          <p>
+            This kind of work needs measuring, and it's done with the same tools customers use. Before intervening, I take a baseline: I put a set of relevant questions to the main AI systems and note the responses — by company name, by product category, by area. For example: who offers a service in a city, what does a certain company produce, which businesses work in a sector.
+          </p>
+          <p>
+            After the intervention I repeat the same questions and compare. Does the company appear where it was absent? Are company and product data correct? Has confusion with competitors or similarly-named businesses disappeared? It's a verifiable comparison, to be repeated over time, because models update.
+          </p>
+
+          <h2>Why it makes sense to move now</h2>
+          <p>
+            Searches via AI assistants are growing at a pace few sectors have fully measured. <a href="https://openai.com" target="_blank" rel="noopener noreferrer">ChatGPT</a> reached 900 million weekly active users in February 2026, double the 400 million of the previous year; total traffic to AI platforms grew sevenfold between 2024 and 2025 (source: <a href="https://seranking.com/blog/ai-statistics/" target="_blank" rel="noopener noreferrer">SE Ranking</a>). In many sectors, the data infrastructure of businesses is still poor. That means whoever structures their presence now becomes one of the few clear reference points for a product, service, or territory.
+          </p>
+          <p>
+            And anchors to verifiable sources don't wear out — they accumulate and strengthen over time. Moving early means being the already-readable business when competitors start catching up: a position that's hard to displace.
+          </p>
+
+          <h2>Where to start</h2>
+          <p>Three concrete steps, in order:</p>
+          <ul>
+            <li><strong>Test your visibility.</strong> Ask ChatGPT, Perplexity, and Gemini about your business — by name, by product category, by area. Note what appears, what's wrong, and what's missing.</li>
+            <li><strong>Align your data across sources.</strong> Make sure your legal name, address, category, and core offering are consistent across your website, Google Business Profile, industry directories, and any other platforms where you're listed.</li>
+            <li><strong>Structure a minimum entity.</strong> An <a href="https://schema.org/Organization" target="_blank" rel="noopener noreferrer">Organization</a> or <a href="https://schema.org/LocalBusiness" target="_blank" rel="noopener noreferrer">LocalBusiness</a> markup with sameAs links to official profiles is often enough to dramatically improve how models describe you. Everything else is built on top.</li>
+          </ul>
+
+          <div class="article-cta">
+            <p class="lead">I work with small and medium-sized businesses to make their brand, products, and data readable and citable by AI answer engines.</p>
+            <div class="cta-group">
+              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Book a call ↗</a>
+              <a href="../smes.html" class="cta-btn cta-btn-outline">For SMEs →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Turin<br>
+        VAT IT01712990058
+      </div>
+      <div class="footer-links">
+        <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fnote%2Fai-search-aziende.html" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
