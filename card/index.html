@@ -212,6 +212,9 @@
       padding: 16px 20px 14px;
       flex-shrink: 0;
     }
+    .card-title {
+      font-size: 0.68rem;
+    }
 
     .card-qr {
       padding: 16px 20px 0;
@@ -226,11 +229,14 @@
       width: 140px;
       height: 140px;
     }
+    .qr-caption {
+      font-size: 0.62rem;
+    }
 
     .btn-contact {
       margin: 12px 20px;
-      padding: 11px 0;
-      font-size: 0.74rem;
+      padding: 12px 0;
+      font-size: 0.82rem;
       flex-shrink: 0;
     }
 
@@ -261,32 +267,58 @@
       width: 13px;
       height: 13px;
     }
+    .contact-label {
+      font-size: 0.62rem;
+    }
     .contact-value {
-      font-size: 0.7rem;
+      font-size: 0.82rem;
     }
 
     .card-footer {
       padding: 10px 20px;
       flex-shrink: 0;
     }
+    .card-footer span {
+      font-size: 0.62rem;
+    }
   }
 
   /* ── safety scale for very short screens (e.g. iPhone SE) ── */
   @media (max-width: 480px) and (max-height: 667px) {
+    .card-header {
+      padding: 12px 20px 10px;
+    }
+    .card-title {
+      font-size: 0.64rem;
+    }
     .card-qr {
       padding: 10px 20px 0;
+      gap: 8px;
     }
     .qr-wrapper img {
       width: 110px;
       height: 110px;
     }
+    .qr-caption {
+      font-size: 0.58rem;
+    }
     .btn-contact {
       margin: 8px 20px;
       padding: 9px 0;
+      font-size: 0.78rem;
     }
     .card-contacts {
       padding: 10px 20px;
       gap: 8px;
+    }
+    .contact-label {
+      font-size: 0.58rem;
+    }
+    .contact-value {
+      font-size: 0.76rem;
+    }
+    .card-footer span {
+      font-size: 0.58rem;
     }
   }
 </style>
