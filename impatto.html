@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="/favicon.png">
 <title>AI Readiness per le organizzazioni a impatto – Pasquale Caiazzo</title>
-<meta name="description" content="Come far raccontare con accuratezza dai sistemi AI la missione di enti del terzo settore (APS, ODV, fondazioni) e società benefit: dati strutturati, entità verificabili e GEO per essere trovati e citati.">
+<meta name="description" content="Come i sistemi AI raccontano la missione di APS, ODV, fondazioni e B Corp: dati strutturati, entity linking e GEO per essere trovati e citati correttamente.">
 <link rel="canonical" href="https://pasqualecaiazzo.com/impatto.html">
 <meta name="robots" content="index, follow">
 <!-- Open Graph -->
@@ -14,6 +14,8 @@
 <meta property="og:description" content="Missione e attività di enti del terzo settore e società benefit rese leggibili, verificabili e citabili dai motori di risposta AI.">
 <meta property="og:url" content="https://pasqualecaiazzo.com/impatto.html">
 <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -42,7 +44,7 @@
       "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
       "about": { "@id": "https://pasqualecaiazzo.com/impatto.html#service" },
       "breadcrumb": { "@id": "https://pasqualecaiazzo.com/impatto.html#breadcrumb" },
-      "dateModified": "2026-06-03"
+      "dateModified": "2026-06-06"
     },
     {
       "@type": "BreadcrumbList",
@@ -116,7 +118,7 @@
   </div>
 </nav>
 
-<!-- Drawer Menu (Sleek slide-out panel) -->
+<!-- Drawer Menu -->
 <div id="nav-drawer" class="nav-drawer" aria-hidden="true">
   <div class="drawer-header">
     <button id="drawer-close" class="drawer-close" aria-label="Chiudi menu">
@@ -159,7 +161,7 @@
             Un ente del terzo settore o una società benefit non vende: chiede fiducia. E la fiducia, oggi, passa anche da come i sistemi AI raccontano la tua missione a chi non ti conosce ancora: donatori, soci, finanziatori, istituzioni.
           </p>
           <div class="cta-group">
-            <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Prenota una chiamata ↗</a>
+            <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Prenota una chiamata &#8599;</a>
             <a href="index.html#servizi" class="cta-btn cta-btn-outline">Altri Servizi</a>
           </div>
         </div>
@@ -185,29 +187,29 @@
 
   <div class="band">
     <div class="inner">
-      <div class="about-layout" style="margin-bottom: 2.5rem;">
+      <div class="about-layout about-band">
         <div>
           <h2>Come la tua organizzazione viene raccontata dai sistemi AI</h2>
           <p class="intro-p">
             Quando qualcuno chiede a ChatGPT o a Gemini chi si occupa di un certo tema su un territorio, o cosa fa la tua associazione, il modello non apre il tuo sito: compone una risposta da ciò che trova strutturato e verificabile. Se la tua missione vive solo dentro PDF, brochure e post, per l'AI è quasi invisibile, o peggio riempita di ipotesi.
           </p>
 
-          <div style="margin: 2rem 0; display: flex; flex-direction: column; gap: 1.50rem;">
-            <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
-              <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">1. GEO per l'impatto</h3>
-              <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
+          <div class="services-items">
+            <div class="service-item">
+              <h3 class="service-item-title">1. GEO per l'impatto</h3>
+              <p class="service-item-desc">
                 Far sì che la tua realtà compaia nelle risposte generative quando si cercano organizzazioni che affrontano il tuo stesso tema. Non per vendere: per essere trovati da chi può sostenerti, collaborare o aderire.
               </p>
             </div>
-            <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
-              <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">2. Integrità della missione e anti-allucinazione</h3>
-              <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
+            <div class="service-item">
+              <h3 class="service-item-title">2. Integrità della missione e anti-allucinazione</h3>
+              <p class="service-item-desc">
                 Ancorare missione, attività e governance a fonti stabili (Schema.org, Wikidata), così che i modelli non confondano la tua organizzazione con altre dal nome simile né inventino attività che non svolgi.
               </p>
             </div>
-            <div style="border-left: 3px solid var(--accent); padding-left: 1.25rem;">
-              <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; font-weight: 700;">3. Entità verificabile e trasparenza</h3>
-              <p style="font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin: 0;">
+            <div class="service-item">
+              <h3 class="service-item-title">3. Entità verificabile e trasparenza</h3>
+              <p class="service-item-desc">
                 Trasformare la trasparenza in un asset leggibile dalle macchine: attività, progetti e impatto strutturati in modo da essere citabili. Per il terzo settore la verificabilità non è marketing, è coerenza col proprio mandato.
               </p>
             </div>
@@ -216,82 +218,80 @@
 
         <div class="details-card">
           <span class="detail-label">Cosa faccio</span>
-          <h3 style="margin-bottom: 1rem; font-weight: 700;">AI Readiness per terzo settore e B Corp</h3>
-          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">
+          <h3 class="detail-heading">AI Readiness per terzo settore e B Corp</h3>
+          <p class="detail-section-desc">
             Preparazione della presenza informativa di associazioni, fondazioni e società benefit per essere comprese, citate e rappresentate con accuratezza dai motori generativi e dagli agenti intelligenti.
           </p>
 
           <span class="detail-label">Aree di intervento</span>
-          <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; font-family: 'IBM Plex Sans', sans-serif; font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
-            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: var(--accent); font-weight: bold;">&bull;</span>
+          <div class="detail-bullet-list">
+            <div class="detail-bullet-item">
+              <span class="detail-bullet-dot">&bull;</span>
               <span>Strutturazione di missione, attività e progetti in dati leggibili dall'AI</span>
             </div>
-            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: var(--accent); font-weight: bold;">&bull;</span>
+            <div class="detail-bullet-item">
+              <span class="detail-bullet-dot">&bull;</span>
               <span>Collegamento a riferimenti Wikidata verificabili e, dove c'è notabilità, voce dedicata disambiguata</span>
             </div>
-            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: var(--accent); font-weight: bold;">&bull;</span>
+            <div class="detail-bullet-item">
+              <span class="detail-bullet-dot">&bull;</span>
               <span>Markup Schema.org (Organization/NGO) sul sito ufficiale</span>
             </div>
           </div>
 
           <span class="detail-label">Per chi è pensato</span>
-          <p style="font-size: 0.85rem; margin: 0; line-height: 1.6;">
+          <p class="detail-section-desc">
             Enti del terzo settore (associazioni APS, organizzazioni di volontariato ODV, fondazioni) e società benefit o B Corp che vogliono che la propria missione sia rappresentata con accuratezza dai sistemi AI.
           </p>
         </div>
       </div>
 
-      <div style="margin-bottom: 2.5rem; max-width: 760px;">
+      <div class="section-body">
         <h2>Perché un'organizzazione a impatto dovrebbe occuparsene</h2>
         <p class="intro-p">Per un ente che vive di fiducia, la prima impressione la dà sempre più spesso un'AI: a un donatore che cerca cause da sostenere, a un funzionario che valuta partner per un bando, a un volontario che vuole capire di cosa ti occupi. Se quella descrizione è vaga o sbagliata, la fiducia parte in svantaggio.</p>
         <p>Non è marketing, è coerenza con il mandato. Un'organizzazione trasparente dovrebbe essere anche leggibile: missione, attività e governance esposte in modo che chiunque, persona o macchina, possa verificarle.</p>
       </div>
 
-      <div style="margin-bottom: 2.5rem; max-width: 760px;">
+      <div class="section-body">
         <h2>Bandi e donatori: cosa cambia concretamente</h2>
         <p class="intro-p">Reti, fondazioni ed enti finanziatori usano sempre più strumenti AI per mappare il terzo settore e individuare realtà attive su un tema o un territorio. Comparire, correttamente, in quella mappatura significa essere considerati per opportunità di cui altrimenti non saprebbero nulla.</p>
         <p>Il punto non è apparire più grandi di ciò che si è, ma essere trovati per ciò che si fa davvero. Un'entità ben strutturata permette a chi cerca esattamente la tua attività, sul tuo territorio, di arrivare a te.</p>
       </div>
 
-      <div style="margin-bottom: 2.5rem; max-width: 760px;">
+      <div class="section-body">
         <h2>Trasparenza come dato, non come dichiarazione</h2>
         <p class="intro-p">Molti enti pubblicano bilanci sociali e report d'impatto in PDF che nessuna macchina legge davvero. La trasparenza c'è, ma resta inaccessibile: per un sistema AI è quasi come non esistesse.</p>
         <p>Strutturare quei dati li trasforma da documento in informazione interrogabile: attività, risultati e impatto diventano citabili. La trasparenza smette di essere un atto formale e diventa un asset che lavora per te.</p>
       </div>
 
-      <div class="manifesto-box" style="margin-top: 3.5rem; margin-bottom: 5.5rem;">
-        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem;">Il percorso di AI Readiness per le organizzazioni a impatto</h2>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--text-muted); margin: 0 0 1.75rem; max-width: 720px;">Il valore non sta nel codice finale, ma nelle decisioni che lo precedono. Si parte da cosa raccontare e si arriva alla sintassi, mai il contrario.</p>
+      <div class="manifesto-box process-box">
+        <h2 class="process-heading">Il percorso di AI Readiness per le organizzazioni a impatto</h2>
+        <p class="process-intro">Il valore non sta nel codice finale, ma nelle decisioni che lo precedono. Si parte da cosa raccontare e si arriva alla sintassi, mai il contrario.</p>
         <div class="manifesto-grid">
           <div>
-            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 1: Cosa vuoi che si sappia</h3>
-            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">AI Exposure Audit & strategia</span>
-            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">Prima del codice viene una decisione. Mappo come i sistemi AI descrivono oggi la tua organizzazione e definisco con te cosa deve sapere di voi chi non vi conosce (donatori, finanziatori, istituzioni) e perché. La narrazione si sceglie qui, non si rincorre dopo.</p>
+            <h3 class="phase-title">Fase 1: Cosa vuoi che si sappia</h3>
+            <span class="phase-label">AI Exposure Audit & strategia</span>
+            <p class="phase-desc">Prima del codice viene una decisione. Mappo come i sistemi AI descrivono oggi la tua organizzazione e definisco con te cosa deve sapere di voi chi non vi conosce (donatori, finanziatori, istituzioni) e perché. La narrazione si sceglie qui, non si rincorre dopo.</p>
           </div>
           <div>
-            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 2: Il paniere di informazioni</h3>
-            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">Recupero e verifica fonti</span>
-            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">È il lavoro vero. Recupero e verifico le fonti che reggono ogni affermazione: bandi vinti, report d'impatto, attività, progetti, affiliazioni, date. Decido con te cosa entra, cosa resta fuori, cosa è davvero dimostrabile. Una missione non si dichiara, si documenta.</p>
+            <h3 class="phase-title">Fase 2: Il paniere di informazioni</h3>
+            <span class="phase-label">Recupero e verifica fonti</span>
+            <p class="phase-desc">È il lavoro vero. Recupero e verifico le fonti che reggono ogni affermazione: bandi vinti, report d'impatto, attività, progetti, affiliazioni, date. Decido con te cosa entra, cosa resta fuori, cosa è davvero dimostrabile. Una missione non si dichiara, si documenta.</p>
           </div>
           <div>
-            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 3: La tessitura delle entità</h3>
-            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">Entity linking & Wikidata</span>
-            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">Nessuna organizzazione esiste da sola. Collego l'entità a quelle già verificate a cui è legata: reti, enti finanziatori, partner di progetto, territori, persone. Il significato di ciò che fate nasce dalle relazioni, ed è questo che un sistema AI legge per collocarvi.</p>
+            <h3 class="phase-title">Fase 3: La tessitura delle entità</h3>
+            <span class="phase-label">Entity linking & Wikidata</span>
+            <p class="phase-desc">Nessuna organizzazione esiste da sola. Collego l'entità a quelle già verificate a cui è legata: reti, enti finanziatori, partner di progetto, territori, persone. Il significato di ciò che fate nasce dalle relazioni, ed è questo che un sistema AI legge per collocarvi.</p>
           </div>
           <div>
-            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">Fase 4: Implementazione e presidio</h3>
-            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">JSON-LD, Schema.org, monitoraggio</span>
-            <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin: 0;">Solo a questo punto traduco le decisioni in JSON-LD e dati strutturati, e tengo l'infrastruttura viva nel tempo. La sintassi è l'ultimo passo, non il lavoro: se potesse generarla un plugin, vorrebbe dire che le scelte a monte non erano state fatte.</p>
+            <h3 class="phase-title">Fase 4: Implementazione e presidio</h3>
+            <span class="phase-label">JSON-LD, Schema.org, monitoraggio</span>
+            <p class="phase-desc">Solo a questo punto traduco le decisioni in JSON-LD e dati strutturati, e tengo l'infrastruttura viva nel tempo. La sintassi è l'ultimo passo, non il lavoro: se potesse generarla un plugin, vorrebbe dire che le scelte a monte non erano state fatte.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
 </main>
 
 <footer>
@@ -303,7 +303,7 @@
         Torino<br>
         P.IVA IT01712990058
       </div>
-      <div class="footer-links" style="display: flex; gap: 2rem;">
+      <div class="footer-links">
         <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fimpatto.html" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
         <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="../favicon.png">
-<title>GEO per il terzo settore: come un'associazione si fa trovare dall'AI – Pasquale Caiazzo</title>
+<title>GEO per il terzo settore: farsi trovare dai sistemi AI – Pasquale Caiazzo</title>
 <meta name="description" content="Perché il terzo settore è quasi invisibile ai sistemi AI, e cosa serve perché un'associazione venga trovata e citata con accuratezza dai modelli.">
 <link rel="canonical" href="https://pasqualecaiazzo.com/note/geo-terzo-settore.html">
 <meta name="robots" content="index, follow">
@@ -16,14 +16,16 @@
 <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
 <meta property="article:published_time" content="2026-06-03">
 <meta property="article:modified_time" content="2026-06-06">
 <meta property="article:author" content="Pasquale Caiazzo">
 <meta name="author" content="Pasquale Caiazzo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GEO per il terzo settore: come un'associazione si fa trovare dall'AI">
+<meta name="twitter:title" content="GEO per il terzo settore: farsi trovare dai sistemi AI">
 <meta name="twitter:description" content="Perché gli enti del terzo settore sono quasi invisibili ai sistemi AI, e cosa serve per essere citati con accuratezza.">
 <meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta name="twitter:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
 
 <script type="application/ld+json">
 {
@@ -62,8 +64,37 @@
       ],
       "mentions": [
         { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
-        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" }
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
+        { "@type": "GovernmentOrganization", "name": "RUNTS", "description": "Registro Unico Nazionale del Terzo Settore", "url": "https://www.registroterzosettore.it/", "sameAs": "https://www.wikidata.org/wiki/Q113416983" },
+        { "@type": "DefinedTerm", "name": "NGO Schema.org type", "url": "https://schema.org/NGO" },
+        { "@type": "DefinedTerm", "name": "Nonprofit organization", "sameAs": "https://www.wikidata.org/wiki/Q163740" }
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "jobTitle": "Semantic Entity Architect",
+      "sameAs": [
+        "https://www.linkedin.com/in/pasqualecaiazzo/",
+        "https://github.com/pasqualecaiazzo"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/favicon.png" }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://pasqualecaiazzo.com/note/#blog",
+      "name": "Note – Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com/note/",
+      "description": "Analisi e riflessioni su AI search, semantic entity architecture e GEO.",
+      "inLanguage": "it"
     },
     {
       "@type": "WebPage",
@@ -185,6 +216,9 @@
             Il risultato è doppio. A volte l'organizzazione viene semplicemente omessa, come se non esistesse. Altre volte il modello riempie i vuoti con ipotesi: attività che non svolge, dati sbagliati, o la confusione con un'altra realtà dal nome simile. Per un ente che vive di fiducia, è il punto di partenza peggiore.
           </p>
           <p>
+            In Italia le organizzazioni non profit sono oltre 360.000 (fonte: <a href="https://www.istat.it/it/archivio/non-profit" target="_blank" rel="noopener noreferrer">ISTAT, censimento 2022</a>); ma secondo il Rapporto 2024 "Verso un futuro digitale" di Italia non profit, solo il 13% di questi enti ha integrato il digitale in modo strategico nelle proprie attività. Il risultato è un intero settore che produce, agisce e rendiconta, ma rimane quasi invisibile ai sistemi che oggi orientano le scelte di finanziatori, istituzioni e donatori.
+          </p>
+          <p>
             C'è una ragione strutturale, non una colpa. Nel terzo settore la comunicazione è quasi sempre l'ultima voce di spesa, i siti li gestiscono volontari, e la cultura dominante è quella del documento: il PDF, la brochure, il comunicato. Sono formati pensati per le persone, non per le macchine. Così anche un'organizzazione seria e attiva, che produce molto, risulta povera di dati leggibili. La distanza tra quanto fa e quanto un sistema AI riesce a vedere è enorme, ed è proprio quel divario il problema da colmare.
           </p>
 
@@ -229,7 +263,7 @@
             <li><strong>Persone e governance, attività e progetti</strong> con le loro date, e gli eventuali bandi, partnership o riconoscimenti che ne provano l'operato.</li>
           </ul>
           <p>
-            Tradotti in markup Schema.org, tipizzando l'ente come Organization o NGO, questi dati smettono di essere testo da interpretare e diventano fatti dichiarati. È la differenza tra un modello che indovina e uno che legge.
+            Tradotti in markup <a href="https://schema.org/NGO" target="_blank" rel="noopener noreferrer">Schema.org (tipo NGO)</a>, tipizzando l'ente come Organization o NGO, questi dati smettono di essere testo da interpretare e diventano fatti dichiarati. È la differenza tra un modello che indovina e uno che legge.
           </p>
 
           <h2>Schema.org per il terzo settore: i tipi che contano</h2>
@@ -264,7 +298,7 @@
             Resta la domanda su Wikidata, perché è il riferimento aperto più citato dai sistemi AI. L'errore è pensare che serva una voce propria. Nella maggior parte dei casi il valore sta altrove: nel collegare l'entità dell'organizzazione alle voci che esistono già. Il comune in cui ha sede, il tema di cui si occupa, la rete a cui aderisce, l'ente che la finanzia, sono tutti nodi verificabili a cui agganciarsi, e quei collegamenti dicono a un modello dove collocarti.
           </p>
           <p>
-            Accanto a Wikidata ci sono registri ufficiali che fanno da fonte d'autorità: per gli enti del terzo settore l'iscrizione al RUNTS è una prova di esistenza e di natura giuridica che vale la pena rendere esplicita e collegabile. Più gli ancoraggi sono ufficiali, più l'identità regge.
+            Accanto a Wikidata ci sono registri ufficiali che fanno da fonte d'autorità: per gli enti del terzo settore l'iscrizione al <a href="https://www.registroterzosettore.it/" target="_blank" rel="noopener noreferrer">RUNTS</a> è una prova di esistenza e di natura giuridica che vale la pena rendere esplicita e collegabile. Più gli ancoraggi sono ufficiali, più l'identità regge.
           </p>
           <p>
             C'è un equivoco diffuso: per essere leggibili dall'AI bisognerebbe essere abbastanza noti da avere una voce su Wikidata. Non è così. Una voce dedicata si crea, ed è preziosa, solo quando l'organizzazione ha una notabilità verificabile, ad esempio copertura stampa. Per tutte le altre il lavoro è collegare l'entità a riferimenti aperti che esistono già, senza forzature che verrebbero rimosse.
@@ -310,6 +344,12 @@
           <p>
             Il primo passo è sempre lo stesso: chiedere ai principali sistemi AI cosa sanno oggi della tua organizzazione, e osservare cosa è corretto, cosa manca e cosa viene inventato. Da quella fotografia si decide se e come intervenire.
           </p>
+          <p>Un percorso in tre passi:</p>
+          <ul>
+            <li><strong>Audit di visibilità.</strong> Interroga ChatGPT, Perplexity e Gemini con il nome dell'organizzazione e con le domande che farebbero un donatore o un finanziatore. Annota cosa compare, cosa è sbagliato e cosa viene omesso.</li>
+            <li><strong>Struttura l'identità.</strong> Identità giuridica, forma legale (APS, ODV, fondazione, società benefit) e attività principali in markup <a href="https://schema.org/NGO" target="_blank" rel="noopener noreferrer">Schema.org</a> sul sito ufficiale. È il fondamento che rende l'ente leggibile.</li>
+            <li><strong>Collega e monitora.</strong> Aggancia l'entità a riferimenti aperti esistenti (<a href="https://www.registroterzosettore.it/" target="_blank" rel="noopener noreferrer">RUNTS</a>, enti partner, temi di attività su <a href="https://www.wikidata.org" target="_blank" rel="noopener noreferrer">Wikidata</a>) e ripeti la fotografia ogni sei mesi.</li>
+          </ul>
 
           <div class="article-cta">
             <p class="lead">Lavoro con enti del terzo settore e società benefit per rendere la loro missione leggibile e citabile dai sistemi AI.</p>
