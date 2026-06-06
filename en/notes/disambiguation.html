@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<title>Name Disambiguation and AI: Building a Verifiable Identity – Pasquale Caiazzo</title>
+<meta name="description" content="Why AI systems confuse people who share the same name, and how semantic disambiguation builds a verifiable, distinct identity that models can reliably cite.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/en/notes/disambiguation.html">
+<link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html">
+<link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/disambiguation.html">
+<link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why AI Mistakes You for Someone Else: Disambiguation Explained">
+<meta property="og:description" content="Why AI systems confuse people who share the same name, and how semantic disambiguation builds a verifiable, distinct identity.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/en/notes/disambiguation.html">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+<meta property="article:published_time" content="2026-06-04">
+<meta property="article:modified_time" content="2026-06-06">
+<meta property="article:author" content="Pasquale Caiazzo">
+<meta name="author" content="Pasquale Caiazzo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Name Disambiguation and AI: Building a Verifiable Identity">
+<meta name="twitter:description" content="Why AI systems confuse people who share the same name, and how to build a distinct, verifiable identity.">
+<meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+<meta name="twitter:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#article",
+      "url": "https://pasqualecaiazzo.com/en/notes/disambiguation.html",
+      "headline": "Why AI Mistakes You for Someone Else: Disambiguation Explained",
+      "description": "Why AI systems confuse people who share the same name, the concrete damage this causes, and how semantic disambiguation builds a verifiable, distinct identity.",
+      "inLanguage": "en",
+      "datePublished": "2026-06-04",
+      "dateModified": "2026-06-06",
+      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
+      "publisher": { "@id": "https://pasqualecaiazzo.com/#publisher" },
+      "mainEntityOfPage": { "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#webpage" },
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/en/notes/#blog" },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+        "width": 1200,
+        "height": 1200
+      },
+      "articleSection": "Notes",
+      "wordCount": 2100,
+      "keywords": [
+        "disambiguation", "digital identity", "entity", "Wikidata",
+        "ORCID", "structured data", "reputation", "AI", "knowledge graph"
+      ],
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".article-tldr"] },
+      "about": [
+        { "@type": "DefinedTerm", "name": "Disambiguation", "sameAs": "https://www.wikidata.org/wiki/Q149301" },
+        { "@type": "DefinedTerm", "name": "Digital identity", "sameAs": "https://www.wikidata.org/wiki/Q2256763" },
+        { "@type": "DefinedTerm", "name": "Large Language Models", "sameAs": "https://www.wikidata.org/wiki/Q115305900" }
+      ],
+      "mentions": [
+        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
+        { "@type": "Organization", "name": "ORCID", "url": "https://orcid.org", "sameAs": "https://www.wikidata.org/wiki/Q51044" },
+        { "@type": "Thing", "name": "Wikidata", "sameAs": "https://www.wikidata.org/wiki/Q2013" },
+        { "@type": "DefinedTerm", "name": "Schema.org Person", "url": "https://schema.org/Person" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "jobTitle": "Semantic Entity Architect",
+      "sameAs": [
+        "https://www.linkedin.com/in/pasqualecaiazzo/",
+        "https://github.com/pasqualecaiazzo"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/favicon.png" }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://pasqualecaiazzo.com/en/notes/#blog",
+      "name": "Notes – Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com/en/notes/",
+      "description": "Analysis and reflections on AI search, semantic entity architecture, and GEO.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#webpage",
+      "url": "https://pasqualecaiazzo.com/en/notes/disambiguation.html",
+      "name": "Why AI Mistakes You for Someone Else: Disambiguation Explained",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
+      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#breadcrumb" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg" },
+      "dateModified": "2026-06-06"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Notes", "item": "https://pasqualecaiazzo.com/en/notes/" },
+        { "@type": "ListItem", "position": 3, "name": "Name disambiguation and AI", "item": "https://pasqualecaiazzo.com/en/notes/disambiguation.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="../../main.js" defer></script>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<nav aria-label="Main navigation">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-name">Pasquale Caiazzo</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+    </button>
+    <div class="lang-toggle"><a href="/note/omonimia-disambiguazione.html" hreflang="it" class="lang-link">IT</a><span class="lang-sep">·</span><span class="lang-current">EN</span></div>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-toggle-text">Menu</span>
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <button id="drawer-close" class="drawer-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-content">
+    <div class="nav-anchors">
+      <a href="../index.html#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">About</span></a>
+      <a href="../professionals.html" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">For Professionals</span></a>
+      <a href="../smes.html" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">For SMEs</span></a>
+      <a href="../impact.html" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">For Nonprofits &amp; B Corps</span></a>
+      <a href="../manifesto.html" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+      <a href="index.html" class="nav-link active"><span class="drawer-num">06</span> <span class="drawer-text">Notes</span></a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-meta">
+        <h3>Contact &amp; Resources</h3>
+        <p>Based in Turin &bull; Available for remote projects</p>
+        <p>Enquiries: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Book a 30-min call ↗</a></p>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+<main>
+  <div class="band hero-band">
+    <div class="inner">
+      <article class="article-wrap">
+        <a href="index.html" class="article-back">← Notes</a>
+        <span class="tag">Professionals</span>
+        <h1 class="article-title">Why AI Mistakes You for Someone Else: Disambiguation Explained</h1>
+        <div class="article-meta">
+          <span>Pasquale Caiazzo</span>
+          <span class="sep">/</span>
+          <time datetime="2026-06-04">4 June 2026</time>
+          <span class="sep">/</span>
+          <span>9 min read</span>
+        </div>
+
+        <p class="article-tldr">
+          <strong>In brief</strong>
+          If you share a name with other people, AI systems can merge your histories — attributing roles and work that aren't yours, or overlooking you because a namesake is more visible. The fix isn't a better bio: it's building a verifiable entity, with a stable identifier and links to unambiguous references, so models have a way to separate you from everyone else with certainty.
+        </p>
+
+        <div class="prose">
+          <h2>What happens when an AI searches for your name</h2>
+          <p>
+            When someone asks an AI assistant who you are, the model doesn't open a card with your identity: it collects scattered signals from across the web and reassembles them into a response. If those signals are coherent and linked, the answer is accurate. If your name is shared with other people, or your presence is fragmented, the model does the only thing it knows how to do: it guesses the most probable version, mixing together whatever it finds.
+          </p>
+          <p>
+            The result is that your first impression — for someone who doesn't know you — is written by a system that's making its best guess. And you often don't even find out, because that response reaches a client or a recruiter, not you.
+          </p>
+
+          <h2>A concrete example</h2>
+          <p>
+            Two people share the same name: one is a solicitor, the other a musician with a reasonable online presence. I ask an AI assistant who that person is: the model, finding more material on the musician, describes the solicitor as if they performed, or builds a hybrid profile that corresponds to neither.
+          </p>
+          <p>
+            It doesn't matter much whether the namesake is well-known or not. What matters is who leaves more structured traces. Without a way to separate the two identities, the model treats them as one — and whoever hasn't built their own anchors loses out.
+          </p>
+          <p>
+            Another common case: a consultant with the same name as a public figure in a different field. Someone searching for the consultant gets the public figure's biography back, and the actual professional stays hidden in their shadow. Not because they're less competent, but because the other is more present and better connected.
+          </p>
+
+          <h2>Why a name is not an identifier</h2>
+          <p>
+            A name is not unique, and never has been. In a paper archive, disambiguation came from context: city, profession, date of birth. On the web that context is often missing, or scattered across sources that don't talk to each other.
+          </p>
+          <p>
+            People reading naturally reconstruct context on their own. A model can't: it needs the distinction to be explicit and linked. As long as your identity is just a name without anchors, to a machine you're indistinguishable from anyone else who shares it.
+          </p>
+
+          <h2>Three ways a namesake harms you</h2>
+          <p>The damage isn't theoretical, and it takes three forms.</p>
+          <ul>
+            <li><strong>Misattribution.</strong> You're assigned roles, titles, or work that aren't yours — or your own work gets attributed to someone else. Your professional story blends with one that doesn't belong to you.</li>
+            <li><strong>Invisibility.</strong> When a namesake is more prominent, the model picks them. You're not contradicted; you simply don't appear. The opportunity vanishes without a visible cause.</li>
+            <li><strong>Reputational contamination.</strong> If someone who shares your name has negative associations, those can land on you through simple proximity. It's the most insidious risk, because it doesn't depend on anything you did.</li>
+          </ul>
+
+          <h2>Who's most at risk</h2>
+          <p>
+            Certain situations make the problem more likely. People with common names start at a statistical disadvantage. But risk also rises for anyone who has changed fields, because the old professional identity continues to coexist with the new one and models struggle to determine which is current.
+          </p>
+          <p>
+            The same applies to people who have changed their name, those working in sectors crowded with similar profiles, or those with a recent and still-thin online presence relative to an established namesake. In all these cases, simply being there isn't enough: you need to declare clearly who you are now, and tie that declaration to evidence that confirms it.
+          </p>
+
+          <h2>When the namesake is a company or a brand</h2>
+          <p>
+            The problem isn't limited to other people. Your name may coincide with that of a company, a product, or a brand that's more visible. In that case, an AI system tends to favour the commercial entity — it's almost always more structured and more cited — and the person ends up secondary or absorbed into it.
+          </p>
+          <p>
+            The logic of the fix doesn't change: you need a clear, anchored personal entity that explicitly declares itself as a person, with a distinct professional trajectory and its own references. Without that, the brand wins by default.
+          </p>
+
+          <h2>Why LinkedIn and Google aren't enough</h2>
+          <p>
+            The instinctive response is to maintain a polished LinkedIn profile and hope Google does the rest. But these tools operate on a different plane. LinkedIn is a page that a model has to interpret, not an entity it can read without ambiguity. And a Google search, faced with a shared name, returns several different people — useful for a human who can choose, useless for a model that has to decide on its own.
+          </p>
+          <p>
+            Maintaining those channels matters, but it doesn't solve the underlying problem: neither tells an AI system which of those people you are, or which verifiable facts are tied to you. It's the same reason that appearing in a model's responses requires structured data, not just content.
+          </p>
+
+          <h2>What an entity is, and why it solves the problem</h2>
+          <p>
+            The solution isn't a better bio — it's building an entity. An entity is a structured representation of who you are: a stable identifier that stays consistent everywhere, with explicit links to the sources that are about you.
+          </p>
+          <p>
+            It's the difference between saying your name in a crowded room and wearing a badge that points to a verifiable document. Once that fixed point exists, the model has a way to anchor you: it no longer has to choose between you and your namesakes, because you've become a unique reference instead of an ambiguous string of text.
+          </p>
+
+          <h2>Disambiguation in practice: the anchors that matter</h2>
+          <p>In concrete terms, disambiguation is built through links. The more verifiable they are, the sharper the separation.</p>
+          <ul>
+            <li><strong>The official profiles you control,</strong> declared as yours via the sameAs property: website, LinkedIn, GitHub, and for those who publish, ORCID or Google Scholar.</li>
+            <li><strong>Affiliations:</strong> the universities, organisations, and networks you belong to, linked to their existing entries. You are the person connected to those entities, not someone else.</li>
+            <li><strong>Work and achievements:</strong> publications, projects, talks, with dates and context, that fix a trajectory no namesake can claim.</li>
+          </ul>
+          <p>
+            Each of these links is a coordinate. Alone, it says little; together, they locate a unique point — which is you.
+          </p>
+
+          <h2>Schema.org for people: the properties that disambiguate</h2>
+          <p>
+            There's a technical level worth making explicit. Schema.org, the vocabulary AI systems use to recognise entities, provides a Person type with properties designed precisely to fix an identity and distinguish it from another.
+          </p>
+          <p>
+            The sameAs property links the entity to the official profiles that confirm it; identifier holds unique references such as an ORCID; worksFor and affiliation tie it to organisations; alumniOf to universities; knowsAbout qualifies areas of expertise; hasOccupation describes the role; award and publications fix achievements. Each of these properties, filled with a verifiable reference, is a wall that separates your identity from a namesake's.
+          </p>
+          <p>
+            The point isn't to fill every field, but to choose the ones that genuinely distinguish you and link them to sources that hold up. It's a judgement call, not a task to automate: which evidence matters for you, and where it lives.
+          </p>
+
+          <h2>The case of researchers and authors</h2>
+          <p>
+            For those who publish, the problem is more acute and the solution more mature. A researcher with a common surname finds their citations split across multiple profiles, or mixed with those of a namesake in another field. Identifiers like <a href="https://orcid.org" target="_blank" rel="noopener noreferrer">ORCID</a> exist precisely for this: giving every author a unique reference point to tie their output to.
+          </p>
+          <p>
+            ORCID has now issued over 20 million identifiers to researchers in every country and discipline; from July 2025, the NIH requires an ORCID for all senior researchers applying for federal funding (source: <a href="https://scholarlykitchen.sspnet.org/2025/07/16/better-together-orcid-and-other-researcher-identifiers/" target="_blank" rel="noopener noreferrer">Scholarly Kitchen</a>). That's the clearest signal that the disambiguation problem is now systemic — and that the solution is no longer an academic eccentricity.
+          </p>
+          <p>
+            Connecting an entity to an ORCID, to publications, and to research institutions transforms an ambiguous name into a traceable academic identity. It's one of the cases where semantic disambiguation has the most immediate and measurable effect.
+          </p>
+
+          <h2>Wikidata: do you need an entry?</h2>
+          <p>
+            The inevitable question: do I need a <a href="https://www.wikidata.org" target="_blank" rel="noopener noreferrer">Wikidata</a> entry? Almost certainly not. Wikidata requires notability, and an entry created for a person who doesn't meet that bar gets deleted — with a counterproductive effect.
+          </p>
+          <p>
+            The value, again, lies in connection rather than creation. You can anchor your entity to entries that already exist: your university, the organisations you belong to, the topics you work on. A dedicated entry for you only makes sense if and when genuine, verifiable notability exists. Until then, forcing one is wasted effort.
+          </p>
+
+          <h2>The mistake of relying on a plugin</h2>
+          <p>
+            At this point the temptation is to automate: a plugin that generates a Person markup, done. The markup will come out, and it will be formally correct. But a plugin doesn't know which of your namesakes you are, doesn't choose which sources prove what, doesn't find the authoritative links that set you apart.
+          </p>
+          <p>
+            Disambiguation is a work of judgement: deciding what needs to be said, retrieving the evidence, choosing which entities to connect to. If a tool could do that work, it would mean the work didn't need doing. The value lies in the decisions that precede the syntax, not in the syntax itself.
+          </p>
+
+          <h2>How to measure it</h2>
+          <p>
+            Checking whether it worked is straightforward, and you can do it yourself. Before the intervention, ask the main AI systems who you are, what you do, and what you've produced — and note the responses. That's your baseline.
+          </p>
+          <p>
+            After the intervention, repeat the same questions. What you observe is concrete: does the model separate you from your namesakes? Are the roles and work cited genuinely yours? Have you appeared where you were previously ignored? It's a verifiable comparison, worth repeating periodically as models update.
+          </p>
+
+          <h2>Disambiguation is not personal branding</h2>
+          <p>
+            It's worth clarifying what this work is not. It's not personal branding: it's not about building an image or a tone of voice. It's not reputation management in the sense of pushing positive content to bury unwanted results. And it's not optimising your name for Google.
+          </p>
+          <p>
+            It's a colder, more structural operation: giving a machine the coordinates to recognise you as a unique entity. Branding decides how you appear; disambiguation decides whether the system knows that appearance is you. You can have the best personal brand in the world and still be indistinguishable, for a model, from a namesake.
+          </p>
+
+          <h2>Reputation: declared or documented?</h2>
+          <p>
+            Underlying all of this is a simple principle. Saying you are something is an assertion; linking it to verifiable sources is evidence. AI systems, like competent people, weight the second more.
+          </p>
+          <p>
+            Disambiguation isn't a question of better words — it's a question of connected evidence. Your reputation stops being a story you tell and becomes a network of facts that hold up on their own, independent of anyone who shares your name.
+          </p>
+
+          <h2>Why it makes sense to act now</h2>
+          <p>
+            A reasonable question is whether this is worth doing now. The answer is that a poorly defined identity doesn't correct itself: the longer it goes, the more models consolidate the confused version, and the more ambiguous material accumulates around your name.
+          </p>
+          <p>
+            Building the correct entity early gives systems a clean reference before confusion sets in. And verifiable anchors don't wear out: once placed, they keep separating you from your namesakes at every new query. It's an investment that works over time, and the best moment to make it is before it becomes urgent.
+          </p>
+
+          <h2>Where to start</h2>
+          <p>Three concrete steps, in order:</p>
+          <ul>
+            <li><strong>Test your visibility.</strong> Ask <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">ChatGPT</a>, <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">Perplexity</a>, and Gemini your name — alone and with professional context. Note who appears, what's attributed to you, and whether there's confusion with a namesake.</li>
+            <li><strong>Identify your real anchors.</strong> Which profiles, affiliations, and pieces of work can you cite as verifiable evidence? Are they reachable via a stable URL? Start with what already exists.</li>
+            <li><strong>Structure a minimum entity.</strong> A <a href="https://schema.org/Person" target="_blank" rel="noopener noreferrer">Person</a> markup with sameAs links to your official profiles is often enough to begin the disambiguation. Everything else is built on top.</li>
+          </ul>
+
+          <div class="article-cta">
+            <p class="lead">I work with professionals, consultants, and authors to build a semantic identity that AI systems read and cite without confusing it with anyone else's.</p>
+            <div class="cta-group">
+              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Book a call ↗</a>
+              <a href="../professionals.html" class="cta-btn cta-btn-outline">For Professionals →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Turin<br>
+        VAT IT01712990058
+      </div>
+      <div class="footer-links">
+        <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fnote%2Fomonimia-disambiguazione.html" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

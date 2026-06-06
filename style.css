@@ -232,6 +232,23 @@
     }
     .nav-btn-linkedin:hover { background: var(--btn-hover); }
 
+
+    /* ── LANG TOGGLE ───────────────────────────────────── */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+    }
+    .lang-current { color: var(--accent); }
+    .lang-sep { color: var(--text-muted); font-weight: 400; }
+    .lang-link { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .lang-link:hover { color: var(--text); }
+
     /* ── LAYOUT ────────────────────────────────────────── */
     .band { width: 100%; position: relative; }
     .inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }

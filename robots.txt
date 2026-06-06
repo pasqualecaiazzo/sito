@@ -1,45 +1,47 @@
-# robots.txt — pasqualecaiazzo.com
-# Strategy: AI Readiness & Machine Readability
-# Status: Open Narrative Sovereignty Protocol
-
 User-agent: *
 Allow: /
+Disallow: /private/
 
-# Google (Inclusi i permessi per l'addestramento di Gemini)
-User-agent: Googlebot
-User-agent: Google-Extended
+Sitemap: https://pasqualecaiazzo.com/sitemap.xml
+
+# ── AI answer engine crawlers ─────────────────────────────
+# Explicitly permitted: this site is built to be read by AI.
+
+User-agent: GPTBot
 Allow: /
 
-# OpenAI - ChatGPT & SearchGPT
-User-agent: GPTBot
 User-agent: ChatGPT-User
+Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
 
-# Anthropic - Claude
 User-agent: ClaudeBot
-User-agent: Claude-Web
+Allow: /
+
 User-agent: anthropic-ai
 Allow: /
 
-# Perplexity & Search Engines AI
 User-agent: PerplexityBot
-User-agent: YouBot
 Allow: /
 
-# Altri LLM & Research Bots
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 User-agent: cohere-ai
-User-agent: Amazonbot
-User-agent: Bytespider
-User-agent: Applebot
-User-agent: MetaExternalAgent
-User-agent: facebookexternalhit
 Allow: /
 
-# Riferimento alla documentazione per LLM (Standard llmstxt.org)
-# Questo segnale "non standard" è intercettato dai crawler di nuova generazione
-llms: https://pasqualecaiazzo.com/llms.txt
+User-agent: meta-externalagent
+Allow: /
 
-# Sitemap
-Sitemap: https://pasqualecaiazzo.com/sitemap.xml
- 
+User-agent: Amazonbot
+Allow: /

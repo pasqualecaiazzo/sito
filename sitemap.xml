@@ -1,70 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ── HOME ─────────────────────────────────────────────── -->
   <url>
     <loc>https://pasqualecaiazzo.com/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pasqualecaiazzo.com/professionisti.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://pasqualecaiazzo.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ── MANIFESTO ─────────────────────────────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/manifesto.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/manifesto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/manifesto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/manifesto.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pasqualecaiazzo.com/pmi.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pasqualecaiazzo.com/impatto.html</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pasqualecaiazzo.com/note/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://pasqualecaiazzo.com/en/manifesto.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/manifesto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/manifesto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/manifesto.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- ── PROFESSIONISTI / PROFESSIONALS ───────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/professionisti.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/professionisti.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/professionals.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/professionisti.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/professionals.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/professionisti.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/professionals.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/professionisti.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── PMI / SMES ────────────────────────────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/pmi.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/pmi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/smes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/pmi.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/smes.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/pmi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/smes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/pmi.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── IMPATTO / IMPACT ──────────────────────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/impatto.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/impatto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/impact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/impatto.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/impact.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/impatto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/impact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/impatto.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── NOTE INDEX / NOTES INDEX ─────────────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/note/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/notes/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── AI SEARCH AZIENDE / BUSINESSES ───────────────────── -->
   <url>
     <loc>https://pasqualecaiazzo.com/note/ai-search-aziende.html</loc>
-    <lastmod>2026-06-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/ai-search-aziende.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/ai-search-aziende.html"/>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/ai-search-aziende.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/ai-search-aziende.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── OMONIMIA / DISAMBIGUATION ────────────────────────── -->
   <url>
     <loc>https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html</loc>
-    <lastmod>2026-06-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/disambiguation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html"/>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/notes/disambiguation.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/disambiguation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── GEO TERZO SETTORE / NONPROFITS ───────────────────── -->
   <url>
     <loc>https://pasqualecaiazzo.com/note/geo-terzo-settore.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/geo-terzo-settore.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/geo-nonprofits.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/geo-terzo-settore.html"/>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pasqualecaiazzo.com/manifesto.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://pasqualecaiazzo.com/en/notes/geo-nonprofits.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/geo-terzo-settore.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/geo-nonprofits.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/geo-terzo-settore.html"/>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://pasqualecaiazzo.com/grafo.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://pasqualecaiazzo.com/llms.txt</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+
 </urlset>
