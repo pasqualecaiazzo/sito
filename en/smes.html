@@ -36,7 +36,9 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@id": "https://pasqualecaiazzo.com/#website" },
+    {
+      "@id": "https://pasqualecaiazzo.com/#website"
+    },
     {
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/en/smes.html#webpage",
@@ -44,17 +46,60 @@
       "name": "AI Readiness for SMEs – Pasquale Caiazzo",
       "description": "Structuring business information for AI answer engines and preparing data for proprietary RAG systems.",
       "inLanguage": "en",
-      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
-      "about": { "@id": "https://pasqualecaiazzo.com/en/smes.html#service" },
-      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/en/smes.html#breadcrumb" },
+      "isPartOf": {
+        "@id": "https://pasqualecaiazzo.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://pasqualecaiazzo.com/en/smes.html#service"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Generative Engine Optimization",
+          "sameAs": "https://www.wikidata.org/wiki/Q134083964"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Knowledge Graph",
+          "sameAs": "https://www.wikidata.org/wiki/Q33002955"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Retrieval-Augmented Generation",
+          "sameAs": "https://www.wikidata.org/wiki/Q121362277"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Structured Data",
+          "sameAs": "https://www.wikidata.org/wiki/Q26813700"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "AI Readiness",
+          "sameAs": "https://www.wikidata.org/wiki/Q138646003"
+        }
+      ],
+      "breadcrumb": {
+        "@id": "https://pasqualecaiazzo.com/en/smes.html#breadcrumb"
+      },
       "dateModified": "2026-06-06"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://pasqualecaiazzo.com/en/smes.html#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com/en/" },
-        { "@type": "ListItem", "position": 2, "name": "For SMEs", "item": "https://pasqualecaiazzo.com/en/smes.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pasqualecaiazzo.com/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "For SMEs",
+          "item": "https://pasqualecaiazzo.com/en/smes.html"
+        }
       ]
     },
     {
@@ -70,15 +115,14 @@
         "name": "Pasquale Caiazzo",
         "url": "https://pasqualecaiazzo.com"
       },
-      "areaServed": { "@type": "AdministrativeArea", "name": "Worldwide" },
-      "about": [
-        { "@type": "DefinedTerm", "name": "Generative Engine Optimization", "sameAs": "https://www.wikidata.org/wiki/Q134083964" },
-        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
-        { "@type": "DefinedTerm", "name": "Retrieval-Augmented Generation", "sameAs": "https://www.wikidata.org/wiki/Q121362277" },
-        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
-        { "@type": "DefinedTerm", "name": "AI Readiness", "sameAs": "https://www.wikidata.org/wiki/Q138646003" }
-      ],
-      "audience": { "@type": "Audience", "audienceType": "SMEs, startups, and businesses seeking visibility in AI answer engines" },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Worldwide"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "SMEs, startups, and businesses seeking visibility in AI answer engines"
+      },
       "offers": {
         "@type": "Offer",
         "name": "Free strategic call",
@@ -89,7 +133,12 @@
         "availability": "https://schema.org/InStock"
       }
     },
-    { "@type": "Person", "@id": "https://pasqualecaiazzo.com/#person", "name": "Pasquale Caiazzo", "url": "https://pasqualecaiazzo.com" }
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com"
+    }
   ]
 }
 </script>
