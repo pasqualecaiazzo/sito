@@ -1023,9 +1023,11 @@
     /* ── NOTE & ARTICLES ───────────────────────────────── */
     .note-intro { max-width: 760px; }
     .note-list { display: flex; flex-direction: column; gap: 0; margin-top: 2.5rem; }
-    .note-card { display: block; text-decoration: none; color: inherit; padding: 1.75rem 0; border-top: 1px solid var(--border); transition: opacity .2s ease; }
+    .note-card { display: block; padding: 1.75rem 0; border-top: 1px solid var(--border); }
     .note-list .note-card:last-child { border-bottom: 1px solid var(--border); }
-    .note-card:hover { opacity: .72; }
+    .note-card-link { display: block; text-decoration: none; color: inherit; transition: opacity .2s ease; }
+    .note-card-link:visited { color: inherit; }
+    .note-card-link:hover { opacity: .72; }
     .note-card .note-kicker { font-family: 'IBM Plex Mono', monospace; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); display: flex; gap: .9rem; align-items: center; margin-bottom: .55rem; }
     .note-card .note-kicker .sep { color: var(--text-muted); opacity: .5; }
     .note-card h2 { font-family: 'IBM Plex Serif', serif; font-size: 1.45rem; font-weight: 700; line-height: 1.25; margin: 0 0 .55rem 0; color: var(--text); }
