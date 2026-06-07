@@ -36,7 +36,9 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@id": "https://pasqualecaiazzo.com/#website" },
+    {
+      "@id": "https://pasqualecaiazzo.com/#website"
+    },
     {
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/impatto.html#webpage",
@@ -44,17 +46,65 @@
       "name": "AI Readiness per le organizzazioni a impatto – Pasquale Caiazzo",
       "description": "Strutturazione della presenza informativa di enti del terzo settore e società benefit per i motori di risposta AI: missione e attività leggibili, verificabili e citabili.",
       "inLanguage": "it",
-      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
-      "about": { "@id": "https://pasqualecaiazzo.com/impatto.html#service" },
-      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/impatto.html#breadcrumb" },
+      "isPartOf": {
+        "@id": "https://pasqualecaiazzo.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://pasqualecaiazzo.com/impatto.html#service"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Generative Engine Optimization",
+          "sameAs": "https://www.wikidata.org/wiki/Q134083964"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Nonprofit organization",
+          "sameAs": "https://www.wikidata.org/wiki/Q163740"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Voluntary sector",
+          "sameAs": "https://www.wikidata.org/wiki/Q1063076"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Knowledge Graph",
+          "sameAs": "https://www.wikidata.org/wiki/Q33002955"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Structured Data",
+          "sameAs": "https://www.wikidata.org/wiki/Q26813700"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "AI Readiness",
+          "sameAs": "https://www.wikidata.org/wiki/Q138646003"
+        }
+      ],
+      "breadcrumb": {
+        "@id": "https://pasqualecaiazzo.com/impatto.html#breadcrumb"
+      },
       "dateModified": "2026-06-06"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://pasqualecaiazzo.com/impatto.html#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com" },
-        { "@type": "ListItem", "position": 2, "name": "Per le organizzazioni a impatto", "item": "https://pasqualecaiazzo.com/impatto.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pasqualecaiazzo.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Per le organizzazioni a impatto",
+          "item": "https://pasqualecaiazzo.com/impatto.html"
+        }
       ]
     },
     {
@@ -70,18 +120,20 @@
         "name": "Pasquale Caiazzo",
         "url": "https://pasqualecaiazzo.com"
       },
-      "areaServed": { "@type": "Country", "name": "Italy", "sameAs": "https://www.wikidata.org/wiki/Q38" },
-      "about": [
-        { "@type": "DefinedTerm", "name": "Generative Engine Optimization", "sameAs": "https://www.wikidata.org/wiki/Q134083964" },
-        { "@type": "DefinedTerm", "name": "Nonprofit organization", "sameAs": "https://www.wikidata.org/wiki/Q163740" },
-        { "@type": "DefinedTerm", "name": "Voluntary sector", "sameAs": "https://www.wikidata.org/wiki/Q1063076" },
-        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
-        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
-        { "@type": "DefinedTerm", "name": "AI Readiness", "sameAs": "https://www.wikidata.org/wiki/Q138646003" }
-      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Italy",
+        "sameAs": "https://www.wikidata.org/wiki/Q38"
+      },
       "audience": [
-        { "@type": "Audience", "audienceType": "Enti del terzo settore: associazioni (APS), organizzazioni di volontariato (ODV), fondazioni" },
-        { "@type": "Audience", "audienceType": "Società benefit e B Corp: imprese a impatto orientate al bene comune" }
+        {
+          "@type": "Audience",
+          "audienceType": "Enti del terzo settore: associazioni (APS), organizzazioni di volontariato (ODV), fondazioni"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Società benefit e B Corp: imprese a impatto orientate al bene comune"
+        }
       ],
       "offers": {
         "@type": "Offer",
@@ -93,7 +145,12 @@
         "availability": "https://schema.org/InStock"
       }
     },
-    { "@type": "Person", "@id": "https://pasqualecaiazzo.com/#person", "name": "Pasquale Caiazzo", "url": "https://pasqualecaiazzo.com" }
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com"
+    }
   ]
 }
 </script>

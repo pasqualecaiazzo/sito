@@ -36,7 +36,9 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@id": "https://pasqualecaiazzo.com/#website" },
+    {
+      "@id": "https://pasqualecaiazzo.com/#website"
+    },
     {
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/professionisti.html#webpage",
@@ -44,17 +46,60 @@
       "name": "Identità semantica per professionisti – Pasquale Caiazzo",
       "description": "L'identità digitale di consulenti e professionisti costruita come entità leggibile e citabile dai motori di risposta AI.",
       "inLanguage": "it",
-      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
-      "about": { "@id": "https://pasqualecaiazzo.com/professionisti.html#service" },
-      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/professionisti.html#breadcrumb" },
+      "isPartOf": {
+        "@id": "https://pasqualecaiazzo.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://pasqualecaiazzo.com/professionisti.html#service"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Generative Engine Optimization",
+          "sameAs": "https://www.wikidata.org/wiki/Q134083964"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Structured Data",
+          "sameAs": "https://www.wikidata.org/wiki/Q26813700"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Knowledge Graph",
+          "sameAs": "https://www.wikidata.org/wiki/Q33002955"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "AI Readiness",
+          "sameAs": "https://www.wikidata.org/wiki/Q138646003"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Large Language Models",
+          "sameAs": "https://www.wikidata.org/wiki/Q115305900"
+        }
+      ],
+      "breadcrumb": {
+        "@id": "https://pasqualecaiazzo.com/professionisti.html#breadcrumb"
+      },
       "dateModified": "2026-06-06"
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://pasqualecaiazzo.com/professionisti.html#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com" },
-        { "@type": "ListItem", "position": 2, "name": "Per i professionisti", "item": "https://pasqualecaiazzo.com/professionisti.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pasqualecaiazzo.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Per i professionisti",
+          "item": "https://pasqualecaiazzo.com/professionisti.html"
+        }
       ]
     },
     {
@@ -70,15 +115,15 @@
         "name": "Pasquale Caiazzo",
         "url": "https://pasqualecaiazzo.com"
       },
-      "areaServed": { "@type": "Country", "name": "Italy", "sameAs": "https://www.wikidata.org/wiki/Q38" },
-      "about": [
-        { "@type": "DefinedTerm", "name": "Generative Engine Optimization", "sameAs": "https://www.wikidata.org/wiki/Q134083964" },
-        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
-        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
-        { "@type": "DefinedTerm", "name": "AI Readiness", "sameAs": "https://www.wikidata.org/wiki/Q138646003" },
-        { "@type": "DefinedTerm", "name": "Large Language Models", "sameAs": "https://www.wikidata.org/wiki/Q115305900" }
-      ],
-      "audience": { "@type": "Audience", "audienceType": "Professionisti, consulenti, founder, autore e ricercatori" },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Italy",
+        "sameAs": "https://www.wikidata.org/wiki/Q38"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Professionisti, consulenti, founder, autore e ricercatori"
+      },
       "offers": {
         "@type": "Offer",
         "name": "Chiamata strategica gratuita",
@@ -89,7 +134,12 @@
         "availability": "https://schema.org/InStock"
       }
     },
-    { "@type": "Person", "@id": "https://pasqualecaiazzo.com/#person", "name": "Pasquale Caiazzo", "url": "https://pasqualecaiazzo.com" }
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com"
+    }
   ]
 }
 </script>
