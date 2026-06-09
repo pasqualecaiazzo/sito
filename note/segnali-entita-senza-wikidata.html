@@ -215,6 +215,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
         </svg>
       </button>
+      <div class="lang-toggle"><span class="lang-current">IT</span><span class="lang-sep">·</span><a href="/en/notes/entity-signals-without-wikidata.html" hreflang="en" class="lang-link">EN</a></div>
       <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
       <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
         <span class="nav-toggle-text">Menu</span>
@@ -256,25 +257,25 @@
   <div id="drawer-backdrop" class="drawer-backdrop"></div>
  
   <main>
-    <div class="article-hero">
+    <div class="band hero-band">
       <div class="inner">
-        <a href="index.html" class="article-back">← Note</a>
-        <span class="tag">Fondamenti</span>
-        <h1 class="article-title">Segnali di entità: costruire un'identità verificabile senza Wikidata</h1>
-        <div class="article-meta">
-          <span>Pasquale Caiazzo</span>
-          <span class="meta-sep">/</span>
-          <span>9 giugno 2026</span>
-          <span class="meta-sep">/</span>
-          <span>11 min di lettura</span>
-        </div>
-      </div>
-    </div>
- 
-    <article class="article-body">
-      <div class="inner">
- 
-        <p><strong>In breve</strong> La maggior parte di professionisti e organizzazioni non ha e non può avere una voce su Wikidata. Questo non impedisce di costruire un'identità semantica leggibile dai sistemi AI. I segnali che contano sono altri: markup JSON-LD sul proprio sito, profili ufficiali dichiarati como ancoraggi verificabili, identificatori di settore, un file llms.txt che istruisce direttamente i modelli. Ognuno di questi è un dato che un sistema AI può usare per risolvere il processo di entity linking senza dover inventare. Il lavoro non è scrivere più contenuto, è rendere verificabile quello che già esiste.</p>
+        <article class="article-wrap">
+          <a href="index.html" class="article-back">← Note</a>
+          <span class="tag">Fondamenti</span>
+          <h1 class="article-title">Segnali di entità: costruire un'identità verificabile senza Wikidata</h1>
+          <div class="article-meta">
+            <span>Pasquale Caiazzo</span>
+            <span class="sep">/</span>
+            <time datetime="2026-06-09">9 giugno 2026</time>
+            <span class="sep">/</span>
+            <span>11 min di lettura</span>
+          </div>
+
+          <p class="article-tldr">
+            <strong>In breve</strong> La maggior parte di professionisti e organizzazioni non ha e non può avere una voce su Wikidata. Questo non impedisce di costruire un'identità semantica leggibile dai sistemi AI. I segnali che contano sono altri: markup JSON-LD sul proprio sito, profili ufficiali dichiarati como ancoraggi verificabili, identificatori di settore, un file llms.txt che istruisce direttamente i modelli. Ognuno di questi è un dato che un sistema AI può usare per risolvere il processo di entity linking senza dover inventare. Il lavoro non è scrivere più contenuto, è rendere verificabile quello che già esiste.
+          </p>
+
+          <div class="prose">
  
         <h2>Il punto di partenza: perché Wikidata non è la risposta per tutti</h2>
  
@@ -371,21 +372,17 @@
         <p>Il terzo passo è la struttura: tradurre quell'inventario in markup JSON-LD sul sito, in dichiarazioni <code>sameAs</code> coerenti tra le piattaforme, in un llms.txt che descriva l'entità in modo controllato. Ognuno di questi è un segnale in più che rende la risposta corretta più facile da trovare per qualunque sistema che cerchi di risolvere l'entity linking su di te.</p>
  
         <p>Lavoro con professionisti, PMI e organizzazioni a impatto per costruire questo tipo di presenza: strutturata, verificabile, leggibile dai sistemi AI che stanno diventando il primo punto di contatto tra chi cerca e chi esiste.</p>
- 
-      </div>
- 
-      <div class="article-cta">
-        <div class="inner">
-          <div class="cta-block">
-            <p>Se vuoi capire quali segnali ti mancano e da dove conviene iniziare, prenota una chiamata di 30 minuti.</p>
-            <div class="cta-actions">
+          <div class="article-cta">
+            <p class="lead">Se vuoi capire quali segnali ti mancano e da dove conviene iniziare, prenota una chiamata di 30 minuti.</p>
+            <div class="cta-group">
               <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Prenota una chiamata ↗</a>
-              <a href="entity-linking.html" class="cta-btn cta-btn-secondary">Leggi: Entity linking →</a>
+              <a href="entity-linking.html" class="cta-btn cta-btn-outline">Leggi: Entity linking →</a>
             </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
+  </div>
   </main>
  
   <footer>
