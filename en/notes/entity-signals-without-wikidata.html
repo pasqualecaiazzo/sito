@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Entity Signals: Building a Verifiable Identity Without Wikidata – Pasquale Caiazzo</title>
+  <meta name="description" content="How to build a machine-readable semantic identity without a Wikidata entry: JSON-LD, Schema.org, llms.txt, and official profiles as verifiable anchors.">
+  <link rel="canonical" href="https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html">
+  <link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/segnali-entita-senza-wikidata.html">
+  <link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html">
+  <link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/segnali-entita-senza-wikidata.html">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Pasquale Caiazzo">
+  <meta property="article:author" content="Pasquale Caiazzo">
+  <meta property="article:published_time" content="2026-06-09">
+  <meta property="article:modified_time" content="2026-06-09">
+ 
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Entity Signals: Building a Verifiable Identity Without Wikidata">
+  <meta property="og:description" content="How to build a machine-readable semantic identity without a Wikidata entry: JSON-LD, Schema.org, llms.txt, and official profiles as verifiable anchors.">
+  <meta property="og:url" content="https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html">
+  <meta property="og:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+  <meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+  <meta property="og:locale" content="en_GB">
+ 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Entity Signals: Building a Verifiable Identity Without Wikidata">
+  <meta name="twitter:description" content="How to build a machine-readable semantic identity without Wikidata: JSON-LD, Schema.org, llms.txt, profiles as anchors.">
+  <meta name="twitter:image" content="https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg">
+  <meta name="twitter:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="../../style.css">
+ 
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script src="../../main.js" defer></script>
+ 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://pasqualecaiazzo.com/#website"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html#webpage",
+      "url": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html",
+      "name": "Entity Signals: Building a Verifiable Identity Without Wikidata – Pasquale Caiazzo",
+      "description": "How to build a machine-readable semantic identity without a Wikidata entry: JSON-LD, Schema.org, llms.txt, and official profiles as verifiable anchors.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://pasqualecaiazzo.com/#website"
+      },
+      "about": {
+        "@id": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html#article"
+      },
+      "breadcrumb": {
+        "@id": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html#breadcrumb"
+      },
+      "dateModified": "2026-06-09"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pasqualecaiazzo.com/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://pasqualecaiazzo.com/en/notes/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Entity Signals Without Wikidata",
+          "item": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html#article",
+      "headline": "Entity Signals: Building a Verifiable Identity Without Wikidata",
+      "description": "How to build a machine-readable semantic identity without a Wikidata entry: JSON-LD, Schema.org, llms.txt, and official profiles as verifiable anchors.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.jpeg",
+        "width": 1200,
+        "height": 1200
+      },
+      "url": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html",
+      "inLanguage": "en",
+      "datePublished": "2026-06-09",
+      "dateModified": "2026-06-09",
+      "wordCount": 1800,
+      "articleSection": "Fundamentals",
+      "keywords": [
+        "Entity Linking",
+        "JSON-LD",
+        "Schema.org",
+        "llms.txt",
+        "Structured Data",
+        "Semantic Entity Architecture",
+        "GEO",
+        "AI Readiness"
+      ],
+      "author": {
+        "@id": "https://pasqualecaiazzo.com/#person",
+        "@type": "Person",
+        "name": "Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/pasqualecaiazzo/",
+          "https://github.com/pasqualecaiazzo",
+          "https://pasqualecaiazzo.solidcommunity.net/profile/card#me"
+        ]
+      },
+      "publisher": {
+        "@id": "https://pasqualecaiazzo.com/#publisher"
+      },
+      "about": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Entity Linking",
+          "sameAs": "https://www.wikidata.org/wiki/Q6473519"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "JSON-LD",
+          "sameAs": "https://www.wikidata.org/wiki/Q6108942"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Structured Data",
+          "sameAs": "https://www.wikidata.org/wiki/Q578095"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Knowledge Graph",
+          "sameAs": "https://www.wikidata.org/wiki/Q33002955"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Semantic Web",
+          "sameAs": "https://www.wikidata.org/wiki/Q54837"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Wikidata",
+          "sameAs": "https://www.wikidata.org/wiki/Q2013"
+        },
+        {
+          "@type": "WebSite",
+          "name": "Schema.org",
+          "sameAs": "https://www.wikidata.org/wiki/Q3475322"
+        }
+      ],
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://pasqualecaiazzo.com/#website",
+        "name": "Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/favicon.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+ 
+  <nav aria-label="Main navigation">
+    <div class="nav-left">
+      <a href="../index.html" class="nav-name">Pasquale Caiazzo</a>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+        <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+        </svg>
+        <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+      <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-text">Menu</span>
+        <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+ 
+  <div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <button id="drawer-close" class="drawer-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="drawer-content">
+      <div class="nav-anchors">
+        <a href="../index.html#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">About</span></a>
+        <a href="../professionals.html" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">For Professionals</span></a>
+        <a href="../smes.html" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">For SMEs</span></a>
+        <a href="../impact.html" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">For Nonprofits &amp; B Corps</span></a>
+        <a href="../manifesto.html" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+        <a href="index.html" class="nav-link active"><span class="drawer-num">06</span> <span class="drawer-text">Notes</span></a>
+      </div>
+      <div class="drawer-footer">
+        <div class="drawer-meta">
+          <h3>Contact &amp; Resources</h3>
+          <p>Based in Turin &bull; Available for remote projects</p>
+          <p>Enquiries: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Book a 30-min call ↗</a></p>
+          <p>Email: <a href="mailto:info@pasqualecaiazzo.com">info@pasqualecaiazzo.com</a></p>
+        </div>
+        <div class="drawer-socials">
+          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+ 
+  <main>
+    <div class="article-hero">
+      <div class="inner">
+        <a href="index.html" class="article-back">← Notes</a>
+        <span class="tag">Fundamentals</span>
+        <h1 class="article-title">Entity Signals: Building a Verifiable Identity Without Wikidata</h1>
+        <div class="article-meta">
+          <span>Pasquale Caiazzo</span>
+          <span class="meta-sep">/</span>
+          <span>9 June 2026</span>
+          <span class="meta-sep">/</span>
+          <span>11 min read</span>
+        </div>
+        <div class="article-lang">
+          <a href="../../note/segnali-entita-senza-wikidata.html">IT</a>·<span>EN</span>
+        </div>
+      </div>
+    </div>
+ 
+    <article class="article-body">
+      <div class="inner">
+ 
+        <p><strong>In short</strong> Most professionals and organisations do not have and cannot have a Wikidata entry. That does not prevent them from building a semantic identity readable by AI systems. The signals that matter are elsewhere: JSON-LD markup on their own website, official profiles declared as verifiable anchors, sector-specific identifiers, an llms.txt file that instructs models directly. Each of these is a piece of data an AI system can use to resolve entity linking without having to invent. The work is not about writing more content — it is about making what already exists verifiable.</p>
+ 
+        <h2>The starting point: why Wikidata is not the answer for everyone</h2>
+ 
+        <p>When discussing semantic identity and entity linking, Wikidata is often cited as the solution. That is understandable: it is the largest and most open knowledge graph on the web, used by Google, the major AI systems and dozens of search engines as a source of verifiable facts. Having an entry there means being a node in the graph machines consult.</p>
+ 
+        <p>The problem is that Wikidata requires notability. It is not an arbitrary formal requirement but a precise editorial choice: entries must describe entities that have received significant coverage from independent sources. A lawyer with twenty years of experience, an established consultant in their field, a nonprofit with projects funded by the European Union — none of these automatically clears that bar. An entry created without meeting the criteria gets removed. The effect is counterproductive, and in some cases leaves a negative trace.</p>
+ 
+        <p>And yet the problem to solve is real and independent of Wikidata: how does an AI system recognise who you are, separate you from your namesakes, cite you accurately? The answer does not necessarily run through a public knowledge graph. It runs through the signals you control directly.</p>
+ 
+        <h2>What an entity signal does</h2>
+ 
+        <p>An entity signal is any structured data that helps an AI system resolve entity linking on you or your organisation. It is not a descriptive text, not a bio, not a social profile: it is data in a form a machine can read without having to interpret.</p>
+ 
+        <p>The distinction is fundamental. A text that says "Mario Rossi is a lawyer specialising in employment law in Milan" is useful for a human reader but ambiguous for a model: how many Mario Rossi lawyers are there? Where does this information come from? Is it verifiable? An entity signal resolves that ambiguity by connecting the name to unique references, declaring properties in a format that requires no interpretation, and anchoring statements to sources that hold up under checking.</p>
+ 
+        <p>The logic is the same as <a href="entity-linking.html">entity linking</a>: the model needs the correct answer to be the easiest one to find. Signals are the coordinates that make the correct answer easier than any other.</p>
+ 
+        <h2>Markup on your website: JSON-LD and Schema.org</h2>
+ 
+        <p>The most direct point of control is your own website. Every page can contain structured markup in JSON-LD, the format recommended by Google and adopted by the major AI systems to read metadata without having to extract it from the page text.</p>
+ 
+        <p>Schema.org provides the vocabulary: a set of recognised types and properties that name entities and their characteristics. The <code>Person</code> type describes a natural person, with properties such as <code>name</code>, <code>jobTitle</code>, <code>worksFor</code>, <code>knowsAbout</code>, <code>sameAs</code>. The <code>Organization</code> type describes an entity, with <code>name</code>, <code>description</code>, <code>foundingDate</code>, <code>areaServed</code>, <code>sameAs</code>. Both types support <code>identifier</code>, which holds unique, verifiable references.</p>
+ 
+        <p>The markup is invisible to the human visitor: it lives in a <code>&lt;script type="application/ld+json"&gt;</code> block in the page head. But for an AI system it is the most reliable information on the page, because it has been declared explicitly by the site owner, not extracted from an ambiguous text.</p>
+ 
+        <h2>The properties that actually disambiguate</h2>
+ 
+        <p>Not all Schema.org properties carry the same weight for disambiguation. Some are descriptive and help build the profile; others are structurally decisive because they pinpoint a unique entity.</p>
+ 
+        <p>The <code>sameAs</code> property is the most important. It declares that the entity described in the markup is the same one appearing on an external profile or page. Linking the entity to your LinkedIn profile, your GitHub, your institutional website turns those profiles from separate pages into confirmations of the same node. Each <code>sameAs</code> added is a thread connecting different sources to a single verifiable identity.</p>
+ 
+        <p>The <code>identifier</code> property holds sector-specific unique codes: the ORCID for researchers and authors, the tax code or VAT number for Italian professionals and companies, the LEI code for financial entities. These identifiers are not names shared with others: they are numbers assigned once to a single entity. For an AI system they are the equivalent of an identity document.</p>
+ 
+        <p>The <code>worksFor</code>, <code>affiliation</code> and <code>alumniOf</code> properties link the entity to other already-known entities. If the organisation you are affiliated with has a Wikidata entry, connecting to that entry transfers some of its anchoring. You are not in the knowledge graph as a standalone node, but you are hooked to nodes that are already there.</p>
+ 
+        <p>The <code>knowsAbout</code> property, filled with references to defined terms, qualifies expertise in a verifiable way instead of relying on keywords. The difference between saying "works on entity linking" and linking the term to its Wikidata entry is that in the second case the model knows exactly what is being discussed.</p>
+ 
+        <h2>Official profiles as anchors</h2>
+ 
+        <p>Profiles on recognised platforms, declared as <code>sameAs</code> in the markup, become anchors of the semantic identity. Not because the platforms are knowledge graphs, but because they are sources AI systems already index and weight — and because the explicit declaration of the link reduces ambiguity.</p>
+ 
+        <p>LinkedIn is the most relevant for professionals: it is the source models consult most often for current professional data. A well-structured LinkedIn profile, linked to your website with <code>sameAs</code>, works as a bidirectional confirmation: the site declares that profile is the same node, and the profile describes the node with data the model can read.</p>
+ 
+        <p>GitHub carries similar value for those working in technical or research fields: it is a verifiable source of contributions and projects, with a traceable history. For organisations, profiles on Charity Navigator, official European Union portals, or sector-specific registries serve the same function: they are external authoritative references confirming the entity's existence and characteristics.</p>
+ 
+        <p>The principle is verifiable redundancy: the more independent sources describe the same entity with consistent data, the harder it becomes for a model to confuse it with another or invent details. Each declared profile is a constraint that narrows the margin for error.</p>
+ 
+        <h2>llms.txt: instructing models directly</h2>
+ 
+        <p>There is a more recent and less widely known tool that approaches the problem from a different direction: the llms.txt file. It is not a W3C standard or a formal vocabulary. It is a convention emerging in the semantic web community, analogous to robots.txt but designed for language models rather than crawlers.</p>
+ 
+        <p>An llms.txt file is a plain-text document placed at the root of the site, readable by both machines and humans, that declares who the site owner is, what they do, which pages contain relevant information and how the information should be used. It does not have the formal structure of JSON-LD, but it has the advantage of being direct: it instructs the model in controlled natural language, with an authority that comes from being hosted on the domain itself.</p>
+ 
+        <p>Its value is not to replace structured markup but to complement it. JSON-LD speaks to the parser of an AI system; llms.txt speaks to the model at the moment it indexes or consults the site. Used together, they cover different layers of the same problem: formal readability and contextual understanding.</p>
+ 
+        <h2>The Solid Pod: the frontier of data sovereignty</h2>
+ 
+        <p>There is a further level, still uncommon but consistent with the direction of the semantic web: the Solid Pod. The Solid Protocol, developed by Tim Berners-Lee, allows you to store your data in a personal container controlled by the individual, with granular access managed by the owner rather than the platform hosting the data.</p>
+ 
+        <p>A Solid Pod is not a social profile and not a website in the traditional sense: it is a storage point for structured data in RDF, accessible according to rules the owner establishes. Linking your Solid Pod to the entity described in the site markup is a declaration of data sovereignty: it tells the model where to find up-to-date, verifiable information under the direct control of the person it concerns.</p>
+ 
+        <p>We are far from widespread adoption, and it is not realistic to propose a Solid Pod as a first step for someone just starting to build their semantic identity. But it is worth naming because it points in the right direction: less dependence on intermediaries, more direct control over how your entity is represented in the web machines read.</p>
+ 
+        <h2>The mistake of treating it as a technical problem</h2>
+ 
+        <p>At this point the temptation is to automate. Plugins, generators and scripts exist that produce JSON-LD markup in seconds: fill in some fields, copy the code into the page, done. The markup will be produced, and it will even be formally valid. The tool worked.</p>
+ 
+        <p>But a generator does not know which of your namesakes you are. It does not choose which of your affiliations actually disambiguate your identity. It does not find the authoritative profiles worth declaring as <code>sameAs</code>. It does not decide which competencies to link to verifiable terms and which to leave as free text. It does not know your professional history well enough to understand what needs to be said and what can be left out.</p>
+ 
+        <p>These are judgements, not mechanical operations. The markup is the result of an analysis: what distinguishes this entity from others sharing the same name? What evidence exists that holds up under checking? Where are the authoritative sources that confirm who you are? The JSON-LD syntax is the last step, not the first.</p>
+ 
+        <h2>How to verify it is working</h2>
+ 
+        <p>The most direct test is also the most useful as a starting point. Before acting, ask the main AI systems — ChatGPT, Gemini, Perplexity — who you are, what you do, what your key projects or outputs are. Note the answers: what is correct, what is missing, what is invented, what belongs to a namesake.</p>
+ 
+        <p>That snapshot serves as a baseline. After building the signals, repeat the same questions. The comparison is verifiable: can the model now separate you from your namesakes? Are the data cited those declared in the markup? Are the affiliations correct? Have you appeared in answers where you were previously ignored?</p>
+ 
+        <p>There is also an immediate technical check: the Schema.org validator lets you verify that the markup is formally correct and that the properties are recognised. It is a necessary check but not sufficient: a valid markup does not guarantee that the content choices are the right ones to disambiguate this specific entity.</p>
+ 
+        <h2>Not more content: different structure</h2>
+ 
+        <p>It is worth clarifying what this work does not require. It does not require writing more texts, publishing more articles, or building a larger presence on social media. It does not require building a richer website or a more detailed profile in the narrative sense.</p>
+ 
+        <p>It requires taking what already exists — affiliations, competencies, projects, outputs — and making it verifiable. Moving from a form a human can read to a form a machine can use to make decisions. It is a transformation of structure, not of volume.</p>
+ 
+        <p>Those who already have a consolidated digital presence often have more verifiable material than they realise. The problem is not a lack of data; it is that the data exists in formats AI systems cannot use with precision. Building entity signals is the work of closing that gap.</p>
+ 
+        <h2>Where to start</h2>
+ 
+        <p>The first step is the baseline snapshot: ask the main AI systems who you are today, and note what they describe accurately, what they invent and where they confuse you with a namesake. From that response you can tell where the entity-linking process is failing and which signals are missing.</p>
+ 
+        <p>The second step is an inventory: what verifiable evidence already exists? Which affiliations are documented on authoritative sources? Which unique identifiers apply to you? Which official profiles do you already control and are consistent with each other? What is found here is the raw material of the signals.</p>
+ 
+        <p>The third step is structure: translating that inventory into JSON-LD markup on the site, consistent <code>sameAs</code> declarations across platforms, and an llms.txt that describes the entity in a controlled way. Each of these is one more signal that makes the correct answer easier to find for any system trying to resolve entity linking on you.</p>
+ 
+        <p>I work with professionals, SMEs and impact organisations to build this kind of presence: structured, verifiable, readable by the AI systems that are becoming the first point of contact between those who search and those who exist.</p>
+ 
+      </div>
+ 
+      <div class="article-cta">
+        <div class="inner">
+          <div class="cta-block">
+            <p>If you want to understand which signals you are missing and where to start, book a 30-minute call.</p>
+            <div class="cta-actions">
+              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Book a call ↗</a>
+              <a href="entity-linking.html" class="cta-btn cta-btn-secondary">Read: Entity linking →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+ 
+  <footer>
+    <div class="inner">
+      <div class="footer-inner">
+        <div class="footer-meta">
+          <span>Pasquale Caiazzo</span><br>
+          Semantic Entity Architect<br>
+          Turin<br>
+          VAT IT01712990058
+        </div>
+        <div class="footer-links" style="display: flex; gap: 2rem;">
+          <a href="mailto:info@pasqualecaiazzo.com">info@pasqualecaiazzo.com</a>
+          <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fen%2Fnotes%2Fentity-signals-without-wikidata.html" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+          <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+ 
+</body>
+</html>
