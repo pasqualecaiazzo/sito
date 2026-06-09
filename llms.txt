@@ -24,6 +24,7 @@ Enquiries: https://cal.com/pcaiazzo/30min
 
 ## Notes (long reads)
 
+- [Entity linking: come l'AI capisce chi sei](https://pasqualecaiazzo.com/note/entity-linking.html) [IT]: The pillar. What entity linking is, why it is not entity resolution, and how it defines the Semantic Entity Architect role. Anchored to knowledge graph and linked data.
 - [Come far comparire la tua azienda nelle risposte dell'AI](https://pasqualecaiazzo.com/note/ai-search-aziende.html) [IT]: How businesses appear in AI responses — GEO, structured data, brand integrity, RAG.
 - [Perché un'AI ti scambia per un altro: omonimia e disambiguazione](https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html) [IT]: Why AI systems confuse people who share names, and how semantic disambiguation fixes it.
 - [GEO per il terzo settore](https://pasqualecaiazzo.com/note/geo-terzo-settore.html) [IT]: Why nonprofits are nearly invisible to AI and how to change that.
