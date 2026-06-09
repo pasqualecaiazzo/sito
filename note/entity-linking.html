@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../favicon.png">
+<title>Entity linking: come l'AI capisce chi sei – Pasquale Caiazzo</title>
+<meta name="description" content="Entity linking è il processo con cui i sistemi AI collegano un nome all'entità reale e unica a cui si riferisce. Cosa significa, perché non è entity resolution, e come rende un'identità leggibile e citabile.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/note/entity-linking.html">
+<link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/entity-linking.html">
+<link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/entity-linking.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Entity linking: come l'AI capisce chi sei">
+<meta property="og:description" content="Entity linking è il nome preciso del processo con cui un sistema AI collega un nome all'entità reale a cui si riferisce. È il meccanismo da cui dipende se l'AI ti descrive con accuratezza o ti confonde.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/note/entity-linking.html">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://pasqualecaiazzo.com/logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+<meta property="article:published_time" content="2026-06-09">
+<meta property="article:modified_time" content="2026-06-09">
+<meta property="article:author" content="Pasquale Caiazzo">
+<meta name="author" content="Pasquale Caiazzo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Entity linking: come l'AI capisce chi sei">
+<meta name="twitter:description" content="Il nome preciso del processo con cui un sistema AI collega un nome all'entità reale a cui si riferisce, e come renderla leggibile e citabile.">
+<meta name="twitter:image" content="https://pasqualecaiazzo.com/logo.png">
+<meta name="twitter:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+ 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://pasqualecaiazzo.com/note/entity-linking.html#article",
+      "url": "https://pasqualecaiazzo.com/note/entity-linking.html",
+      "headline": "Entity linking: come l'AI capisce chi sei",
+      "description": "Entity linking è il nome preciso del processo con cui un sistema AI collega un nome all'entità reale e unica a cui si riferisce, lo distingue dalla deduplica (entity resolution), e definisce il lavoro di chi rende un'identità leggibile e citabile.",
+      "inLanguage": "it",
+      "datePublished": "2026-06-09",
+      "dateModified": "2026-06-09",
+      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
+      "publisher": { "@id": "https://pasqualecaiazzo.com/#publisher" },
+      "mainEntityOfPage": { "@id": "https://pasqualecaiazzo.com/note/entity-linking.html#webpage" },
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/note/#blog" },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png",
+        "width": 1200,
+        "height": 1200
+      },
+      "articleSection": "Note",
+      "wordCount": 1148,
+      "keywords": [
+        "entity linking", "named-entity disambiguation", "knowledge graph", "linked data",
+        "dati strutturati", "Wikidata", "GEO", "entità", "AI search", "semantic entity architecture"
+      ],
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".article-tldr"] },
+      "about": [
+        { "@type": "DefinedTerm", "name": "Entity linking", "sameAs": "https://www.wikidata.org/wiki/Q17012245" },
+        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
+        { "@type": "DefinedTerm", "name": "Linked Data", "sameAs": "https://www.wikidata.org/wiki/Q515701" }
+      ],
+      "mentions": [
+        { "@type": "DefinedTerm", "name": "Generative Engine Optimization", "sameAs": "https://www.wikidata.org/wiki/Q134083964" },
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
+        { "@type": "DefinedTerm", "name": "Semantic Web", "sameAs": "https://www.wikidata.org/wiki/Q54837" },
+        { "@type": "Thing", "name": "Wikidata", "sameAs": "https://www.wikidata.org/wiki/Q2013" },
+        { "@type": "DefinedTerm", "name": "Schema.org", "sameAs": "https://www.wikidata.org/wiki/Q3475322" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "jobTitle": "Semantic Entity Architect",
+      "sameAs": [
+        "https://www.linkedin.com/in/pasqualecaiazzo/",
+        "https://github.com/pasqualecaiazzo"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pasqualecaiazzo.com/#publisher",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "logo": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/favicon.png" }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://pasqualecaiazzo.com/note/#blog",
+      "name": "Note – Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com/note/",
+      "description": "Analisi e riflessioni su AI search, semantic entity architecture e GEO.",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/note/entity-linking.html#webpage",
+      "url": "https://pasqualecaiazzo.com/note/entity-linking.html",
+      "name": "Entity linking: come l'AI capisce chi sei",
+      "inLanguage": "it",
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
+      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/note/entity-linking.html#breadcrumb" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png" },
+      "dateModified": "2026-06-09"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/note/entity-linking.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Note", "item": "https://pasqualecaiazzo.com/note/" },
+        { "@type": "ListItem", "position": 3, "name": "Entity linking", "item": "https://pasqualecaiazzo.com/note/entity-linking.html" }
+      ]
+    }
+  ]
+}
+</script>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="../main.js" defer></script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav aria-label="Navigazione principale">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-name">Pasquale Caiazzo</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+      </svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
+    <div class="lang-toggle"><span class="lang-current">IT</span><span class="lang-sep">·</span><a href="/en/notes/entity-linking.html" hreflang="en" class="lang-link">EN</a></div>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <span class="nav-toggle-text">Menu</span>
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+ 
+<div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <button id="drawer-close" class="drawer-close" aria-label="Chiudi menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-content">
+    <div class="nav-anchors">
+      <a href="../index.html#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">Chi sono</span></a>
+      <a href="../professionisti.html" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">Per i professionisti</span></a>
+      <a href="../pmi.html" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">Per le PMI</span></a>
+      <a href="../impatto.html" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">Per le organizzazioni a impatto</span></a>
+      <a href="../manifesto.html" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+      <a href="index.html" class="nav-link active"><span class="drawer-num">06</span> <span class="drawer-text">Note</span></a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-meta">
+        <h3>Contatti & Risorse</h3>
+        <p>Base operativa a Torino &bull; Disponibile per progetti da remoto</p>
+        <p>Richieste: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Prenota un incontro di 30 min ↗</a></p>
+          <p>Email: <a href="mailto:info@pasqualecaiazzo.com">info@pasqualecaiazzo.com</a></p>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+ 
+<main>
+  <div class="band hero-band">
+    <div class="inner">
+      <article class="article-wrap">
+        <a href="index.html" class="article-back">← Note</a>
+        <span class="tag">Fondamenti</span>
+        <h1 class="article-title">Entity linking: come l'AI capisce chi sei</h1>
+        <div class="article-meta">
+          <span>Pasquale Caiazzo</span>
+          <span class="sep">/</span>
+          <time datetime="2026-06-09">9 giugno 2026</time>
+          <span class="sep">/</span>
+          <span>10 min di lettura</span>
+        </div>
+ 
+        <p class="article-tldr">
+          <strong>In breve</strong>
+          Entity linking è il nome preciso del processo con cui un sistema AI collega un nome all'entità reale e unica a cui si riferisce, e decide che quel "Pasquale Caiazzo" sono io e non un altro. Non è un dettaglio tecnico lontano: è il meccanismo da cui dipende se l'AI ti descrive con accuratezza o ti confonde, se ti cita o ti ignora. Il mio lavoro di Semantic Entity Architect vive esattamente lì, nel preparare un'entità perché quel collegamento riesca. Le tre note verticali di questo sito sono lo stesso principio applicato a pubblici diversi.
+        </p>
+ 
+        <div class="prose">
+          <h2>C'è un nome preciso per il problema</h2>
+          <p>
+            Per anni il modo di farsi trovare era posizionarsi tra i dieci link di una pagina di risultati. Oggi un sistema AI risponde in un colpo solo, e prima di rispondere deve compiere una decisione che la ricerca tradicional non gli chiedeva: stabilire a chi, o a cosa, si riferisce un nome. Quella decisione ha un nome nella letteratura, ed è entity linking, chiamato anche named-entity disambiguation. È il compito di assegnare un'identità univoca alle entità menzionate in un testo. L'esempio da manuale è la frase "Paris is the capital of France": il modello deve capire che "Paris" è la città e non Paris Hilton.
+          </p>
+          <p>
+            Non è un termine che ho coniato io. È una disciplina riconosciuta, con una voce su Wikipedia e un nodo su Wikidata, studiata da oltre vent'anni tra information retrieval, natural language processing e semantic web. E sapere che il problema ha un nome preciso cambia il modo di affrontarlo: non è la vaga aspirazione a "essere più visibili", è una questione tecnica definita, con cause note e leve concrete su cui agire.
+          </p>
+ 
+          <h2>Non confonderlo con la deduplica</h2>
+          <p>
+            C'è un quasi omonimo che porta fuori strada: entity resolution. A dispetto del nome simile significa un'altra cosa, cioè decidere se due record diversi sono la stessa entità e fonderli, eliminando i duplicati. È un lavoro da ingegneria dei dati e da master data management, il mondo dell'antiriciclaggio e delle anagrafiche aziendali. L'entity linking va nella direzione opposta: prende una menzione e la risolve all'entità canonica giusta, distinguendola dagli omonimi.
+          </p>
+          <p>
+            La distinzione conta, e non per pedanteria. Se insegui la parola sbagliata finisci nella conversazione sbagliata, letta dal pubblico sbagliato. Il problema di cui mi occupo non è ripulire database da doppioni, è fare in modo che un nome venga risolto alla persona o all'organizzazione giusta, con i fatti giusti.
+          </p>
+ 
+          <h2>Come fa l'AI a decidere</h2>
+          <p>
+            Il processo si compone di tre momenti. Prima il modello riconosce il nome dentro il testo. Poi genera dei candidati, cioè le entità possibili a cui quel nome potrebbe corrispondere, attingendo a una base di conoscenza, di solito Wikipedia o Wikidata. Infine disambigua, sceglie il candidato corretto.
+          </p>
+          <p>
+            Il punto debole, per te, è il secondo passaggio. Se la tua entità non è in quella base di conoscenza, o c'è ma è descritta in modo confuso, il modello sceglie qualcun altro oppure inventa. Non è malizia, è il comportamento normale di un sistema che riempie i vuoti. L'unico modo di controllare l'esito è rendere la risposta corretta quella più facile da trovare.
+          </p>
+ 
+          <h2>Perché riguarda te, non gli ingegneri</h2>
+          <p>
+            Costruire il sistema di entity linking è il lavoro degli ingegneri NLP, e non è il mio. Io sto dall'altra parte del tavolo: sul lato dell'entità che deve essere collegabile. La leva che hai in mano non è l'algoritmo, è l'offerta di dati puliti, verificabili e strutturati su di te o sulla tua organizzazione. Un identificativo stabile, riferimenti che reggono al controllo, una descrizione che una macchina legge senza dover interpretare.
+          </p>
+          <p>
+            È esattamente la metà del problema che puoi controllare, ed è anche quella su cui non lavora quasi nessuno. Tutti discutono di come le AI sbagliano, pochi preparano la propria entità perché le AI possano fare bene.
+          </p>
+ 
+          <h2>Dove vivono le entità: knowledge graph e linked data</h2>
+          <p>
+            Due concetti riconosciuti danno il nome al substrato su cui si lavora. Un knowledge graph è la struttura di entità e relazioni che motori di ricerca e sistemi AI consultano per sapere chi è chi. I linked data sono la pratica di pubblicare i propri dati in forma connessa e leggibile dalle macchine, con identificatori univoci e collegamenti ai nodi canonici, su fondamenta RDF, e nella pratica quotidiana con JSON-LD e Schema.org e con i sameAs verso Wikidata.
+          </p>
+          <p>
+            Rendersi collegabili significa, in concreto, due cose: esistere come nodo pulito in quel grafo, e puntare ai nodi giusti accanto a te, il tema di cui ti occupi, le organizzazioni a cui appartieni, i luoghi in cui operi. Sono quei collegamenti a dire al modello dove collocarti, e a impedirgli di confonderti con un omonimo.
+          </p>
+ 
+          <h2>Cosa fa, qui, un Semantic Entity Architect</h2>
+          <p>
+            A questo punto posso dire senza giri di parole cosa significa il titolo che porto. Non ottimizzo parole chiave e non costruisco intelligenze artificiali. Progetto il modo in cui un'entità è rappresentata, perché quando un modello compie l'entity linking la risolva al nodo giusto, con i fatti giusti, distinta dagli omonimi, e perché quell'entità sia citabile come fonte.
+          </p>
+          <p>
+            È un mestiere che vive all'incrocio di tre campi riconosciuti, entity linking, knowledge graph e linked data, applicati a un solo obiettivo: essere trovati e descritti correttamente dai sistemi generativi, ciò che il mercato chiama GEO, Generative Engine Optimization. Il nome del ruolo è mio, ma quei nodi dicono cosa contiene. È la disambiguazione applicata a me stesso, prima ancora che ai clienti.
+          </p>
+ 
+          <h2>Tre applicazioni dello stesso principio</h2>
+          <p>
+            Tutto il resto di questo sito è questo principio calato su un soggetto specifico. Per un professionista il problema prende la forma dell'omonimia, l'AI che ti fonde con qualcuno che porta il tuo stesso nome, e lo affronto nella nota su <a href="omonimia-disambiguazione.html">omonimia e disambiguazione</a>. Per una PMI è il marchio e l'offerta che devono comparire correttamente nelle risposte su fornitori e soluzioni, ed è il tema di <a href="ai-search-aziende.html">come far comparire la tua azienda nelle risposte dell'AI</a>. Per un ente del terzo settore è una missione intrappolata in PDF che nessuna macchina legge, di cui parlo in <a href="geo-terzo-settore.html">GEO per il terzo settore</a>.
+          </p>
+          <p>
+            Pubblici diversi, lavoro di fondo identico: fare in modo che l'entità venga risolta correttamente. Cambia il soggetto, non il principio.
+          </p>
+ 
+          <h2>Da dove si parte</h2>
+          <p>
+            Il primo passo è sempre lo stesso, e lo puoi fare oggi: chiedi a ChatGPT, Gemini e Perplexity chi sei, o cosa fa la tua organizzazione, e osserva cosa è corretto, cosa manca e cosa viene inventato. Quella fotografia ti dice se l'entity linking, su di te, sta funzionando o no. Da lì si decide se e come intervenire.
+          </p>
+ 
+          <div class="article-cta">
+            <p class="lead">Lavoro con professionisti, PMI e organizzazioni a impatto perché la loro entità venga collegata, descritta e citata correttamente dai sistemi AI.</p>
+            <div class="cta-group">
+              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Prenota una chiamata ↗</a>
+              <a href="../manifesto.html" class="cta-btn cta-btn-outline">Leggi il manifesto →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+ 
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links">
+        <a href="mailto:info@pasqualecaiazzo.com">info@pasqualecaiazzo.com</a>
+          <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fnote%2Fentity-linking.html" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
