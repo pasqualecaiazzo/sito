@@ -28,6 +28,7 @@ Enquiries: https://cal.com/pcaiazzo/30min
 - [Come far comparire la tua azienda nelle risposte dell'AI](https://pasqualecaiazzo.com/note/ai-search-aziende.html) [IT]: How businesses appear in AI responses — GEO, structured data, brand integrity, RAG.
 - [Perché un'AI ti scambia per un altro: omonimia e disambiguazione](https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html) [IT]: Why AI systems confuse people who share names, and how semantic disambiguation fixes it.
 - [GEO per il terzo settore](https://pasqualecaiazzo.com/note/geo-terzo-settore.html) [IT]: Why nonprofits are nearly invisible to AI and how to change that.
+- [Entity Linking: How AI Works Out Who You Are](https://pasqualecaiazzo.com/en/notes/entity-linking.html) [EN]: English version of the entity linking pillar article.
 - [How to Make Your Business Appear in AI Responses](https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html) [EN]: English version of the SME/AI search article.
 - [Why AI Mistakes You for Someone Else: Disambiguation Explained](https://pasqualecaiazzo.com/en/notes/disambiguation.html) [EN]: English version of the disambiguation article.
 - [GEO for Nonprofits: How a Charity Gets Found by AI](https://pasqualecaiazzo.com/en/notes/geo-nonprofits.html) [EN]: English version of the nonprofit GEO article.
