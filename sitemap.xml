@@ -112,6 +112,26 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ── PRIVACY ──────────────────────────────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/privacy.html"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/privacy.html"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- ── NOTE INDEX / NOTES INDEX ─────────────────────────── -->
   <url>
     <loc>https://pasqualecaiazzo.com/note/</loc>
