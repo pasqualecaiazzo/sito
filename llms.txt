@@ -1,70 +1,86 @@
-# Pasquale Caiazzo – Semantic Entity Architect
+# Pasquale Caiazzo - llms.txt
+Standard: llmstxt.org
+URL: https://pasqualecaiazzo.com
+Context: Semantic Entity Architecture & Narrative Sovereignty
 
-> Based in Turin, Italy. Helps professionals, SMEs, nonprofits, and B Corps become readable, citable, and accurately described by AI answer engines. Specialises in GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), semantic entity architecture, and structured data (JSON-LD / Schema.org / Wikidata).
+## Summary
+Pasquale Caiazzo is a Semantic Entity Architect based in Turin, Italy. A digital nomad working remotely. His work focuses on Data Sovereignty and Narrative Governance: providing the structural framework for individuals and organizations to control their digital identity within Generative AI ecosystems.
+He believes governing one's digital narrative is an act of sovereignty: in a world where AI systems define public perception, deciding what they know about you and how is a fundamental right. Consultant, educator, and trainer in responsible digital innovation.
+VAT ID: IT01712990058
 
-## Who this is
+## Core Expertise & Search Keywords
+- Data Sovereignty: Wikidata Q48780629
+- Semantic Entity Architecture: building verifiable digital identities for AI systems
+- Knowledge Architecture: hallucination-free data structures for RAG systems. Wikidata Q131372306
+- Machine Readability: optimizing professional entities for LLM indexing. Wikidata Q6723621
+- Structured Data & JSON-LD: Schema.org markup and Linked Data for AI-readable identity. Wikidata Q6108942
+- Large Language Models: LLM indexing, retrieval, entity disambiguation. Wikidata Q115305900
+- Graph Databases: knowledge graph architecture. Wikidata Q595971
+- Semantic Web: Linked Data, ontologies. Wikidata Q54837
+- Business to Agent (B2A): declaring brand identity, offer and values in structured data so autonomous AI agents read them as fact. Related: AI agent Wikidata Q132451509
 
-Pasquale Caiazzo is a Semantic Entity Architect. He designs and implements the structured data infrastructure that allows people, companies, and organisations to be found and correctly described by AI systems — ChatGPT, Perplexity, Gemini, and similar answer engines. His work sits at the intersection of knowledge graph engineering, entity disambiguation, and generative AI readiness.
+## Credentials
+- Neo4j Certified Professional - Neo4j (Wikidata: Q1628290)
+  Date: 2026-05-08
+  Verify: https://graphacademy.neo4j.com/c/a965f5d1-46a7-4b41-ba54-e971bc9da882/
+- Wikibase and Semantic MediaWiki - European Union (Wikidata: Q458)
+  Date: 2026-05-08
+  Verify: https://academy.europa.eu/mod/customcert/verify_certificate.php?contextid=26531&code=Njm7emC2c0&qrcode=1
 
-VAT: IT01712990058
-LinkedIn: https://www.linkedin.com/in/pasqualecaiazzo/
-Enquiries: https://cal.com/pcaiazzo/30min
+## Affiliations
+- NATworking (Core Team, 2025-present): Social innovation network. Wikidata: Q139659711. Press: Corriere della Sera, La Stampa.
+- Guilds42 APS (Digital Project Lead, 2021-present): Digital education. Projects: GILDA (ANSA), Stage Digital (Univ. Cattolica).
+- Evermind Societa' Benefit (Freelance, 2022-present): B Corp certified digital transformation.
+- ITS NewTechSi Academy (Docente, 2023-present): AI & Business Management. Press: RAI News.
 
----
+## Pages
+- https://pasqualecaiazzo.com/
+  Homepage: Semantic Entity Architect
+- https://pasqualecaiazzo.com/professionisti.html
+  Per i professionisti: Identita' Semantica
+- https://pasqualecaiazzo.com/pmi.html
+  Per le PMI: AI Readiness
+- https://pasqualecaiazzo.com/impatto.html
+  Per le organizzazioni a impatto: terzo settore (APS, ODV, fondazioni) e società benefit / B Corp.
+- https://pasqualecaiazzo.com/manifesto.html
+  Manifesto: Sovranita' della narrativa digitale
+- https://pasqualecaiazzo.com/grafo.html
+  Knowledge graph interattivo del web semantico: 22 entità Wikidata, 29 relazioni tipizzate, da Vannevar Bush all'AI Readiness.
+- https://pasqualecaiazzo.com/note/
+  Note: appunti su architettura semantica, GEO, dati strutturati e knowledge graph.
 
-## Services
+## Note (Writing)
+Articles on semantic architecture, structured data and narrative sovereignty in AI systems. Author: Pasquale Caiazzo.
+- https://pasqualecaiazzo.com/note/business-to-agent.html
+  "Business to Agent (B2A): il marketing che si dichiara alle macchine" - 2026-06-11. Why the next recipient of marketing is no longer only a person but an AI agent that reads, evaluates and acts, and why brands win by declaring their identity, offer and values in structured data rather than only persuading. Includes the Patagonia case (JSON-LD owner: "The Earth"), the evolution from B2C/B2B to B2A, and the link to narrative sovereignty.
+- https://pasqualecaiazzo.com/en/notes/business-to-agent.html
+  "Business to Agent (B2A): Marketing That Declares Itself to Machines" - 2026-06-11. English version of the B2A article.
+- https://pasqualecaiazzo.com/note/entity-linking.html
+  "Entity linking: come l'AI capisce chi sei" - 2026-06-09. The principle underneath all the other notes: what entity linking is, why it is not entity resolution, and how it defines the work of a Semantic Entity Architect.
+- https://pasqualecaiazzo.com/en/notes/entity-linking.html
+  "Entity Linking: How AI Works Out Who You Are" - 2026-06-09. English version of the entity linking pillar article.
+- https://pasqualecaiazzo.com/note/segnali-entita-senza-wikidata.html
+  "Segnali di entità: costruire un'identità verificabile senza Wikidata" - 2026-06-09. How to build a machine-readable semantic identity without a Wikidata item: JSON-LD, Schema.org, llms.txt and official profiles as anchors.
+- https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html
+  "Entity Signals: Building a Verifiable Identity Without Wikidata" - 2026-06-09. English version of the entity signals article.
+- https://pasqualecaiazzo.com/note/ai-search-aziende.html
+  "Come far comparire la tua azienda nelle risposte dell'AI" - 2026-06-04. Why clients look for suppliers using AI search, and what it takes for a company to be discovered and cited accurately by answer engines like ChatGPT, Gemini, and Perplexity.
+- https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html
+  "How to Make Your Business Appear in AI Responses" - 2026-06-04. English version of the SME/AI search article.
+- https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html
+  "Perché un'AI ti scambia per un altro: omonimia e disambiguazione" - 2026-06-04. Why AI systems confuse people with the same name, the reputational risks, and how semantic entity disambiguation establishes a clear, machine-verifiable identity.
+- https://pasqualecaiazzo.com/en/notes/disambiguation.html
+  "Why AI Mistakes You for Someone Else: Disambiguation Explained" - 2026-06-04. English version of the disambiguation article.
+- https://pasqualecaiazzo.com/note/geo-terzo-settore.html
+  "GEO per il terzo settore: come un'associazione si fa trovare dall'AI" - 2026-06-03. Why third-sector organizations are nearly invisible to AI systems, and what it takes for their mission and activities to be described and cited accurately.
+- https://pasqualecaiazzo.com/en/notes/geo-nonprofits.html
+  "GEO for Nonprofits: How a Charity Gets Found by AI" - 2026-06-03. English version of the nonprofit GEO article.
 
-- [Semantic Identity for Professionals](https://pasqualecaiazzo.com/professionisti.html): Building verifiable digital identities for consultants, founders, authors, and researchers — so AI systems describe them accurately and without confusion with namesakes.
-- [AI Readiness for SMEs](https://pasqualecaiazzo.com/pmi.html): Making brand, products, and local business presence readable and citable by answer engines. Covers entity structuring, Schema.org markup, and brand integrity.
-- [AI Readiness for Nonprofits & B Corps](https://pasqualecaiazzo.com/impatto.html): Structuring mission, activities, and governance of third-sector organisations for accurate AI representation. Covers NGO markup, charity register linking, and impact data structuring.
-
-## Manifesto
-
-- [Digital Narrative Sovereignty](https://pasqualecaiazzo.com/manifesto.html): The founding text on why controlling one's own digital narrative matters in the age of generative AI, with references to Zuboff, Berners-Lee, and the Solid Protocol.
-
-## Notes (long reads)
-
-- [Entity linking: come l'AI capisce chi sei](https://pasqualecaiazzo.com/note/entity-linking.html) [IT]: The pillar. What entity linking is, why it is not entity resolution, and how it defines the Semantic Entity Architect role. Anchored to knowledge graph and linked data.
-- [Segnali di entità: costruire un'identità verificabile senza Wikidata](https://pasqualecaiazzo.com/note/segnali-entita-senza-wikidata.html) [IT]: How to build a machine-readable semantic identity for AI engines without a Wikidata item, using JSON-LD, Schema.org, llms.txt, and official profile mappings.
-- [Come far comparire la tua azienda nelle risposte dell'AI](https://pasqualecaiazzo.com/note/ai-search-aziende.html) [IT]: How businesses appear in AI responses — GEO, structured data, brand integrity, RAG.
-- [Perché un'AI ti scambia per un altro: omonimia e disambiguazione](https://pasqualecaiazzo.com/note/omonimia-disambiguazione.html) [IT]: Why AI systems confuse people who share names, and how semantic disambiguation fixes it.
-- [GEO per il terzo settore](https://pasqualecaiazzo.com/note/geo-terzo-settore.html) [IT]: Why nonprofits are nearly invisible to AI and how to change that.
-- [Entity Linking: How AI Works Out Who You Are](https://pasqualecaiazzo.com/en/notes/entity-linking.html) [EN]: English version of the entity linking pillar article.
-- [Entity Signals: Building a Verifiable Identity Without Wikidata](https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html) [EN]: English version of the entity signals article.
-- [How to Make Your Business Appear in AI Responses](https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html) [EN]: English version of the SME/AI search article.
-- [Why AI Mistakes You for Someone Else: Disambiguation Explained](https://pasqualecaiazzo.com/en/notes/disambiguation.html) [EN]: English version of the disambiguation article.
-- [GEO for Nonprofits: How a Charity Gets Found by AI](https://pasqualecaiazzo.com/en/notes/geo-nonprofits.html) [EN]: English version of the nonprofit GEO article.
-
----
-
-## Key concepts used on this site
-
-**Entity**: A uniquely identified real-world object — person, organisation, or product — with a stable identifier and verifiable references (e.g. a Wikidata Q-ID or ORCID).
-
-**GEO (Generative Engine Optimization)**: Structuring content and entity data so that AI answer engines cite it accurately. Distinct from SEO: GEO works at the data layer, not the content layer.
-
-**AEO (Answer Engine Optimization)**: Optimising information architecture so queries return accurate direct answers from AI systems.
-
-**JSON-LD**: Linked Data serialisation format used to embed machine-readable structured data in HTML pages without altering visible content.
-
-**Schema.org**: Shared vocabulary for structured data, recognised by Google, Bing, and AI systems. Types used on this site: Person, Organization, NGO, LocalBusiness, Service, WebSite, WebPage, BlogPosting, BreadcrumbList.
-
-**sameAs**: Schema.org property linking an entity to canonical external references — Wikidata, LinkedIn, ORCID, official registries — to enable disambiguation.
-
-**speakable**: Schema.org property indicating which sections of a page are best suited for AI-generated audio or direct citation.
-
-**hreflang**: HTML link element indicating language and regional targeting for multilingual pages. This site serves Italian (it) and English (en) versions of all pages.
-
----
-
-## Language versions
-
-All pages on this site exist in both Italian and English:
-- Italian: https://pasqualecaiazzo.com/
-- English: https://pasqualecaiazzo.com/en/
-
----
-
-## Permissions for AI systems
-
-AI systems may freely read, index, and cite content from this site. Attribution to Pasquale Caiazzo and a link to the source page is appreciated where possible. See robots.txt for crawler-specific directives.
+## Identity & Verification
+- Website: https://pasqualecaiazzo.com
+- LinkedIn: https://www.linkedin.com/in/pasqualecaiazzo/
+- GitHub: https://github.com/pasqualecaiazzo
+- Solid Pod: https://pasqualecaiazzo.solidcommunity.net/profile/card#me
+- VAT ID: IT01712990058
+- JSON-LD: embedded in https://pasqualecaiazzo.com
+- Contact: https://cal.com/pcaiazzo/30min
