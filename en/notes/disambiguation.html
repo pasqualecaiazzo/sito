@@ -32,95 +32,163 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#article",
-      "url": "https://pasqualecaiazzo.com/en/notes/disambiguation.html",
-      "headline": "Why AI Mistakes You for Someone Else: Disambiguation Explained",
-      "description": "Why AI systems confuse people who share the same name, the concrete damage this causes, and how semantic disambiguation builds a verifiable, distinct identity.",
-      "inLanguage": "en",
-      "datePublished": "2026-06-04",
-      "dateModified": "2026-06-06",
-      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
-      "publisher": { "@id": "https://pasqualecaiazzo.com/#publisher" },
-      "mainEntityOfPage": { "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#webpage" },
-      "isPartOf": { "@id": "https://pasqualecaiazzo.com/en/notes/#blog" },
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png",
-        "width": 1200,
-        "height": 1200
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#article",
+        "url": "https://pasqualecaiazzo.com/en/notes/disambiguation.html",
+        "headline": "Why AI Mistakes You for Someone Else: Disambiguation Explained",
+        "description": "Why AI systems confuse people who share the same name, the concrete damage this causes, and how semantic disambiguation builds a verifiable, distinct identity.",
+        "inLanguage": "en",
+        "datePublished": "2026-06-04",
+        "dateModified": "2026-06-06",
+        "author": {
+          "@id": "https://pasqualecaiazzo.com/#person"
+        },
+        "publisher": {
+          "@id": "https://pasqualecaiazzo.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#webpage"
+        },
+        "isPartOf": {
+          "@id": "https://pasqualecaiazzo.com/en/notes/#blog"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png",
+          "width": 1200,
+          "height": 1200
+        },
+        "articleSection": "Notes",
+        "wordCount": 2100,
+        "keywords": [
+          "disambiguation",
+          "digital identity",
+          "entity",
+          "Wikidata",
+          "ORCID",
+          "structured data",
+          "reputation",
+          "AI",
+          "knowledge graph"
+        ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [
+            ".article-tldr"
+          ]
+        },
+        "about": [
+          {
+            "@type": "DefinedTerm",
+            "name": "Disambiguation",
+            "sameAs": "https://www.wikidata.org/wiki/Q149301"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Digital identity",
+            "sameAs": "https://www.wikidata.org/wiki/Q2256763"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Large Language Models",
+            "sameAs": "https://www.wikidata.org/wiki/Q115305900"
+          }
+        ],
+        "mentions": [
+          {
+            "@type": "DefinedTerm",
+            "name": "Knowledge Graph",
+            "sameAs": "https://www.wikidata.org/wiki/Q33002955"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Structured Data",
+            "sameAs": "https://www.wikidata.org/wiki/Q26813700"
+          },
+          {
+            "@type": "Organization",
+            "name": "ORCID",
+            "url": "https://orcid.org",
+            "sameAs": "https://www.wikidata.org/wiki/Q51044"
+          },
+          {
+            "@type": "Thing",
+            "name": "Wikidata",
+            "sameAs": "https://www.wikidata.org/wiki/Q2013"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Schema.org Person",
+            "url": "https://schema.org/Person"
+          }
+        ]
       },
-      "articleSection": "Notes",
-      "wordCount": 2100,
-      "keywords": [
-        "disambiguation", "digital identity", "entity", "Wikidata",
-        "ORCID", "structured data", "reputation", "AI", "knowledge graph"
-      ],
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".article-tldr"] },
-      "about": [
-        { "@type": "DefinedTerm", "name": "Disambiguation", "sameAs": "https://www.wikidata.org/wiki/Q149301" },
-        { "@type": "DefinedTerm", "name": "Digital identity", "sameAs": "https://www.wikidata.org/wiki/Q2256763" },
-        { "@type": "DefinedTerm", "name": "Large Language Models", "sameAs": "https://www.wikidata.org/wiki/Q115305900" }
-      ],
-      "mentions": [
-        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
-        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
-        { "@type": "Organization", "name": "ORCID", "url": "https://orcid.org", "sameAs": "https://www.wikidata.org/wiki/Q51044" },
-        { "@type": "Thing", "name": "Wikidata", "sameAs": "https://www.wikidata.org/wiki/Q2013" },
-        { "@type": "DefinedTerm", "name": "Schema.org Person", "url": "https://schema.org/Person" }
-      ]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://pasqualecaiazzo.com/#person",
-      "name": "Pasquale Caiazzo",
-      "url": "https://pasqualecaiazzo.com",
-      "jobTitle": "Semantic Entity Architect",
-      "sameAs": [
-        "https://www.linkedin.com/in/pasqualecaiazzo/",
-        "https://github.com/pasqualecaiazzo"
-      ]
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://pasqualecaiazzo.com/#publisher",
-      "name": "Pasquale Caiazzo",
-      "url": "https://pasqualecaiazzo.com",
-      "logo": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/favicon.png" }
-    },
-    {
-      "@type": "Blog",
-      "@id": "https://pasqualecaiazzo.com/en/notes/#blog",
-      "name": "Notes - Pasquale Caiazzo",
-      "url": "https://pasqualecaiazzo.com/en/notes/",
-      "description": "Analysis and reflections on AI search, semantic entity architecture, and GEO.",
-      "inLanguage": "en"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#webpage",
-      "url": "https://pasqualecaiazzo.com/en/notes/disambiguation.html",
-      "name": "Why AI Mistakes You for Someone Else: Disambiguation Explained",
-      "inLanguage": "en",
-      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
-      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#breadcrumb" },
-      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png" },
-      "dateModified": "2026-06-06"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com/en/" },
-        { "@type": "ListItem", "position": 2, "name": "Notes", "item": "https://pasqualecaiazzo.com/en/notes/" },
-        { "@type": "ListItem", "position": 3, "name": "Name disambiguation and AI", "item": "https://pasqualecaiazzo.com/en/notes/disambiguation.html" }
-      ]
-    }
-  ]
-}
+      {
+        "@type": "Person",
+        "@id": "https://pasqualecaiazzo.com/#person",
+        "name": "Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com",
+        "jobTitle": "Semantic Entity Architect",
+        "sameAs": [
+          "https://www.linkedin.com/in/pasqualecaiazzo/",
+          "https://github.com/pasqualecaiazzo"
+        ]
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://pasqualecaiazzo.com/en/notes/#blog",
+        "name": "Notes - Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com/en/notes/",
+        "description": "Analysis and reflections on AI search, semantic entity architecture, and GEO.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#webpage",
+        "url": "https://pasqualecaiazzo.com/en/notes/disambiguation.html",
+        "name": "Why AI Mistakes You for Someone Else: Disambiguation Explained",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://pasqualecaiazzo.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#breadcrumb"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png"
+        },
+        "dateModified": "2026-06-06"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://pasqualecaiazzo.com/en/notes/disambiguation.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pasqualecaiazzo.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Notes",
+            "item": "https://pasqualecaiazzo.com/en/notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Name disambiguation and AI",
+            "item": "https://pasqualecaiazzo.com/en/notes/disambiguation.html"
+          }
+        ]
+      }
+    ]
+  }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
