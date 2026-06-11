@@ -48,6 +48,10 @@ VAT ID: IT01712990058
   Knowledge graph interattivo del web semantico: 22 entità Wikidata, 29 relazioni tipizzate, da Vannevar Bush all'AI Readiness.
 - https://pasqualecaiazzo.com/note/
   Note: appunti su architettura semantica, GEO, dati strutturati e knowledge graph.
+- https://pasqualecaiazzo.com/note/geo/
+  GEO Hub (IT): guida completa alla Generative Engine Optimization, definizioni e note correlate per l'AI Readiness.
+- https://pasqualecaiazzo.com/en/notes/geo/
+  GEO Hub (EN): comprehensive guide to Generative Engine Optimization, definitions and related notes.
 
 ## Note (Writing)
 Articles on semantic architecture, structured data and narrative sovereignty in AI systems. Author: Pasquale Caiazzo.
