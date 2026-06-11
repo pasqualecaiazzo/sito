@@ -32,95 +32,163 @@
  
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#article",
-      "url": "https://pasqualecaiazzo.com/en/notes/entity-linking.html",
-      "headline": "Entity Linking: How AI Works Out Who You Are",
-      "description": "Entity linking is the precise name for the process by which an AI system connects a name to the real, unique entity it refers to, how it differs from deduplication (entity resolution), and how it defines the work of making an identity readable and citable.",
-      "inLanguage": "en",
-      "datePublished": "2026-06-09",
-      "dateModified": "2026-06-09",
-      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
-      "publisher": { "@id": "https://pasqualecaiazzo.com/#publisher" },
-      "mainEntityOfPage": { "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#webpage" },
-      "isPartOf": { "@id": "https://pasqualecaiazzo.com/en/notes/#blog" },
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png",
-        "width": 1200,
-        "height": 1200
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#article",
+        "url": "https://pasqualecaiazzo.com/en/notes/entity-linking.html",
+        "headline": "Entity Linking: How AI Works Out Who You Are",
+        "description": "Entity linking is the precise name for the process by which an AI system connects a name to the real, unique entity it refers to, how it differs from deduplication (entity resolution), and how it defines the work of making an identity readable and citable.",
+        "inLanguage": "en",
+        "datePublished": "2026-06-09",
+        "dateModified": "2026-06-09",
+        "author": {
+          "@id": "https://pasqualecaiazzo.com/#person"
+        },
+        "publisher": {
+          "@id": "https://pasqualecaiazzo.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#webpage"
+        },
+        "isPartOf": {
+          "@id": "https://pasqualecaiazzo.com/en/notes/#blog"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png",
+          "width": 1200,
+          "height": 1200
+        },
+        "articleSection": "Notes",
+        "wordCount": 1124,
+        "keywords": [
+          "entity linking",
+          "named-entity disambiguation",
+          "knowledge graph",
+          "linked data",
+          "structured data",
+          "Wikidata",
+          "GEO",
+          "entity",
+          "AI search",
+          "semantic entity architecture"
+        ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [
+            ".article-tldr"
+          ]
+        },
+        "about": [
+          {
+            "@type": "DefinedTerm",
+            "name": "Entity linking",
+            "sameAs": "https://www.wikidata.org/wiki/Q17012245"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Knowledge Graph",
+            "sameAs": "https://www.wikidata.org/wiki/Q33002955"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Linked Data",
+            "sameAs": "https://www.wikidata.org/wiki/Q515701"
+          }
+        ],
+        "mentions": [
+          {
+            "@type": "DefinedTerm",
+            "name": "Generative Engine Optimization",
+            "sameAs": "https://www.wikidata.org/wiki/Q134083964"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Structured Data",
+            "sameAs": "https://www.wikidata.org/wiki/Q26813700"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Semantic Web",
+            "sameAs": "https://www.wikidata.org/wiki/Q54837"
+          },
+          {
+            "@type": "Thing",
+            "name": "Wikidata",
+            "sameAs": "https://www.wikidata.org/wiki/Q2013"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Schema.org",
+            "sameAs": "https://www.wikidata.org/wiki/Q3475322"
+          }
+        ]
       },
-      "articleSection": "Notes",
-      "wordCount": 1124,
-      "keywords": [
-        "entity linking", "named-entity disambiguation", "knowledge graph", "linked data",
-        "structured data", "Wikidata", "GEO", "entity", "AI search", "semantic entity architecture"
-      ],
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".article-tldr"] },
-      "about": [
-        { "@type": "DefinedTerm", "name": "Entity linking", "sameAs": "https://www.wikidata.org/wiki/Q17012245" },
-        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
-        { "@type": "DefinedTerm", "name": "Linked Data", "sameAs": "https://www.wikidata.org/wiki/Q515701" }
-      ],
-      "mentions": [
-        { "@type": "DefinedTerm", "name": "Generative Engine Optimization", "sameAs": "https://www.wikidata.org/wiki/Q134083964" },
-        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
-        { "@type": "DefinedTerm", "name": "Semantic Web", "sameAs": "https://www.wikidata.org/wiki/Q54837" },
-        { "@type": "Thing", "name": "Wikidata", "sameAs": "https://www.wikidata.org/wiki/Q2013" },
-        { "@type": "DefinedTerm", "name": "Schema.org", "sameAs": "https://www.wikidata.org/wiki/Q3475322" }
-      ]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://pasqualecaiazzo.com/#person",
-      "name": "Pasquale Caiazzo",
-      "url": "https://pasqualecaiazzo.com",
-      "jobTitle": "Semantic Entity Architect",
-      "sameAs": [
-        "https://www.linkedin.com/in/pasqualecaiazzo/",
-        "https://github.com/pasqualecaiazzo"
-      ]
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://pasqualecaiazzo.com/#publisher",
-      "name": "Pasquale Caiazzo",
-      "url": "https://pasqualecaiazzo.com",
-      "logo": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/favicon.png" }
-    },
-    {
-      "@type": "Blog",
-      "@id": "https://pasqualecaiazzo.com/en/notes/#blog",
-      "name": "Notes - Pasquale Caiazzo",
-      "url": "https://pasqualecaiazzo.com/en/notes/",
-      "description": "Analysis and reflections on AI search, semantic entity architecture, and GEO.",
-      "inLanguage": "en"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#webpage",
-      "url": "https://pasqualecaiazzo.com/en/notes/entity-linking.html",
-      "name": "Entity Linking: How AI Works Out Who You Are",
-      "inLanguage": "en",
-      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
-      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#breadcrumb" },
-      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png" },
-      "dateModified": "2026-06-09"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com/en/" },
-        { "@type": "ListItem", "position": 2, "name": "Notes", "item": "https://pasqualecaiazzo.com/en/notes/" },
-        { "@type": "ListItem", "position": 3, "name": "Entity linking", "item": "https://pasqualecaiazzo.com/en/notes/entity-linking.html" }
-      ]
-    }
-  ]
-}
+      {
+        "@type": "Person",
+        "@id": "https://pasqualecaiazzo.com/#person",
+        "name": "Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com",
+        "jobTitle": "Semantic Entity Architect",
+        "sameAs": [
+          "https://www.linkedin.com/in/pasqualecaiazzo/",
+          "https://github.com/pasqualecaiazzo"
+        ]
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://pasqualecaiazzo.com/en/notes/#blog",
+        "name": "Notes - Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com/en/notes/",
+        "description": "Analysis and reflections on AI search, semantic entity architecture, and GEO.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#webpage",
+        "url": "https://pasqualecaiazzo.com/en/notes/entity-linking.html",
+        "name": "Entity Linking: How AI Works Out Who You Are",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://pasqualecaiazzo.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#breadcrumb"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png"
+        },
+        "dateModified": "2026-06-09"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://pasqualecaiazzo.com/en/notes/entity-linking.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pasqualecaiazzo.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Notes",
+            "item": "https://pasqualecaiazzo.com/en/notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Entity linking",
+            "item": "https://pasqualecaiazzo.com/en/notes/entity-linking.html"
+          }
+        ]
+      }
+    ]
+  }
 </script>
  
 <link rel="preconnect" href="https://fonts.googleapis.com">
