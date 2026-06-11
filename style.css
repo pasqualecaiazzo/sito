@@ -960,10 +960,11 @@
       padding: 3.5rem 2.5rem;
       box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
       transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      visibility: hidden;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     @media (max-width: 480px) { .nav-drawer { padding: 3.5rem 1.5rem; } }
-    .nav-drawer.open { transform: translateX(0); }
+    .nav-drawer.open { transform: translateX(0); visibility: visible; }
     .drawer-backdrop {
       position: fixed;
       top: 0; left: 0;
