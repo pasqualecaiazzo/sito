@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../favicon.png">
+<title>Agentic Web e Business to Agent (B2A): preparare l'azienda agli agenti AI - Pasquale Caiazzo</title>
+<meta name="description" content="Dal Generative Web all'Agentic Web: come un'azienda diventa agent-ready e si fa scegliere dagli agenti AI che cercano, selezionano e acquistano per conto delle persone. Modello Business to Agent (B2A), protocolli di agentic commerce, impatto sul CAC e GEO.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/note/agentic-web.html">
+<link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/agentic-web.html">
+<link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/agentic-web.html">
+<link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/agentic-web.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agentic Web e Business to Agent (B2A): preparare l'azienda agli agenti AI">
+<meta property="og:description" content="Come un'azienda si fa scegliere dagli agenti AI che cercano, selezionano e acquistano per conto delle persone. Modello B2A, agentic commerce, CAC e GEO.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/note/agentic-web.html">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://pasqualecaiazzo.com/logo.png">
+<meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+<meta property="article:published_time" content="2026-06-11">
+<meta property="article:modified_time" content="2026-06-11">
+<meta property="article:author" content="Pasquale Caiazzo">
+<meta name="author" content="Pasquale Caiazzo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agentic Web e Business to Agent (B2A): preparare l'azienda agli agenti AI">
+<meta name="twitter:description" content="Come un'azienda diventa agent-ready e si fa scegliere dagli agenti AI. Modello B2A, agentic commerce, CAC e GEO.">
+<meta name="twitter:image" content="https://pasqualecaiazzo.com/logo.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://pasqualecaiazzo.com/note/agentic-web.html#article",
+      "url": "https://pasqualecaiazzo.com/note/agentic-web.html",
+      "headline": "Agentic Web e Business to Agent (B2A): preparare l'azienda agli agenti AI",
+      "description": "Dal Generative Web all'Agentic Web: come un'azienda diventa agent-ready e si fa scegliere dagli agenti AI che cercano, selezionano e acquistano per conto delle persone. Modello Business to Agent (B2A), protocolli di agentic commerce, impatto sul CAC e GEO.",
+      "inLanguage": "it",
+      "datePublished": "2026-06-11",
+      "dateModified": "2026-06-11",
+      "author": { "@id": "https://pasqualecaiazzo.com/#person" },
+      "publisher": { "@id": "https://pasqualecaiazzo.com/#person" },
+      "mainEntityOfPage": { "@id": "https://pasqualecaiazzo.com/note/agentic-web.html#webpage" },
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/note/#blog" },
+      "image": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png", "width": 1200, "height": 1200 },
+      "articleSection": "Note",
+      "wordCount": 2700,
+      "keywords": [
+        "Agentic Web", "Business to Agent", "B2A", "agentic commerce", "agenti AI",
+        "GEO", "llms.txt", "Model Context Protocol", "dati strutturati", "CAC", "agent-ready"
+      ],
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".article-tldr"] },
+      "about": [
+        { "@type": "DefinedTerm", "name": "Business to Agent", "alternateName": "B2A", "description": "Modello in cui le aziende ottimizzano dati e servizi per essere scelti e utilizzati da agenti AI autonomi che cercano, selezionano e acquistano per conto degli utenti. Da non confondere con Business-to-Administration.", "inDefinedTermSet": "https://pasqualecaiazzo.com/note/business-to-agent.html" },
+        { "@type": "DefinedTerm", "name": "Generative Engine Optimization", "sameAs": "https://www.wikidata.org/wiki/Q134083964" },
+        { "@type": "DefinedTerm", "name": "AI agent", "sameAs": "https://www.wikidata.org/wiki/Q132451509" }
+      ],
+      "mentions": [
+        { "@type": "DefinedTerm", "name": "Model Context Protocol", "sameAs": "https://www.wikidata.org/wiki/Q133436854" },
+        { "@type": "DefinedTerm", "name": "Retrieval-Augmented Generation", "sameAs": "https://www.wikidata.org/wiki/Q121362277" },
+        { "@type": "DefinedTerm", "name": "Structured Data", "sameAs": "https://www.wikidata.org/wiki/Q26813700" },
+        { "@type": "DefinedTerm", "name": "Knowledge Graph", "sameAs": "https://www.wikidata.org/wiki/Q33002955" },
+        { "@type": "DefinedTerm", "name": "Schema.org", "sameAs": "https://www.wikidata.org/wiki/Q3475322" },
+        { "@type": "DefinedTerm", "name": "Wikidata", "sameAs": "https://www.wikidata.org/wiki/Q2013" },
+        { "@type": "Organization", "name": "OpenAI", "sameAs": "https://www.wikidata.org/wiki/Q21708200" },
+        { "@type": "Organization", "name": "Anthropic", "sameAs": "https://www.wikidata.org/wiki/Q116758847" }
+      ],
+      "citation": [
+        { "@type": "ScholarlyArticle", "name": "GEO: Generative Engine Optimization", "url": "https://arxiv.org/abs/2311.09735" },
+        { "@type": "CreativeWork", "name": "Introducing the Model Context Protocol", "url": "https://www.anthropic.com/news/model-context-protocol" },
+        { "@type": "CreativeWork", "name": "Agentic Commerce Protocol", "url": "https://www.agenticcommerce.dev/" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pasqualecaiazzo.com/note/agentic-web.html#webpage",
+      "url": "https://pasqualecaiazzo.com/note/agentic-web.html",
+      "name": "Agentic Web e Business to Agent (B2A): preparare l'azienda agli agenti AI",
+      "inLanguage": "it",
+      "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" },
+      "breadcrumb": { "@id": "https://pasqualecaiazzo.com/note/agentic-web.html#breadcrumb" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png" },
+      "dateModified": "2026-06-11"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pasqualecaiazzo.com/note/agentic-web.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pasqualecaiazzo.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Note", "item": "https://pasqualecaiazzo.com/note/" },
+        { "@type": "ListItem", "position": 3, "name": "Agentic Web e Business to Agent", "item": "https://pasqualecaiazzo.com/note/agentic-web.html" }
+      ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://pasqualecaiazzo.com/note/#blog",
+      "name": "Note - Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com/note/",
+      "description": "Analisi e riflessioni su AI search, semantic entity architecture e GEO.",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pasqualecaiazzo.com/#person",
+      "name": "Pasquale Caiazzo",
+      "url": "https://pasqualecaiazzo.com",
+      "jobTitle": "Semantic Entity Architect",
+      "sameAs": [
+        "https://www.linkedin.com/in/pasqualecaiazzo/",
+        "https://github.com/pasqualecaiazzo"
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&amp;display=swap"></noscript>
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="../main.js" defer></script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav aria-label="Navigazione principale">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-name">Pasquale Caiazzo</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+      </svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
+    <div class="lang-toggle"><span class="lang-current">IT</span><span class="lang-sep">·</span><a href="/en/notes/agentic-web.html" hreflang="en" class="lang-link">EN</a></div>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <span class="nav-toggle-text">Menu</span>
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Drawer Menu -->
+<div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <button id="drawer-close" class="drawer-close" aria-label="Chiudi menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-content">
+    <div class="nav-anchors">
+      <a href="../index.html#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">Chi sono</span></a>
+      <a href="../professionisti.html" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">Per i professionisti</span></a>
+      <a href="../pmi.html" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">Per le PMI</span></a>
+      <a href="../impatto.html" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">Per le organizzazioni a impatto</span></a>
+      <a href="../manifesto.html" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+      <a href="index.html" class="nav-link active"><span class="drawer-num">06</span> <span class="drawer-text">Note</span></a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-meta">
+        <h3>Contatti & Risorse</h3>
+        <p>Base operativa a Torino &bull; Disponibile per progetti da remoto</p>
+        <p>Richieste: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Prenota un incontro di 30 min ↗</a></p>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+<main>
+  <div class="band hero-band">
+    <div class="inner">
+      <article class="article-wrap">
+        <a href="index.html" class="article-back">← Note</a>
+        <span class="tag">PMI</span>
+        <h1 class="article-title">Agentic Web e Business to Agent: preparare l'azienda agli agenti</h1>
+        <div class="article-meta">
+          <span>Pasquale Caiazzo</span>
+          <span class="sep">/</span>
+          <time datetime="2026-06-11">11 giugno 2026</time>
+          <span class="sep">/</span>
+          <span>12 min di lettura</span>
+        </div>
+
+        <p class="article-tldr">
+          <strong>In breve</strong>
+          Stiamo passando dal Generative Web, dove le persone usano l'AI per cercare, all'Agentic Web, dove agenti AI autonomi cercano, selezionano e acquistano per conto loro. Per un'azienda cambia l'interlocutore: non più solo un cliente da convincere, ma un agente da far scegliere. È il modello Business to Agent - B2A, da non confondere con il vecchio Business-to-Administration. Prepararsi non significa rifare il business, ma aggiungergli sopra un livello di leggibilità per le macchine: dati esposti, identità verificabile, transazioni senza attrito. Chi lo fa per primo abbassa il costo di acquisizione e diventa il fornitore predefinito; chi non lo fa rischia l'invisibilità.
+        </p>
+
+        <div class="prose">
+          <h2>Dal Generative Web all'Agentic Web</h2>
+          <p>
+            Negli ultimi due anni ci siamo abituati a un'idea: le persone chiedono all'AI invece di cercare su Google. È il Generative Web, e ha già cambiato il modo in cui un cliente scopre un fornitore. Ma è una fase di passaggio. Quello che sta arrivando è diverso: agenti AI che non si limitano a rispondere, ma <em>agiscono</em> - cercano, confrontano, selezionano e concludono un acquisto per conto di una persona. È l'Agentic Web, e sposta il punto in cui si vince o si perde un cliente.
+          </p>
+          <p>
+            La differenza è netta. Un motore di risposta <strong>recupera e sintetizza</strong>: ti nomina in una risposta. Un agente <strong>decide e agisce</strong>: ti seleziona, verifica le condizioni e, sempre più spesso, compra. Il primo livello richiede di essere descritti bene; il secondo richiede di essere operativamente pronti. Per un'azienda questo introduce un modello che chiamo Business to Agent. Ne ho scritto la <a href="business-to-agent.html">tesi di fondo altrove</a>; qui guardo il lato operativo: cosa cambia concretamente nel funnel, nei costi e nei requisiti tecnici quando dall'altra parte non c'è più un occhio umano, ma una macchina che decide.
+          </p>
+
+          <h2>B2A: una disambiguazione necessaria</h2>
+          <p>
+            Una premessa, perché è il tipo di confusione che fa parte del mio mestiere. In italiano l'acronimo <strong>B2A</strong> è ambiguo. Storicamente indica <strong>Business-to-Administration</strong>, il rapporto tra un'impresa e la pubblica amministrazione; in giro trovi anche chi lo usa per <strong>Business-to-Affiliate</strong> o, più di recente, per <strong>Business-to-Algorithm</strong>. Quando in questa pagina scrivo B2A intendo una cosa precisa: <strong>Business-to-Agent</strong>, l'azienda di fronte all'agente AI che acquista per conto di una persona.
+          </p>
+          <p>
+            Non è pedanteria. È esattamente l'errore che un sistema AI commette quando un'entità non è dichiarata con precisione: prende un'etichetta ambigua e la collega al significato più frequente, non a quello giusto. Disambiguare un termine - dichiarare a cosa si riferisce, e a cosa no - è il primo gesto di chi vuole essere capito dalle macchine. Lo faccio qui sul mio stesso vocabolario.
+          </p>
+
+          <h2>Dal B2C/B2B al B2A: cambia l'interlocutore</h2>
+          <p>
+            Nel marketing tradizionale ottimizzi i canali per catturare l'attenzione di una persona: grafica, messaggi persuasivi, leve di urgenza. Nel B2A si inserisce un passaggio nuovo, e il destinatario di quel passaggio non si emoziona. La persona resta, e l'ultima parola è ancora sua; ma tra lei e te si inserisce un agente che fa da filtro, e quel filtro non legge la tua landing page: legge i tuoi dati.
+          </p>
+          <div style="overflow-x:auto;margin:1.75rem 0;">
+            <table style="width:100%;border-collapse:collapse;font-size:0.95rem;line-height:1.45;">
+              <thead>
+                <tr>
+                  <th style="text-align:left;padding:0.6rem 0.8rem;border-bottom:2px solid rgba(127,127,127,0.4);">Modello</th>
+                  <th style="text-align:left;padding:0.6rem 0.8rem;border-bottom:2px solid rgba(127,127,127,0.4);">Interlocutore</th>
+                  <th style="text-align:left;padding:0.6rem 0.8rem;border-bottom:2px solid rgba(127,127,127,0.4);">Leva principale</th>
+                  <th style="text-align:left;padding:0.6rem 0.8rem;border-bottom:2px solid rgba(127,127,127,0.4);">Segnale di fiducia</th>
+                  <th style="text-align:left;padding:0.6rem 0.8rem;border-bottom:2px solid rgba(127,127,127,0.4);">Metrica</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);"><strong>B2C</strong></td>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);">Persona (consumatore)</td>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);">Persuasione, emozione, brand</td>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);">Riprova sociale, estetica</td>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);">Conversioni, clic</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);"><strong>B2B</strong></td>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);">Persona in un'organizzazione</td>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);">Relazione, ROI, referenze</td>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);">Case study, referenze</td>
+                  <td style="padding:0.6rem 0.8rem;border-bottom:1px solid rgba(127,127,127,0.2);">Lead, pipeline</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.6rem 0.8rem;"><strong>B2A</strong></td>
+                  <td style="padding:0.6rem 0.8rem;">Agente AI (per conto di una persona)</td>
+                  <td style="padding:0.6rem 0.8rem;">Leggibilità, dati dichiarati</td>
+                  <td style="padding:0.6rem 0.8rem;">Verificabilità (sameAs, registri, citazioni)</td>
+                  <td style="padding:0.6rem 0.8rem;">Tasso di citazione e di selezione</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            La colonna che conta è l'ultima riga: cambiano leva, segnale di fiducia e metrica. Non vinci più con il messaggio migliore, ma con i dati più leggibili e verificabili; e non misuri più i clic, ma quante volte vieni scelto.
+          </p>
+
+          <h2>Una transazione B2A, in concreto</h2>
+          <p>
+            Per capire la portata del cambiamento conviene seguire una transazione in tre fasi. Un responsabile acquisti dice al proprio assistente: &laquo;Acquista 20 licenze di un software di project management per un team di sviluppatori in Italia, massimo 15 € al mese a utente, con server conformi al GDPR in Europa.&raquo;
+          </p>
+          <p>
+            L'agente non apre le homepage grafiche dei fornitori. Scansiona il web in cerca di fatti dichiarati: legge i file <code>llms.txt</code>, interroga i dati strutturati, estrae prezzo, conformità legale e localizzazione dei server. Restringe il campo a chi è leggibile, e scarta chi non lo è - non perché sia peggiore, ma perché è opaco.
+          </p>
+          <p>
+            Trovata l'opzione migliore, esegue. Si collega ai sistemi del fornitore, verifica la disponibilità reale e completa l'acquisto tramite i protocolli di pagamento pensati per gli agenti - come l'<a href="https://www.agenticcommerce.dev/" target="_blank" rel="noopener noreferrer">Agentic Commerce Protocol</a>, lo standard aperto co-sviluppato da OpenAI e Stripe, in cui un token di pagamento condiviso consente all'agente di concludere senza esporre i dati della carta. L'essere umano non ha mai aperto il browser.
+          </p>
+
+          <h2>L'infrastruttura è già qui</h2>
+          <p>
+            Vale la pena fermarsi su un punto, perché è ciò che distingue una previsione da un fatto: l'impianto tecnico dell'Agentic Web non è in arrivo, è già stato costruito, nel giro di poco più di un anno.
+          </p>
+          <p>
+            Anthropic ha rilasciato il <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener noreferrer">Model Context Protocol</a> (MCP) nel novembre 2024, lo standard aperto che collega gli agenti ai dati e agli strumenti di un'azienda; nel 2025 è stato adottato anche da OpenAI e Google. Google ha presentato l'Agent2Agent (A2A) per far dialogare agenti di vendor diversi, e poi l'Agent Payments Protocol (AP2) per i pagamenti tra agenti. Sul fronte dei circuiti, Visa ha lanciato Intelligent Commerce e Mastercard ha presentato Agent Pay, entrambi nell'aprile 2025. E nel settembre 2025 OpenAI ha attivato l'Instant Checkout dentro ChatGPT, costruito con Stripe sull'Agentic Commerce Protocol. Con oltre 700 milioni di persone che usano ChatGPT ogni settimana, l'agente che acquista non è una promessa lontana: ha già i binari su cui correre.
+          </p>
+
+          <h2>Come ragiona un acquirente che è una macchina</h2>
+          <p>
+            A differenza di una persona, un agente non è influenzabile dall'estetica o dal tono. Sceglie su criteri oggettivi, e sono tre.
+          </p>
+          <ul>
+            <li><strong>Reperibilità dei dati.</strong> Prezzi, caratteristiche, disponibilità e condizioni devono essere leggibili dalla macchina all'istante, non sepolti in un'immagine o in un PDF.</li>
+            <li><strong>Autorevolezza verificabile.</strong> L'agente controlla recensioni, citazioni e riscontri di terze parti per stimare un punteggio di fiducia ancorato a fonti, non a promesse.</li>
+            <li><strong>Assenza di attrito.</strong> A parità di offerta, sceglie chi consente una transazione o una prenotazione immediata invece di chi impone form e passaggi manuali.</li>
+          </ul>
+
+          <h2>L'impatto commerciale: perché il B2A abbassa il CAC</h2>
+          <p>
+            Prepararsi all'Agentic Web non è solo una questione tecnica, è una leva sul conto economico. Quando un cliente delega un acquisto, lo fa nel momento di massima intenzione: l'agente intercetta esattamente quella domanda e salta gran parte del funnel tradizionale, con i relativi costi pubblicitari. Essere il fornitore che l'agente seleziona significa abbassare il costo di acquisizione, perché l'AI fa da filtro al posto delle campagne.
+          </p>
+          <p>
+            C'è poi un effetto di fidelizzazione: una volta che l'agente di un cliente ha registrato la tua azienda come fornitore affidabile e &laquo;macchina-compatibile&raquo;, gli acquisti ricorrenti tendono a ripetersi in automatico. E la posta in gioco è grande: Gartner stima che entro il 2028 il 90% degli acquisti B2B sarà intermediato da agenti AI, con oltre 15.000 miliardi di dollari di spesa che passeranno attraverso scambi tra agenti - sono proiezioni, ma indicano la direzione. Sul fronte consumer il fenomeno è già misurabile: secondo Adobe Analytics, durante le festività del 2025 il traffico verso i siti di e-commerce proveniente da fonti AI generative è cresciuto di quasi il 700% su base annua.
+          </p>
+          <p>
+            Il rovescio è il rischio di invisibilità. Le ricerche &laquo;zero-click&raquo;, in cui la risposta o l'acquisto si chiudono dentro l'interfaccia di ChatGPT, Gemini o Perplexity, crescono in fretta. Non essere pronti per il B2A non è uno svantaggio teorico: è cedere quote di mercato a chi è già leggibile.
+          </p>
+
+          <h2>Tre requisiti per diventare agent-ready</h2>
+          <p>
+            Non serve che tu programmi nulla in prima persona. Servono tre infrastrutture, da chiedere al team tecnico con cognizione di causa.
+          </p>
+          <p>
+            <strong>Una mappa di contenuto per le macchine (<code>llms.txt</code>).</strong> Gli agenti hanno bisogno di un riassunto schematico del business per non sprecare capacità di calcolo. Un file <code>llms.txt</code> nella radice del sito - secondo lo standard documentato su <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer">llmstxt.org</a> - funziona come una sitemap per intelligenze artificiali: esclude il codice grafico ed espone solo le informazioni di valore.
+          </p>
+          <p>
+            <strong>Un'identità verificabile (JSON-LD e Wikidata).</strong> Perché un'AI si fidi del brand, i dati aziendali vanno strutturati con il vocabolario <a href="https://schema.org/" target="_blank" rel="noopener noreferrer">Schema.org</a> e collegati a nodi riconosciuti come Wikidata, il knowledge base aperto della galassia Wikimedia. È il lavoro di <a href="entity-linking.html">entity linking</a>: agganciare in modo univoco il marchio alla sua specializzazione. Lo chiamo linking, non &laquo;resolution&raquo;, di proposito: l'obiettivo non è fondere record duplicati, ma collegare la tua entità a quelle giuste.
+          </p>
+          <p>
+            <strong>Un canale di interoperabilità (MCP).</strong> Il <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener noreferrer">Model Context Protocol</a>, lo standard aperto promosso da Anthropic, permette alle applicazioni AI di connettersi in modo sicuro ai dati di un'azienda. Esporre un canale MCP consente a un agente di verificare disponibilità e condizioni in tempo reale, e quindi di prenotare o acquistare senza attrito.
+          </p>
+
+          <h2>GEO: influenzare le risposte dell'AI</h2>
+          <p>
+            Quando qualcuno chiede a ChatGPT o Perplexity &laquo;quali sono i migliori consulenti di business design in Italia?&raquo;, il modello usa la tecnica del RAG - Retrieval-Augmented Generation - per estrarre informazioni dal web e comporre la risposta. Comparire in quella risposta, con una citazione attiva, è l'obiettivo della Generative Engine Optimization.
+          </p>
+          <p>
+            Lo studio che ha formalizzato la disciplina, <a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer">&laquo;GEO: Generative Engine Optimization&raquo;</a> (ricercatori di Princeton, Georgia Tech, IIT Delhi e dell'Allen Institute for AI, presentato a KDD 2024), mostra che un'ottimizzazione strutturata può aumentare la visibilità di un contenuto nelle risposte generative fino al 40%. In pratica conta la densità informativa: i testi ricchi di dati, numeri e dichiarazioni verificabili vengono preferiti a quelli lunghi ma generici. E conta la co-menzione: se il tuo brand compare spesso accanto ai concetti giusti su fonti autorevoli, il modello tende a considerarti un riferimento. La metrica non è più la visita al sito, ma la frequenza con cui sei citato come fonte. Su questo livello - farsi trovare e citare dall'AI - ho raccolto fondamenti e casi nella mia <a href="geo/">guida alla GEO</a>.
+          </p>
+
+          <h2>Una checklist onesta per capire se sei pronto</h2>
+          <p>Cinque domande dicono in pochi minuti quanto la tua azienda è già leggibile dagli agenti.</p>
+          <ul>
+            <li>Il sito consente la scansione ai bot AI (GPTBot, ClaudeBot, PerplexityBot) o li blocca a priori?</li>
+            <li>Esiste un <code>llms.txt</code>, cioè una versione del sito leggibile dalle macchine?</li>
+            <li>Prodotti e servizi sono descritti con Schema.org validato e collegati a entità esterne autorevoli?</li>
+            <li>Il flusso di checkout o prenotazione è integrabile con i protocolli di agentic commerce?</li>
+            <li>Misuri, anche solo una volta al mese, quanto e come il tuo brand viene citato su ChatGPT e Perplexity?</li>
+          </ul>
+          <p>
+            Se la maggioranza delle risposte è &laquo;no&raquo;, non è un allarme: è la fotografia di partenza. Da lì si decide dove intervenire.
+          </p>
+
+          <h2>Da dove si parte</h2>
+          <p>
+            Preparare un'azienda all'Agentic Web non vuol dire rifare tutto. Vuol dire aggiungere un livello di leggibilità per le macchine sopra il business che già hai: dichiarare i dati che contano, ancorarli a fonti verificabili, togliere attrito alle transazioni. Il primo passo è sempre lo stesso - chiedere ai principali sistemi AI cosa sanno oggi della tua azienda e dei tuoi prodotti, e osservare cosa è corretto, cosa manca e cosa viene inventato.
+          </p>
+
+          <div class="article-cta">
+            <p class="lead">Lavoro con le imprese per costruire questo livello: rendere dati, offerta e identità leggibili e citabili dai sistemi AI, e prepararli all'arrivo degli agenti.</p>
+            <div class="cta-group">
+              <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Prenota una chiamata ↗</a>
+              <a href="../pmi.html" class="cta-btn cta-btn-outline">Per le PMI →</a>
+            </div>
+          </div>
+
+          <h2>Riferimenti essenziali</h2>
+          <ul>
+            <li>Aggarwal P. et al., &laquo;GEO: Generative Engine Optimization&raquo;, KDD 2024 (ACM SIGKDD) - <a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer">arxiv.org/abs/2311.09735</a></li>
+            <li>Standard <code>llms.txt</code> - <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer">llmstxt.org</a></li>
+            <li>Anthropic, Model Context Protocol (novembre 2024) - <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener noreferrer">modelcontextprotocol.io</a></li>
+            <li>OpenAI &amp; Stripe, Agentic Commerce Protocol (settembre 2025) - <a href="https://www.agenticcommerce.dev/" target="_blank" rel="noopener noreferrer">agenticcommerce.dev</a></li>
+            <li>Schema.org - <a href="https://schema.org/" target="_blank" rel="noopener noreferrer">schema.org</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links" style="display: flex; gap: 2rem;">
+        <a href="mailto:info@pasqualecaiazzo.com">info@pasqualecaiazzo.com</a>
+        <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fnote%2Fagentic-web.html" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="../privacy.html">Informativa sulla privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

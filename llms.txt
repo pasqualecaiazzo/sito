@@ -59,6 +59,10 @@ Articles on semantic architecture, structured data and narrative sovereignty in 
   "Business to Agent (B2A): il marketing che si dichiara alle macchine" - 2026-06-11. Why the next recipient of marketing is no longer only a person but an AI agent that reads, evaluates and acts, and why brands win by declaring their identity, offer and values in structured data rather than only persuading. Includes the Patagonia case (JSON-LD owner: "The Earth"), the evolution from B2C/B2B to B2A, and the link to narrative sovereignty.
 - https://pasqualecaiazzo.com/en/notes/business-to-agent.html
   "Business to Agent (B2A): Marketing That Declares Itself to Machines" - 2026-06-11. English version of the B2A article.
+- https://pasqualecaiazzo.com/note/agentic-web.html
+  "Agentic Web e Business to Agent (B2A): preparare l'azienda agli agenti AI" - 2026-06-11. Operational companion to the B2A thesis: from the Generative Web to the Agentic Web, how a company becomes agent-ready, the B2C/B2B/B2A comparison, the agentic commerce protocol stack (MCP, A2A/AP2, ACP by OpenAI and Stripe, Visa Intelligent Commerce, Mastercard Agent Pay), impact on CAC, and a disambiguation of B2A (Agent vs Administration/Affiliate/Algorithm).
+- https://pasqualecaiazzo.com/en/notes/agentic-web.html
+  "Agentic Web and Business to Agent (B2A): Getting Your Company Ready for AI Agents" - 2026-06-11. English version of the Agentic Web / B2A operational guide.
 - https://pasqualecaiazzo.com/note/entity-linking.html
   "Entity linking: come l'AI capisce chi sei" - 2026-06-09. The principle underneath all the other notes: what entity linking is, why it is not entity resolution, and how it defines the work of a Semantic Entity Architect.
 - https://pasqualecaiazzo.com/en/notes/entity-linking.html
