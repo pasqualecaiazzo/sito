@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>404 - Pagina non trovata / Page Not Found - Pasquale Caiazzo</title>
+  <meta name="description" content="Errore 404: La pagina cercata non esiste. / Error 404: The requested page does not exist.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&amp;display=swap"></noscript>
+
+  <link rel="stylesheet" href="/style.css">
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script src="/main.js" defer></script>
+
+  <style>
+    .error-container {
+      text-align: center;
+      padding-top: 10rem;
+      padding-bottom: 6rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .error-code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(4.0rem, 15vw, 8.0rem);
+      line-height: 1;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .error-title {
+      font-family: 'IBM Plex Serif', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      margin-top: 1rem;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+    .error-subtitle {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: clamp(1.0rem, 2.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+    .error-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .error-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .error-btn-primary {
+      background: var(--primary-gradient);
+      color: var(--color-white, #ffffff);
+      border: none;
+    }
+    .error-btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+    .error-btn-secondary {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .error-btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .error-lang-section {
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      padding-top: 3rem;
+    }
+    .error-lang-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://pasqualecaiazzo.com/404.html#webpage",
+        "url": "https://pasqualecaiazzo.com/404.html",
+        "name": "404 Not Found - Pasquale Caiazzo",
+        "description": "La pagina richiesta non è stata trovata. / The requested page was not found.",
+        "inLanguage": ["it", "en"],
+        "isPartOf": { "@id": "https://pasqualecaiazzo.com/#website" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://pasqualecaiazzo.com/#person",
+        "name": "Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com",
+        "jobTitle": "Semantic Entity Architect",
+        "sameAs": [
+          "https://www.linkedin.com/in/pasqualecaiazzo/",
+          "https://github.com/pasqualecaiazzo"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<nav aria-label="Navigazione principale">
+  <div class="nav-left">
+    <a href="/index.html" class="nav-name">Pasquale Caiazzo</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    </button>
+    <div class="lang-toggle">
+      <a href="/index.html" class="lang-link">IT</a>
+      <span class="lang-sep">·</span>
+      <a href="/en/index.html" class="lang-link">EN</a>
+    </div>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <span class="nav-toggle-text">Menu</span>
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Drawer Menu -->
+<div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <button id="drawer-close" class="drawer-close" aria-label="Chiudi menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-content">
+    <div class="nav-anchors">
+      <a href="/index.html#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">Chi sono (IT)</span></a>
+      <a href="/en/index.html#about" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">About (EN)</span></a>
+      <a href="/pmi.html" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">Per le PMI (IT)</span></a>
+      <a href="/en/smes.html" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">For SMEs (EN)</span></a>
+      <a href="/note/index.html" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Note (IT)</span></a>
+      <a href="/en/notes/index.html" class="nav-link"><span class="drawer-num">06</span> <span class="drawer-text">Notes (EN)</span></a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-meta">
+        <h3>Contatti &amp; Risorse / Contacts</h3>
+        <p>Base operativa a Torino &bull; Remote</p>
+        <p>Richieste/Enquiries: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Book a 30-min call ↗</a></p>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+<main>
+  <div class="error-container">
+    <div class="error-code">404</div>
+    
+    <div class="error-title">Pagina non trovata</div>
+    <div class="error-subtitle">La pagina che stai cercando non esiste, è stata rimossa o il suo indirizzo è cambiato.</div>
+    <div class="error-actions">
+      <a href="/index.html" class="error-btn error-btn-primary">Torna alla Home</a>
+      <a href="/note/index.html" class="error-btn error-btn-secondary">Vai alle Note</a>
+    </div>
+
+    <div class="error-lang-section">
+      <div class="error-lang-title">English Version</div>
+      <div class="error-title" style="font-size: clamp(1.6rem, 3.5vw, 2.0rem); margin-top: 0;">Page Not Found</div>
+      <div class="error-subtitle" style="margin-bottom: 2rem;">The page you are looking for does not exist, has been removed, or its address has changed.</div>
+      <div class="error-actions">
+        <a href="/en/index.html" class="error-btn error-btn-primary">Go to Homepage</a>
+        <a href="/en/notes/index.html" class="error-btn error-btn-secondary">Go to Notes</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links" style="display: flex; gap: 2rem;">
+        <a href="mailto:info@pasqualecaiazzo.com">info@pasqualecaiazzo.com</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/privacy.html">Informativa sulla privacy / Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
