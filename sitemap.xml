@@ -272,6 +272,26 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ── AGENTIC WEB / B2A (OPERATIVO) ────────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/note/agentic-web.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/agentic-web.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/agentic-web.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/agentic-web.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/notes/agentic-web.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/agentic-web.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/agentic-web.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/agentic-web.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ── GEO HUBS ─────────────────────────────────────────── -->
   <url>
     <loc>https://pasqualecaiazzo.com/note/geo/</loc>
