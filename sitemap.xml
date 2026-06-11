@@ -138,7 +138,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/"/>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -147,7 +147,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/"/>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -250,6 +250,34 @@
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- ── BUSINESS TO AGENT ───────────────────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/note/business-to-agent.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/business-to-agent.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/business-to-agent.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/business-to-agent.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/notes/business-to-agent.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/business-to-agent.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/business-to-agent.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/business-to-agent.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── LLMS.TXT ─────────────────────────────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/llms.txt</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
