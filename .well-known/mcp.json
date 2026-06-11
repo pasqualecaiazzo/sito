@@ -1,0 +1,12 @@
+{
+  "version": "2025-draft",
+  "servers": [
+    {
+      "name": "Pasquale Caiazzo",
+      "description": "Query Pasquale Caiazzo's professional entity (Semantic Entity Architect): profile, services, and notes on GEO, structured data and Business to Agent. Read-only.",
+      "url": "https://mcp.pasqualecaiazzo.com/mcp",
+      "transport": "streamable-http",
+      "capabilities": { "tools": true, "resources": false, "prompts": false }
+    }
+  ]
+}

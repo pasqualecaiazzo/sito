@@ -92,3 +92,5 @@ Articles on semantic architecture, structured data and narrative sovereignty in 
 - VAT ID: IT01712990058
 - JSON-LD: embedded in https://pasqualecaiazzo.com
 - Contact: https://cal.com/pcaiazzo/30min
+- MCP server: https://mcp.pasqualecaiazzo.com/mcp (read-only entity API)
+
