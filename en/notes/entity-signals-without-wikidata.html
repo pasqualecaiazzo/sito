@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <title>Entity Signals: Building a Verifiable Identity Without Wikidata – Pasquale Caiazzo</title>
+  <title>Entity Signals: Building a Verifiable Identity Without Wikidata - Pasquale Caiazzo</title>
   <meta name="description" content="How to build a machine-readable semantic identity without a Wikidata entry: JSON-LD, Schema.org, llms.txt, and official profiles as verifiable anchors.">
   <link rel="canonical" href="https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html">
   <link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/segnali-entita-senza-wikidata.html">
@@ -59,7 +59,7 @@
       "@type": "WebPage",
       "@id": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html#webpage",
       "url": "https://pasqualecaiazzo.com/en/notes/entity-signals-without-wikidata.html",
-      "name": "Entity Signals: Building a Verifiable Identity Without Wikidata – Pasquale Caiazzo",
+      "name": "Entity Signals: Building a Verifiable Identity Without Wikidata - Pasquale Caiazzo",
       "description": "How to build a machine-readable semantic identity without a Wikidata entry: JSON-LD, Schema.org, llms.txt, and official profiles as verifiable anchors.",
       "inLanguage": "en",
       "isPartOf": {
@@ -272,7 +272,7 @@
           </div>
 
           <p class="article-tldr">
-            <strong>In short</strong> Most professionals and organisations do not have and cannot have a Wikidata entry. That does not prevent them from building a semantic identity readable by AI systems. The signals that matter are elsewhere: JSON-LD markup on their own website, official profiles declared as verifiable anchors, sector-specific identifiers, an llms.txt file that instructs models directly. Each of these is a piece of data an AI system can use to resolve entity linking without having to invent. The work is not about writing more content — it is about making what already exists verifiable.
+            <strong>In short</strong> Most professionals and organisations do not have and cannot have a Wikidata entry. That does not prevent them from building a semantic identity readable by AI systems. The signals that matter are elsewhere: JSON-LD markup on their own website, official profiles declared as verifiable anchors, sector-specific identifiers, an llms.txt file that instructs models directly. Each of these is a piece of data an AI system can use to resolve entity linking without having to invent. The work is not about writing more content - it is about making what already exists verifiable.
           </p>
 
           <div class="prose">
@@ -280,7 +280,7 @@
  
         <p>When discussing semantic identity and entity linking, Wikidata is often cited as the solution. That is understandable: it is the largest and most open knowledge graph on the web, used by Google, the major AI systems and dozens of search engines as a source of verifiable facts. Having an entry there means being a node in the graph machines consult.</p>
  
-        <p>The problem is that Wikidata requires notability. It is not an arbitrary formal requirement but a precise editorial choice: entries must describe entities that have received significant coverage from independent sources. A lawyer with twenty years of experience, an established consultant in their field, a nonprofit with projects funded by the European Union — none of these automatically clears that bar. An entry created without meeting the criteria gets removed. The effect is counterproductive, and in some cases leaves a negative trace.</p>
+        <p>The problem is that Wikidata requires notability. It is not an arbitrary formal requirement but a precise editorial choice: entries must describe entities that have received significant coverage from independent sources. A lawyer with twenty years of experience, an established consultant in their field, a nonprofit with projects funded by the European Union - none of these automatically clears that bar. An entry created without meeting the criteria gets removed. The effect is counterproductive, and in some cases leaves a negative trace.</p>
  
         <p>And yet the problem to solve is real and independent of Wikidata: how does an AI system recognise who you are, separate you from your namesakes, cite you accurately? The answer does not necessarily run through a public knowledge graph. It runs through the signals you control directly.</p>
  
@@ -314,7 +314,7 @@
  
         <h2>Official profiles as anchors</h2>
  
-        <p>Profiles on recognised platforms, declared as <code>sameAs</code> in the markup, become anchors of the semantic identity. Not because the platforms are knowledge graphs, but because they are sources AI systems already index and weight — and because the explicit declaration of the link reduces ambiguity.</p>
+        <p>Profiles on recognised platforms, declared as <code>sameAs</code> in the markup, become anchors of the semantic identity. Not because the platforms are knowledge graphs, but because they are sources AI systems already index and weight - and because the explicit declaration of the link reduces ambiguity.</p>
  
         <p>LinkedIn is the most relevant for professionals: it is the source models consult most often for current professional data. A well-structured LinkedIn profile, linked to your website with <code>sameAs</code>, works as a bidirectional confirmation: the site declares that profile is the same node, and the profile describes the node with data the model can read.</p>
  
@@ -348,7 +348,7 @@
  
         <h2>How to verify it is working</h2>
  
-        <p>The most direct test is also the most useful as a starting point. Before acting, ask the main AI systems — ChatGPT, Gemini, Perplexity — who you are, what you do, what your key projects or outputs are. Note the answers: what is correct, what is missing, what is invented, what belongs to a namesake.</p>
+        <p>The most direct test is also the most useful as a starting point. Before acting, ask the main AI systems - ChatGPT, Gemini, Perplexity - who you are, what you do, what your key projects or outputs are. Note the answers: what is correct, what is missing, what is invented, what belongs to a namesake.</p>
  
         <p>That snapshot serves as a baseline. After building the signals, repeat the same questions. The comparison is verifiable: can the model now separate you from your namesakes? Are the data cited those declared in the markup? Are the affiliations correct? Have you appeared in answers where you were previously ignored?</p>
  
@@ -358,7 +358,7 @@
  
         <p>It is worth clarifying what this work does not require. It does not require writing more texts, publishing more articles, or building a larger presence on social media. It does not require building a richer website or a more detailed profile in the narrative sense.</p>
  
-        <p>It requires taking what already exists — affiliations, competencies, projects, outputs — and making it verifiable. Moving from a form a human can read to a form a machine can use to make decisions. It is a transformation of structure, not of volume.</p>
+        <p>It requires taking what already exists - affiliations, competencies, projects, outputs - and making it verifiable. Moving from a form a human can read to a form a machine can use to make decisions. It is a transformation of structure, not of volume.</p>
  
         <p>Those who already have a consolidated digital presence often have more verifiable material than they realise. The problem is not a lack of data; it is that the data exists in formats AI systems cannot use with precision. Building entity signals is the work of closing that gap.</p>
  
@@ -371,6 +371,10 @@
         <p>The third step is structure: translating that inventory into JSON-LD markup on the site, consistent <code>sameAs</code> declarations across platforms, and an llms.txt that describes the entity in a controlled way. Each of these is one more signal that makes the correct answer easier to find for any system trying to resolve entity linking on you.</p>
  
         <p>I work with professionals, SMEs and impact organisations to build this kind of presence: structured, verifiable, readable by the AI systems that are becoming the first point of contact between those who search and those who exist.</p>
+          <p>
+            Establishing robust entity signals represents one of the foundational steps in <a href="geo/">GEO (Generative Engine Optimization)</a>, the practice of optimizing for AI citation.
+          </p>
+
           <div class="article-cta">
             <p class="lead">If you want to understand which signals you are missing and where to start, book a 30-minute call.</p>
             <div class="cta-group">

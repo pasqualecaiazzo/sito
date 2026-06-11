@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="../../favicon.png">
-<title>AI Search for Businesses: GEO and Structured Data – Pasquale Caiazzo</title>
+<title>AI Search for Businesses: GEO and Structured Data - Pasquale Caiazzo</title>
 <meta name="description" content="How to make your business appear in ChatGPT, Perplexity, and Gemini responses: GEO, structured data, and knowledge graph for SMEs and local businesses.">
 <link rel="canonical" href="https://pasqualecaiazzo.com/en/notes/ai-search-businesses.html">
 <link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/ai-search-aziende.html">
@@ -96,7 +96,7 @@
     {
       "@type": "Blog",
       "@id": "https://pasqualecaiazzo.com/en/notes/#blog",
-      "name": "Notes – Pasquale Caiazzo",
+      "name": "Notes - Pasquale Caiazzo",
       "url": "https://pasqualecaiazzo.com/en/notes/",
       "description": "Analysis and reflections on AI search, semantic entity architecture, and GEO.",
       "inLanguage": "en"
@@ -216,12 +216,12 @@
             For a growing share of customers, the first encounter with a business no longer involves a Google search and a click on its website. It starts with a question to an AI assistant: who offers this service in my area, what's the best product for this problem, what does this company do? The answer arrives already composed, often without the person visiting any page.
           </p>
           <p>
-            That means the decision is formed before the website. If the business doesn't appear in that response — or appears with inaccurate data — a large part of the work is already lost, and the business may not even notice: there's no missed click to measure, just an opportunity that never existed.
+            That means the decision is formed before the website. If the business doesn't appear in that response - or appears with inaccurate data - a large part of the work is already lost, and the business may not even notice: there's no missed click to measure, just an opportunity that never existed.
           </p>
 
           <h2>A concrete example</h2>
           <p>
-            A business makes bespoke office furniture. A potential client asks an AI assistant who makes office furniture in their county. If the business exists online only with an unstructured brochure site and a few social profiles, the response cites more readable competitors — perhaps less suitable ones — and ignores it.
+            A business makes bespoke office furniture. A potential client asks an AI assistant who makes office furniture in their county. If the business exists online only with an unstructured brochure site and a few social profiles, the response cites more readable competitors - perhaps less suitable ones - and ignores it.
           </p>
           <p>
             Then I try asking directly about the company, by name. The model, finding fragmented data, gets the location wrong, attributes products it doesn't make, or cites an invented price list. For someone evaluating a supplier, those inaccuracies weigh as much as an absence.
@@ -240,12 +240,12 @@
             A common mistake is thinking the website is enough. A model draws from many more sources: Google Business Profile, public registries, industry directories, marketplaces, and review platforms. The picture it builds is the sum of all these traces.
           </p>
           <p>
-            That's why consistency matters. If the company name, address, or category differs across sources, the model struggles to build a single coherent picture and tends to pick the most frequent version, not the correct one. Aligning and linking these presences — starting from the website as the authoritative source — is as much a part of the work as the markup itself.
+            That's why consistency matters. If the company name, address, or category differs across sources, the model struggles to build a single coherent picture and tends to pick the most frequent version, not the correct one. Aligning and linking these presences - starting from the website as the authoritative source - is as much a part of the work as the markup itself.
           </p>
 
           <h2>Why classic SEO is no longer enough</h2>
           <p>
-            SEO was built for a world of lists: you optimise to rank higher in the results, and the user chooses. Answer engines skip the list and compose a response directly. Being first on Google no longer guarantees appearing in that synthesis — and sometimes doesn't even guarantee a click, because the person has already got what they were looking for.
+            SEO was built for a world of lists: you optimise to rank higher in the results, and the user chooses. Answer engines skip the list and compose a response directly. Being first on Google no longer guarantees appearing in that synthesis - and sometimes doesn't even guarantee a click, because the person has already got what they were looking for.
           </p>
           <p>
             That doesn't make SEO useless, it means it operates on a different plane. Visibility in answer engines isn't won with the same levers: it's built in the data infrastructure, not just in content.
@@ -275,7 +275,7 @@
             There's a technical level worth making explicit, because this is where many generic interventions fall short. Schema.org provides specific types for businesses, and using them well changes how the company is interpreted.
           </p>
           <p>
-            The base type is <a href="https://schema.org/Organization" target="_blank" rel="noopener noreferrer">Organization</a>, but for businesses with a physical presence, <a href="https://schema.org/LocalBusiness" target="_blank" rel="noopener noreferrer">LocalBusiness</a> matters — with address, openingHours, and areaServed. The offering is described with <a href="https://schema.org/Product" target="_blank" rel="noopener noreferrer">Product</a>, Service, and Offer, linking prices and availability; brand identifies the trademark; makesOffer connects the company to what it sells; sameAs connects it to official profiles and registries. Reputation, where it exists in verifiable form, is attached with aggregateRating and subjectOf for press coverage.
+            The base type is <a href="https://schema.org/Organization" target="_blank" rel="noopener noreferrer">Organization</a>, but for businesses with a physical presence, <a href="https://schema.org/LocalBusiness" target="_blank" rel="noopener noreferrer">LocalBusiness</a> matters - with address, openingHours, and areaServed. The offering is described with <a href="https://schema.org/Product" target="_blank" rel="noopener noreferrer">Product</a>, Service, and Offer, linking prices and availability; brand identifies the trademark; makesOffer connects the company to what it sells; sameAs connects it to official profiles and registries. Reputation, where it exists in verifiable form, is attached with aggregateRating and subjectOf for press coverage.
           </p>
           <p>
             It's not completeness for its own sake: every verifiable property is one more anchor that reduces ambiguity. Choosing which fields to populate, and with which sources, is the work that a plugin cannot do.
@@ -299,7 +299,7 @@
 
           <h2>Brand integrity: when AI invents data about your business</h2>
           <p>
-            An underappreciated risk is hallucination about company data. A model, lacking clear sources, may attribute a wrong address, a location closed for years, a non-existent price, or a product feature that doesn't match. Not malice — just the normal behaviour of a system filling gaps.
+            An underappreciated risk is hallucination about company data. A model, lacking clear sources, may attribute a wrong address, a location closed for years, a non-existent price, or a product feature that doesn't match. Not malice - just the normal behaviour of a system filling gaps.
           </p>
           <p>
             The damage is real: a customer who receives inaccurate information attributes it to the company, not the model. Anchoring data to stable, verifiable sources reduces that margin and removes the space models have to invent.
@@ -315,7 +315,7 @@
 
           <h2>Companies House, Wikidata, and open registers: does your business need an entry?</h2>
           <p>
-            The Wikidata question is inevitable. For a business the same rule applies as for a person: a dedicated entry makes sense, and is valuable, only where there's verifiable notability — press coverage, industry recognition. Forcing one without those conditions leads to removal.
+            The Wikidata question is inevitable. For a business the same rule applies as for a person: a dedicated entry makes sense, and is valuable, only where there's verifiable notability - press coverage, industry recognition. Forcing one without those conditions leads to removal.
           </p>
           <p>
             In most cases the value lies in connection: anchoring the business to already-existing entries for its sector, territory, partners, and trade associations. These links give a model a way to place and distinguish it from businesses with similar names.
@@ -326,7 +326,7 @@
             It's worth clarifying what this work is not. It's not advertising: no space is bought, and the result doesn't disappear when you stop paying. It's not social media management: there's no posting schedule to maintain to feed a feed algorithm.
           </p>
           <p>
-            It's a structural operation: making a company's data readable and verifiable once, so it stays that way over time. Campaigns bring traffic today; this work builds an asset that keeps working tomorrow, on a channel — answer engines — that campaigns don't reach.
+            It's a structural operation: making a company's data readable and verifiable once, so it stays that way over time. Campaigns bring traffic today; this work builds an asset that keeps working tomorrow, on a channel - answer engines - that campaigns don't reach.
           </p>
 
           <h2>Three mistakes I see often</h2>
@@ -347,7 +347,7 @@
 
           <h2>How to measure it</h2>
           <p>
-            This kind of work needs measuring, and it's done with the same tools customers use. Before intervening, I take a baseline: I put a set of relevant questions to the main AI systems and note the responses — by company name, by product category, by area. For example: who offers a service in a city, what does a certain company produce, which businesses work in a sector.
+            This kind of work needs measuring, and it's done with the same tools customers use. Before intervening, I take a baseline: I put a set of relevant questions to the main AI systems and note the responses - by company name, by product category, by area. For example: who offers a service in a city, what does a certain company produce, which businesses work in a sector.
           </p>
           <p>
             After the intervention I repeat the same questions and compare. Does the company appear where it was absent? Are company and product data correct? Has confusion with competitors or similarly-named businesses disappeared? It's a verifiable comparison, to be repeated over time, because models update.
@@ -358,16 +358,20 @@
             Searches via AI assistants are growing at a pace few sectors have fully measured. <a href="https://openai.com" target="_blank" rel="noopener noreferrer">ChatGPT</a> reached 900 million weekly active users in February 2026, double the 400 million of the previous year; total traffic to AI platforms grew sevenfold between 2024 and 2025 (source: <a href="https://seranking.com/blog/ai-statistics/" target="_blank" rel="noopener noreferrer">SE Ranking</a>). In many sectors, the data infrastructure of businesses is still poor. That means whoever structures their presence now becomes one of the few clear reference points for a product, service, or territory.
           </p>
           <p>
-            And anchors to verifiable sources don't wear out — they accumulate and strengthen over time. Moving early means being the already-readable business when competitors start catching up: a position that's hard to displace.
+            And anchors to verifiable sources don't wear out - they accumulate and strengthen over time. Moving early means being the already-readable business when competitors start catching up: a position that's hard to displace.
           </p>
 
           <h2>Where to start</h2>
           <p>Three concrete steps, in order:</p>
           <ul>
-            <li><strong>Test your visibility.</strong> Ask ChatGPT, Perplexity, and Gemini about your business — by name, by product category, by area. Note what appears, what's wrong, and what's missing.</li>
+            <li><strong>Test your visibility.</strong> Ask ChatGPT, Perplexity, and Gemini about your business - by name, by product category, by area. Note what appears, what's wrong, and what's missing.</li>
             <li><strong>Align your data across sources.</strong> Make sure your legal name, address, category, and core offering are consistent across your website, Google Business Profile, industry directories, and any other platforms where you're listed.</li>
             <li><strong>Structure a minimum entity.</strong> An <a href="https://schema.org/Organization" target="_blank" rel="noopener noreferrer">Organization</a> or <a href="https://schema.org/LocalBusiness" target="_blank" rel="noopener noreferrer">LocalBusiness</a> markup with sameAs links to official profiles is often enough to dramatically improve how models describe you. Everything else is built on top.</li>
           </ul>
+
+          <p>
+            These recommendations form the operational core of <a href="geo/">GEO (Generative Engine Optimization)</a> for business AI readiness and presence.
+          </p>
 
           <div class="article-cta">
             <p class="lead">I work with small and medium-sized businesses to make their brand, products, and data readable and citable by AI answer engines.</p>
