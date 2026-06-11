@@ -6,8 +6,9 @@ function getRadius(node) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.canvas-wrapper');
-  if (!container) return;
+  requestAnimationFrame(() => {
+    const container = document.querySelector('.canvas-wrapper');
+    if (!container) return;
   
   const svgEl = document.getElementById('d3-graph');
   if (!svgEl) return;
@@ -286,4 +287,5 @@ window.addEventListener('DOMContentLoaded', () => {
   }).catch(err => {
     console.error("Error loading graph data:", err);
   });
+});
 });
