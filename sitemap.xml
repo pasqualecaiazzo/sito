@@ -292,6 +292,26 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ── BOT DEL PROFESSIONISTA ───────────────────────────── -->
+  <url>
+    <loc>https://pasqualecaiazzo.com/note/bot-del-professionista</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/bot-del-professionista"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/bot-del-professionista"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/bot-del-professionista"/>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pasqualecaiazzo.com/en/notes/bot-del-professionista</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/bot-del-professionista"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/bot-del-professionista"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/bot-del-professionista"/>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ── GEO HUBS ─────────────────────────────────────────── -->
   <url>
     <loc>https://pasqualecaiazzo.com/note/geo/</loc>

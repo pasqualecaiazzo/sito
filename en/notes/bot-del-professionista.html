@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<title>The Professional's Bot: Built, Not Trained — Pasquale Caiazzo</title>
+<meta name="description" content="Many professionals want their own AI assistant, a bot that speaks on their behalf, and imagine they need to 'train' it on their data. That is the wrong part of the problem.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/en/notes/bot-del-professionista">
+<link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/bot-del-professionista">
+<link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/bot-del-professionista">
+<link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/bot-del-professionista">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Professional's Bot: Built, Not Trained">
+<meta property="og:description" content="Intelligence is borrowed, identity is built. Why a reliable AI assistant depends on an explicit and verifiable layer of knowledge.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/en/notes/bot-del-professionista">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pasqualecaiazzo.com/logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+<meta property="article:published_time" content="2026-06-12">
+<meta property="article:modified_time" content="2026-06-12">
+<meta property="article:author" content="Pasquale Caiazzo">
+<meta name="author" content="Pasquale Caiazzo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Professional's Bot: Built, Not Trained">
+<meta name="twitter:description" content="Intelligence is borrowed, identity is built. Why a reliable AI assistant depends on an explicit and verifiable layer of knowledge.">
+<meta name="twitter:image" content="https://pasqualecaiazzo.com/logo.png">
+<meta name="twitter:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://pasqualecaiazzo.com/en/notes/bot-del-professionista#article",
+        "url": "https://pasqualecaiazzo.com/en/notes/bot-del-professionista",
+        "headline": "The Professional's Bot: Built, Not Trained",
+        "description": "Many professionals want their own AI assistant, a bot that speaks on their behalf, and imagine they need to 'train' it on their data. That is the wrong part of the problem. A bot's intelligence is borrowed from an already capable model, while what makes it reliable is another layer: the verifiable knowledge of the professional.",
+        "inLanguage": "en",
+        "datePublished": "2026-06-12",
+        "dateModified": "2026-06-12",
+        "author": {
+          "@id": "https://pasqualecaiazzo.com/#person"
+        },
+        "publisher": {
+          "@id": "https://pasqualecaiazzo.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://pasqualecaiazzo.com/en/notes/bot-del-professionista#webpage"
+        },
+        "isPartOf": {
+          "@id": "https://pasqualecaiazzo.com/en/notes/#blog"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png",
+          "width": 1200,
+          "height": 1200
+        },
+        "articleSection": "Notes",
+        "wordCount": 1600,
+        "keywords": [
+          "professional bot",
+          "AI assistant",
+          "fine-tuning",
+          "RAG",
+          "Andrej Karpathy",
+          "system prompt learning",
+          "structured data",
+          "verifiability",
+          "GEO"
+        ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [
+            ".article-tldr"
+          ]
+        },
+        "about": [
+          {
+            "@type": "DefinedTerm",
+            "name": "Retrieval-Augmented Generation",
+            "alternateName": "RAG",
+            "sameAs": "https://www.wikidata.org/wiki/Q121362277"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Fine-tuning",
+            "sameAs": "https://www.wikidata.org/wiki/Q113401569"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "AI Agent",
+            "sameAs": "https://www.wikidata.org/wiki/Q132451509"
+          }
+        ],
+        "mentions": [
+          {
+            "@type": "Person",
+            "name": "Andrej Karpathy",
+            "sameAs": "https://www.wikidata.org/wiki/Q104886915"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Model Context Protocol",
+            "sameAs": "https://www.wikidata.org/wiki/Q133436854"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Structured Data",
+            "sameAs": "https://www.wikidata.org/wiki/Q26813700"
+          }
+        ],
+        "citation": [
+          {
+            "@type": "ScholarlyArticle",
+            "name": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+            "url": "https://arxiv.org/abs/2005.11401"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Andrej Karpathy - 2025 LLM Year in Review",
+            "url": "https://karpathy.bearblog.dev/year-in-review-2025/"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://pasqualecaiazzo.com/en/notes/bot-del-professionista#webpage",
+        "url": "https://pasqualecaiazzo.com/en/notes/bot-del-professionista",
+        "name": "The Professional's Bot: Built, Not Trained",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://pasqualecaiazzo.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://pasqualecaiazzo.com/en/notes/bot-del-professionista#breadcrumb"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png"
+        },
+        "dateModified": "2026-06-12"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://pasqualecaiazzo.com/en/notes/bot-del-professionista#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pasqualecaiazzo.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Notes",
+            "item": "https://pasqualecaiazzo.com/en/notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Professional's Bot",
+            "item": "https://pasqualecaiazzo.com/en/notes/bot-del-professionista"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://pasqualecaiazzo.com/#person",
+        "name": "Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com",
+        "jobTitle": "Semantic Entity Architect",
+        "sameAs": [
+          "https://www.linkedin.com/in/pasqualecaiazzo/",
+          "https://github.com/pasqualecaiazzo"
+        ]
+      }
+    ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&amp;display=swap"></noscript>
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="../../main.js" defer></script>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<nav aria-label="Main navigation">
+  <div class="nav-left">
+    <a href="/en/" class="nav-name">Pasquale Caiazzo</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+      </svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
+    <div class="lang-toggle"><a href="/note/bot-del-professionista" hreflang="it" class="lang-link">IT</a><span class="lang-sep">·</span><span class="lang-current">EN</span></div>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-toggle-text">Menu</span>
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Drawer Menu (Sleek slide-out panel) -->
+<div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <button id="drawer-close" class="drawer-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-content">
+    <div class="nav-anchors">
+      <a href="/en/#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">About</span></a>
+      <a href="/en/professionals" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">For Professionals</span></a>
+      <a href="/en/smes" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">For SMEs</span></a>
+      <a href="/en/impact" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">For Nonprofits &amp; B Corps</span></a>
+      <a href="/en/manifesto" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+      <a href="/en/notes/" class="nav-link active"><span class="drawer-num">06</span> <span class="drawer-text">Notes</span></a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-meta">
+        <h3>Contact &amp; Resources</h3>
+        <p>Based in Turin &bull; Available for remote projects</p>
+        <p>Enquiries: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Book a 30-min call ↗</a></p>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+<main>
+  <div class="band hero-band">
+    <div class="inner">
+      <article class="article-wrap">
+        <a href="/en/notes/" class="article-back">← Notes</a>
+        <span class="tag">Professionals</span>
+        <h1 class="article-title">The Professional's Bot: Built, Not Trained</h1>
+        <div class="article-meta">
+          <span>Pasquale Caiazzo</span>
+          <span class="sep">/</span>
+          <time datetime="2026-06-12">12 June 2026</time>
+          <span class="sep">/</span>
+          <span>12 min read</span>
+        </div>
+
+        <p class="article-tldr">
+          <strong>In brief</strong>
+          Many professionals want their own AI assistant, a bot that speaks on their behalf, and imagine they need to "train" it on their data. That is the wrong part of the problem. A bot's intelligence is borrowed from an already capable model, while what makes it reliable is another layer: the verifiable knowledge of who that professional is, declared explicitly and maintained over time. RAG fills the working memory but doesn't make anyone known in a stable way; training the model's weights promises more than it delivers. What decides the bot's fidelity is a structured and quotable core of knowledge, which is not a new service to invent but the composition of what I have always worked on.
+        </p>
+
+        <div class="prose">
+          <h2>Everyone wants a bot, few know what makes it reliable</h2>
+          <p>
+            For a few months now, the request has come back almost identically. A professional—a lawyer, a consultant, an architect—wants an AI assistant to answer client questions, summarize their skills, filter requests, and explain how they work. And almost always, the request comes with a pre-selected word: "train it." The implicit idea is that there is a model to be instructed on one's documents until it learns to be us.
+          </p>
+          <p>
+            It is an understandable instinct, but it aims at the wrong place. The problem with a bot representing a person is not how smart it is, because today's models are already smart enough. The problem is how faithful it is: an assistant that invents a skill, misquotes a judgment, or remains stuck in last year does not protect a professional's reputation—it damages it. And fidelity is not achieved by making the model smarter, but by structuring what the model reads before it speaks.
+          </p>
+
+          <h2>What the professional's bot is, and what it is not</h2>
+          <p>
+            The professional's bot is not a generic chatbot with a label on it, and it is not a model "that has studied you." It is a capable model put in a position to respond like that professional because it has in front of it, in a readable form, the structured and verifiable set of who they are, what they do, with what credentials, under what conditions, and with what evidence.
+          </p>
+          <p>
+            The distinction matters because it separates two very different tasks. One is choosing the engine, and that is the easy part and largely solved by the market already. The other is building the knowledge that the engine must use, and that is the hard part—the one that decides whether the bot will be precise or approximate. The value is not in the engine; it is in the core of knowledge that gives it identity.
+          </p>
+
+          <h2>Intelligence is borrowed, identity is built</h2>
+          <p>
+            To frame this point, I will rely on a framework that Andrej Karpathy has focused on over the past year, as it has the merit of organizing ideas without fanaticism. Karpathy distinguishes what a model knows through training from its ability to reason, observing that true general intelligence depends more on the "cognitive core"—that is, abstraction and problem solving—than on the quantity of memorized facts.
+          </p>
+          <p>
+            The consequence is liberating. You don't have to build the bot's intelligence; that already exists in the model, and you borrow it. You must provide the identity: the specific knowledge of the professional, which no general model possesses and no one expects to find in its weights. In other words, laboratories graduate the capable university student; it is up to you to turn them into the precise professional by providing the right data and context. This, to use Karpathy's words again, is precisely the function of applications built on top of models: organizing a generalist and <a href="/en/notes/entity-linking">animating</a> them into a vertical professional.
+          </p>
+
+          <h2>RAG fills the working memory, not the knowledge of you</h2>
+          <p>
+            Here a common misunderstanding must be cleared up, without falling into the opposite excess. In the last two years, the standard way to feed documents to a model has been RAG (Retrieval-Augmented Generation): we search for relevant texts and insert them into the context at the moment of the query. It works, and it is useful. But it must be understood for what it is.
+          </p>
+          <p>
+            In the metaphor Karpathy uses to describe these systems, the model's weights are like the CPU, the context window is like the RAM, and the prompt is the program. RAG fills the RAM: it brings in the right documents for the duration of a response, then the session closes and that memory vanishes. It is precious for giving the bot materials to reason on, but it does not make it "know" the professional in a stable way, and its quality depends entirely on how structured and reliable the sources you provide are. In short, RAG is a component of the professional's bot, not its identity.
+          </p>
+
+          <h2>Training the model: the temptation that promises too much</h2>
+          <p>
+            The alternative many imagine is the opposite: actually training the model on the professional's data, modifying its weights through fine-tuning. Here too, a measured stance is needed, because fine-tuning has a legitimate use—teaching a style or habitual behavior—but it is the wrong lever for the goal we are talking about.
+          </p>
+          <p>
+            Three reasons, all practical. Weights are opaque: you cannot show a client why the bot said a certain thing, which is a problem, not a detail, for those who make verifiability their brand. Updating them is expensive: every time a service, tariff, or qualification changes, you would have to redo the training. And above all, models today do not have continuous learning. Karpathy describes this with a sharp image: anterograde amnesia. An LLM does not consolidate what you tell it over time on its own; it doesn't have a "sleep" phase that turns context into long-term memory. Training weights on a single person is therefore expensive, fragile, and opaque. It promises a bot "that has learned you"; it delivers a bot that is hard to inspect and keep up to date.
+          </p>
+
+          <h2>The missing layer: explicit and verifiable knowledge</h2>
+          <p>
+            Between RAG, which fills the working memory, and fine-tuning, which modifies the weights, there is an intermediate layer that is decisive. It is explicit, readable, and modifiable knowledge that declares what is true about the professional and with what sources it is demonstrated.
+          </p>
+          <p>
+            Karpathy proposed, as an intuition rather than a consolidated technique, the idea of "system prompt learning": much of the useful learning looks more like rewriting one's own explicit manual than changing weights—as if the model were writing itself the book of how to approach a problem. I quote it for what it is, a research direction, but it points precisely to the layer we need to work on: a declared memory, in clear text, that can be read, corrected, and verified. This is exactly the layer that those who build <a href="/en/notes/entity-signals-without-wikidata">semantic identities</a> know how to handle, because it is made of the same material: deciding what to assert and anchoring it to evidence.
+          </p>
+
+          <h2>An example: declared competence as data</h2>
+          <p>
+            It is just like an organization's values. If a data point remains only in texts written for humans, a machine must infer it; if you declare it in the structure, it treats it as fact. A professional's competence can be written in a biography, and then an agent interprets it, or it can be stated in data, and then the machine reads it without ambiguity.
+          </p>
+
+          <pre class="code-block" style="background:rgba(127,127,127,0.12);padding:1.1rem 1.25rem;border-radius:8px;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:0.82em;line-height:1.6;margin:1.5rem 0;"><code>{
+  "@type": "Person",
+  "name": "...",
+  "jobTitle": "Avvocato",
+  "knowsAbout": ["diritto della concorrenza", "contrattualistica IT"],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Iscrizione all'Ordine degli Avvocati"
+  },
+  "sameAs": ["https://www.wikidata.org/wiki/Q...", "https://www.linkedin.com/in/..."]
+}</code></pre>
+
+          <p>
+            A bot drawing from such a declaration does not have to guess what the professional is competent in, where their authority comes from, or how to verify it: it finds it asserted, typed, and linked to controllable entities and registries. The biography speaks to the human, the structure declares to the machine, and the bot responds on foundations that can be shown.
+          </p>
+
+          <h2>The bot is the entity made queryable</h2>
+          <p>
+            Seen this way, the professional's bot is not a separate object from the work on digital identity; it is its natural continuation. In a previous note, I described the transition to <a href="/en/notes/business-to-agent">Business to Agent</a>, the world where the professional must become <a href="/en/notes/agentic-web">readable by AI agents</a>. The bot is the next step: from readable to queryable, from an entity that an agent consults to an entity that dialogues.
+          </p>
+          <p>
+            And building it does not require inventing a new service. It requires putting together four things I already do. Structured data in JSON-LD shapes the professional's truth. Anchors to verified entities, on Wikidata and official registries, make it quotable and strip the bot of the temptation to hallucinate. Queryable knowledge bases—the professional's materials reorganized for the model to access—are the well-built working memory. And semantic automation keeps the whole system alive, updating data when content changes and monitoring how the bot describes the professional over time. The bot is the composition of these layers, not an isolated fifth piece.
+          </p>
+
+          <h2>Fidelity is maintenance, not an installation</h2>
+          <p>
+            From this also follows what is honest to promise. A faithful bot is not installed once and forgotten. Because models do not have continuous learning, the update layer must be kept alive manually: it is the continual learning that the machine does not do on its own and that becomes our job. This is not a limitation to hide, it is the value of the service, because it makes the relationship recursive rather than a one-off sale.
+          </p>
+          <p>
+            Similarly, it makes no sense to promise a bot that never errs. It makes sense to promise a bot whose answers are anchored to declared sources, where one can trace what it asserts and correct it where needed. Trust, for a machine, is not a perception to suggest, but a chain of verifiable assertions. That is where the credibility of an assistant carrying a person's name is won or lost.
+          </p>
+
+          <h2>Why it pays to move now</h2>
+          <p>
+            One might think all this concerns a distant tomorrow. It does not, and neither does the opposite. Karpathy invites calm regarding timelines, speaking of an "agents decade" rather than a single year, because there is still a long way to go. But precisely for this reason, the window is now: the infrastructure allowing models to connect to data and tools is arriving, while the structured knowledge of most professionals is still poor or absent.
+          </p>
+          <p>
+            There is also a fact that downsizes the technical fear. Karpathy showed with nanochat that today a small conversational model can be trained from scratch for about a hundred dollars in a few hours: the capacity to build engines is no longer the bottleneck, and because of this, competitive advantage shifts upstream, to the quality of the knowledge you feed the model. Those who declare their identity early in a verifiable way will be among the few clear references when bots and agents begin operating on a large scale. A structured declaration, unlike a campaign, does not stop working when you stop paying for it: it deposits and reinforces itself over time.
+          </p>
+
+          <h2>Where to start</h2>
+          <p>
+            The first step is always the same, and it is simple. Ask the main AI systems what they know about the professional today, and observe what is correct, what is missing, and what is invented. That snapshot tells you exactly how much of your professional identity you are already delegating to the machine, and with what fidelity.
+          </p>
+          <p>
+            From there, the work is declaring what you want to be treated as fact—competences, titles, fields, evidence—linking it to the right entities and verifiable sources, and building the bot on top of this base, rather than hoping a model learns by itself to be us. You don't train a brain on a person. You build the verifiable core of knowledge that makes a capable AI speak like that person, and you keep it alive.
+          </p>
+          <p>
+            The evolution toward intelligent agents represents the new frontier of <a href="/en/notes/geo/">GEO (Generative Engine Optimization)</a>, redefining how brands declare their identity and offer to machines.
+          </p>
+
+          <h2>Essential references</h2>
+          <ul>
+            <li>Karpathy A., «2025 LLM Year in Review», December 2025 - <a href="https://karpathy.bearblog.dev/year-in-review-2025/" target="_blank" rel="noopener noreferrer">karpathy.bearblog.dev</a></li>
+            <li>Karpathy A., interview with Dwarkesh Patel (decade of agents, continuous learning), October 2025 - <a href="https://www.dwarkesh.com/p/andrej-karpathy" target="_blank" rel="noopener noreferrer">dwarkesh.com</a></li>
+            <li>Karpathy A., «Software 3.0», YC AI Startup School, June 2025 - <a href="https://www.youtube.com/watch?v=LCEmiRjPEtQ" target="_blank" rel="noopener noreferrer">youtube.com</a></li>
+            <li>Karpathy A., note on «system prompt learning» as the missing paradigm, X, May 2025 - <a href="https://x.com/karpathy/status/1921368644069765486" target="_blank" rel="noopener noreferrer">x.com/karpathy</a></li>
+            <li>Karpathy A., «nanochat», open source repository, 2025 - <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener noreferrer">github.com/karpathy/nanochat</a></li>
+            <li>Lewis P. et al., «Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks», NeurIPS 2020 - <a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener noreferrer">arxiv.org/abs/2005.11401</a></li>
+            <li>Anthropic, «Introducing the Model Context Protocol», 2024 - <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener noreferrer">anthropic.com</a></li>
+          </ul>
+        </div>
+
+        <div class="article-cta">
+          <p class="lead">I work with professionals, businesses, and organizations to declare their identity in structured data and build tools on top of it, like a faithful bot, that AI systems read as facts and not as hypotheses.</p>
+          <div class="cta-group">
+          <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Book a call ↗</a>
+          <a href="/en/manifesto" class="cta-btn cta-btn-outline">Read the Manifesto →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links" style="display: flex; gap: 2rem;">
+        <a href="mailto:info@pasqualecaiazzo.com">info@pasqualecaiazzo.com</a>
+        <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fen%2Fnotes%2Fbot-del-professionista" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/en/privacy">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
