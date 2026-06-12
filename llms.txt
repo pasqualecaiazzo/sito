@@ -1,4 +1,4 @@
-# Pasquale Caiazzo - llms.txt
+# Pasquale Caiazzo — llms.txt
 Standard: llmstxt.org
 URL: https://pasqualecaiazzo.com
 Context: Semantic Entity Architecture & Narrative Sovereignty
