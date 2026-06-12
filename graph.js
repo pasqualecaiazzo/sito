@@ -41,13 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btn-zoom-out').addEventListener('click', () => {
     svg.transition().duration(300).call(zoom.scaleBy, 1/1.3);
   });
-  document.getElementById('btn-reset-layout').addEventListener('click', () => {
-    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
-    d3.selectAll('.node circle').classed('highlighted', false);
-    d3.selectAll('.link').classed('highlighted', false);
-    document.getElementById('details-content').classList.add('hidden');
-    document.getElementById('details-default').classList.remove('hidden');
-  });
+  // Reset layout listener is registered inside d3.json callback below
+
 
   const defs = svg.append('defs');
 
@@ -172,17 +167,7 @@ window.addEventListener('DOMContentLoaded', () => {
       link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
       showNodeDetails(d);
     });
-
-    svg.on('click', function() {
-      d3.selectAll('.node circle').classed('highlighted', false);
-      link.classed('highlighted', false);
-      link.attr('marker-end', 'url(#arrow-default)');
-      document.getElementById('details-content').classList.add('hidden');
-      document.getElementById('details-default').classList.remove('hidden');
-    });
-
     function showNodeDetails(d) {
-      document.getElementById('details-default').classList.add('hidden');
       document.getElementById('details-content').classList.remove('hidden');
 
       document.getElementById('node-name').innerText = d.label;
@@ -225,16 +210,25 @@ window.addEventListener('DOMContentLoaded', () => {
       }).join('');
     }
 
-    // Seleziona il nodo di default (Web Semantico) al caricamento della pagina
-    const defaultNode = graphNodes.find(n => n.id === 'semantic-web');
-    if (defaultNode) {
-      node.filter(d => d.id === 'semantic-web').each(function(d) {
-        d3.select(this).select('circle').classed('highlighted', true);
-        link.classed('highlighted', l => l.source.id === d.id || l.target.id === d.id);
-        link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
-        showNodeDetails(d);
-      });
+    function selectDefaultNode() {
+      const defaultNode = graphNodes.find(n => n.id === 'semantic-web');
+      if (defaultNode) {
+        node.filter(d => d.id === 'semantic-web').each(function(d) {
+          d3.selectAll('.node circle').classed('highlighted', false);
+          d3.select(this).select('circle').classed('highlighted', true);
+          link.classed('highlighted', l => l.source.id === d.id || l.target.id === d.id);
+          link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
+          showNodeDetails(d);
+        });
+      }
     }
+
+    document.getElementById('btn-reset-layout').addEventListener('click', () => {
+      svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+      selectDefaultNode();
+    });
+
+    selectDefaultNode();
 
     simulation.on('tick', () => {
       link.attr('d', d => {

@@ -613,7 +613,8 @@
     }
     .graph-icon { width: 3.5rem; height: 3.5rem; color: var(--text-muted); opacity: 0.6; }
     .details-default p { font-size: 0.85rem; line-height: 1.6; }
-    .details-content.hidden { display: none; }
+    .details-content.hidden { display: none !important; }
+    .details-default.hidden { display: none !important; }
     .details-header { margin-bottom: 1.25rem; }
     .node-badge {
       display: inline-block;
@@ -903,7 +904,7 @@
     [data-theme="light"] .node-critique { stroke: #6b240e; }
     .node { cursor: pointer; }
     .node circle { stroke-width: 2px; transition: transform 0.2s ease, filter 0.2s ease; transform-origin: center; transform-box: fill-box; }
-    .node:hover circle, .node.highlighted circle { filter: drop-shadow(0 0 8px var(--accent)); transform: scale(1.15); }
+    .node:hover circle, .node circle.highlighted { filter: drop-shadow(0 0 8px var(--accent)); transform: scale(1.15); }
     .node text { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; font-weight: 600; pointer-events: none; text-anchor: middle; fill: var(--text); }
     [data-theme="light"] .node text { fill: var(--text); }
     .link { stroke: var(--border); stroke-opacity: 0.45; stroke-width: 1.2px; transition: stroke-opacity 0.2s, stroke-width 0.2s; }
