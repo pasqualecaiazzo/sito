@@ -225,6 +225,17 @@ window.addEventListener('DOMContentLoaded', () => {
       }).join('');
     }
 
+    // Seleziona il nodo di default (Web Semantico) al caricamento della pagina
+    const defaultNode = graphNodes.find(n => n.id === 'semantic-web');
+    if (defaultNode) {
+      node.filter(d => d.id === 'semantic-web').each(function(d) {
+        d3.select(this).select('circle').classed('highlighted', true);
+        link.classed('highlighted', l => l.source.id === d.id || l.target.id === d.id);
+        link.attr('marker-end', l => (l.source.id === d.id || l.target.id === d.id) ? 'url(#arrow-active)' : 'url(#arrow-default)');
+        showNodeDetails(d);
+      });
+    }
+
     simulation.on('tick', () => {
       link.attr('d', d => {
         if (!d.source.x || !d.target.x) return 'M0,0L0,0';
