@@ -98,16 +98,14 @@
     text-align: center;
   }
 
-  /* ── add contact button ── */
-  .btn-contact {
+  /* ── action buttons ── */
+  .btn-contact, .btn-whatsapp {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin: 16px 24px 24px;
+    margin: 16px 24px 0;
     padding: 13px 0;
-    background: var(--accent);
-    color: #0e0e0e;
     border-radius: 10px;
     text-decoration: none;
     font-family: 'IBM Plex Mono', monospace;
@@ -116,8 +114,17 @@
     letter-spacing: 0.04em;
     transition: opacity 0.15s;
   }
-  .btn-contact:active { opacity: 0.8; }
-  .btn-contact svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .btn-contact {
+    background: var(--accent);
+    color: #0e0e0e;
+  }
+  .btn-whatsapp {
+    background: #25D366;
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+  .btn-contact:active, .btn-whatsapp:active { opacity: 0.8; }
+  .btn-contact svg, .btn-whatsapp svg { width: 16px; height: 16px; flex-shrink: 0; }
 
   /* ── divider ── */
   .divider {
@@ -235,11 +242,14 @@
       font-size: 0.68rem;
     }
 
-    .btn-contact {
-      margin: 16px 24px;
+    .btn-contact, .btn-whatsapp {
+      margin: 10px 24px 0;
       padding: 14px 0;
       font-size: 0.88rem;
       flex-shrink: 0;
+    }
+    .btn-whatsapp {
+      margin-bottom: 16px;
     }
 
     .divider {
@@ -309,11 +319,14 @@
     .qr-caption {
       font-size: 0.6rem;
     }
-    .btn-contact {
-      margin: 10px 20px;
+    .btn-contact, .btn-whatsapp {
+      margin: 8px 20px 0;
       padding: 11px 0;
       font-size: 0.82rem;
       flex-shrink: 0;
+    }
+    .btn-whatsapp {
+      margin-bottom: 10px;
     }
     .card-contacts {
       padding: 10px 20px;
@@ -366,6 +379,14 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M19 8v6m3-3h-6"/>
     </svg>
     Aggiungi il contatto
+  </a>
+
+  <!-- WhatsApp button -->
+  <a class="btn-whatsapp" href="https://wa.me/393337086896" target="_blank" rel="noopener">
+    <svg fill="currentColor" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.623-1.023-5.086-2.885-6.948C16.59 2.016 14.12 1.01 11.5 1.017c-5.437 0-9.862 4.371-9.866 9.802 0 1.748.473 3.456 1.368 4.974l-1.013 3.693 3.79-.993zm11.567-7.234c-.328-.164-1.94-.957-2.24-1.066-.3-.11-.518-.164-.737.164-.22.329-.848 1.066-1.04 1.284-.19.219-.383.245-.71.082-.328-.164-1.386-.51-2.64-1.627-.977-.872-1.637-1.95-1.828-2.278-.19-.329-.02-.507.144-.67.147-.147.328-.384.492-.575.164-.19.22-.328.328-.548.11-.219.055-.41-.028-.574-.082-.164-.737-1.777-1.01-2.434-.266-.64-.537-.552-.737-.562-.19-.01-.41-.012-.628-.012-.22 0-.575.082-.876.411-.3.328-1.15 1.123-1.15 2.738 0 1.616 1.176 3.177 1.34 3.396.164.22 2.313 3.532 5.6 4.951.782.338 1.39.54 1.867.691.786.25 1.5.214 2.067.129.632-.096 1.94-.793 2.213-1.56.273-.767.273-1.423.19-1.56-.081-.138-.3-.22-.627-.384z"/>
+    </svg>
+    Scrivimi su WhatsApp
   </a>
 
   <div class="divider"></div>
