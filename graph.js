@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const g = svg.append('g').attr('class', 'graph-g');
 
   const zoom = d3.zoom()
-    .scaleExtent([0.3, 3])
+    .scaleExtent([0.6, 2.5])
     .on('zoom', (event) => {
       g.attr('transform', event.transform);
     });
