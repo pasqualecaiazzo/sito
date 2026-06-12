@@ -386,11 +386,11 @@
       "description": "Fondatore di Wikidata, il knowledge graph aperto della Wikimedia Foundation. Ha creato l'infrastruttura che rende verificabili oltre 100 milioni di entità."
     },
     {
-      "@type": "CreativeWork",
+      "@type": "DefinedTerm",
       "@id": "https://www.wikidata.org/wiki/Q471",
       "name": "Memex",
       "description": "Dispositivo immaginato da Bush nel 1945. Non lineare, associativo, personale. Non è mai stato costruito ma ha ispirato tutto ciò che è venuto dopo: ipertesto, web, knowledge graph.",
-      "creator": {
+      "dcterms:creator": {
         "@id": "https://www.wikidata.org/wiki/Q299595"
       },
       "dcterms:references": {
@@ -398,11 +398,11 @@
       }
     },
     {
-      "@type": "CreativeWork",
+      "@type": "DefinedTerm",
       "@id": "https://www.wikidata.org/wiki/Q93241",
       "name": "Ipertesto",
       "description": "Testo non lineare con collegamenti tra documenti. Il principio fondamentale del web: non una sequenza ma una rete di relazioni tra contenuti.",
-      "creator": {
+      "dcterms:creator": {
         "@id": "https://www.wikidata.org/wiki/Q62852"
       },
       "dcterms:references": {
@@ -410,11 +410,11 @@
       }
     },
     {
-      "@type": "CreativeWork",
+      "@type": "DefinedTerm",
       "@id": "https://www.wikidata.org/wiki/Q466",
       "name": "World Wide Web",
       "description": "Sistema di documenti ipertestuali su internet. Creato al CERN nel 1989. Ha trasformato la comunicazione globale ma anche abilitato la concentrazione di potere sui dati.",
-      "creator": {
+      "dcterms:creator": {
         "@id": "https://www.wikidata.org/wiki/Q80"
       },
       "dcterms:relation": [
@@ -427,11 +427,11 @@
       ]
     },
     {
-      "@type": "CreativeWork",
+      "@type": "DefinedTerm",
       "@id": "https://www.wikidata.org/wiki/Q54837",
       "name": "Web Semantico",
       "description": "Estensione del web proposta da Berners-Lee: i dati hanno significato formale leggibile dalle macchine. La visione non si è realizzata completamente ma i suoi standard sono la base dell'AI readiness.",
-      "creator": [
+      "dcterms:creator": [
         {
           "@id": "https://www.wikidata.org/wiki/Q80"
         },
@@ -449,11 +449,11 @@
       ]
     },
     {
-      "@type": "CreativeWork",
+      "@type": "DefinedTerm",
       "@id": "https://www.wikidata.org/wiki/Q515701",
       "name": "Linked Data",
       "description": "Principi definiti da Berners-Lee nel 2006: usa URI stabili, pubblica dati in RDF, collega a dati esterni. La grammatica pratica del Web Semantico.",
-      "creator": {
+      "dcterms:creator": {
         "@id": "https://www.wikidata.org/wiki/Q80"
       },
       "dcterms:relation": {
@@ -480,7 +480,7 @@
       "name": "Entity Linking",
       "description": "Il processo di associare le menzioni di entità nel testo ai loro nodi corrispondenti in una base di conoscenza (come Wikidata). Fondamentale per la comprensione del testo e l'AI search.",
       "dcterms:relation": {
-        "@id": "https://www.wikidata.org/wiki/Q138646003"
+        "@id": "https://pasqualecaiazzo.com/#ai-readiness"
       }
     },
     {
@@ -489,12 +489,12 @@
       "name": "Sovranità del Dato",
       "description": "Principio per cui i dati appartengono a chi li produce. Risposta al capitalismo della sorveglianza. Si realizza nel Protocollo Solid e nella governance della narrativa semantica.",
       "dcterms:relation": {
-        "@id": "https://www.wikidata.org/wiki/Q138646003"
+        "@id": "https://pasqualecaiazzo.com/#ai-readiness"
       }
     },
     {
       "@type": "DefinedTerm",
-      "@id": "https://www.wikidata.org/wiki/Q138646003",
+      "@id": "https://pasqualecaiazzo.com/#ai-readiness",
       "name": "AI Readiness",
       "description": "Capacità di un'entità di essere letta, citata e rappresentata con precisione dai sistemi AI. Si costruisce con JSON-LD, Wikidata e knowledge graph verificabili."
     },
@@ -517,7 +517,7 @@
           "@id": "https://www.wikidata.org/wiki/Q3475322"
         },
         {
-          "@id": "https://www.wikidata.org/wiki/Q138646003"
+          "@id": "https://pasqualecaiazzo.com/#ai-readiness"
         }
       ]
     },
@@ -531,16 +531,16 @@
           "@id": "https://www.wikidata.org/wiki/Q33002955"
         },
         {
-          "@id": "https://www.wikidata.org/wiki/Q138646003"
+          "@id": "https://pasqualecaiazzo.com/#ai-readiness"
         }
       ]
     },
     {
-      "@type": "CreativeWork",
+      "@type": "DefinedTerm",
       "@id": "https://www.wikidata.org/wiki/Q55408718",
       "name": "Solid Protocol",
       "description": "Protocollo proposto da Berners-Lee. Archivia i dati in Pod personali controllati dall'individuo. L'implementazione tecnica della sovranità del dato.",
-      "creator": {
+      "dcterms:creator": {
         "@id": "https://www.wikidata.org/wiki/Q80"
       },
       "dcterms:relation": {
@@ -553,7 +553,7 @@
       "name": "RAG",
       "description": "Retrieval-Augmented Generation. Potenzia i LLM collegandoli a basi di conoscenza esterne strutturate. Richiede dati verificabili e ben organizzati per funzionare senza allucinazioni.",
       "dcterms:relation": {
-        "@id": "https://www.wikidata.org/wiki/Q138646003"
+        "@id": "https://pasqualecaiazzo.com/#ai-readiness"
       }
     },
     {
@@ -561,7 +561,7 @@
       "@id": "https://www.wikidata.org/wiki/Q2013",
       "name": "Wikidata",
       "description": "Knowledge graph aperto della Wikimedia Foundation. Oltre 100 milioni di entità con identificatori univoci (Q-ID). La fonte più verificabile per l'identità semantica.",
-      "creator": {
+      "dcterms:creator": {
         "@id": "https://www.wikidata.org/wiki/Q18618629"
       },
       "dcterms:relation": [
@@ -572,7 +572,7 @@
           "@id": "https://www.wikidata.org/wiki/Q17012245"
         },
         {
-          "@id": "https://www.wikidata.org/wiki/Q138646003"
+          "@id": "https://pasqualecaiazzo.com/#ai-readiness"
         }
       ]
     },
@@ -586,11 +586,11 @@
       }
     },
     {
-      "@type": "CreativeWork",
+      "@type": "DefinedTerm",
       "@id": "https://www.wikidata.org/wiki/Q29096967",
       "name": "Capitalismo della Sorveglianza",
       "description": "Sistema economico che estrae valore dai dati comportamentali umani senza consenso. Concetto di Zuboff: il web commerciale come macchina di previsione e modifica del comportamento.",
-      "creator": {
+      "dcterms:creator": {
         "@id": "https://www.wikidata.org/wiki/Q15953956"
       },
       "dcterms:relation": {
