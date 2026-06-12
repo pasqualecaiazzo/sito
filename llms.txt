@@ -55,6 +55,10 @@ VAT ID: IT01712990058
 
 ## Note (Writing)
 Articles on semantic architecture, structured data and narrative sovereignty in AI systems. Author: Pasquale Caiazzo.
+- https://pasqualecaiazzo.com/note/bot-del-professionista
+  "Il bot del professionista: non si addestra, si costruisce" - 2026-06-12. Why a professional's AI assistant shouldn't be trained via fine-tuning but built on top of a structured, verifiable knowledge layer (JSON-LD, Schema.org, system prompt learning) to protect their reputation and ensure accurate answers. Mentions Andrej Karpathy's CPU/RAM/Software 3.0 paradigm, RAG limits, and how AI readable entity architecture applies to conversational bots.
+- https://pasqualecaiazzo.com/en/notes/bot-del-professionista
+  "The Professional's Bot: Built, Not Trained" - 2026-06-12. English version of the professional bot article.
 - https://pasqualecaiazzo.com/note/business-to-agent
   "Business to Agent (B2A): il marketing che si dichiara alle macchine" - 2026-06-11. Why the next recipient of marketing is no longer only a person but an AI agent that reads, evaluates and acts, and why brands win by declaring their identity, offer and values in structured data rather than only persuading. Includes the Patagonia case (JSON-LD owner: "The Earth"), the evolution from B2C/B2B to B2A, and the link to narrative sovereignty.
 - https://pasqualecaiazzo.com/en/notes/business-to-agent

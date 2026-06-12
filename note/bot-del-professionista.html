@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../favicon.png">
+<title>Il bot del professionista: non si addestra, si costruisce — Pasquale Caiazzo</title>
+<meta name="description" content="Molti professionisti vogliono un proprio assistente AI, un bot che parli al posto loro, e immaginano di doverlo «addestrare» sulle proprie informazioni. È la parte sbagliata del problema.">
+<link rel="canonical" href="https://pasqualecaiazzo.com/note/bot-del-professionista">
+<link rel="alternate" hreflang="it" href="https://pasqualecaiazzo.com/note/bot-del-professionista">
+<link rel="alternate" hreflang="en" href="https://pasqualecaiazzo.com/en/notes/bot-del-professionista">
+<link rel="alternate" hreflang="x-default" href="https://pasqualecaiazzo.com/note/bot-del-professionista">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Il bot del professionista: non si addestra, si costruisce">
+<meta property="og:description" content="L'intelligenza si prende in prestito, l'identità si costruisce. Perché la fedeltà di un assistente AI dipende da una conoscenza esplicita e verificabile.">
+<meta property="og:url" content="https://pasqualecaiazzo.com/note/bot-del-professionista">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://pasqualecaiazzo.com/logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+<meta property="article:published_time" content="2026-06-12">
+<meta property="article:modified_time" content="2026-06-12">
+<meta property="article:author" content="Pasquale Caiazzo">
+<meta name="author" content="Pasquale Caiazzo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Il bot del professionista: non si addestra, si costruisce">
+<meta name="twitter:description" content="L'intelligenza si prende in prestito, l'identità si costruisce. Perché la fedeltà di un assistente AI dipende da una conoscenza esplicita e verificabile.">
+<meta name="twitter:image" content="https://pasqualecaiazzo.com/logo.png">
+<meta name="twitter:image:alt" content="Pasquale Caiazzo, Semantic Entity Architect">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://pasqualecaiazzo.com/note/bot-del-professionista#article",
+        "url": "https://pasqualecaiazzo.com/note/bot-del-professionista",
+        "headline": "Il bot del professionista: non si addestra, si costruisce",
+        "description": "Molti professionisti vogliono un proprio assistente AI, un bot che parli al posto loro, e immaginano di doverlo «addestrare» sulle proprie informazioni. È la parte sbagliata del problema. L'intelligenza di un bot si prende in prestito da un modello già capace, mentre ciò che lo rende affidabile è la conoscenza verificabile del professionista.",
+        "inLanguage": "it",
+        "datePublished": "2026-06-12",
+        "dateModified": "2026-06-12",
+        "author": {
+          "@id": "https://pasqualecaiazzo.com/#person"
+        },
+        "publisher": {
+          "@id": "https://pasqualecaiazzo.com/#person"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://pasqualecaiazzo.com/note/bot-del-professionista#webpage"
+        },
+        "isPartOf": {
+          "@id": "https://pasqualecaiazzo.com/note/#blog"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png",
+          "width": 1200,
+          "height": 1200
+        },
+        "articleSection": "Note",
+        "wordCount": 1600,
+        "keywords": [
+          "bot del professionista",
+          "assistente AI",
+          "fine-tuning",
+          "RAG",
+          "Andrej Karpathy",
+          "system prompt learning",
+          "dati strutturati",
+          "verificabilità",
+          "GEO"
+        ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [
+            ".article-tldr"
+          ]
+        },
+        "about": [
+          {
+            "@type": "DefinedTerm",
+            "name": "Retrieval-Augmented Generation",
+            "alternateName": "RAG",
+            "sameAs": "https://www.wikidata.org/wiki/Q121362277"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Fine-tuning",
+            "sameAs": "https://www.wikidata.org/wiki/Q113401569"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "AI Agent",
+            "sameAs": "https://www.wikidata.org/wiki/Q132451509"
+          }
+        ],
+        "mentions": [
+          {
+            "@type": "Person",
+            "name": "Andrej Karpathy",
+            "sameAs": "https://www.wikidata.org/wiki/Q104886915"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Model Context Protocol",
+            "sameAs": "https://www.wikidata.org/wiki/Q133436854"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Structured Data",
+            "sameAs": "https://www.wikidata.org/wiki/Q26813700"
+          }
+        ],
+        "citation": [
+          {
+            "@type": "ScholarlyArticle",
+            "name": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+            "url": "https://arxiv.org/abs/2005.11401"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Andrej Karpathy - 2025 LLM Year in Review",
+            "url": "https://karpathy.bearblog.dev/year-in-review-2025/"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://pasqualecaiazzo.com/note/bot-del-professionista#webpage",
+        "url": "https://pasqualecaiazzo.com/note/bot-del-professionista",
+        "name": "Il bot del professionista: non si addestra, si costruisce",
+        "inLanguage": "it",
+        "isPartOf": {
+          "@id": "https://pasqualecaiazzo.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://pasqualecaiazzo.com/note/bot-del-professionista#breadcrumb"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://pasqualecaiazzo.com/pasquale-caiazzo.png"
+        },
+        "dateModified": "2026-06-12"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://pasqualecaiazzo.com/note/bot-del-professionista#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pasqualecaiazzo.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Note",
+            "item": "https://pasqualecaiazzo.com/note/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Il bot del professionista",
+            "item": "https://pasqualecaiazzo.com/note/bot-del-professionista"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://pasqualecaiazzo.com/#person",
+        "name": "Pasquale Caiazzo",
+        "url": "https://pasqualecaiazzo.com",
+        "jobTitle": "Semantic Entity Architect",
+        "sameAs": [
+          "https://www.linkedin.com/in/pasqualecaiazzo/",
+          "https://github.com/pasqualecaiazzo"
+        ]
+      }
+    ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&amp;display=swap"></noscript>
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const theme = (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<script src="../main.js" defer></script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav aria-label="Navigazione principale">
+  <div class="nav-left">
+    <a href="/" class="nav-name">Pasquale Caiazzo</a>
+  </div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambia tema">
+      <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+      </svg>
+      <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+    </button>
+    <div class="lang-toggle"><span class="lang-current">IT</span><span class="lang-sep">·</span><a href="/en/notes/bot-del-professionista" hreflang="en" class="lang-link">EN</a></div>
+    <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer" class="nav-btn-linkedin">LinkedIn ↗</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <span class="nav-toggle-text">Menu</span>
+      <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Drawer Menu (Sleek slide-out panel) -->
+<div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <button id="drawer-close" class="drawer-close" aria-label="Chiudi menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-content">
+    <div class="nav-anchors">
+      <a href="/#about" class="nav-link"><span class="drawer-num">01</span> <span class="drawer-text">Chi sono</span></a>
+      <a href="/professionisti" class="nav-link"><span class="drawer-num">02</span> <span class="drawer-text">Per i professionisti</span></a>
+      <a href="/pmi" class="nav-link"><span class="drawer-num">03</span> <span class="drawer-text">Per le PMI</span></a>
+      <a href="/impatto" class="nav-link"><span class="drawer-num">04</span> <span class="drawer-text">Per le organizzazioni a impatto</span></a>
+      <a href="/manifesto" class="nav-link"><span class="drawer-num">05</span> <span class="drawer-text">Manifesto</span></a>
+      <a href="/note/" class="nav-link active"><span class="drawer-num">06</span> <span class="drawer-text">Note</span></a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-meta">
+        <h3>Contatti & Risorse</h3>
+        <p>Base operativa a Torino &bull; Disponibile per progetti da remoto</p>
+        <p>Richieste: <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer">Prenota un incontro di 30 min ↗</a></p>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/pasqualecaiazzo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+<main>
+  <div class="band hero-band">
+    <div class="inner">
+      <article class="article-wrap">
+        <a href="/note/" class="article-back">← Note</a>
+        <span class="tag">Professionisti</span>
+        <h1 class="article-title">Il bot del professionista: non si addestra, si costruisce</h1>
+        <div class="article-meta">
+          <span>Pasquale Caiazzo</span>
+          <span class="sep">/</span>
+          <time datetime="2026-06-12">12 giugno 2026</time>
+          <span class="sep">/</span>
+          <span>12 min di lettura</span>
+        </div>
+
+        <p class="article-tldr">
+          <strong>In breve</strong>
+          Molti professionisti vogliono un proprio assistente AI, un bot che parli al posto loro, e immaginano di doverlo «addestrare» sulle proprie informazioni. È la parte sbagliata del problema. L'intelligenza di un bot si prende in prestito da un modello già capace, mentre ciò che lo rende affidabile è un altro strato: la conoscenza verificabile di chi è quel professionista, dichiarata in modo esplicito e mantenuta nel tempo. Il RAG riempie la memoria di lavoro ma non fa conoscere nessuno in modo stabile; addestrare i pesi del modello promette più di quanto mantenga. Quello che decide la fedeltà del bot è un nucleo di conoscenza strutturato e citabile, che non è un servizio nuovo da inventare ma la composizione di ciò su cui lavoro da sempre.
+        </p>
+
+        <div class="prose">
+          <h2>Tutti vogliono un bot, pochi sanno cosa lo rende affidabile</h2>
+          <p>
+            Da qualche mese la richiesta torna quasi identica. Un professionista, un avvocato, un consulente, un architetto, vorrebbe un assistente AI che risponda alle domande dei clienti, riassuma le sue competenze, filtri le richieste, racconti come lavora. E quasi sempre la richiesta arriva con una parola già scelta: «addestrarlo». L'idea implicita è che esista un modello da istruire sui propri documenti finché non impara a essere noi.
+          </p>
+          <p>
+            È un istinto comprensibile, ma punta nel posto sbagliato. Il problema di un bot che rappresenta una persona non è quanto sia intelligente, perché i modelli di oggi lo sono già abbastanza. Il problema è quanto sia fedele: un assistente che inventa una competenza, cita male una sentenza o resta fermo a un anno fa non protegge la reputazione del professionista, la danneggia. E la fedeltà non si ottiene rendendo il modello più sveglio, ma costruendo bene ciò che il modello legge prima di parlare.
+          </p>
+
+          <h2>Cos'è il bot del professionista, e cosa non è</h2>
+          <p>
+            Il bot del professionista non è un chatbot generico con un'etichetta sopra, e non è un modello «che ha studiato te». È un modello capace, messo nelle condizioni di rispondere come quel professionista perché ha davanti, in forma leggibile, l'insieme strutturato e verificabile di chi è, cosa fa, con quali titoli, a quali condizioni e con quali prove.
+          </p>
+          <p>
+            La distinzione conta perché separa due lavori molto diversi. Uno è scegliere il motore, ed è la parte facile e in larga parte già risolta dal mercato. L'altro è costruire la conoscenza che quel motore deve usare, ed è la parte difficile, quella che decide se il bot sarà preciso o approssimativo. Il valore non sta nel motore, sta nel nucleo di conoscenza che gli dà identità.
+          </p>
+
+          <h2>L'intelligenza si prende in prestito, l'identità si costruisce</h2>
+          <p>
+            Per inquadrare il punto mi appoggio a una cornice che Andrej Karpathy ha messo a fuoco nell'ultimo anno, perché ha il pregio di ordinare le idee senza fanatismi. Karpathy distingue ciò che un modello sa per via dell'addestramento dalla sua capacità di ragionare, e osserva che la vera intelligenza generale dipende più dal «nucleo cognitivo», cioè dall'astrazione e dal problem solving, che dalla quantità di fatti memorizzati.
+          </p>
+          <p>
+            La conseguenza è liberatoria. Non devi costruire l'intelligenza del bot, quella esiste già nel modello e la prendi in prestito. Devi fornire l'identità: la conoscenza specifica del professionista, che nessun modello generale possiede e che nessuno si aspetta di trovare nei suoi pesi. Detto altrimenti, lo studente universitario capace lo laureano i laboratori; sei tu a trasformarlo nel professionista preciso, fornendogli i dati e il contesto giusti. Questa, sempre nelle parole di Karpathy, è proprio la funzione delle applicazioni costruite sopra i modelli: organizzare un generalista e <a href="/note/entity-linking">animarlo</a> in un professionista verticale.
+          </p>
+
+          <h2>Il RAG riempie la memoria di lavoro, non la conoscenza di te</h2>
+          <p>
+            Qui va sciolto un equivoco diffuso, senza cadere nell'eccesso opposto. Negli ultimi due anni il modo standard per dare a un modello dei documenti è stato il RAG, la generazione aumentata dal recupero: si cercano i testi pertinenti e li si infilano nel contesto al momento della domanda. Funziona, ed è utile. Ma va capito per quello che è.
+          </p>
+          <p>
+            Nella metafora che Karpathy usa per descrivere questi sistemi, i pesi del modello sono come la CPU, la finestra di contesto è come la RAM, e il prompt è il programma. Il RAG riempie la RAM: porta i documenti giusti per la durata di una risposta, poi la sessione si chiude e quella memoria svanisce. È prezioso per dare al bot i materiali su cui ragionare, ma non lo fa «conoscere» il professionista in modo stabile, e la sua qualità dipende interamente da quanto sono strutturate e affidabili le fonti che gli dai. Il RAG, insomma, è un componente del bot del professionista, non la sua identità.
+          </p>
+
+          <h2>Addestrare il modello: la tentazione che promette troppo</h2>
+          <p>
+            L'alternativa che molti immaginano è l'opposto: addestrare davvero il modello sui dati del professionista, modificandone i pesi con il fine-tuning. Anche qui serve una posizione misurata, perché il fine-tuning ha un uso legittimo, insegnare uno stile o un comportamento abituale, ma è la leva sbagliata per l'obiettivo di cui parliamo.
+          </p>
+          <p>
+            Tre ragioni, tutte pratiche. I pesi sono opachi: non puoi mostrare a un cliente perché il bot ha detto una certa cosa, e per chi fa della verificabilità il proprio marchio è un problema, non un dettaglio. Aggiornarli costa: ogni volta che cambia un servizio, una tariffa, una qualifica, dovresti rimettere mano all'addestramento. E soprattutto i modelli, oggi, non hanno apprendimento continuo. Karpathy lo descrive con un'immagine netta, l'amnesia anterograda: un LLM non consolida da solo nel tempo ciò che gli dici, non ha un «sonno» che trasformi il contesto in memoria duratura. Addestrare i pesi su una singola persona è quindi costoso, fragile e poco trasparente. Promette un bot «che ti ha imparato»; mantiene un bot difficile da ispezionare e da tenere aggiornato.
+          </p>
+
+          <h2>Lo strato mancante: una conoscenza esplicita e verificabile</h2>
+          <p>
+            Tra il RAG, che riempie la memoria di lavoro, e il fine-tuning, che modifica i pesi, c'è uno strato intermedio che è quello decisivo. È una conoscenza esplicita, leggibile e modificabile, che dichiara cosa è vero del professionista e con quali fonti lo si dimostra.
+          </p>
+          <p>
+            Karpathy ha proposto, come intuizione e non ancora come tecnica consolidata, l'idea di un «system prompt learning»: gran parte dell'apprendimento utile assomiglia più al riscrivere un proprio manuale esplicito che al cambiare i pesi, come se il modello scrivesse a sé stesso il libro di come affrontare un problem. La cito per quello che è, una direzione di ricerca, ma indica con precisione lo strato su cui conviene lavorare: una memoria dichiarata, in chiaro, che si può leggere, correggere e verificare. È esattamente lo strato che chi costruisce <a href="/note/segnali-entita-senza-wikidata">identità semantiche</a> sa trattare, perché è fatto della stessa materia, decidere cosa affermare e ancorarlo a prove.
+          </p>
+
+          <h2>Un esempio: la competenza dichiarata come dato</h2>
+          <p>
+            Vale come per i valori di un'azienda. Se un dato resta solo nei testi scritti per gli umani, una macchina deve dedurlo; se lo dichiari nella struttura, lo tratta come fatto. La competenza di un professionista può essere scritta in una biografia, e allora un agente la interpreta, oppure può essere affermata in dati, e allora la legge senza ambiguità.
+          </p>
+
+          <pre class="code-block" style="background:rgba(127,127,127,0.12);padding:1.1rem 1.25rem;border-radius:8px;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:0.82em;line-height:1.6;margin:1.5rem 0;"><code>{
+  "@type": "Person",
+  "name": "...",
+  "jobTitle": "Avvocato",
+  "knowsAbout": ["diritto della concorrenza", "contrattualistica IT"],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Iscrizione all'Ordine degli Avvocati"
+  },
+  "sameAs": ["https://www.wikidata.org/wiki/Q...", "https://www.linkedin.com/in/..."]
+}</code></pre>
+
+          <p>
+            Un bot che attinge a una dichiarazione così non deve indovinare in cosa è competente il professionista, da dove viene la sua autorità o come verificarla: lo trova affermato, tipizzato e collegato a entità e registri controllabili. La biografia parla all'umano, la struttura dichiara alla macchina, e il bot risponde su fondamenta che si possono mostrare.
+          </p>
+
+          <h2>Il bot è l'entità resa interrogabile</h2>
+          <p>
+            Visto così, il bot del professionista non è un oggetto a parte rispetto al lavoro sull'identità digitale, ne è la naturale prosecuzione. In una nota precedente ho descritto il passaggio al <a href="/note/business-to-agent">Business to Agent</a>, il mondo in cui il professionista deve diventare <a href="/note/agentic-web">leggibile dagli agenti AI</a>. Il bot è il passo successivo: da leggibile a interrogabile, da entità che un agente consulta a entità che dialoga.
+          </p>
+          <p>
+            E la sua costruzione non chiede di inventare un servizio nuovo. Chiede di mettere a sistema quattro cose che già faccio. I dati strutturati in JSON-LD danno la forma alla verità del professionista. Gli ancoraggi a entità verificate, su Wikidata e sui registri ufficiali, la rendono citabile e tolgono al bot la tentazione di inventare. Le basi di conoscenza interrogabili, i materiali del professionista riorganizzati perché il modello vi attinga, sono la memoria di lavoro ben costruita. E l'automazione semantica tiene vivo l'insieme, aggiornando i dati quando i contenuti cambiano e monitorando come il bot descrive il professionista nel tempo. Il bot è la composizione di questi strati, non un quinto pezzo isolato.
+          </p>
+
+          <h2>La fedeltà è manutenzione, non un'installazione</h2>
+          <p>
+            Da qui discende anche cosa è onesto promettere. Un bot fedele non si installa una volta e si dimentica. Poiché i modelli non hanno apprendimento continuo, lo strato di aggiornamento va tenuto vivo a mano: è il continual learning che la macchina non fa da sola e che diventa lavoro nostro. Questo non è un limite da nascondere, è il valore del servizio, perché rende la relazione ricorsiva invece che una vendita una tantum.
+          </p>
+          <p>
+            Allo stesso modo, non ha senso promettere un bot che non sbaglia mai. Ha senso promettere un bot le cui risposte sono ancorate a fonti dichiarate, in cui si può risalire a ciò che afferma e correggerlo dove serve. La fiducia, per una macchina, non è una percezione da suggerire, è una catena di affermazioni verificabili. È lì che si vince o si perde la credibilità di un assistente che porta il nome di una persona.
+          </p>
+
+          <h2>Perché conviene muoversi adesso</h2>
+          <p>
+            Si potrebbe pensare che tutto questo riguardi un domani lontano. Non è così, e nemmeno il contrario. Karpathy invita alla calma sui tempi, parla di un «decennio degli agenti» e non di un anno, perché molta strada è ancora da fare. Ma proprio per questo la finestra è ora: l'infrastruttura che permette ai modelli di collegarsi a dati e strumenti sta arrivando, mentre la conoscenza strutturata della maggior parte dei professionisti è ancora povera o assente.
+          </p>
+          <p>
+            C'è anche un dato che ridimensiona la paura tecnica. Karpathy ha mostrato con nanochat che oggi un piccolo modello conversazionale si addestra da zero con circa cento dollari in poche ore: la capacità di costruire motori non è più il collo di bottiglia, e proprio per questo il vantaggio competitivo si sposta a monte, sulla qualità della conoscenza che dai al modello. Chi dichiara presto la propria identità in modo verificabile sarà uno dei pochi riferimenti chiari quando i bot e gli agenti inizieranno a operare su larga scala. Una dichiarazione strutturata, a differenza di una campagna, non smette di lavorare quando smetti di pagarla: si deposita e si rinforza nel tempo.
+          </p>
+
+          <h2>Da dove si parte</h2>
+          <p>
+            Il primo passo è sempre lo stesso, ed è semplice. Chiedere ai principali sistemi AI cosa sanno oggi del professionista, e osservare cosa è corretto, cosa manca e cosa viene inventato. Quella fotografia dice quanto della propria identità professionale si sta già delegando alla macchina, e con quale fedeltà.
+          </p>
+          <p>
+            Da lì il lavoro è dichiarare ciò che deve essere trattato come fatto, competenze, titoli, ambiti, prove, collegandolo alle entità giuste e a fonti verificabili, e costruire sopra questa base il bot, invece di sperare che un modello impari da solo a essere noi. Non si addestra un cervello su una persona. Si costruisce il nucleo di conoscenza verificabile che fa parlare un'AI capace come quella persona, e lo si tiene vivo.
+          </p>
+          <p>
+            L'evoluzione verso gli agenti intelligenti rappresenta la nuova frontiera della <a href="/note/geo/">GEO (Generative Engine Optimization)</a>, ridefinendo il modo in cui i brand dichiarano la propria identità e offerta alle macchine.
+          </p>
+
+          <h2>Riferimenti essenziali</h2>
+          <ul>
+            <li>Karpathy A., «2025 LLM Year in Review», dicembre 2025 - <a href="https://karpathy.bearblog.dev/year-in-review-2025/" target="_blank" rel="noopener noreferrer">karpathy.bearblog.dev</a></li>
+            <li>Karpathy A., intervista con Dwarkesh Patel (decennio degli agenti, apprendimento continuo), ottobre 2025 - <a href="https://www.dwarkesh.com/p/andrej-karpathy" target="_blank" rel="noopener noreferrer">dwarkesh.com</a></li>
+            <li>Karpathy A., «Software 3.0», YC AI Startup School, giugno 2025 - <a href="https://www.youtube.com/watch?v=LCEmiRjPEtQ" target="_blank" rel="noopener noreferrer">youtube.com</a></li>
+            <li>Karpathy A., nota su «system prompt learning» come paradigma mancante, X, maggio 2025 - <a href="https://x.com/karpathy/status/1921368644069765486" target="_blank" rel="noopener noreferrer">x.com/karpathy</a></li>
+            <li>Karpathy A., «nanochat», repository open source, 2025 - <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener noreferrer">github.com/karpathy/nanochat</a></li>
+            <li>Lewis P. et al., «Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks», NeurIPS 2020 - <a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener noreferrer">arxiv.org/abs/2005.11401</a></li>
+            <li>Anthropic, «Introducing the Model Context Protocol», 2024 - <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener noreferrer">anthropic.com</a></li>
+          </ul>
+        </div>
+
+        <div class="article-cta">
+          <p class="lead">Lavoro con professionisti, imprese e organizzazioni per dichiarare la loro identità in dati strutturati e costruirci sopra strumenti, come un bot fedele, che i sistemi AI leggono come fatti e non come ipotesi.</p>
+          <div class="cta-group">
+          <a href="https://cal.com/pcaiazzo/30min" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Prenota una chiamata ↗</a>
+          <a href="/manifesto" class="cta-btn cta-btn-outline">Leggi il Manifesto →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <span>Pasquale Caiazzo</span><br>
+        Semantic Entity Architect<br>
+        Torino<br>
+        P.IVA IT01712990058
+      </div>
+      <div class="footer-links" style="display: flex; gap: 2rem;">
+        <a href="mailto:info@pasqualecaiazzo.com">info@pasqualecaiazzo.com</a>
+        <a href="https://validator.schema.org/#url=https%3A%2F%2Fpasqualecaiazzo.com%2Fnote%2Fbot-del-professionista" target="_blank" rel="noopener noreferrer">Schema.org verifier</a>
+        <a href="https://www.linkedin.com/in/pasqualecaiazzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/privacy">Informativa sulla privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
