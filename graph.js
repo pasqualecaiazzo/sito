@@ -205,8 +205,14 @@ window.addEventListener('DOMContentLoaded', () => {
       badge.style.backgroundColor = themeColor + '15';
 
       const wLink = document.getElementById('node-wikidata-link');
-      wLink.href = `https://www.wikidata.org/wiki/${d.wikidata}`;
-      document.getElementById('node-wikidata-text').innerText = `wikidata.org/wiki/${d.wikidata} ↗`;
+      const wContainer = wLink.parentElement;
+      if (d.wikidata) {
+        wContainer.style.display = 'block';
+        wLink.href = `https://www.wikidata.org/wiki/${d.wikidata}`;
+        document.getElementById('node-wikidata-text').innerText = `wikidata.org/wiki/${d.wikidata} ↗`;
+      } else {
+        wContainer.style.display = 'none';
+      }
 
       const rels = graphLinks.filter(l => l.source.id === d.id || l.target.id === d.id);
       const list = document.getElementById('node-relations-list');
