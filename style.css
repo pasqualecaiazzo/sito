@@ -1037,13 +1037,15 @@
     .note-card h2 { font-family: 'IBM Plex Serif', serif; font-size: 1.45rem; font-weight: 700; line-height: 1.25; margin: 0 0 .55rem 0; color: var(--text); }
     .note-card p { font-size: .95rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 .75rem 0; max-width: 680px; }
     .note-card .note-more { font-family: 'IBM Plex Mono', monospace; font-size: .8rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: .35rem; }
-    .article-wrap { max-width: 720px; }
+    .article-wrap { width: 100%; max-width: 720px; box-sizing: border-box; }
     .article-meta { font-family: 'IBM Plex Mono', monospace; font-size: .78rem; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: .85rem; align-items: center; margin: .5rem 0 1.75rem; }
     .article-meta .sep { opacity: .45; }
     .article-title { font-family: 'IBM Plex Serif', serif; font-weight: 700; line-height: 1.15; font-size: clamp(1.9rem, 4vw, 2.7rem); margin: .4rem 0 0; }
     .article-tldr { border-left: 2px solid var(--accent); padding: .25rem 0 .25rem 1.25rem; margin: 0 0 2.5rem; font-size: 1.08rem; line-height: 1.65; color: var(--text); }
     .article-tldr strong { font-family: 'IBM Plex Mono', monospace; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .5rem; font-weight: 700; }
-    .prose { overflow-wrap: break-word; word-wrap: break-word; }
+    .prose { overflow-wrap: break-word; word-wrap: break-word; width: 100%; box-sizing: border-box; }
+    .prose pre, .prose .code-block { max-width: 100%; overflow-x: auto; white-space: pre; word-wrap: normal; box-sizing: border-box; }
+    .prose table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .prose h2 { font-family: 'IBM Plex Serif', serif; font-size: 1.45rem; font-weight: 700; margin: 2.6rem 0 .9rem; line-height: 1.25; color: var(--text); }
     .prose p { font-size: 1.02rem; line-height: 1.75; color: var(--text); margin: 0 0 1.15rem; }
     .prose p.lead { color: var(--text-muted); }
@@ -1120,6 +1122,13 @@
 
     /* ── MOBILE CTA BUTTONS & RESPONSIVENESS OVERRIDES ───── */
     @media (max-width: 480px) {
+      .inner { padding: 0 1.25rem; }
       .cta-group { flex-direction: column; width: 100%; align-items: stretch; gap: 0.75rem; }
       .cta-btn { white-space: normal; width: 100%; justify-content: center; text-align: center; box-sizing: border-box; }
+      
+      /* Prevents layout stretching by wide code blocks and tables */
+      .article-wrap { width: 100%; box-sizing: border-box; }
+      .prose { width: 100%; box-sizing: border-box; }
+      .prose pre, .prose .code-block { max-width: 100%; overflow-x: auto !important; white-space: pre; word-wrap: normal; box-sizing: border-box; }
+      .prose table { display: block; width: 100%; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
     }
