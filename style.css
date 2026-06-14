@@ -251,7 +251,7 @@
 
     /* ── LAYOUT ────────────────────────────────────────── */
     .band { width: 100%; position: relative; }
-    .inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+    .inner { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; box-sizing: border-box; }
 
     /* ── TAG ───────────────────────────────────────────── */
     .tag {
