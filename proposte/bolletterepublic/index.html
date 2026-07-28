@@ -1,0 +1,1542 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Proposta operativa per costruire una base semantica di entità, relazioni, fonti e specifiche JSON-LD per Bollette Republic.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bollette Republic - Mappatura semantica delle entità</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f7f5ef;
+      --panel: rgba(255, 255, 255, 0.82);
+      --panel-2: #edf1f7;
+      --ink: #111827;
+      --text: #334155;
+      --muted: #64748b;
+      --line: #d9ded8;
+      --line-strong: #c8d1cc;
+      --accent: #1f6feb;
+      --accent-soft: rgba(31, 111, 235, 0.08);
+      --accent-border: rgba(31, 111, 235, 0.22);
+      --max: 1180px;
+      --radius: 22px;
+      --shadow: 0 18px 50px rgba(17, 24, 39, 0.08);
+      --primary-gradient: linear-gradient(135deg, #1f6feb 0%, #4457d6 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(17, 24, 39, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17, 24, 39, 0.035) 1px, transparent 1px);
+      background-size: 45px 45px;
+      background-position: center top;
+    }
+
+    body::after {
+      content: "";
+      position: absolute;
+      top: 8%;
+      left: 12%;
+      z-index: -2;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: rgba(31, 111, 235, 0.08);
+      filter: blur(150px);
+      pointer-events: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p,
+    li {
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.62;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 7px;
+    }
+
+    code {
+      padding: 2px 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel-2);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.86em;
+    }
+
+    pre {
+      overflow: auto;
+      margin: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #111827;
+      color: #e2e8f0;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    pre code {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: inherit;
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 34px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 245, 239, 0.9);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      width: min(1280px, calc(100% - 34px));
+      margin: 0 auto;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      gap: 12px;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      font-family: "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+    }
+
+    .client-logo {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+
+    .client-logo img {
+      display: block;
+      width: clamp(138px, 14vw, 178px);
+      height: auto;
+    }
+
+    .brand span {
+      color: var(--muted);
+    }
+
+    .brand > span:not(.client-logo) {
+      white-space: nowrap;
+    }
+
+    .topnav {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      gap: clamp(8px, 1.2vw, 14px);
+      min-width: 0;
+      font-size: clamp(12px, 1.08vw, 16px);
+      font-weight: 800;
+      color: var(--ink);
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .topnav a {
+      padding: 7px 8px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .topnav a:hover {
+      border-color: var(--line);
+      background: rgba(31, 111, 235, 0.07);
+      color: var(--ink);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 30px;
+      align-items: stretch;
+      padding: 54px 0 34px;
+    }
+
+    .eyebrow {
+      margin-bottom: 16px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      font-family: "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(32px, 4.6vw, 54px);
+      line-height: 0.98;
+      font-family: "IBM Plex Serif", serif;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: var(--accent);
+    }
+
+    h2 {
+      font-size: clamp(30px, 3.6vw, 44px);
+      line-height: 1.06;
+      font-family: "IBM Plex Serif", serif;
+      color: var(--ink);
+    }
+
+    h3 {
+      font-size: clamp(22px, 2.5vw, 32px);
+      line-height: 1.08;
+      font-family: "IBM Plex Serif", serif;
+      color: var(--ink);
+    }
+
+    h4 {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin-top: 22px;
+      color: var(--text);
+      font-size: clamp(18px, 2.2vw, 25px);
+      line-height: 1.36;
+      letter-spacing: -0.015em;
+    }
+
+    .delivery-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      padding: 10px 14px;
+      border: 1px solid var(--accent-border);
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .panel {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-pad {
+      padding: clamp(22px, 3vw, 34px);
+    }
+
+    .summary {
+      display: grid;
+      gap: 20px;
+    }
+
+    .summary-item {
+      display: grid;
+      gap: 6px;
+    }
+
+    .summary-item h3 {
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .summary-item p {
+      margin: 0;
+    }
+
+    .summary strong {
+      color: var(--ink);
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .metric-card {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px;
+      border: 1px solid var(--line-strong);
+      border-radius: 22px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      display: block;
+      margin-bottom: 10px;
+      font-size: clamp(34px, 4.6vw, 60px);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      font-family: "IBM Plex Mono", monospace;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: var(--accent);
+    }
+
+    .metric-card p {
+      margin-bottom: 0;
+      font-size: 15px;
+      line-height: 1.48;
+    }
+
+    .source-link {
+      display: inline-flex;
+      width: fit-content;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      font-family: "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+    }
+
+    .source-link:hover {
+      border-color: var(--line-strong);
+      color: var(--ink);
+    }
+
+    .section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .section-intro {
+      max-width: none;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .architecture {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .phase-pill {
+      min-height: 112px;
+      padding: 18px;
+      border: 1px solid var(--line-strong);
+      border-radius: 16px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .phase-pill .num {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .phase-pill b {
+      display: block;
+      font-size: 22px;
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+    }
+
+    .phase-pill p {
+      margin-top: 14px;
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .phase {
+      display: block;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .phase + .phase {
+      margin-top: 18px;
+    }
+
+    .phase-index {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      column-gap: 16px;
+      align-items: start;
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      position: static;
+    }
+
+    .phase-number {
+      display: inline-flex;
+      width: 48px;
+      height: 48px;
+      align-items: center;
+      justify-content: center;
+      grid-row: 1 / span 2;
+      margin-bottom: 0;
+      border: 1px solid var(--line-strong);
+      border-radius: 50%;
+      background: var(--panel-2);
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 900;
+    }
+
+    .phase-title {
+      margin-bottom: 12px;
+    }
+
+    .phase-desc {
+      max-width: 860px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .detail {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+    }
+
+    .detail.wide {
+      grid-column: 1 / -1;
+    }
+
+    .detail h4 {
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .output {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 2px 8px 8px 0;
+      padding: 7px 10px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--accent-soft);
+      font-family: "IBM Plex Mono", monospace;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .example {
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+    }
+
+    .table-wrap {
+      overflow-x: visible;
+      border: 1px solid var(--line-strong);
+      border-radius: 18px;
+      background: var(--panel);
+    }
+
+    table {
+      width: 100%;
+      min-width: 0;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.45;
+      overflow-wrap: break-word;
+      word-break: normal;
+    }
+
+    th:first-child,
+    td:first-child {
+      width: 21%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 22%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 21%;
+    }
+
+    th:last-child,
+    td:last-child {
+      width: 36%;
+    }
+
+    .semantic-map th:first-child,
+    .semantic-map td:first-child {
+      width: 18%;
+    }
+
+    .semantic-map th:nth-child(2),
+    .semantic-map td:nth-child(2) {
+      width: 18%;
+    }
+
+    .semantic-map th:nth-child(3),
+    .semantic-map td:nth-child(3) {
+      width: 26%;
+    }
+
+    .semantic-map th:nth-child(4),
+    .semantic-map td:nth-child(4) {
+      width: 18%;
+    }
+
+    .semantic-map th:last-child,
+    .semantic-map td:last-child {
+      width: 20%;
+    }
+
+    th {
+      background: var(--panel-2);
+      color: var(--ink);
+      font-size: 12px;
+      letter-spacing: 0.07em;
+      font-family: "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+    }
+
+    td {
+      color: var(--text);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: 0;
+    }
+
+    .file-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .file-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .file-card code {
+      display: inline-block;
+      margin-bottom: 12px;
+      border-color: var(--line-strong);
+      background: var(--accent-soft);
+      font-weight: 800;
+    }
+
+    .oral {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .quote-card {
+      padding: 22px;
+      border: 1px solid var(--line-strong);
+      border-radius: 22px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .quote-card p {
+      font-size: 17px;
+      line-height: 1.58;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .section-head,
+      .oral {
+        grid-template-columns: 1fr;
+      }
+
+      .phase-index {
+        position: static;
+      }
+
+      .file-grid,
+      .evidence-grid,
+      .timeline-grid,
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand > span:not(.client-logo) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 721px) and (max-width: 980px) {
+      .timeline-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topnav {
+        display: none;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+      }
+
+      table {
+        min-width: 680px;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      h1 {
+        font-size: clamp(38px, 12vw, 56px);
+      }
+
+      .phase {
+        padding: 16px;
+        border-radius: 18px;
+      }
+    }
+
+    @media print {
+      :root {
+        --paper: #ffffff;
+        --panel: #ffffff;
+        --panel-2: #f3f5f8;
+        --ink: #111827;
+        --text: #334155;
+        --muted: #475569;
+        --line: #d8dee8;
+        --line-strong: #cbd5e1;
+        --accent: #1f6feb;
+        --accent-soft: #eef5ff;
+        --accent-border: #b8d6ff;
+        --shadow: none;
+        --primary-gradient: none;
+      }
+
+      body {
+        background: #ffffff;
+        color: var(--ink);
+      }
+
+      .topbar {
+        position: static;
+        background: #ffffff;
+      }
+
+      .phase-index {
+        position: static;
+      }
+
+      h1 {
+        -webkit-text-fill-color: currentColor;
+        background: none;
+        color: var(--accent);
+      }
+
+      .panel,
+      .metric-card,
+      .phase,
+      .phase-pill,
+      .detail,
+      .file-card,
+      .quote-card,
+      .table-wrap {
+        box-shadow: none;
+      }
+
+      pre {
+        background: #f8fafc;
+        color: var(--ink);
+        white-space: pre-wrap;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="client-logo">
+          <img src="bollette-republic-logo.png" alt="Bollette Republic">
+        </span>
+        <span>Mappatura semantica</span>
+      </div>
+      <nav class="topnav" aria-label="Sezioni">
+        <a href="#tesi">Tesi</a>
+        <a href="#architettura">Architettura</a>
+        <a href="#fasi">Fasi</a>
+        <a href="#timeline">Tempi</a>
+        <a href="#file">File</a>
+        <a href="#uso">Uso</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero" id="tesi">
+      <div>
+        <div class="eyebrow">Percorso operativo</div>
+        <h1>Mappatura semantica delle entità</h1>
+        <p class="subtitle">Una base ordinata di entità, relazioni, fonti, identificatori e istruzioni leggibili da sistemi automatici.</p>
+        <div class="delivery-badge">Realizzazione del progetto in 4 settimane</div>
+      </div>
+
+      <aside class="panel panel-pad summary">
+        <div class="summary-item">
+          <h3>Scenario</h3>
+          <p>Bollette Republic sta costruendo un servizio che unisce gestione bollette, cassetto documentale, privacy, avvisi, switch e gruppi d’acquisto. Questi elementi devono restare collegati anche quando vengono letti fuori dalla singola pagina.</p>
+        </div>
+        <div class="summary-item">
+          <h3>Intervento</h3>
+          <p>Organizzo una base semantica di entità, relazioni, fonti, pagine di riferimento e ambiguità. Da questa base derivano specifiche JSON-LD e istruzioni operative per chi implementa.</p>
+        </div>
+        <div class="summary-item">
+          <h3>Risultato</h3>
+          <p>Il sito diventa più stabile da interpretare. Brand, servizio, funzioni e contesto vengono dichiarati in modo coerente, riducendo letture parziali o associazioni sbagliate.</p>
+        </div>
+        <div class="summary-item">
+          <h3>Base operativa</h3>
+          <p>Resta una mappa consultabile per decidere cosa dichiarare, in quale pagina, con quali fonti e con quale priorità quando il progetto evolve.</p>
+        </div>
+        <div class="summary-item">
+          <h3>Consegna</h3>
+          <p>Registro Excel centrale, specifiche JSON-LD, indicazioni per la lettura automatica, query di verifica e piano operativo. Ogni output chiarisce contenuto, punto di applicazione e decisione supportata.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="architettura">
+      <div class="section-head">
+        <div class="section-kicker">Mappa delle fasi</div>
+        <div>
+          <h2>Il lavoro viene costruito in nove blocchi operativi</h2>
+          <p class="section-intro">La sequenza è pensata per evitare interventi isolati. Prima si capisce il perimetro, poi si costruisce un registro unico di entità, relazioni e fonti; infine lo si traduce in specifiche JSON-LD, istruzioni di lettura automatica e test di verifica.</p>
+        </div>
+      </div>
+
+      <div class="architecture">
+        <a class="phase-pill" href="#fase-1"><span class="num">01</span><b>Audit semantico iniziale</b></a>
+        <a class="phase-pill" href="#fase-2"><span class="num">02</span><b>Inventario delle entità</b></a>
+        <a class="phase-pill" href="#fase-3"><span class="num">03</span><b>Disambiguazione</b></a>
+        <a class="phase-pill" href="#fase-4"><span class="num">04</span><b>Registro fonti e Wikidata</b></a>
+        <a class="phase-pill" href="#fase-5"><span class="num">05</span><b>Mappa pagina-entità</b></a>
+        <a class="phase-pill" href="#fase-6"><span class="num">06</span><b>Mappa delle relazioni</b></a>
+        <a class="phase-pill" href="#fase-7"><span class="num">07</span><b>Specifiche JSON-LD</b></a>
+        <a class="phase-pill" href="#fase-8"><span class="num">08</span><b>Istruzioni AI</b></a>
+        <a class="phase-pill" href="#fase-9"><span class="num">09</span><b>Query test e manutenzione</b></a>
+      </div>
+    </section>
+
+    <section class="section" id="fasi">
+      <div class="section-head">
+        <div class="section-kicker">Mappa operativa</div>
+        <div>
+          <h2>Cosa si costruisce nel concreto</h2>
+          <p class="section-intro">Ogni fase produce un avanzamento verificabile. Le fasi 2-6 non generano archivi separati; popolano viste diverse dello stesso registro Excel centrale. L’obiettivo è descrivere Bollette Republic come un sistema leggibile, non come una somma di pagine, attraverso una rete di entità, relazioni e fonti.</p>
+        </div>
+      </div>
+
+      <article class="phase" id="fase-1">
+        <div class="phase-index">
+          <div class="phase-number">01</div>
+          <h3 class="phase-title">Audit semantico iniziale</h3>
+          <p class="phase-desc">Fotografa come il progetto è leggibile oggi da un sistema automatico.</p>
+        </div>
+        <div>
+          <p>In questa fase si osserva l’intero perimetro informativo: pagine, dati strutturati, sezioni ricorrenti, nomi dei servizi, concetti impliciti, fonti citate, profili ufficiali, FAQ, blog e segnali macchina già presenti.</p>
+          <div class="detail-grid">
+            <div class="detail">
+              <h4>Attività</h4>
+              <ol>
+                <li>Raccolta delle pagine principali.</li>
+                <li>Estrazione delle entità nominate esplicitamente.</li>
+                <li>Estrazione delle entità implicite necessarie per capire il servizio.</li>
+                <li>Verifica dei JSON-LD già presenti.</li>
+                <li>Controllo di <code>llms.txt</code>, <code>robots.txt</code>, sitemap e altri segnali macchina.</li>
+                <li>Individuazione di pagine forti, pagine deboli e ambiguità.</li>
+              </ol>
+            </div>
+            <div class="detail">
+              <h4>Output</h4>
+              <span class="output">stato-iniziale.md</span>
+              <p>Contiene stato attuale, entità già presenti, entità implicite, segnali rilevati, ambiguità e priorità operative.</p>
+              <p><strong>Uso:</strong> serve come riferimento decisionale per impostare priorità, criteri e interventi successivi. Resta al team come fotografia dello stato di partenza.</p>
+            </div>
+            <div class="detail wide example">
+              <h4>Esempio</h4>
+              <p>Il sito può parlare di “bollette”, “switch”, “gruppo d’acquisto” e “privacy”, ma un agente deve capire che questi elementi appartengono allo stesso sistema, fatto di raccolta documenti, dati di consumo, monitoraggio, avvisi, condizioni alternative e protezione del percorso di switch.</p>
+              <p><strong>Criterio di lettura:</strong> ogni pagina viene classificata con stato <code>ok</code>, <code>parziale</code>, <code>assente</code> o <code>critico</code>. I criteri sono entità principale, pagina canonica, dati strutturati, fonti, collegamenti interni e ambiguità. Da qui nasce la lista delle priorità.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase" id="fase-2">
+        <div class="phase-index">
+          <div class="phase-number">02</div>
+          <h3 class="phase-title">Inventario delle entità</h3>
+          <p class="phase-desc">Costruisce il registro centrale di ciò che Bollette Republic deve rendere riconoscibile.</p>
+        </div>
+        <div>
+          <p>Un’entità è qualsiasi oggetto concettuale che un sistema deve riconoscere: brand, servizio, funzione, documento, processo, attore, regolatore, dato, problema utente, fonte o concetto di mercato.</p>
+          <div class="detail-grid">
+            <div class="detail">
+              <h4>Attività</h4>
+              <ol>
+                <li>Separazione tra entità proprietarie ed entità di contesto.</li>
+                <li>Identificazione di entità core, documentali, di processo, privacy, istituzionali e di mercato.</li>
+                <li>Raccolta di sinonimi, varianti linguistiche e formule usate dagli utenti.</li>
+                <li>Assegnazione di priorità e collegamento a pagine, fonti e possibili proprietà Schema.org.</li>
+              </ol>
+            </div>
+            <div class="detail">
+              <h4>Output</h4>
+              <span class="output">mappa-semantica.xlsx</span>
+              <p>È la fonte dati centrale del lavoro: contiene entità, definizioni, categorie, relazioni, priorità, pagine collegate, fonti e uso operativo.</p>
+              <p><strong>Colonne minime:</strong> ID entità, nome, tipo, definizione, pagina canonica, sinonimi, entità correlate, fonte primaria, stato di validazione, priorità, uso JSON-LD e note di disambiguazione.</p>
+              <p><strong>Uso:</strong> evita duplicazioni tra file diversi. Il file Excel diventa il registro operativo condiviso, leggibile, revisionabile e aggiornabile senza introdurre formati tecnici non necessari in questa fase.</p>
+            </div>
+            <div class="detail wide">
+              <h4>Esempio di mappa semantica</h4>
+              <div class="table-wrap">
+                <table class="semantic-map">
+                  <thead>
+                    <tr>
+                      <th>Entità</th>
+                      <th>Pagina</th>
+                      <th>Relazione</th>
+                      <th>Fonte</th>
+                      <th>Uso</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bollette Republic</td>
+                      <td>Home</td>
+                      <td>offre un servizio di gestione bollette luce e gas</td>
+                      <td>pagine ufficiali del sito</td>
+                      <td>nodo <code>Organization</code> e <code>Service</code></td>
+                    </tr>
+                    <tr>
+                      <td>Cassetto bollette</td>
+                      <td>Pagina servizio dedicata</td>
+                      <td>raccoglie documenti e sostiene monitoraggio contratti</td>
+                      <td>descrizione servizio</td>
+                      <td>entità principale della pagina</td>
+                    </tr>
+                    <tr>
+                      <td>Gruppo d’acquisto energia</td>
+                      <td>Pagina gruppo d’acquisto</td>
+                      <td>aggrega domanda e abilita condizioni dedicate</td>
+                      <td>materiali di progetto</td>
+                      <td>disambiguazione da comparatore offerte</td>
+                    </tr>
+                    <tr>
+                      <td>ARERA</td>
+                      <td>Articoli e pagine informative</td>
+                      <td>fornisce contesto istituzionale sul mercato energia</td>
+                      <td>fonte istituzionale verificata</td>
+                      <td>riferimento esterno e possibile <code>sameAs</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase" id="fase-3">
+        <div class="phase-index">
+          <div class="phase-number">03</div>
+          <h3 class="phase-title">Disambiguazione</h3>
+          <p class="phase-desc">Stabilisce cosa significa ogni entità e quali concetti vicini vanno distinti.</p>
+        </div>
+        <div>
+          <p>Il dominio energia è pieno di termini simili: fornitore e distributore, bolletta e contratto, switch e voltura, gruppo d’acquisto e comparazione. La disambiguazione rende queste differenze leggibili e riutilizzabili nei file macchina.</p>
+          <div class="detail-grid">
+            <div class="detail">
+              <h4>Attività</h4>
+              <ol>
+                <li>Definizione del nome canonico.</li>
+                <li>Scrittura di definizione breve ed estesa.</li>
+                <li>Raccolta di sinonimi ammessi e termini correlati.</li>
+                <li>Indicazione di relazioni consigliate e relazioni da evitare.</li>
+                <li>Creazione di ID interni per entità proprietarie.</li>
+              </ol>
+            </div>
+            <div class="detail">
+              <h4>Output</h4>
+              <span class="output">mappa-semantica.xlsx</span>
+              <p>La disambiguazione non è un file separato da mantenere. È una sezione del registro semantico, collegata alle entità e alle pagine in cui quelle entità compaiono.</p>
+              <p><strong>Criterio di ammissione:</strong> un termine diventa entità solo se ha un ruolo concreto nel servizio, una pagina o fonte di riferimento, una relazione utile o un possibile uso in JSON-LD, lettura AI o verifica. Gli altri termini restano sinonimi, note o riferimenti scartati.</p>
+              <p><strong>Uso:</strong> guida le scelte su nomi, definizioni, relazioni e confini tra concetti vicini. Resta al team come riferimento quando aggiunge nuove pagine, nuove FAQ o nuovi servizi.</p>
+            </div>
+            <div class="detail wide">
+              <h4>Esempi di distinzione</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Entità</th>
+                      <th>Da distinguere da</th>
+                      <th>Motivo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Fornitore energia</td>
+                      <td>Distributore locale</td>
+                      <td>il fornitore vende energia, il distributore gestisce rete e contatore</td>
+                    </tr>
+                    <tr>
+                      <td>Switch energetico</td>
+                      <td>Voltura</td>
+                      <td>lo switch riguarda cambio condizioni o fornitore, la voltura riguarda cambio intestatario</td>
+                    </tr>
+                    <tr>
+                      <td>Cassetto bollette</td>
+                      <td>Archivio documentale generico</td>
+                      <td>il cassetto sostiene monitoraggio, avvisi e decisioni sul contratto</td>
+                    </tr>
+                    <tr>
+                      <td>Gruppo d’acquisto energia</td>
+                      <td>Comparatore offerte</td>
+                      <td>il gruppo aggrega domanda, non si limita a mostrare offerte</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase" id="fase-4">
+        <div class="phase-index">
+          <div class="phase-number">04</div>
+          <h3 class="phase-title">Registro fonti e Wikidata</h3>
+          <p class="phase-desc">Collega le entità a riferimenti verificabili e identificatori esterni.</p>
+        </div>
+        <div>
+          <p>Il lavoro usa fonti riconosciute con ruoli distinti: Wikidata come identificatore e ponte semantico, fonti istituzionali come riferimenti di contesto, pagine ufficiali di Bollette Republic come fonte primaria su ciò che il servizio fa e promette.</p>
+          <div class="detail-grid">
+            <div class="detail">
+              <h4>Attività</h4>
+              <ol>
+                <li>Ricerca di voci Wikidata pertinenti.</li>
+                <li>Verifica di QID, descrizione e compatibilità.</li>
+                <li>Scarto di voci troppo generiche o ambigue.</li>
+                <li>Registrazione di fonti istituzionali e fonti ufficiali.</li>
+                <li>Indicazione dell’uso: JSON-LD, note di implementazione, istruzioni AI o riferimento interno.</li>
+              </ol>
+            </div>
+            <div class="detail">
+              <h4>Output</h4>
+              <span class="output">mappa-semantica.xlsx</span>
+              <p>QID, URL Wikidata, fonti istituzionali, rilevanza, relazione Schema.org e stato di verifica vengono gestiti nella stessa fonte dati centrale.</p>
+              <p><strong>Stati possibili:</strong> approvata, da verificare, scartata, solo riferimento interno. Questo evita di usare come fonte ciò che è troppo generico, ambiguo o non adatto al contesto.</p>
+              <p><strong>Uso:</strong> serve a decidere quali riferimenti esterni usare nei dati strutturati e nelle istruzioni di lettura automatica. Resta al team come registro delle fonti approvate e verificabili.</p>
+            </div>
+            <div class="detail wide example">
+              <h4>Esempio</h4>
+              <p>ARERA può diventare fonte istituzionale per mercato energia e Portale Offerte. Il Garante Privacy può sostenere il contesto sul trattamento dati. Energia elettrica e gas naturale possono essere entità esterne quando i QID sono pertinenti. Una voce troppo generica o distante resta invece solo riferimento interno o viene scartata.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase" id="fase-5">
+        <div class="phase-index">
+          <div class="phase-number">05</div>
+          <h3 class="phase-title">Mappa pagina-entità</h3>
+          <p class="phase-desc">Assegna a ogni URL una funzione semantica precisa.</p>
+        </div>
+        <div>
+          <p>Questa fase risponde a una domanda concreta: quale entità sostiene ogni pagina? La home sostiene brand e servizio generale. Una pagina sul cassetto bollette sostiene una funzione proprietaria; una FAQ sostiene chiarimenti; un articolo può sostenere una specifica entità di contesto.</p>
+          <div class="detail-grid">
+            <div class="detail">
+              <h4>Attività</h4>
+              <ol>
+                <li>Selezione delle pagine strategiche.</li>
+                <li>Assegnazione di entità primaria, entità secondarie ed entità di supporto.</li>
+                <li>Definizione della domanda utente coperta dalla pagina.</li>
+                <li>Collegamento a fonti interne ed esterne.</li>
+                <li>Suggerimento del tipo Schema.org e delle relazioni JSON-LD.</li>
+                <li>Registrazione dei gap.</li>
+              </ol>
+            </div>
+            <div class="detail">
+              <h4>Output</h4>
+              <span class="output">mappa-semantica.xlsx</span>
+              <p>La mappa pagina-entità è una vista del registro centrale e indica dove innestare i segnali senza creare un secondo archivio da sincronizzare.</p>
+              <p><strong>Campi previsti:</strong> URL, template, entità primaria, entità secondarie, intento della pagina, schema suggerito, target JSON-LD, fonti, gap e priorità.</p>
+              <p><strong>Uso:</strong> assegna a ogni pagina una funzione precisa. Il team può usarlo per implementare JSON-LD pagina per pagina e mantenere coerenza sulle nuove URL.</p>
+            </div>
+            <div class="detail wide">
+              <h4>Esempio di mappa pagina-entità</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Pagina</th>
+                      <th>Entità primaria</th>
+                      <th>Entità secondarie</th>
+                      <th>Uso</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>/</td>
+                      <td>Bollette Republic</td>
+                      <td>gestione bollette, gruppo d’acquisto, switch</td>
+                      <td>nodo principale</td>
+                    </tr>
+                    <tr>
+                      <td>/cassetto-bollette</td>
+                      <td>Cassetto bollette</td>
+                      <td>bolletta luce, bolletta gas, privacy</td>
+                      <td>pagina servizio</td>
+                    </tr>
+                    <tr>
+                      <td>/gruppo-acquisto</td>
+                      <td>Gruppo d’acquisto energia</td>
+                      <td>community, fornitori, offerte</td>
+                      <td>pagina servizio</td>
+                    </tr>
+                    <tr>
+                      <td>/switch-energetico</td>
+                      <td>Switch energetico</td>
+                      <td>contratto, fornitore, avvisi</td>
+                      <td>pagina processo</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase" id="fase-6">
+        <div class="phase-index">
+          <div class="phase-number">06</div>
+          <h3 class="phase-title">Mappa delle relazioni</h3>
+          <p class="phase-desc">Tiene insieme entità, pagine, fonti, servizi e casi d’uso.</p>
+        </div>
+        <div>
+          <p>Questa fase risponde a una seconda domanda: come sono collegate le entità tra loro? La mappa delle relazioni tiene insieme entità, pagine, fonti, servizi e casi d’uso, e serve come riferimento logico per JSON-LD, istruzioni AI e query di verifica.</p>
+          <div class="detail-grid">
+            <div class="detail">
+              <h4>Attività</h4>
+              <ol>
+                <li>Creazione di cluster semantici.</li>
+                <li>Definizione di relazioni soggetto-predicato-oggetto.</li>
+                <li>Collegamento tra documenti, dati, servizi e processi.</li>
+                <li>Scrittura di percorsi concettuali.</li>
+                <li>Allineamento con pagine, fonti e istruzioni di lettura automatica.</li>
+                <li>Separazione tra entità stabili, dati volatili e dati sensibili.</li>
+              </ol>
+            </div>
+            <div class="detail">
+              <h4>Output</h4>
+              <span class="output">mappa-semantica.xlsx</span>
+              <p>Cluster, entità core, entità di supporto, triple semantiche, percorsi e note operative vengono mantenuti nel registro centrale.</p>
+              <p><strong>Uso:</strong> è la mappa principale del sistema. Spiega come le entità si collegano e diventa la base logica per JSON-LD, istruzioni AI e query di verifica.</p>
+            </div>
+            <div class="detail wide example">
+              <h4>Esempio di cluster</h4>
+              <p>Il cassetto bollette conserva bollette luce e gas. Le bollette contengono POD, PDR e dati di consumo; questi dati supportano monitoraggio e avvisi. Gli avvisi possono portare a switch energetico o gruppo d’acquisto, mentre privacy e contatti dedicati sostengono il percorso.</p>
+              <p><strong>Esempio di relazione:</strong> Cassetto bollette <code>è parte di</code> gestione bollette luce e gas; gestione bollette <code>usa</code> bollette luce e gas; bollette luce e gas <code>contengono</code> dati di consumo; dati di consumo <code>supportano</code> monitoraggio e avvisi.</p>
+              <p><strong>Nota di governance:</strong> la mappa distingue ciò che è stabile e descrivibile pubblicamente, come servizi, concetti, fonti e processi, da ciò che è volatile o sensibile, come tariffe, PUN, PSV, POD, PDR, consumi e dati personali. I dati sensibili non diventano contenuto della base semantica pubblica; vengono modellati come categorie e vincoli di interpretazione.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase" id="fase-7">
+        <div class="phase-index">
+          <div class="phase-number">07</div>
+          <h3 class="phase-title">Specifiche JSON-LD</h3>
+          <p class="phase-desc">Traduce la mappa semantica in dati strutturati implementabili.</p>
+        </div>
+        <div>
+          <p>Il JSON-LD è la traduzione implementabile della mappa semantica. Viene progettato come grafo coerente, non come blocchi isolati. Le entità principali hanno <code>@id</code> stabili e relazioni leggibili tra loro. La specifica parte dal grafo base e poi scende sulle pagine rilevanti: servizi, FAQ, articoli strategici, entità citate, fonti e relazioni pagina per pagina.</p>
+          <div class="detail-grid">
+            <div class="detail">
+              <h4>Attività</h4>
+              <ol>
+                <li>Definizione degli <code>@id</code> canonici.</li>
+                <li>Progettazione del grafo base: <code>Organization</code>, <code>WebSite</code>, <code>Service</code>.</li>
+                <li>Progettazione di schemi per pagine servizio, FAQ e articoli strategici.</li>
+                <li>Uso di relazioni come <code>provider</code>, <code>publisher</code>, <code>mainEntity</code>, <code>about</code>, <code>mentions</code>, <code>sameAs</code>, <code>knowsAbout</code>, <code>isPartOf</code>.</li>
+                <li>Preparazione di esempi copiabili, note di inserimento e controlli di validazione per il dev interno.</li>
+              </ol>
+            </div>
+            <div class="detail">
+              <h4>Output</h4>
+              <span class="output">json-ld.md</span>
+              <p>È la specifica per implementare o aggiornare dati strutturati coerenti con la mappa. Contiene testo esplicativo, schede pagina per pagina ed esempi JSON-LD già scritti come blocchi copiabili.</p>
+              <p><strong>Uso:</strong> è il file più vicino all’implementazione tecnica. Indica cosa inserire, dove inserirlo, quali <code>@id</code> usare, quali relazioni mantenere e quali controlli eseguire dopo l’inserimento.</p>
+            </div>
+            <div class="detail wide">
+              <h4>Esempio semplificato di grafo base</h4>
+              <pre><code>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bolletterepublic.it/#organization",
+      "name": "Bollette Republic",
+      "url": "https://bolletterepublic.it",
+      "knowsAbout": [
+        "bollette luce e gas",
+        "gestione bollette",
+        "gruppo d'acquisto energia",
+        "switch energetico",
+        "privacy nei contratti energetici"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bolletterepublic.it/#website",
+      "url": "https://bolletterepublic.it",
+      "publisher": {
+        "@id": "https://bolletterepublic.it/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://bolletterepublic.it/#service",
+      "name": "Gestione bollette luce e gas",
+      "provider": {
+        "@id": "https://bolletterepublic.it/#organization"
+      },
+      "areaServed": "Italia"
+    }
+  ]
+}</code></pre>
+            </div>
+            <div class="detail wide example">
+              <h4>Esempio di scheda in <code>json-ld.md</code></h4>
+              <p><strong>Pagina:</strong> pagina dedicata al cassetto bollette.</p>
+              <p><strong>Entità sostenuta:</strong> Cassetto bollette, collegata a Bollette Republic come funzione del servizio.</p>
+              <p><strong><code>@id</code> proposto:</strong> <code>https://bolletterepublic.it/#cassetto-bollette</code></p>
+              <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://bolletterepublic.it/#cassetto-bollette",
+  "name": "Cassetto bollette",
+  "provider": {
+    "@id": "https://bolletterepublic.it/#organization"
+  },
+  "isPartOf": {
+    "@id": "https://bolletterepublic.it/#service"
+  },
+  "about": [
+    "bollette luce e gas",
+    "gestione documenti",
+    "monitoraggio contratto"
+  ]
+}</code></pre>
+              <p><strong>Ragione operativa:</strong> la pagina non viene descritta come archivio generico, ma come funzione collegata a gestione bollette, monitoraggio e servizio Bollette Republic.</p>
+              <p><strong>Nota per implementazione:</strong> gli esempi vanno validati sulla pagina reale prima della pubblicazione. Il controllo riguarda contenuto visibile, URL canonico, proprietà Schema.org ammissibili, assenza di dati personali o volatili e coerenza con il grafo principale.</p>
+            </div>
+            <div class="detail wide">
+              <h4>Checklist per il dev interno</h4>
+              <ol>
+                <li>Usare <code>@id</code> stabili e coerenti tra home, pagine servizio, FAQ e articoli strategici.</li>
+                <li>Collegare ogni pagina a una sola entità primaria e alle entità secondarie necessarie.</li>
+                <li>Allineare JSON-LD e contenuto visibile della pagina.</li>
+                <li>Usare URL canonici e relazioni coerenti con la mappa semantica.</li>
+                <li>Validare home, pagina servizio, FAQ e almeno un articolo strategico con strumenti di controllo Schema.org.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase" id="fase-8">
+        <div class="phase-index">
+          <div class="phase-number">08</div>
+          <h3 class="phase-title">Istruzioni AI e file opzionali</h3>
+          <p class="phase-desc">Rende esplicito quali pagine, entità e fonti vanno considerate prioritarie nella lettura automatica.</p>
+        </div>
+        <div>
+          <p>Questa parte produce segnali ausiliari e raccomandazioni mantenibili. Indica quali pagine sono fonti principali, quali entità rappresentano il servizio, quali percorsi di lettura seguire e quali riferimenti usare quando un sistema automatico deve ricostruire il contesto.</p>
+          <div class="detail-grid">
+            <div class="detail">
+              <h4>Attività</h4>
+              <ol>
+                <li>Definizione delle pagine da trattare come fonti principali.</li>
+                <li>Scrittura di una traccia per eventuale <code>llms.txt</code>.</li>
+                <li>Scrittura di una traccia per eventuale <code>agents.md</code> o documento interno equivalente.</li>
+                <li>Collegamento al registro semantico e alle specifiche JSON-LD.</li>
+                <li>Inserimento di esempi di domande e percorsi di consultazione.</li>
+                <li>Indicazione del ruolo corretto: segnali ausiliari da affiancare a JSON-LD, sitemap, contenuti e fonti verificabili.</li>
+              </ol>
+            </div>
+            <div class="detail">
+              <h4>Output</h4>
+              <span class="output">lettura-ai.md</span>
+              <p>Contiene indicazioni per eventuale <code>llms.txt</code>, eventuale <code>agents.md</code>, fonti principali, percorsi di lettura e limiti di utilizzo.</p>
+              <p><strong>Uso:</strong> alcune parti possono essere pubblicate nella root del sito; altre possono restare interne come guida per strumenti AI, test e manutenzione. La scelta viene fatta voce per voce, distinguendo ciò che aiuta la lettura del sito da ciò che serve a governare metodo, limiti o verifiche.</p>
+            </div>
+            <div class="detail wide example">
+              <h4>Esempio di percorso agente</h4>
+              <p>Alla domanda “come capisco se sto pagando troppo la luce?”, l’agente dovrebbe partire da bolletta luce, leggere dati di consumo, tariffa e fornitore, quindi collegare il tema a gestione bollette e cassetto bollette. Se il problema riguarda condizioni alternative, può richiamare avvisi, switch energetico o gruppo d’acquisto.</p>
+              <p><strong>Criterio pratico:</strong> ogni istruzione deve indicare fonte principale, pagine prioritarie, entità coinvolte e confini di interpretazione. In questo modo il file resta utile anche se viene mantenuto come documento interno.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="phase" id="fase-9">
+        <div class="phase-index">
+          <div class="phase-number">09</div>
+          <h3 class="phase-title">Query di verifica AI e manutenzione</h3>
+          <p class="phase-desc">Misura se la base semantica copre interrogazioni realistiche e resta aggiornabile.</p>
+        </div>
+        <div>
+          <p>Dopo la consegna resta un set di controlli per verificare nel tempo come i sistemi AI interpretano Bollette Republic, insieme a una procedura minima per aggiornare la mappa quando cambiano pagine, servizi o priorità.</p>
+          <div class="detail-grid">
+            <div class="detail">
+              <h4>Attività</h4>
+              <ol>
+                <li>Creazione di query informative, procedurali, comparative e ambigue.</li>
+                <li>Associazione di ogni query a entità, pagine e fonti attese.</li>
+                <li>Definizione della risposta ideale e del criterio di successo.</li>
+                <li>Registrazione dei gap.</li>
+                <li>Preparazione di regole per nuove pagine, nuovi servizi e nuove entità.</li>
+              </ol>
+            </div>
+            <div class="detail">
+              <h4>Output</h4>
+              <span class="output">verifica-ai.xlsx</span>
+              <span class="output">piano-implementazione.md</span>
+              <p>Il set di query verifica la comprensione. Il piano operativo trasforma la mappa in una sequenza di azioni applicabili e manutenibili.</p>
+              <p><strong>Uso:</strong> il set di query serve a verificare le risposte AI nel tempo. Il piano operativo indica cosa integrare, in che ordine e quali elementi aggiornare quando il sito cambia. La verifica è pensata come controllo manuale o a campione, con criteri chiari e replicabili.</p>
+              <p><strong>Protocollo:</strong> baseline prima dell’implementazione, controllo dopo la pubblicazione, verifica periodica, archivio delle risposte e azioni correttive quando mancano entità, fonti o pagine attese.</p>
+            </div>
+            <div class="detail wide">
+              <h4>Esempi di query di verifica</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Query</th>
+                      <th>Entità attese</th>
+                      <th>Criterio di successo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Che cos’è Bollette Republic?</td>
+                      <td>Bollette Republic, gestione bollette, luce e gas</td>
+                      <td>la risposta descrive servizio e contesto corretto</td>
+                    </tr>
+                    <tr>
+                      <td>Come faccio a capire se la bolletta gas è troppo alta?</td>
+                      <td>bolletta gas, consumi, PDR, fornitore, cassetto bollette</td>
+                      <td>la risposta collega documento, dati e monitoraggio</td>
+                    </tr>
+                    <tr>
+                      <td>Cos’è il cassetto bollette?</td>
+                      <td>cassetto bollette, bollette luce/gas, archivio, privacy</td>
+                      <td>la risposta lo descrive come funzione del servizio</td>
+                    </tr>
+                    <tr>
+                      <td>Quando ha senso cambiare fornitore?</td>
+                      <td>switch energetico, contratto, tariffa, avvisi</td>
+                      <td>la risposta collega scadenze, condizioni e monitoraggio</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p><strong>Campi previsti:</strong> query, sistema testato, data, risposta osservata, entità attese, pagine attese, errori bloccanti, punteggio da 0 a 2 e azione successiva.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="timeline">
+      <div class="section-head">
+        <div class="section-kicker">Tempi</div>
+        <div>
+          <h2>Un intervento di 4 settimane</h2>
+          <p class="section-intro">Il lavoro è pensato come sprint compatto, in cui ogni settimana produce un avanzamento verificabile e prepara la successiva. Alla fine delle 4 settimane restano file operativi, specifiche e priorità di integrazione.</p>
+        </div>
+      </div>
+
+      <div class="timeline-grid">
+        <div class="phase-pill">
+          <span class="num">Settimana 01</span>
+          <b>Audit e raccolta segnali</b>
+          <p>Raccolta pagine, verifica JSON-LD, sitemap, <code>robots.txt</code>, eventuale <code>llms.txt</code>, segnali macchina e prime ambiguità.</p>
+        </div>
+        <div class="phase-pill">
+          <span class="num">Settimana 02</span>
+          <b>Entità e disambiguazione</b>
+          <p>Costruzione di mappa entità, matrice di disambiguazione, registro fonti e primi riferimenti Wikidata.</p>
+        </div>
+        <div class="phase-pill">
+          <span class="num">Settimana 03</span>
+          <b>Architettura e specifiche</b>
+          <p>Mappa pagina-entità, mappa delle relazioni, <code>@id</code> canonici, relazioni Schema.org e specifiche JSON-LD.</p>
+        </div>
+        <div class="phase-pill">
+          <span class="num">Settimana 04</span>
+          <b>Istruzioni AI e piano operativo</b>
+          <p>Preparazione di raccomandazioni AI, query di verifica, priorità di implementazione, checklist finale e regole minime di manutenzione.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="file">
+      <div class="section-head">
+        <div class="section-kicker">Consegna</div>
+        <div>
+          <h2>Pacchetto previsto</h2>
+          <p class="section-intro">La proposta è compatta e pensata per essere usabile subito. Include audit, registro semantico, specifiche JSON-LD, raccomandazioni AI, query di verifica e piano operativo. Le informazioni vive stanno nel registro semantico; le altre uscite le applicano nei punti giusti.</p>
+        </div>
+      </div>
+
+      <div class="file-grid">
+        <div class="file-card">
+          <code>stato-iniziale.md</code>
+          <p>Fotografia iniziale dello stato attuale, con segnali presenti, ambiguità e pagine prioritarie.</p>
+          <p><strong>Serve a:</strong> impostare il lavoro e motivare le priorità.</p>
+          <p><strong>Dopo la consegna:</strong> documenta lo stato di partenza e permette di leggere gli interventi in relazione ai problemi rilevati.</p>
+        </div>
+        <div class="file-card">
+          <code>mappa-semantica.xlsx</code>
+          <p>Fonte dati centrale con entità, definizioni, disambiguazione, relazioni, pagine collegate, fonti, QID Wikidata, priorità e uso operativo.</p>
+          <p><strong>Serve a:</strong> alimentare specifiche, query di verifica e manutenzione senza duplicare la verità in file separati.</p>
+          <p><strong>Dopo la consegna:</strong> diventa il registro aggiornabile della base semantica, leggibile sia da persone sia da sistemi.</p>
+        </div>
+        <div class="file-card">
+          <code>json-ld.md</code>
+          <p>Specifiche implementabili per grafo base, <code>@id</code>, proprietà Schema.org, relazioni tra pagine, esempi e regole di manutenzione.</p>
+          <p><strong>Serve a:</strong> trasformare il registro semantico in dati strutturati.</p>
+          <p><strong>Dopo la consegna:</strong> guida l’implementazione tecnica e gli aggiornamenti quando cambiano pagine o servizi.</p>
+        </div>
+        <div class="file-card">
+          <code>lettura-ai.md</code>
+          <p>Indicazioni per la lettura automatica, con fonti principali, pagine prioritarie, entità centrali, percorsi consigliati, limiti e possibile struttura di <code>llms.txt</code> o <code>agents.md</code>.</p>
+          <p><strong>Serve a:</strong> rendere espliciti i segnali utili ai sistemi AI come supporto a JSON-LD, sitemap, pagine e fonti verificabili.</p>
+          <p><strong>Dopo la consegna:</strong> può essere usato come guida operativa interna o come base per eventuali file pubblici.</p>
+        </div>
+        <div class="file-card">
+          <code>verifica-ai.xlsx</code>
+          <p>Set di interrogazioni con domande, entità attese, pagine attese, risposta ideale e criteri di successo.</p>
+          <p><strong>Serve a:</strong> verificare manualmente o a campione come le AI interpretano Bollette Republic.</p>
+          <p><strong>Dopo la consegna:</strong> permette controlli periodici e confronto delle risposte nel tempo.</p>
+        </div>
+        <div class="file-card">
+          <code>piano-implementazione.md</code>
+          <p>Ordine di integrazione, dipendenze, checklist, priorità e regole minime per aggiornare il registro quando cambiano pagine o servizi.</p>
+          <p><strong>Serve a:</strong> trasformare la mappa in azioni.</p>
+          <p><strong>Dopo la consegna:</strong> accompagna implementazione, controlli finali e manutenzione ordinaria.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="uso">
+      <div class="section-head">
+        <div class="section-kicker">Uso del pacchetto</div>
+        <div>
+          <h2>Come leggere e utilizzare la consegna</h2>
+          <p class="section-intro">Il pacchetto non è una raccolta di documenti scollegati. È una base operativa con una gerarchia precisa. Il registro semantico è la fonte unica; specifiche, raccomandazioni e query di verifica sono viste applicative costruite a partire da quel registro.</p>
+        </div>
+      </div>
+
+      <div class="oral">
+        <div class="quote-card">
+          <p><strong>Audit.</strong> <code>stato-iniziale.md</code> documenta lo stato iniziale, le criticità, i segnali già presenti e le priorità. Serve a motivare le scelte e resta come riferimento dello stato di partenza.</p>
+        </div>
+        <div class="quote-card">
+          <p><strong>Fonte dati.</strong> <code>mappa-semantica.xlsx</code> contiene entità, disambiguazione, pagine, fonti, QID e relazioni. È il file da mantenere come base viva della mappatura semantica.</p>
+        </div>
+        <div class="quote-card">
+          <p><strong>Implementazione.</strong> <code>json-ld.md</code> traduce il registro in dati strutturati: <code>@id</code>, tipi Schema.org, relazioni e priorità pagina per pagina.</p>
+        </div>
+        <div class="quote-card">
+          <p><strong>Lettura automatica.</strong> <code>lettura-ai.md</code> indica come rendere più chiari fonti, pagine e percorsi di consultazione per sistemi AI e agenti, includendo eventuali tracce per <code>llms.txt</code> o <code>agents.md</code>.</p>
+        </div>
+        <div class="quote-card">
+          <p><strong>Verifica.</strong> <code>verifica-ai.xlsx</code> misura se le risposte generate dai sistemi AI richiamano le entità, le pagine e il contesto corretti.</p>
+        </div>
+        <div class="quote-card">
+          <p><strong>Manutenzione.</strong> <code>piano-implementazione.md</code> indica ordine di integrazione, dipendenze, checklist e regole di aggiornamento quando cambiano pagine, servizi o priorità.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
