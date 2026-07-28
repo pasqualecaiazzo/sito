@@ -803,6 +803,12 @@
         white-space: normal;
       }
 
+      code {
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
       .panel-pad,
       .detail,
       .quote-card,
@@ -977,6 +983,16 @@
         padding: 14px;
         border-radius: 14px;
         font-size: 12px;
+        white-space: pre-wrap;
+        overflow-x: hidden;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      pre code {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        word-break: break-word;
       }
     }
 
